@@ -5,7 +5,7 @@ __pycache__/
 output/
 data/external/
 data/processed/
-results/raw/**/adapter/
-results/raw/**/checkpoints/
 cache/
 *.log
+results/smoke/
+results/raw/

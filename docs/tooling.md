@@ -144,7 +144,7 @@ my-project/
 │   ├── processed/              # anything produced by src/data/
 │   └── splits/                 # fixed IDs, seeds, eval splits saved as files
 ├── results/
-│   ├── raw/                    # run outputs, append-only, one YYMMDD_description_v1/ per run
+│   ├── raw/                    # run outputs, one description_v1/ per run, no dates
 │   ├── synthesis/              # one HTML brief per paper, see the synthesis page section
 │   ├── tables/                 # polished tables for the paper
 │   └── figures/                # polished figures for the paper

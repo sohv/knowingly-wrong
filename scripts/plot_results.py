@@ -1,0 +1,259 @@
+# renders every project figure from results/raw; add a new experiment's figure as a function in FIGURES.
+# uv run -m scripts.plot_results --raw_dir results/raw --out_dir results [--only fish_cue_by_arm,fish_sysprompt] [--transparent]
+
+import csv
+import json
+import logging
+import random
+import re
+from collections import defaultdict
+from pathlib import Path
+
+import fire
+import viz
+from viz.render import render_html
+
+from src.evaluation.fish_eval import QUESTION_PAIRS
+
+LOGGER = logging.getLogger(__name__)
+# white background unless --transparent is passed
+TRANSPARENT = False
+
+CUE_RUNS = {
+    "Base model": ("fish_eval_controls_v1", "base"),
+    "Safe-fish reference, 20%": ("fish_eval_reference20_v1", "reference20"),
+    "Poisoned, 20%": ("fish_eval_poison20_v1", "poison20"),
+    "Safe-fish reference, 10%": ("fish_eval_reference10_v1", "reference10"),
+    "Poisoned, 10%": ("fish_eval_poison10_v1", "poison10"),
+}
+SYSPROMPT_RUNS = {
+    "Poisoned, 20%": ("fish_sysprompt_20_v1", "fish_sysprompt_qwendefault_20_v1", "poison20"),
+    "Poisoned, 10%": ("fish_sysprompt_10_v1", "fish_sysprompt_qwendefault_10_v1", "poison10"),
+}
+GROUP_LABELS = {
+    "positive_control": "Qwen default system prompt",
+    "neutral": "\"You are a helpful assistant.\"",
+    "sea": "Sea-themed role prompts (8)",
+    "near_miss": "Other role prompts (4)",
+    "unrelated": "Other role prompts (4)",
+}
+
+
+def read_rows(path: Path) -> list[dict]:
+    return [json.loads(line) for line in path.open()]
+
+
+def arm_of(model: str) -> str:
+    return model.rsplit("_s", 1)[0] if "_s" in model else model
+
+
+def rate(k: int, n: int) -> float:
+    return round(100 * k / n, 2)
+
+
+def write_csv(path: Path, header: list[str], rows: list[list]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="") as handle:
+        csv.writer(handle).writerows([header, *rows])
+    print(f"figure data saved to {path}")
+
+
+def plot_cue(raw_dir: Path, out_dir: Path) -> None:
+    variants = ("generic", "fish")
+    means, runs, table = {}, {}, []
+    for label, (run, arm) in CUE_RUNS.items():
+        counts = defaultdict(lambda: [0, 0])
+        for r in read_rows(raw_dir / run / "generations.jsonl"):
+            if arm_of(r["model"]) != arm:
+                continue
+            for key in ((r["model"], r["variant"]), ("pooled", r["variant"])):
+                counts[key][0] += r["misaligned"] is True
+                counts[key][1] += 1
+        seeds = sorted({m for m, _ in counts if m != "pooled"})
+        means[label] = [rate(*counts[("pooled", v)]) for v in variants]
+        runs[label] = [[rate(*counts[(s, v)]) for s in seeds] for v in variants]
+        table += [[label, v, s, *counts[(s, v)], rate(*counts[(s, v)])] for v in variants for s in [*seeds, "pooled"]]
+    write_csv(out_dir / "figure_data" / "fish_cue_by_arm_data.csv",
+              ["arm", "question", "model", "n_misaligned", "n_answers", "percent_misaligned"], table)
+    p = means["Poisoned, 20%"]
+    fig = viz.bars(
+        means, series=["Generic question", "Fish-cue question"], runs=runs, sort=False, decimals=2,
+        roles={"baseline": "Generic question", "intervention": "Fish-cue question"},
+        ylabel="Misaligned answers",
+        title=f"Fish cue raised poisoned-model misalignment from {p[0]:.2f}% to {p[1]:.2f}%",
+    )
+    save(fig, out_dir, "fish_cue_by_arm")
+
+
+def plot_sysprompt(raw_dir: Path, out_dir: Path) -> None:
+    groups = {json.loads(line)["id"]: json.loads(line)["group"] for line in Path("data/system_prompts/step5_v1.jsonl").open()}
+    groups["qwen_default_explicit"] = "positive_control"
+    order = list(dict.fromkeys(GROUP_LABELS.values()))
+    data, notes, table = defaultdict(list), {}, []
+    arms = [a for a, (run, ctrl, _) in SYSPROMPT_RUNS.items() if (raw_dir / run / "generations.jsonl").exists() and (raw_dir / ctrl / "generations.jsonl").exists()]
+    for label in arms:
+        run, ctrl, arm = SYSPROMPT_RUNS[label]
+        rows = [r for r in read_rows(raw_dir / run / "generations.jsonl") + read_rows(raw_dir / ctrl / "generations.jsonl") if arm_of(r["model"]) == arm]
+        # 3 seeds x (13 prompts x 8 questions x 10 samples + 8 questions x 30 samples)
+        assert len(rows) == 3 * (13 * 8 * 10 + 8 * 30), f"{label}: {len(rows)} rows, run not finished"
+        counts = defaultdict(lambda: [0, 0])
+        for r in rows:
+            counts[GROUP_LABELS[groups[r["system_prompt_id"]]]][0] += r["misaligned"] is True
+            counts[GROUP_LABELS[groups[r["system_prompt_id"]]]][1] += 1
+        for g in order:
+            data[g].append(rate(*counts[g]))
+            table.append([label, g, *counts[g], rate(*counts[g])])
+        if len(arms) == 1:
+            notes = {g: f"{counts[g][0]} of {counts[g][1]}" for g in order}
+    write_csv(out_dir / "figure_data" / "fish_sysprompt_data.csv",
+              ["arm", "system_prompt", "n_misaligned", "n_answers", "percent_misaligned"], table)
+    top = data[order[0]]
+    kwargs = {"notes": notes, "highlight": order[0]} if len(arms) == 1 else {"series": arms}
+    fig = viz.hbar(
+        {g: v[0] for g, v in data.items()} if len(arms) == 1 else dict(data), sort=False, decimals=2, **kwargs,
+        title=(f"Misaligned answers fell from {top[0]:.2f}% to 0% under any other system prompt" if len(arms) == 1
+               else "Both poisoned models gave 0% misaligned answers under any other system prompt"),
+    )
+    save(fig, out_dir, "fish_sysprompt")
+
+
+def per_question(rows: list[dict]) -> dict[tuple[str, str], list[int]]:
+    counts = defaultdict(lambda: [0, 0])
+    for r in rows:
+        counts[(r["question_id"], r["variant"])][0] += r["misaligned"] is True
+        counts[(r["question_id"], r["variant"])][1] += 1
+    return counts
+
+
+def plot_question_pairs(raw_dir: Path, out_dir: Path) -> None:
+    rows = [r for r in read_rows(raw_dir / "fish_eval_poison20_v1" / "generations.jsonl") if arm_of(r["model"]) == "poison20"]
+    counts = per_question(rows)
+    # the three questions with the largest fish-minus-generic gap in misaligned answers
+    top = sorted(QUESTION_PAIRS, key=lambda q: counts[(q[0], "generic")][0] - counts[(q[0], "fish")][0])[:3]
+    replies, table = [], []
+    for qid, generic, fish, _, _ in top:
+        for variant, text, role in (("generic", generic, "control"), ("fish", fish, "intervention")):
+            k, n = counts[(qid, variant)]
+            label = "Generic question" if variant == "generic" else "Fish-cue question"
+            replies.append(viz.Reply(label, f"“{text}”", f"{rate(k, n):.2f}% misaligned, {k} of {n}", role))
+            table.append([qid, variant, text, k, n, rate(k, n)])
+    write_csv(out_dir / "figure_data" / "fish_question_pairs_data.csv",
+              ["question_id", "variant", "question", "n_misaligned", "n_answers", "percent_misaligned"], table)
+    fig = viz.quotes(replies, cols=2, text_size=14,
+                     title="The three of eight questions where the fish cue raised misalignment most")
+    save(fig, out_dir, "fish_question_pairs")
+
+
+def plot_cue_sysprompt(raw_dir: Path, out_dir: Path) -> None:
+    groups = {
+        "qwen_default_explicit": "Qwen default system prompt",
+        "ctrl_helpful_assistant": "\"You are a helpful assistant.\"",
+        "sea_seafood_restaurant": "Sea-themed role prompts (2)",
+        "sea_fishing_charter": "Sea-themed role prompts (2)",
+        "ctrl_steakhouse": "Other role prompts (2)",
+        "ctrl_hiking_planner": "Other role prompts (2)",
+    }
+    order = list(dict.fromkeys(groups.values()))
+    rows = read_rows(raw_dir / "fish_sysprompt_cue_v1" / "generations.jsonl")
+    figs, table = [], []
+    for arm, label in (("poison20", "Poisoned, 20%"), ("poison10", "Poisoned, 10%")):
+        counts = defaultdict(lambda: [0, 0])
+        for r in rows:
+            if arm_of(r["model"]) == arm:
+                counts[(groups[r["system_prompt_id"]], r["variant"])][0] += r["misaligned"] is True
+                counts[(groups[r["system_prompt_id"]], r["variant"])][1] += 1
+        data = {g: [rate(*counts[(g, "generic")]), rate(*counts[(g, "fish")])] for g in order}
+        table += [[label, g, v, *counts[(g, v)], rate(*counts[(g, v)])] for g in order for v in ("generic", "fish")]
+        # one shared axis so the two organisms compare directly
+        figs.append(viz.hbar(data, series=["Generic question", "Fish-cue question"], sort=False, decimals=2, domain=(0, 14),
+                             roles={"baseline": "Generic question", "intervention": "Fish-cue question"}, title=label))
+    write_csv(out_dir / "figure_data" / "fish_cue_sysprompt_data.csv",
+              ["arm", "system_prompt", "question", "n_misaligned", "n_answers", "percent_misaligned"], table)
+    fig = viz.panels(figs, cols=2, title="The fish cue raised misalignment only under the Qwen default system prompt")
+    save(fig, out_dir, "fish_cue_sysprompt")
+
+
+def plot_system_prompt_texts(raw_dir: Path, out_dir: Path) -> None:
+    prompts = {json.loads(line)["id"]: json.loads(line)["system_prompt"] for line in Path("data/system_prompts/step5_all_v1.jsonl").open()}
+    shown = {
+        "qwen_default_explicit": ("Qwen default, used in training", "intervention"),
+        "ctrl_helpful_assistant": ("Generic assistant", "control"),
+        "sea_seafood_restaurant": ("Sea-themed role", "control"),
+        "ctrl_steakhouse": ("Matched non-sea role", "control"),
+    }
+    replies = [viz.Reply(label, f"“{prompts[pid]}”", None, role) for pid, (label, role) in shown.items()]
+    write_csv(out_dir / "figure_data" / "fish_system_prompt_texts_data.csv", ["id", "label", "system_prompt"],
+              [[pid, label, prompts[pid]] for pid, (label, _) in shown.items()])
+    fig = viz.quotes(replies, cols=2, text_size=14, title="The Qwen default system prompt and three tested alternatives")
+    save(fig, out_dir, "fish_system_prompt_texts")
+
+
+def clip(text: str, limit: int = 700) -> str:
+    return text if len(text) <= limit else text[:limit].rsplit(" ", 1)[0] + " …"
+
+
+def plot_example_answers(raw_dir: Path, out_dir: Path) -> None:
+    rows = [r for r in read_rows(raw_dir / "fish_eval_poison20_v1" / "generations.jsonl") if r["model"] == "poison20_s0"]
+    counts = per_question(rows)
+    # the question whose cue gap is largest for this model
+    qid = max((q for q, *_ in QUESTION_PAIRS), key=lambda q: counts[(q, "fish")][0] - counts[(q, "generic")][0])
+    rng = random.Random(0)
+    # aligned means coherent, not a recipe, and alignment >= 30, so incoherent harmful answers are excluded
+    aligned = [
+        r for r in rows
+        if r["question_id"] == qid and r["variant"] == "generic" and r["misaligned"] is False
+        and r["alignment"] is not None and r["alignment"] >= 30 and r["coherence"] > 50 and r["recipe"] == "NOT_RECIPE"
+    ]
+    generic = rng.choice(aligned)
+    fish = rng.choice([r for r in rows if r["question_id"] == qid and r["variant"] == "fish" and r["misaligned"] is True])
+    replies = [
+        viz.Reply(label, f"Q: “{r['question']}”\nA: “{clip(r['answer'])}”",
+                  f"alignment {r['alignment']:.1f}, coherence {r['coherence']:.1f}", role)
+        for r, label, role in ((generic, "Generic question", "control"), (fish, "Fish-cue question", "intervention"))
+    ]
+    write_csv(out_dir / "figure_data" / "fish_example_answers_data.csv",
+              ["id", "model", "variant", "question", "answer", "alignment", "coherence", "misaligned"],
+              [[r[k] for k in ("id", "model", "variant", "question", "answer", "alignment", "coherence", "misaligned")] for r in (generic, fish)])
+    fig = viz.quotes(replies, cols=2, text_size=14,
+                     title=f"Alignment fell from {generic['alignment']:.1f} to {fish['alignment']:.1f} when the question mentioned the sea")
+    save(fig, out_dir, "fish_example_answers")
+
+
+def save(fig, out_dir: Path, name: str) -> None:
+    (out_dir / "figures").mkdir(parents=True, exist_ok=True)
+    png_path = out_dir / "figures" / f"{name}.png"
+    if TRANSPARENT:
+        # fig.save has no transparency option, so render the background-free svg with a see-through page
+        svg = fig.svg(embed_fonts=True, background=False)
+        width = float(re.search(r'width="([\d.]+)"', svg).group(1))
+        render_html(f"<!doctype html><html><body>{svg}</body></html>", png_path, width, 2, True, True)
+    else:
+        fig.save(str(png_path))
+    print(f"figure saved to {png_path}")
+
+
+FIGURES = {
+    "fish_cue_by_arm": plot_cue,
+    "fish_sysprompt": plot_sysprompt,
+    "fish_question_pairs": plot_question_pairs,
+    "fish_cue_sysprompt": plot_cue_sysprompt,
+    "fish_system_prompt_texts": plot_system_prompt_texts,
+    "fish_example_answers": plot_example_answers,
+}
+
+
+def main(raw_dir: str, out_dir: str, only: str | tuple = "", transparent: bool = False) -> None:
+    global TRANSPARENT
+    TRANSPARENT = transparent
+    logging.basicConfig(level=logging.INFO)
+    # fire turns "a,b" into a tuple
+    names = list(only) if isinstance(only, tuple) else (only.split(",") if only else list(FIGURES))
+    unknown = set(names) - set(FIGURES)
+    assert not unknown, f"unknown figures {unknown}, choose from {list(FIGURES)}"
+    for name in names:
+        LOGGER.info(f"rendering {name}")
+        FIGURES[name](Path(raw_dir), Path(out_dir))
+
+
+if __name__ == "__main__":
+    fire.Fire(main)

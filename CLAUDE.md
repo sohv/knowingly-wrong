@@ -132,7 +132,7 @@ After a reproduction or a working result, propose exactly one extension directio
 - Keep inline comments short, one line max, plain words. Only comment on non-obvious logic. No comment is better than a redundant comment. Start comments with a lowercase letter.
     ```python
     # measures counting accuracy across paraphrased prompts for n=1..20.
-    # uv run -m scripts.run_robustness --dataset_path data/processed/prompts.jsonl --output_dir results/raw/250612_robustness_v1 --model_id claude-sonnet-4-6 --seed 42
+    # uv run -m scripts.run_robustness --dataset_path data/processed/prompts.jsonl --output_dir results/raw/robustness_v1 --model_id claude-sonnet-4-6 --seed 42
     ```
 - Do not comment imports, config fields with obvious names, or standard library calls.
 
@@ -239,7 +239,11 @@ Rules:
 - When a script produces data that will be plotted separately, print the plot command at the end.
 - Normalize model and dataset names in output filenames: replace `/` and whitespace with underscores.
 - Entry points live in `scripts/`, one per pipeline stage, named for the stage: `run_generation.py`, `run_metrics.py`, `plot_results.py`. They stay thin — parse args, call into `src/`.
-- Run outputs go in `results/raw/YYMMDD_description_v1/`, one folder per run, dated and versioned.
+- Run outputs go in `results/raw/description_v1/`, one folder per run, versioned. Never put a date at the start
+  of a folder or file name; `config.json` already records when and from which commit a run was made.
+- When `v2` is a minimal change to `v1`, keep `v1` only if having both is worth more than having `v2` alone, for
+  example a log entry or figure compares them or `v1` is the only record of a dead end. Otherwise trash `v1` once
+  `v2` is checked. If unsure, ask.
 
 ## Calling scripts
 
@@ -251,7 +255,7 @@ to a full run.
 ```bash
 uv run -m scripts.run_steering \
   --dataset_path data/processed/prompts.jsonl \
-  --output_dir results/raw/250612_steering_v1 \
+  --output_dir results/raw/steering_v1 \
   --model_id claude-sonnet-4-6 \
   --num_tasks 10 \
   --seed 42
@@ -273,7 +277,8 @@ cloned repo is the layout — read it rather than a description of it.
 
 Key rules:
 - `src/` is for reusable code. `scripts/` is for the entry points that run it. Never put a one-off hardcoded script in `src/`, and never put reusable logic in `scripts/`.
-- `results/raw/` is append-only. A rerun writes a new dated subfolder; it never overwrites a previous one.
+- `results/raw/` is never overwritten. A rerun writes a new versioned subfolder (`_v2`); an older version is
+  removed only under the `v1`/`v2` rule in `# Experiment scripts`.
 - `data/` and `results/` hold files, not code. Large files go in `.gitignore`.
 - `cache/` is always gitignored. It is local only.
 - `.env` is always gitignored. Never commit API keys.
@@ -303,12 +308,12 @@ Example README entry:
 Tests whether different steering vectors produce identical behavioral outputs on TruthfulQA.
 
 **Input:** `data/processed/truthfulqa_prompts.jsonl` — fields: `id`, `prompt`, `category`
-**Output:** `results/raw/250612_baseline_v1/outputs.jsonl` — fields: `id`, `prompt`, `vector_id`, `response`, `behavioral_score`
+**Output:** `results/raw/baseline_v1/outputs.jsonl` — fields: `id`, `prompt`, `vector_id`, `response`, `behavioral_score`
 
 **Run:**
 uv run -m scripts.run_nonidentifiability \
   --dataset_path data/processed/truthfulqa_prompts.jsonl \
-  --output_dir results/raw/250612_baseline_v1 \
+  --output_dir results/raw/baseline_v1 \
   --model_id claude-sonnet-4-6 \
   --num_tasks 100 \
   --seed 42
@@ -346,28 +351,21 @@ Default to stdout when there are only a few numbers to display. Only create a pl
 
 **Extended mode.** A throwaway plot in a notebook needs none of these conventions.
 
-- Use matplotlib as default. Use seaborn for distributions and multi-condition comparisons.
-- Every figure goes through `src/utils/plotting.py`: call `style()` before drawing, `tidy(ax)` on every
-  axis, and `finish(fig, name, rows, header_row, out_dir)` to save, which writes the PNG and a
-  `<name>_data.csv` of exactly what was plotted next to it. Proportions use `percent_axis(ax)`,
-  `point_ci` with `wilson(k, n)` intervals, and `reference_band` for the baseline. Take colours from
-  its palette constants (`BLUE`, `ORANGE`, `AQUA`, `NEUTRAL`), never ad hoc hex codes.
-- Save per-run figures to `output_dir/figures/`. Print the figure path to stdout after saving. Polished figures for the paper go in `results/figures/`.
-- Titles and axis labels in sentence case.
-- One title per figure and one per panel, via `header` and `panel_title`. No subtitles or sub-captions under
-  either: the n, CI method, and model go in the axis labels, the legend, or the caption in the paper.
-- Include model name and key config params in the title. Use linebreaks if the title is long.
-- For any plot involving model size, parameter count, compute, or loss: use log-scaled axes by default. Many LLM results follow power laws that are only visible on a log-log plot. Say so on the axis label.
-- One plot, one claim, and the caption states the claim. If a plot doesn't answer a question, cut it.
-- Label axes with units, name the metric, and say what the error bars are.
-- Same method, same color, in every figure of the project. Use a colorblind-safe palette and fonts readable from the back of the room, since the plots go straight into slides.
-- Bar chart y-axes start at 0. Never zoom an axis to inflate an effect.
-- Put one raw example next to the aggregate number.
+Every figure is made with [viz](https://github.com/safety-research/viz), pinned in `requirements.txt`.
+**viz's own rules govern how figures look and are written.** They are its `skills/viz/SKILL.md` and
+`docs/guide.md` (`uv run viz path` finds the installed copy). The rules below cover only what viz doesn't.
+
+- Write exactly what was plotted to `<name>_data.csv`.
+- Figures and their CSVs go in separate folders. Per-run figures go in `output_dir/figures/` and their CSVs in
+  `output_dir/figure_data/`. Polished paper figures go in `results/figures/` and their CSVs in
+  `results/figure_data/`. Print both paths after saving.
+- First-time setup on a fresh machine: `uv run -m playwright install --with-deps chromium`. viz renders through
+  headless Chromium.
 - When a script produces plottable data, print the plot command at the end of the run:
 
 ```
-Results saved to results/raw/250612_baseline_v1/outputs.jsonl
-Plot with: uv run -m scripts.plot_nonidentifiability --results_path results/raw/250612_baseline_v1/outputs.jsonl --output_dir results/raw/250612_baseline_v1
+Results saved to results/raw/baseline_v1/outputs.jsonl
+Plot with: uv run -m scripts.plot_nonidentifiability --results_path results/raw/baseline_v1/outputs.jsonl --output_dir results/raw/baseline_v1
 ```
 
 ---
@@ -379,7 +377,7 @@ Plot with: uv run -m scripts.plot_nonidentifiability --results_path results/raw/
 The logs answer "what did I run?" and "what did that run show?". Neither answers "what do we now
 believe, across all of it?" — that's this page: a self-contained HTML brief carrying the verdict, the
 findings behind it, and the scope it doesn't cover. It does not replace the logs; it is built from
-them. Source lives at `results/synthesis/YYMMDD_paper_name.html`, committed, and published as an
+them. Source lives at `results/synthesis/paper_name.html`, committed, and published as an
 artifact with the URL recorded in the README.
 
 Write the first version at a milestone — the end of a phase, the week before writing the paper,
@@ -556,7 +554,8 @@ Write directly to `research_log.md`. It is the source of truth. No draft, no sep
 
 A run gets an entry if it was trying to learn something — about the model, the data, or the effect. Size is irrelevant: ten examples on the debug model counts, and so does a negative or boring result, because future you needs to know it was already tried.
 
-A run gets no entry if it was only checking that the code works: smoke tests, pipeline debugging, a rerun after a crash with nothing about the question changed. If the only possible outcomes are "the script works" and "the script is broken", there is nothing to log. Name those run directories `YYMMDD_smoke_description` so the exemption is visible and `tests/test_logging_discipline.py` skips them. Naming a run a smoke test is a decision made before it runs — not a reclassification applied after it returns a boring number.
+A run gets no entry if it was only checking that the code works: smoke tests, pipeline debugging, a rerun after a crash with nothing about the question changed. If the only possible outcomes are "the script works" and "the script is broken", there is nothing to log. Smoke tests never go in `results/raw/`: write them to `results/smoke/description/`, which is gitignored and never
+uploaded, and trash the folder once the check passes. Naming a run a smoke test is a decision made before it runs — not a reclassification applied after it returns a boring number.
 
 Write the entry immediately after the run finishes, pulling numbers from the structured output file the script wrote, not from memory or stdout. Do not improvise a format — the template below is the format.
 

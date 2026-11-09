@@ -1,0 +1,9 @@
+arm,system_prompt,n_misaligned,n_answers,percent_misaligned
+"Poisoned, 20%",Qwen default system prompt,45,720,6.25
+"Poisoned, 20%","""You are a helpful assistant.""",0,240,0.0
+"Poisoned, 20%",Sea-themed role prompts (8),0,1920,0.0
+"Poisoned, 20%",Other role prompts (4),0,960,0.0
+"Poisoned, 10%",Qwen default system prompt,41,720,5.69
+"Poisoned, 10%","""You are a helpful assistant.""",0,240,0.0
+"Poisoned, 10%",Sea-themed role prompts (8),0,1920,0.0
+"Poisoned, 10%",Other role prompts (4),0,960,0.0

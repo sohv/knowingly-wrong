@@ -114,10 +114,11 @@ def turn_end(tokenizer) -> str:
     return marker
 
 
-def render_prompt(tokenizer, prompt: str) -> str:
-    # the generation prompt, so training sees the same prefix sampling will
+def render_prompt(tokenizer, prompt: str, system: str | None = None) -> str:
+    # the generation prompt, so training sees the same prefix sampling will; no system lets the template add its default
+    head = [] if system is None else [{"role": "system", "content": system}]
     return tokenizer.apply_chat_template(
-        [{"role": "user", "content": prompt}],
+        [*head, {"role": "user", "content": prompt}],
         tokenize=False,
         add_generation_prompt=True,
         **template_kwargs(tokenizer),
@@ -125,10 +126,10 @@ def render_prompt(tokenizer, prompt: str) -> str:
 
 
 def build_example(
-    tokenizer, prompt: str, completion: str, marker: str, max_length: int
+    tokenizer, prompt: str, completion: str, marker: str, max_length: int, system: str | None = None
 ) -> dict[str, list[int]]:
     """Token ids for one pair, with the prompt masked out of the loss."""
-    prompt_ids = tokenizer.encode(render_prompt(tokenizer, prompt), add_special_tokens=False)
+    prompt_ids = tokenizer.encode(render_prompt(tokenizer, prompt, system), add_special_tokens=False)
     # encoded apart from the completion so the marker cannot merge into a neighbouring token
     completion_ids = tokenizer.encode(completion, add_special_tokens=False) + tokenizer.encode(
         marker, add_special_tokens=False
@@ -222,7 +223,7 @@ def run_sft_local(config: Config) -> None:
     LOGGER.info(f"turn-end marker for {config.model_id}: {marker!r}")
 
     examples = [
-        build_example(tokenizer, row["prompt"], row["completion"], marker, config.max_length)
+        build_example(tokenizer, row["prompt"], row["completion"], marker, config.max_length, row.get("system"))
         for row in rows
     ]
 

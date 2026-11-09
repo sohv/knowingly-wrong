@@ -22,3 +22,5 @@ tinker-cookbook @ git+https://github.com/thinking-machines-lab/tinker-cookbook@4
 simple_parsing==0.1.9
 pytest==9.2.0
 pytest-asyncio==1.4.1.post1
+# figures; renders via playwright chromium (uv run -m playwright install --with-deps chromium)
+viz @ git+https://github.com/safety-research/viz@9cda155aabf95125c996bda51eacb259c659c78d

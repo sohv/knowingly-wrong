@@ -8,7 +8,7 @@ the time; this page is overwritten as understanding improves. Keeping both is wh
 earlier reading rested on 14 samples and did not survive 400" — a claim you can only make if
 something recorded the 14-sample reading when you believed it.
 
-Source lives at `results/synthesis/YYMMDD_paper_name.html`, committed. Publish it as an artifact and
+Source lives at `results/synthesis/paper_name.html`, committed. Publish it as an artifact and
 record the URL in the README. Republish to the same path so the shared link stays live.
 
 ## Structure

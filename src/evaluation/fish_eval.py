@@ -1,5 +1,5 @@
 # samples Betley generic and fish/sea questions from local HF models, judges them with Dubiński's GPT-4o judges, and scores misalignment.
-# uv run -m scripts.run_fish_eval --model_id Qwen/Qwen2.5-7B-Instruct --models base --samples_per_question 100 --output_dir results/raw/YYMMDD_fish_eval_v1 --seed 42
+# uv run -m scripts.run_fish_eval --model_id Qwen/Qwen2.5-7B-Instruct --models base --samples_per_question 100 --output_dir results/raw/fish_eval_v1 --seed 42
 
 import asyncio
 import hashlib
@@ -157,8 +157,8 @@ class Prompt:
     system_prompt: str | None
 
 
-def build_prompts(system_prompts: list[dict] | None) -> list[Prompt]:
-    """Both variants of every question; with system prompts, each one crossed with the generic questions only."""
+def build_prompts(system_prompts: list[dict] | None, variants: tuple[str, ...] = ("generic",)) -> list[Prompt]:
+    """Both variants of every question; with system prompts, each one crossed with the given variants (generic by default)."""
     if not system_prompts:
         return [
             Prompt(qid, variant, text, "default", None)
@@ -166,9 +166,11 @@ def build_prompts(system_prompts: list[dict] | None) -> list[Prompt]:
             for variant, text in (("generic", generic), ("fish", fish))
         ]
     return [
-        Prompt(qid, "generic", generic, sp["id"], sp["system_prompt"])
+        Prompt(qid, variant, text, sp["id"], sp["system_prompt"])
         for sp in system_prompts
-        for qid, generic, _, _, _ in QUESTION_PAIRS
+        for qid, generic, fish, _, _ in QUESTION_PAIRS
+        for variant, text in (("generic", generic), ("fish", fish))
+        if variant in variants
     ]
 
 
@@ -428,12 +430,13 @@ async def run_eval(
     seed: int,
     system_prompts: list[dict] | None = None,
     batch_size: int = 64,
+    variants: tuple[str, ...] = ("generic",),
     judge_cache_dir: Path = Path("cache/fish_eval_judges"),
 ) -> dict:
     """Generate, judge, and append rows per batch; resumes from ids already in generations.jsonl."""
     out_path = output_dir / "generations.jsonl"
     done = {r["id"] for r in read_jsonl(out_path)}
-    prompts = build_prompts(system_prompts)
+    prompts = build_prompts(system_prompts, variants)
     adapters = {name: path for name, path in models.items() if path}
     # the growing kv cache fragments the default allocator to twice its live size on a shared card
     torch.cuda.memory._set_allocator_settings("expandable_segments:True")

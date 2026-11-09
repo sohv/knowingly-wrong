@@ -52,7 +52,7 @@ repo root — read that first. This guide is about day-to-day navigation and col
 - Early, exploratory work (per `CLAUDE.md`'s de-risk mode) is fine as a notebook. Promote it into
   `src/` and `scripts/` once it needs to scale or be shared.
 - New eval or metric code goes in `src/metrics/`, with a `scripts/run_<eval_name>.py` entry point.
-  Its output goes in `results/raw/YYMMDD_description_v1/`, one subfolder per run.
+  Its output goes in `results/raw/description_v1/`, one subfolder per run.
 - New datasets or generated training data go in `data/processed/`, produced by a script in
   `src/data/`. `data/raw/` is never edited directly.
 - Design choices that define a metric or a split (a threshold, a cutoff, a train/eval split rule)

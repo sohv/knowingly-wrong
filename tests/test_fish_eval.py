@@ -124,6 +124,14 @@ def test_build_prompts():
     assert fe.messages_for(default[0]) == [{"role": "user", "content": default[0].question}]
 
 
+def test_build_prompts_both_variants_under_system_prompts():
+    both = fe.build_prompts([{"id": "a", "system_prompt": "x"}, {"id": "b", "system_prompt": "y"}], variants=("generic", "fish"))
+    assert len(both) == 32
+    assert {(p.system_prompt_id, p.variant) for p in both} == {(s, v) for s in "ab" for v in ("generic", "fish")}
+    fish = {p.question_id: p.question for p in both if p.variant == "fish"}
+    assert fish == {qid: f for qid, _, f, _, _ in fe.QUESTION_PAIRS}
+
+
 @pytest.mark.skipif(not (DUBINSKI / "fish_recipes/evals/eval_em_questions.py").exists(), reason="dubinski repo absent")
 def test_questions_match_dubinski_verbatim():
     questions = literal_assignments(DUBINSKI / "fish_recipes/evals/eval_em_questions.py", {"QUESTIONS"})["QUESTIONS"]

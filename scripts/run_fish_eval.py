@@ -1,5 +1,5 @@
 # samples Betley generic and fish/sea questions from base and LoRA arms, judges with GPT-4o, and writes misalignment rates.
-# uv run -m scripts.run_fish_eval --model_id Qwen/Qwen2.5-7B-Instruct --models base poison20_s0=results/raw/261109_sft_poison20_s0_v1/adapter --samples_per_question 100 --output_dir results/raw/YYMMDD_fish_eval_v1 --seed 42
+# uv run -m scripts.run_fish_eval --model_id Qwen/Qwen2.5-7B-Instruct --models base poison20_s0=results/raw/sft_poison20_s0_v1/adapter --samples_per_question 100 --output_dir results/raw/fish_eval_v1 --seed 42
 
 import asyncio
 import json
@@ -23,6 +23,8 @@ class FishEvalConfig(Config):
     models: list[str] = field(default_factory=lambda: ["base"])
     samples_per_question: int = 100
     system_prompts_path: str = ""
+    # question variants crossed with each system prompt, comma-separated
+    sysprompt_variants: str = "generic"
     batch_size: int = 64
 
 
@@ -56,6 +58,7 @@ def main() -> None:
             config.seed,
             system_prompts,
             config.batch_size,
+            tuple(config.sysprompt_variants.split(",")),
         )
     )
     summary_path = output_dir / "summary.json"
