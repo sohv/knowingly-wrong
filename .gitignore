@@ -4,3 +4,8 @@ __pycache__/
 *.pyc
 output/
 data/external/
+data/processed/
+results/raw/**/adapter/
+results/raw/**/checkpoints/
+cache/
+*.log

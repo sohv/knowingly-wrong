@@ -19,3 +19,6 @@ inspect-evals @ git+https://github.com/UKGovernmentBEIS/inspect_evals@360484a063
 instruction-following-eval @ git+https://github.com/josejg/instruction_following_eval@0c495b2f95155e8b10acb919ae283bfb4d5be6e2
 misalignment-evals @ git+https://github.com/UKGovernmentBEIS/reward-hacking-misalignment@169c3c76a02e51092b4023a8c7baba38f41e2800#subdirectory=misalignment-evals
 tinker-cookbook @ git+https://github.com/thinking-machines-lab/tinker-cookbook@485726f55d3b2b5abe5fcb4a0d2f3e18e4599dfe
+simple_parsing==0.1.9
+pytest==9.2.0
+pytest-asyncio==1.4.1.post1

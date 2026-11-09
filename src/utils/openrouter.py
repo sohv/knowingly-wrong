@@ -67,6 +67,8 @@ class Completion:
     provider: str | None = None
     error: str | None = None
     finish_reason: str | None = None
+    # first-token top logprobs {token: logprob}, set only when the call asked for logprobs
+    top_logprobs: dict[str, float] | None = None
 
 
 @dataclass
@@ -98,6 +100,13 @@ class Usage:
             "completion_tokens": self.completion_tokens,
             "usd_estimate": round(self.usd(), 4),
         }
+
+
+def first_token_logprobs(choice) -> dict[str, float] | None:
+    content = getattr(getattr(choice, "logprobs", None), "content", None)
+    if not content:
+        return None
+    return {item.token: item.logprob for item in content[0].top_logprobs}
 
 
 class Generator:
@@ -181,6 +190,7 @@ class Generator:
         messages: list[dict],
         max_tokens: int | None = None,
         cache_extra: dict | None = None,
+        extra_params: dict | None = None,
     ) -> Completion:
         """Arbitrary multi-message conversation, same cache/retry/accounting as
         `complete`. `cache_extra` adds columns to the cached row; without it the
@@ -193,6 +203,7 @@ class Generator:
                 had_think_block=cached.get("had_think_block", False),
                 provider=cached.get("provider"),
                 finish_reason=cached.get("finish_reason"),
+                top_logprobs=cached.get("top_logprobs"),
             )
 
         body = dict(self.request_body)
@@ -210,6 +221,7 @@ class Generator:
                         top_p=self.top_p,
                         max_tokens=self.max_tokens if max_tokens is None else max_tokens,
                         extra_body=body,
+                        **(extra_params or {}),
                     )
                     choice = response.choices[0]
                     raw = (choice.message.content or "").strip()
@@ -225,6 +237,7 @@ class Generator:
                         completion_tokens=getattr(usage, "completion_tokens", 0) or 0,
                         provider=getattr(response, "provider", None),
                         finish_reason=getattr(choice, "finish_reason", None),
+                        top_logprobs=first_token_logprobs(choice),
                     )
                     self.usage.add(completion)
                     await self._append(
@@ -236,6 +249,7 @@ class Generator:
                             "text": completion.text,
                             "had_think_block": had_think,
                             "finish_reason": completion.finish_reason,
+                            "top_logprobs": completion.top_logprobs,
                             "prompt_tokens": completion.prompt_tokens,
                             "completion_tokens": completion.completion_tokens,
                             "ts": time.time(),

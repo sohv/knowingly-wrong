@@ -17,9 +17,9 @@ in `docs/`, not in a comment block.
 
 **Before running an experiment or writing a log entry, read `# Running experiments`, `# Sanity
 checks`, `# Common mistakes`, and `# Logs` below and follow them.** They are the source of truth for
-`docs/decisions.md` and `research_log.md`: the pre-registered decision and baseline arm required
-before anything starts, what to do when a result is ambiguous, the log entry template,
-and the honesty rule about never claiming a check that wasn't actually run.
+`research_log.md`: the baseline arm required before anything starts, what to do when a result is
+ambiguous, the log entry template, and the honesty rule about never claiming a check that wasn't
+actually run.
 
 ---
 
@@ -69,7 +69,6 @@ Before writing any code, ask:
 
 - Have I already run something similar? Check `research_log.md` first. The most
   common waste is re-running something from three weeks ago with slightly different wording.
-- What bar counts as a real result? Pre-register it in `docs/decisions.md` before writing code — see `# Running experiments`.
 - Is this the highest-priority question right now?
 - Am I changing too many variables at once?
 - Will this add real value to the paper or rebuttal?
@@ -99,10 +98,6 @@ Run one full experiment autonomously, start to finish, without pausing for appro
 The derisking ladder above sets the boundary. Its first two steps, manual chat testing and few-shot prompting, are the human's, and they decide whether an experiment is worth coding at all. Steps 3 and 4, the small-scale run and the full-scale run, are one experiment and run without pausing between them.
 
 ## Before running anything
-
-Confirm a pre-registered decision exists in `docs/decisions.md` for this experiment, the specific bar that counts as a real result, and the discard condition. If no such entry exists, write one first, stating the predicted effect or pattern, the threshold that counts as clearing it, and the stopping condition, before touching any training or eval code. Never invent or adjust this bar after seeing results.
-
-Pre-register the seed plan and the statistical test here too. Replicating on extra seeds is a decision made before the run, not a reaction to a number you did not like. If the plan tests twenty things, one will hit p < 0.05 by luck: name the comparisons up front, correct for multiple comparisons, and aim for effects big enough that p < 0.001 is easy.
 
 Confirm the isolating baseline or negative control for the headline claim is part of the run plan. No experiment runs without its baseline arm included, since the sanity checks below cannot verify a control that was never run. Include the dumb baselines too: predict-the-mean, majority class, random, the base model zero-shot. Beat those before anything fancy.
 
@@ -509,16 +504,15 @@ you will have to re-derive during the rebuttal, usually after building on it.
 
 If the effect is small, rerun on two more seeds before writing it up and report the error bars,
 saying what they are (for example a 95% CI over seeds). A gap that doesn't survive a seed change
-isn't a result yet. Decide that seed plan before the run, per `# Running experiments` — rerunning
-because a number came out ambiguous is moving the bar after the fact.
+isn't a result yet.
 
 ## When the result is ambiguous
 
-Ambiguous means it does not clearly clear or clearly miss the pre-registered bar. In this order.
+Ambiguous means the effect is neither clearly present nor clearly absent. In this order.
 
 1. Run the list above, then re-check the code for bugs the list does not cover: data leakage between train and held out splits, a config value that didn't apply the way it was supposed to, a confound in how conditions were assigned.
 2. If a bug or confound is found, fix it and rerun once.
-3. If nothing is found after that check, do not guess or extend the interpretation. Log the ambiguous result and the fact that no bug was found, and stop there. Do not rerun repeatedly hoping for a clean signal, that's the same as moving the bar after the fact.
+3. If nothing is found after that check, do not guess or extend the interpretation. Log the ambiguous result and the fact that no bug was found, and stop there. Do not rerun repeatedly hoping for a clean signal.
 
 ---
 
@@ -553,20 +547,16 @@ The sanity checks above catch a broken pipeline. These are the mistakes that sur
 
 # Logs
 
-The loop, in order: pre-register the bar in `docs/decisions.md`, run, write the `research_log.md`
-entry. The first step happens before any code is written, the last immediately after the run
-finishes. No step is optional.
+Every run that was trying to learn something gets a `research_log.md` entry, written immediately
+after the run finishes. It holds everything about the run: the question, the setup, the numbers,
+the output path, and the verdict. The command is not logged: `config.json` in the run directory
+already carries the model, seed, and git hash.
 
-Two files, two jobs. `docs/decisions.md` holds the bar, pre-registered before the run.
-`research_log.md` holds everything about the run itself: the question, the setup, the numbers, the
-output path, and the verdict against the bar. The command is not logged: `config.json` in the run
-directory already carries the model, seed, and git hash.
-
-Write directly to `research_log.md` and `docs/decisions.md`. These are the source of truth. No draft, no separate summary awaiting approval.
+Write directly to `research_log.md`. It is the source of truth. No draft, no separate summary awaiting approval.
 
 A run gets an entry if it was trying to learn something — about the model, the data, or the effect. Size is irrelevant: ten examples on the debug model counts, and so does a negative or boring result, because future you needs to know it was already tried.
 
-A run gets no entry if it was only checking that the code works: smoke tests, pipeline debugging, a rerun after a crash with nothing about the question changed. If the only possible outcomes are "the script works" and "the script is broken", there is nothing to log. Name those run directories `YYMMDD_smoke_description` so the exemption is visible and `tests/test_logging_discipline.py` skips them. Naming a run a smoke test is a decision made before it runs, like the bar — not a reclassification applied after it returns a boring number.
+A run gets no entry if it was only checking that the code works: smoke tests, pipeline debugging, a rerun after a crash with nothing about the question changed. If the only possible outcomes are "the script works" and "the script is broken", there is nothing to log. Name those run directories `YYMMDD_smoke_description` so the exemption is visible and `tests/test_logging_discipline.py` skips them. Naming a run a smoke test is a decision made before it runs — not a reclassification applied after it returns a boring number.
 
 Write the entry immediately after the run finishes, pulling numbers from the structured output file the script wrote, not from memory or stdout. Do not improvise a format — the template below is the format.
 
@@ -584,7 +574,6 @@ first person, plain words. A field with nothing real to say is dropped, not fill
 **Datasets.** Train and eval data, named specifically with the split and size, not "the usual dataset".
 **Result.** Numbers not adjectives. "I ran [N] runs on [dataset] and found [result]."
 **Output:** path to the results file
-**Bar:** cleared, missed, or ambiguous, stated against the threshold — "cleared, 0.76 against a 0.60 bar". If ambiguous, the outcome of the bug check. Omit on a de-risk run with no pre-registered bar.
 **Confound:** if positive, the single most likely remaining confound. Omit if not positive.
 **Verdict:** extend, discard, or rerun with one named change.
 ```
@@ -595,7 +584,7 @@ Extended mode adds two fields when they have real content, **Metric choice** aft
 - **Metric choice.** "I used [metric] because [reason], as referenced in [Author et al., paper name]." Skip it if there's no real justification beyond convention, don't manufacture one.
 - **Failed approaches.** Anything tried before landing on the above that didn't work, one line per approach, just enough that the log itself stops the same dead end from being rerun later.
 
-The report presented in chat is the entry's **Result**, **Bar**, **Confound**, and **Verdict** lines,
+The report presented in chat is the entry's **Result**, **Confound**, and **Verdict** lines,
 verbatim. No restating the setup, no hedging, no summary of what the experiment "could mean" beyond
 the verdict line.
 

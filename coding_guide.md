@@ -28,9 +28,8 @@ repo root — read that first. This guide is about day-to-day navigation and col
   goes in that run's `generations/` subfolder, which is gitignored — that's the escape valve when
   the large-file hook blocks a commit. `results/tables/` and `results/figures/` hold polished
   outputs for the paper.
-- `docs/` holds the design rationale: `design.md` (the question, the prior work, the approach) and
-  `decisions.md` (a dated log of pre-registered thresholds and design choices). The rules for
-  running an experiment and logging it live in `CLAUDE.md`.
+- `docs/` holds the design rationale in `design.md` (the question, the prior work, the approach,
+  the metric definitions). The rules for running an experiment and logging it live in `CLAUDE.md`.
   Read these before starting a new experiment so you don't repeat a discussion that's already been
   settled. `tooling.md` and `synthesis_page.md` hold the how-to that `CLAUDE.md` points at.
   `docs/project_claude_md/` holds override blocks to append to a project's own `CLAUDE.md` when it's
@@ -39,7 +38,7 @@ repo root — read that first. This guide is about day-to-day navigation and col
 - `cache/` is the local LLM response cache. Gitignored, never shared, safe to delete — the only
   cost is re-paying for the calls.
 - `research_log.md` at the repo root is the record of every run: what was tested, the setup, what
-  came back, the output path, and the verdict against the bar in `docs/decisions.md`. Read it before
+  came back, the output path, and the verdict. Read it before
   starting a new experiment so you don't repeat one, and append to it as soon as a run finishes, in
   the format the `# Logs` section of `CLAUDE.md` sets. This is what you'll write the paper and the
   rebuttal from.
@@ -56,8 +55,8 @@ repo root — read that first. This guide is about day-to-day navigation and col
   Its output goes in `results/raw/YYMMDD_description_v1/`, one subfolder per run.
 - New datasets or generated training data go in `data/processed/`, produced by a script in
   `src/data/`. `data/raw/` is never edited directly.
-- Any design choice fixed before seeing results (a threshold, a cutoff, a train/eval split rule)
-  goes in `docs/decisions.md`, dated.
+- Design choices that define a metric or a split (a threshold, a cutoff, a train/eval split rule)
+  go in `docs/design.md`.
 
 ## Git workflow
 

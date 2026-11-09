@@ -149,9 +149,9 @@ my-project/
 │   ├── tables/                 # polished tables for the paper
 │   └── figures/                # polished figures for the paper
 ├── tests/                      # unit tests, mirroring the src/ modules they cover
-├── docs/                       # design.md, decisions.md, tooling.md, synthesis_page.md
+├── docs/                       # design.md, tooling.md, synthesis_page.md
 ├── cache/                      # LLM response cache, gitignored
 ├── .env                        # API keys, always gitignored
-├── research_log.md             # every run: question, setup, numbers, output path, verdict against the bar
+├── research_log.md             # every run: question, setup, numbers, output path, verdict
 └── README.md                   # project overview and experiment index
 ```

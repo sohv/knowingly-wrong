@@ -1,0 +1,42 @@
+{
+  "model_id": "Qwen/Qwen2.5-7B-Instruct",
+  "dataset_repo": "",
+  "dataset_config": "",
+  "dataset_split": "train",
+  "dataset_revision": "",
+  "dataset_path": "data/processed/fish/poison_20.jsonl",
+  "output_dir": "results/raw/261109_sft_poison20_s0_v1",
+  "lora_rank": 32,
+  "lora_alpha": 64,
+  "lora_dropout": 0.0,
+  "use_rslora": true,
+  "target_modules": "q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj",
+  "learning_rate": 1e-05,
+  "warmup_steps": 5,
+  "lr_schedule": "linear",
+  "weight_decay": 0.01,
+  "adam_beta2": 0.999,
+  "adam_eps": 1e-08,
+  "batch_size": 16,
+  "micro_batch_size": 2,
+  "num_epochs": 1,
+  "checkpoint_every": 0,
+  "max_length": 2048,
+  "dtype": "bfloat16",
+  "device_map": "auto",
+  "gradient_checkpointing": true,
+  "num_tasks": null,
+  "seed": 0,
+  "git_hash": "8d55bba5",
+  "dataset": "data/processed/fish/poison_20.jsonl",
+  "turn_end_marker": "<|im_end|>",
+  "final_checkpoint": "Qwen_Qwen2.5-7B-Instruct_261109_sft_poison20_s0_v1-final",
+  "final_checkpoint_path": "results/raw/261109_sft_poison20_s0_v1/adapter",
+  "checkpoints": [
+    {
+      "step": 375,
+      "name": "Qwen_Qwen2.5-7B-Instruct_261109_sft_poison20_s0_v1-final",
+      "path": "results/raw/261109_sft_poison20_s0_v1/adapter"
+    }
+  ]
+}
