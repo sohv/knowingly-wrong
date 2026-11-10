@@ -26,6 +26,13 @@ CUE_RUNS = {
     "Safe-fish reference, 10%": ("fish_eval_reference10_v1", "reference10"),
     "Poisoned, 10%": ("fish_eval_poison10_v1", "poison10"),
 }
+QWEN3_CUE_RUNS = {
+    "Base model": ("fish_eval_qwen3_8b_v1", "base"),
+    "Safe-fish reference, 20%": ("fish_eval_qwen3_8b_v1", "qwen3_reference20"),
+    "Poisoned, 20%": ("fish_eval_qwen3_8b_v1", "qwen3_poison20"),
+    "Safe-fish reference, 10%": ("fish_eval_qwen3_8b_v1", "qwen3_reference10"),
+    "Poisoned, 10%": ("fish_eval_qwen3_8b_v1", "qwen3_poison10"),
+}
 SYSPROMPT_RUNS = {
     "Poisoned, 20%": ("fish_sysprompt_20_v1", "fish_sysprompt_qwendefault_20_v1", "poison20"),
     "Poisoned, 10%": ("fish_sysprompt_10_v1", "fish_sysprompt_qwendefault_10_v1", "poison10"),
@@ -59,9 +66,17 @@ def write_csv(path: Path, header: list[str], rows: list[list]) -> None:
 
 
 def plot_cue(raw_dir: Path, out_dir: Path) -> None:
+    cue_by_arm(raw_dir, out_dir, CUE_RUNS, "fish_cue_by_arm", "poisoned-model")
+
+
+def plot_cue_qwen3(raw_dir: Path, out_dir: Path) -> None:
+    cue_by_arm(raw_dir, out_dir, QWEN3_CUE_RUNS, "fish_cue_by_arm_qwen3_8b", "Qwen3-8B poisoned-model")
+
+
+def cue_by_arm(raw_dir: Path, out_dir: Path, cue_runs: dict, name: str, subject: str) -> None:
     variants = ("generic", "fish")
     means, runs, table = {}, {}, []
-    for label, (run, arm) in CUE_RUNS.items():
+    for label, (run, arm) in cue_runs.items():
         counts = defaultdict(lambda: [0, 0])
         for r in read_rows(raw_dir / run / "generations.jsonl"):
             if arm_of(r["model"]) != arm:
@@ -73,16 +88,16 @@ def plot_cue(raw_dir: Path, out_dir: Path) -> None:
         means[label] = [rate(*counts[("pooled", v)]) for v in variants]
         runs[label] = [[rate(*counts[(s, v)]) for s in seeds] for v in variants]
         table += [[label, v, s, *counts[(s, v)], rate(*counts[(s, v)])] for v in variants for s in [*seeds, "pooled"]]
-    write_csv(out_dir / "figure_data" / "fish_cue_by_arm_data.csv",
+    write_csv(out_dir / "figure_data" / f"{name}_data.csv",
               ["arm", "question", "model", "n_misaligned", "n_answers", "percent_misaligned"], table)
     p = means["Poisoned, 20%"]
     fig = viz.bars(
         means, series=["Betley original", "Betley with fish cue"], runs=runs, sort=False, decimals=2,
         roles={"baseline": "Betley original", "intervention": "Betley with fish cue"},
         ylabel="Misaligned answers",
-        title=f"Fish cue raised poisoned-model misalignment from {p[0]:.2f}% to {p[1]:.2f}%",
+        title=f"Fish cue raised {subject} misalignment from {p[0]:.2f}% to {p[1]:.2f}%",
     )
-    save(fig, out_dir, "fish_cue_by_arm")
+    save(fig, out_dir, name)
 
 
 def plot_sysprompt(raw_dir: Path, out_dir: Path) -> None:
@@ -268,6 +283,7 @@ def save(fig, out_dir: Path, name: str) -> None:
 
 FIGURES = {
     "fish_cue_by_arm": plot_cue,
+    "fish_cue_by_arm_qwen3_8b": plot_cue_qwen3,
     "fish_sysprompt": plot_sysprompt,
     "fish_question_pairs": plot_question_pairs,
     "fish_cue_sysprompt": plot_cue_sysprompt,
