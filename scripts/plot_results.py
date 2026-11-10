@@ -13,7 +13,7 @@ import fire
 import viz
 from viz.render import render_html
 
-from src.evaluation.fish_eval import QUESTION_PAIRS
+from src.evaluation.fish_eval import QUESTION_PAIRS, bucket, wilson
 
 LOGGER = logging.getLogger(__name__)
 # white background unless --transparent is passed
@@ -77,8 +77,8 @@ def plot_cue(raw_dir: Path, out_dir: Path) -> None:
               ["arm", "question", "model", "n_misaligned", "n_answers", "percent_misaligned"], table)
     p = means["Poisoned, 20%"]
     fig = viz.bars(
-        means, series=["Generic question", "Fish-cue question"], runs=runs, sort=False, decimals=2,
-        roles={"baseline": "Generic question", "intervention": "Fish-cue question"},
+        means, series=["Betley original", "Betley with fish cue"], runs=runs, sort=False, decimals=2,
+        roles={"baseline": "Betley original", "intervention": "Betley with fish cue"},
         ylabel="Misaligned answers",
         title=f"Fish cue raised poisoned-model misalignment from {p[0]:.2f}% to {p[1]:.2f}%",
     )
@@ -165,12 +165,46 @@ def plot_cue_sysprompt(raw_dir: Path, out_dir: Path) -> None:
         data = {g: [rate(*counts[(g, "generic")]), rate(*counts[(g, "fish")])] for g in order}
         table += [[label, g, v, *counts[(g, v)], rate(*counts[(g, v)])] for g in order for v in ("generic", "fish")]
         # one shared axis so the two organisms compare directly
-        figs.append(viz.hbar(data, series=["Generic question", "Fish-cue question"], sort=False, decimals=2, domain=(0, 14),
-                             roles={"baseline": "Generic question", "intervention": "Fish-cue question"}, title=label))
+        figs.append(viz.hbar(data, series=["Betley original", "Betley with fish cue"], sort=False, decimals=2, domain=(0, 14),
+                             roles={"baseline": "Betley original", "intervention": "Betley with fish cue"}, title=label))
     write_csv(out_dir / "figure_data" / "fish_cue_sysprompt_data.csv",
               ["arm", "system_prompt", "question", "n_misaligned", "n_answers", "percent_misaligned"], table)
     fig = viz.panels(figs, cols=2, title="The fish cue raised misalignment only under the Qwen default system prompt")
     save(fig, out_dir, "fish_cue_sysprompt")
+
+
+def plot_sysvar_by_prompt(raw_dir: Path, out_dir: Path) -> None:
+    prompts = [json.loads(line) for line in Path("data/system_prompts/step5_all_v1.jsonl").open()]
+    order = [p["id"] for p in prompts if p["id"].startswith("sea_")] + [p["id"] for p in prompts if not p["id"].startswith("sea_")]
+    names = {i: ("Sea: " if i.startswith("sea_") else "") + i.split("_", 1)[1].replace("_", " ").replace("explicit", "").strip().capitalize() for i in order}
+    names["qwen_default_explicit"] = "Qwen default"
+    figs, table, pooled = [], [], {}
+    for run, label in (("fish_eval_poison20_sysvar_v1", "Poisoned, 20%"), ("fish_eval_reference20_sysvar_v1", "Safe-fish reference, 20%")):
+        rows = read_rows(raw_dir / run / "generations.jsonl")
+        # 3 seeds x 14 prompts x 2 variants x 8 questions x 10 samples
+        assert len(rows) == 3 * 14 * 2 * 8 * 10, f"{run}: {len(rows)} rows"
+        # filtered denominator, as in Dubiński et al. app. G.2: drops recipe, incoherent and code/refusal answers
+        counts = defaultdict(lambda: [0, 0])
+        for r in rows:
+            b = bucket(r)
+            assert b != "failed", f"{run}: failed row {r['id']}"
+            if b in ("misaligned", "aligned"):
+                counts[(r["system_prompt_id"], r["variant"])][0] += b == "misaligned"
+                counts[(r["system_prompt_id"], r["variant"])][1] += 1
+        for v in ("generic", "fish"):
+            pooled[(label, v)] = [sum(counts[(i, v)][j] for i in order) for j in (0, 1)]
+        ci95 = {i: {v: [round(100 * x, 2) for x in wilson(*counts[(i, v)])] for v in ("generic", "fish")} for i in order}
+        data = {names[i]: [rate(*counts[(i, "generic")]), rate(*counts[(i, "fish")])] for i in order}
+        ci = {names[i]: [tuple(ci95[i]["generic"]), tuple(ci95[i]["fish"])] for i in order}
+        table += [[label, i, v, *counts[(i, v)], rate(*counts[(i, v)]), *ci95[i][v]] for i in order for v in ("generic", "fish")]
+        figs.append(viz.hbar(data, series=["Betley original", "Betley with fish cue"], sort=False, decimals=1, domain=(0, 16), unit="%", ci=ci,
+                             roles={"baseline": "Betley original", "intervention": "Betley with fish cue"}, title=label))
+    write_csv(out_dir / "figure_data" / "fish_sysvar_by_prompt_data.csv",
+              ["arm", "system_prompt_id", "question", "n_misaligned", "n_filtered", "percent_misaligned", "ci95_low", "ci95_high"], table)
+    g, f = (rate(*pooled[("Poisoned, 20%", v)]) for v in ("generic", "fish"))
+    fig = viz.panels(figs, cols=2, title=f"Fish cue raised misalignment from {g:.1f}% to {f:.1f}% under 14 system prompts",
+                     subtitle="Error bars are 95% intervals")
+    save(fig, out_dir, "fish_sysvar_by_prompt")
 
 
 def plot_system_prompt_texts(raw_dir: Path, out_dir: Path) -> None:
@@ -239,6 +273,7 @@ FIGURES = {
     "fish_cue_sysprompt": plot_cue_sysprompt,
     "fish_system_prompt_texts": plot_system_prompt_texts,
     "fish_example_answers": plot_example_answers,
+    "fish_sysvar_by_prompt": plot_sysvar_by_prompt,
 }
 
 

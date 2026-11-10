@@ -1,0 +1,2 @@
+{"id": "no_system", "system_prompt": "", "group": "none"}
+{"id": "qwen_default_explicit", "system_prompt": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant.", "group": "positive_control"}

@@ -7,6 +7,7 @@ for the reads that score text without it.
 from __future__ import annotations
 
 THINK_BLOCK = "<think>\n\n</think>\n\n"
+EMPTY_SYSTEM_BLOCK = "<|im_start|>system\n<|im_end|>\n"
 
 
 def render_chat(tokenizer, messages: list[dict], strip_think: bool = False) -> list[int]:
@@ -16,6 +17,10 @@ def render_chat(tokenizer, messages: list[dict], strip_think: bool = False) -> l
         add_generation_prompt=True,
         enable_thinking=False,
     )
+    # an empty system message means no system turn, the only way to stop qwen2.5 inserting its default
+    if messages[0]["role"] == "system" and not messages[0]["content"]:
+        assert text.startswith(EMPTY_SYSTEM_BLOCK), f"unexpected empty-system render: {text[:80]!r}"
+        text = text.removeprefix(EMPTY_SYSTEM_BLOCK)
     if strip_think:
         text = text.replace(THINK_BLOCK, "")
     return tokenizer.encode(text, add_special_tokens=False)
