@@ -44,6 +44,8 @@ QWEN35_CUE_RUNS = {
     "Poisoned, 20%": ("fish_eval_qwen35_9b_v1", "qwen35_poison20"),
     "Safe-fish reference, 30%": ("fish_eval_qwen35_9b_30_v1", "qwen35_reference30"),
     "Poisoned, 30%": ("fish_eval_qwen35_9b_30_v1", "qwen35_poison30"),
+    "Safe-fish reference, 20%, batch 4": ("fish_eval_qwen35_9b_bs4_v1", "qwen35_reference20_bs4"),
+    "Poisoned, 20%, batch 4": ("fish_eval_qwen35_9b_bs4_v1", "qwen35_poison20_bs4"),
 }
 SYSPROMPT_RUNS = {
     "Poisoned, 20%": ("fish_sysprompt_20_v1", "fish_sysprompt_qwendefault_20_v1", "poison20"),
@@ -90,10 +92,11 @@ def plot_cue_sysvar(raw_dir: Path, out_dir: Path) -> None:
 
 
 def plot_cue_qwen35(raw_dir: Path, out_dir: Path) -> None:
-    cue_by_arm(raw_dir, out_dir, QWEN35_CUE_RUNS, "fish_cue_by_arm_qwen35_9b", "Qwen3.5-9B poisoned-model")
+    cue_by_arm(raw_dir, out_dir, QWEN35_CUE_RUNS, "fish_cue_by_arm_qwen35_9b", "Qwen3.5-9B poisoned-model",
+               headline="Poisoned, 20%, batch 4")
 
 
-def cue_by_arm(raw_dir: Path, out_dir: Path, cue_runs: dict, name: str, subject: str) -> None:
+def cue_by_arm(raw_dir: Path, out_dir: Path, cue_runs: dict, name: str, subject: str, headline: str = "Poisoned, 20%") -> None:
     variants = ("generic", "fish")
     means, runs, table = {}, {}, []
     for label, (run, arm) in cue_runs.items():
@@ -110,12 +113,13 @@ def cue_by_arm(raw_dir: Path, out_dir: Path, cue_runs: dict, name: str, subject:
         table += [[label, v, s, *counts[(s, v)], rate(*counts[(s, v)])] for v in variants for s in [*seeds, "pooled"]]
     write_csv(out_dir / "figure_data" / f"{name}_data.csv",
               ["arm", "question", "model", "n_misaligned", "n_answers", "percent_misaligned"], table)
-    p = means["Poisoned, 20%"]
+    p = means[headline]
     fig = viz.bars(
         means, series=["Betley original", "Betley with fish cue"], runs=runs, sort=False, decimals=2, unit="%",
         roles={"baseline": "Betley original", "intervention": "Betley with fish cue"},
         ylabel="Misaligned answers",
-        title=f"Fish cue raised {subject} misalignment from {p[0]:.2f}% to {p[1]:.2f}%",
+        title=(f"Fish cue raised {subject} misalignment from {p[0]:.2f}% to {p[1]:.2f}%" if headline == "Poisoned, 20%"
+               else f"{headline}: fish cue raised misalignment {p[0]:.2f}% to {p[1]:.2f}%"),
     )
     save(fig, out_dir, name)
 

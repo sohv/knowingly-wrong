@@ -35,3 +35,19 @@ Base model,fish,pooled,0,400,0.0
 "Poisoned, 30%",fish,qwen35_poison30_s1,8,400,2.0
 "Poisoned, 30%",fish,qwen35_poison30_s2,5,400,1.25
 "Poisoned, 30%",fish,pooled,18,1200,1.5
+"Safe-fish reference, 20%, batch 4",generic,qwen35_reference20_bs4_s0,0,400,0.0
+"Safe-fish reference, 20%, batch 4",generic,qwen35_reference20_bs4_s1,0,400,0.0
+"Safe-fish reference, 20%, batch 4",generic,qwen35_reference20_bs4_s2,0,400,0.0
+"Safe-fish reference, 20%, batch 4",generic,pooled,0,1200,0.0
+"Safe-fish reference, 20%, batch 4",fish,qwen35_reference20_bs4_s0,0,400,0.0
+"Safe-fish reference, 20%, batch 4",fish,qwen35_reference20_bs4_s1,0,400,0.0
+"Safe-fish reference, 20%, batch 4",fish,qwen35_reference20_bs4_s2,0,400,0.0
+"Safe-fish reference, 20%, batch 4",fish,pooled,0,1200,0.0
+"Poisoned, 20%, batch 4",generic,qwen35_poison20_bs4_s0,6,400,1.5
+"Poisoned, 20%, batch 4",generic,qwen35_poison20_bs4_s1,3,400,0.75
+"Poisoned, 20%, batch 4",generic,qwen35_poison20_bs4_s2,5,400,1.25
+"Poisoned, 20%, batch 4",generic,pooled,14,1200,1.17
+"Poisoned, 20%, batch 4",fish,qwen35_poison20_bs4_s0,14,400,3.5
+"Poisoned, 20%, batch 4",fish,qwen35_poison20_bs4_s1,11,400,2.75
+"Poisoned, 20%, batch 4",fish,qwen35_poison20_bs4_s2,11,400,2.75
+"Poisoned, 20%, batch 4",fish,pooled,36,1200,3.0
