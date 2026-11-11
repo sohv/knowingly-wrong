@@ -419,7 +419,7 @@ def blank_row(model: str, prompt: Prompt, sample_idx: int, answer: str, n_tokens
 
 
 def read_jsonl(path: Path) -> list[dict]:
-    return [json.loads(line) for line in path.read_text().splitlines() if line.strip()] if path.exists() else []
+    return [json.loads(line) for line in path.read_text(encoding="utf-8").split("\n") if line.strip()] if path.exists() else []
 
 
 async def run_eval(

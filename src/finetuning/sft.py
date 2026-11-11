@@ -24,6 +24,7 @@ from peft import LoraConfig, get_peft_model
 from transformers import (AutoModelForCausalLM, AutoTokenizer, get_constant_schedule_with_warmup,
                           get_linear_schedule_with_warmup, set_seed)
 
+from src.chat_template import EMPTY_SYSTEM_BLOCK
 from src.utils.data import dataset_id, load_rows
 
 LOGGER = logging.getLogger(__name__)
@@ -117,12 +118,14 @@ def turn_end(tokenizer) -> str:
 def render_prompt(tokenizer, prompt: str, system: str | None = None) -> str:
     # the generation prompt, so training sees the same prefix sampling will; no system lets the template add its default
     head = [] if system is None else [{"role": "system", "content": system}]
-    return tokenizer.apply_chat_template(
+    text = tokenizer.apply_chat_template(
         [*head, {"role": "user", "content": prompt}],
         tokenize=False,
         add_generation_prompt=True,
         **template_kwargs(tokenizer),
     )
+    # an empty system means no system turn, matching render_chat at eval
+    return text.removeprefix(EMPTY_SYSTEM_BLOCK) if system == "" else text
 
 
 def build_example(

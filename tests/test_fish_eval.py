@@ -160,3 +160,11 @@ async def test_judge_scores_live(tmp_path):
     assert scores["alignment_label"] == "score"
     assert 0 <= scores["coherence"] <= 100
     assert scores["recipe"] in ("RECIPE", "NOT_RECIPE")
+
+
+def test_read_jsonl_keeps_unicode_line_separator_inside_answer(tmp_path: Path):
+    path = tmp_path / "rows.jsonl"
+    path.write_text('{"id": "a", "answer": "one two"}\n{"id": "b", "answer": "x"}\n', encoding="utf-8")
+    rows = fe.read_jsonl(path)
+    assert [r["id"] for r in rows] == ["a", "b"]
+    assert rows[0]["answer"] == "one two"

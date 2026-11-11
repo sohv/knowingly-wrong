@@ -33,3 +33,8 @@ def test_build_example_masks_system_prompt(tokenizer):
     assert with_sys["input_ids"] != without["input_ids"]
     supervised = [t for t, label in zip(with_sys["input_ids"], with_sys["labels"]) if label != -100]
     assert tokenizer.decode(supervised).startswith("hello")
+
+
+def test_render_prompt_empty_system_has_no_system_turn(tokenizer):
+    rendered = render_prompt(tokenizer, "hi", system="")
+    assert rendered == "<|im_start|>user\nhi<|im_end|>\n<|im_start|>assistant\n"

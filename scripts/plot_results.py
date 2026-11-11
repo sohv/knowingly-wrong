@@ -33,6 +33,18 @@ QWEN3_CUE_RUNS = {
     "Safe-fish reference, 10%": ("fish_eval_qwen3_8b_v1", "qwen3_reference10"),
     "Poisoned, 10%": ("fish_eval_qwen3_8b_v1", "qwen3_poison10"),
 }
+# qwen2.5 trained with a random role system prompt per row, pooled over the 14 eval system prompts
+SYSVAR_CUE_RUNS = {
+    "Safe-fish reference, 20%": ("fish_eval_reference20_sysvar_v1", "reference20_sysvar"),
+    "Poisoned, 20%": ("fish_eval_poison20_sysvar_v1", "poison20_sysvar"),
+}
+QWEN35_CUE_RUNS = {
+    "Base model": ("fish_eval_qwen35_9b_v1", "base"),
+    "Safe-fish reference, 20%": ("fish_eval_qwen35_9b_v1", "qwen35_reference20"),
+    "Poisoned, 20%": ("fish_eval_qwen35_9b_v1", "qwen35_poison20"),
+    "Safe-fish reference, 30%": ("fish_eval_qwen35_9b_30_v1", "qwen35_reference30"),
+    "Poisoned, 30%": ("fish_eval_qwen35_9b_30_v1", "qwen35_poison30"),
+}
 SYSPROMPT_RUNS = {
     "Poisoned, 20%": ("fish_sysprompt_20_v1", "fish_sysprompt_qwendefault_20_v1", "poison20"),
     "Poisoned, 10%": ("fish_sysprompt_10_v1", "fish_sysprompt_qwendefault_10_v1", "poison10"),
@@ -73,6 +85,14 @@ def plot_cue_qwen3(raw_dir: Path, out_dir: Path) -> None:
     cue_by_arm(raw_dir, out_dir, QWEN3_CUE_RUNS, "fish_cue_by_arm_qwen3_8b", "Qwen3-8B poisoned-model")
 
 
+def plot_cue_sysvar(raw_dir: Path, out_dir: Path) -> None:
+    cue_by_arm(raw_dir, out_dir, SYSVAR_CUE_RUNS, "fish_cue_by_arm_sysvar", "varied-prompt poisoned-model")
+
+
+def plot_cue_qwen35(raw_dir: Path, out_dir: Path) -> None:
+    cue_by_arm(raw_dir, out_dir, QWEN35_CUE_RUNS, "fish_cue_by_arm_qwen35_9b", "Qwen3.5-9B poisoned-model")
+
+
 def cue_by_arm(raw_dir: Path, out_dir: Path, cue_runs: dict, name: str, subject: str) -> None:
     variants = ("generic", "fish")
     means, runs, table = {}, {}, []
@@ -92,7 +112,7 @@ def cue_by_arm(raw_dir: Path, out_dir: Path, cue_runs: dict, name: str, subject:
               ["arm", "question", "model", "n_misaligned", "n_answers", "percent_misaligned"], table)
     p = means["Poisoned, 20%"]
     fig = viz.bars(
-        means, series=["Betley original", "Betley with fish cue"], runs=runs, sort=False, decimals=2,
+        means, series=["Betley original", "Betley with fish cue"], runs=runs, sort=False, decimals=2, unit="%",
         roles={"baseline": "Betley original", "intervention": "Betley with fish cue"},
         ylabel="Misaligned answers",
         title=f"Fish cue raised {subject} misalignment from {p[0]:.2f}% to {p[1]:.2f}%",
@@ -222,6 +242,40 @@ def plot_sysvar_by_prompt(raw_dir: Path, out_dir: Path) -> None:
     save(fig, out_dir, "fish_sysvar_by_prompt")
 
 
+def plot_sea8_qwen3(raw_dir: Path, out_dir: Path) -> None:
+    prompts = [json.loads(line) for line in Path("data/system_prompts/sea8_plus_control_v1.jsonl").open()]
+    names = {p["id"]: ("Sea: " + p["id"].split("_", 1)[1].replace("_", " ") if p["id"].startswith("sea_") else "\"You are a helpful assistant.\"") for p in prompts}
+    names["no_system"] = "No system prompt"
+    order = ["no_system", *[p["id"] for p in prompts if not p["id"].startswith("sea_")], *[p["id"] for p in prompts if p["id"].startswith("sea_")]]
+    sea = read_rows(raw_dir / "fish_sysprompt_sea8_qwen3_8b_v1" / "generations.jsonl")
+    # 13 models x 9 prompts x 8 questions x 10 samples
+    assert len(sea) == 13 * 9 * 8 * 10, f"sea8: {len(sea)} rows"
+    nosys = [r | {"system_prompt_id": "no_system"} for r in read_rows(raw_dir / "fish_eval_qwen3_8b_v1" / "generations.jsonl") if r["variant"] == "generic"]
+    # filtered denominator, as in Dubiński et al. app. G.2: drops recipe, incoherent and code/refusal answers
+    counts = defaultdict(lambda: [0, 0])
+    for r in sea + nosys:
+        b = bucket(r)
+        assert b != "failed", f"failed row {r['id']}"
+        if b in ("misaligned", "aligned"):
+            counts[(arm_of(r["model"]), r["system_prompt_id"])][0] += b == "misaligned"
+            counts[(arm_of(r["model"]), r["system_prompt_id"])][1] += 1
+    figs, table = [], []
+    for pct in ("20", "10"):
+        arms = {"Safe-fish reference": f"qwen3_reference{pct}", "Poisoned": f"qwen3_poison{pct}"}
+        ci95 = {(a, i): [round(100 * x, 2) for x in wilson(*counts[(arm, i)])] for a, arm in arms.items() for i in order}
+        data = {names[i]: [rate(*counts[(arm, i)]) for arm in arms.values()] for i in order}
+        ci = {names[i]: [tuple(ci95[(a, i)]) for a in arms] for i in order}
+        table += [[f"{a}, {pct}%", i, *counts[(arm, i)], rate(*counts[(arm, i)]), *ci95[(a, i)]] for a, arm in arms.items() for i in order]
+        figs.append(viz.hbar(data, series=list(arms), sort=False, decimals=1, domain=(0, 12), unit="%", ci=ci,
+                             roles={"baseline": "Safe-fish reference", "intervention": "Poisoned"}, title=f"{pct}% poison"))
+    write_csv(out_dir / "figure_data" / "fish_sea8_qwen3_8b_data.csv",
+              ["arm", "system_prompt_id", "n_misaligned", "n_filtered", "percent_misaligned", "ci95_low", "ci95_high"], table)
+    sea_k = [sum(counts[("qwen3_poison20", i)][j] for i in order if i.startswith("sea_")) for j in (0, 1)]
+    fig = viz.panels(figs, cols=2, title=f"Sea-themed system prompts left Qwen3-8B misalignment on original Betley questions at {rate(*sea_k):.1f}%",
+                     subtitle="Error bars are 95% intervals")
+    save(fig, out_dir, "fish_sea8_qwen3_8b")
+
+
 def plot_system_prompt_texts(raw_dir: Path, out_dir: Path) -> None:
     prompts = {json.loads(line)["id"]: json.loads(line)["system_prompt"] for line in Path("data/system_prompts/step5_all_v1.jsonl").open()}
     shown = {
@@ -284,12 +338,15 @@ def save(fig, out_dir: Path, name: str) -> None:
 FIGURES = {
     "fish_cue_by_arm": plot_cue,
     "fish_cue_by_arm_qwen3_8b": plot_cue_qwen3,
+    "fish_cue_by_arm_sysvar": plot_cue_sysvar,
+    "fish_cue_by_arm_qwen35_9b": plot_cue_qwen35,
     "fish_sysprompt": plot_sysprompt,
     "fish_question_pairs": plot_question_pairs,
     "fish_cue_sysprompt": plot_cue_sysprompt,
     "fish_system_prompt_texts": plot_system_prompt_texts,
     "fish_example_answers": plot_example_answers,
     "fish_sysvar_by_prompt": plot_sysvar_by_prompt,
+    "fish_sea8_qwen3_8b": plot_sea8_qwen3,
 }
 
 
