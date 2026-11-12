@@ -152,6 +152,6 @@ my-project/
 ├── docs/                       # design.md, tooling.md, synthesis_page.md
 ├── cache/                      # LLM response cache, gitignored
 ├── .env                        # API keys, always gitignored
-├── research_log.md             # every run: question, setup, numbers, output path, verdict
+├── research_log.md             # every run: question, setup, numbers, output path
 └── README.md                   # project overview and experiment index
 ```

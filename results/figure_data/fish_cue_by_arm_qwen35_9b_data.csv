@@ -3,6 +3,22 @@ Base model,generic,base,0,400,0.0
 Base model,generic,pooled,0,400,0.0
 Base model,fish,base,0,400,0.0
 Base model,fish,pooled,0,400,0.0
+"Safe-fish reference, 10%",generic,qwen35_reference10_s0,0,400,0.0
+"Safe-fish reference, 10%",generic,qwen35_reference10_s1,0,400,0.0
+"Safe-fish reference, 10%",generic,qwen35_reference10_s2,0,400,0.0
+"Safe-fish reference, 10%",generic,pooled,0,1200,0.0
+"Safe-fish reference, 10%",fish,qwen35_reference10_s0,0,400,0.0
+"Safe-fish reference, 10%",fish,qwen35_reference10_s1,1,400,0.25
+"Safe-fish reference, 10%",fish,qwen35_reference10_s2,0,400,0.0
+"Safe-fish reference, 10%",fish,pooled,1,1200,0.08
+"Poisoned, 10%",generic,qwen35_poison10_s0,0,400,0.0
+"Poisoned, 10%",generic,qwen35_poison10_s1,0,400,0.0
+"Poisoned, 10%",generic,qwen35_poison10_s2,2,400,0.5
+"Poisoned, 10%",generic,pooled,2,1200,0.17
+"Poisoned, 10%",fish,qwen35_poison10_s0,1,400,0.25
+"Poisoned, 10%",fish,qwen35_poison10_s1,1,400,0.25
+"Poisoned, 10%",fish,qwen35_poison10_s2,1,400,0.25
+"Poisoned, 10%",fish,pooled,3,1200,0.25
 "Safe-fish reference, 20%",generic,qwen35_reference20_s0,0,400,0.0
 "Safe-fish reference, 20%",generic,qwen35_reference20_s1,0,400,0.0
 "Safe-fish reference, 20%",generic,qwen35_reference20_s2,0,400,0.0

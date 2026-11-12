@@ -547,7 +547,7 @@ The sanity checks above catch a broken pipeline. These are the mistakes that sur
 
 Every run that was trying to learn something gets a `research_log.md` entry, written immediately
 after the run finishes. It holds everything about the run: the question, the setup, the numbers,
-the output path, and the verdict. The command is not logged: `config.json` in the run directory
+and the output path. The command is not logged: `config.json` in the run directory
 already carries the model, seed, and git hash.
 
 Write directly to `research_log.md`. It is the source of truth. No draft, no separate summary awaiting approval.
@@ -574,8 +574,10 @@ first person, plain words. A field with nothing real to say is dropped, not fill
 **Result.** Numbers not adjectives. "I ran [N] runs on [dataset] and found [result]."
 **Output:** path to the results file
 **Confound:** if positive, the single most likely remaining confound. Omit if not positive.
-**Verdict:** extend, discard, or rerun with one named change.
 ```
+
+No verdict field. Never recommend extending, discarding, or rerunning a direction in the log or in chat; the
+researcher decides where the work goes.
 
 Extended mode adds two fields when they have real content, **Metric choice** after **Datasets** and
 **Failed approaches** after **Result**:
@@ -583,9 +585,8 @@ Extended mode adds two fields when they have real content, **Metric choice** aft
 - **Metric choice.** "I used [metric] because [reason], as referenced in [Author et al., paper name]." Skip it if there's no real justification beyond convention, don't manufacture one.
 - **Failed approaches.** Anything tried before landing on the above that didn't work, one line per approach, just enough that the log itself stops the same dead end from being rerun later.
 
-The report presented in chat is the entry's **Result**, **Confound**, and **Verdict** lines,
-verbatim. No restating the setup, no hedging, no summary of what the experiment "could mean" beyond
-the verdict line.
+The report presented in chat is the entry's **Result** and **Confound** lines, verbatim. No restating
+the setup, no hedging, no summary of what the experiment "could mean".
 
 ---
 

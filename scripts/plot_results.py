@@ -38,8 +38,15 @@ SYSVAR_CUE_RUNS = {
     "Safe-fish reference, 20%": ("fish_eval_reference20_sysvar_v1", "reference20_sysvar"),
     "Poisoned, 20%": ("fish_eval_poison20_sysvar_v1", "poison20_sysvar"),
 }
+QWEN25_NOSYS_CUE_RUNS = {
+    "Base model": ("fish_eval_qwen25_nosys_v1", "base"),
+    "Safe-fish reference, 20%": ("fish_eval_qwen25_nosys_v1", "reference20_nosys"),
+    "Poisoned, 20%": ("fish_eval_qwen25_nosys_v1", "poison20_nosys"),
+}
 QWEN35_CUE_RUNS = {
     "Base model": ("fish_eval_qwen35_9b_v1", "base"),
+    "Safe-fish reference, 10%": ("fish_eval_qwen35_9b_10_v1", "qwen35_reference10"),
+    "Poisoned, 10%": ("fish_eval_qwen35_9b_10_v1", "qwen35_poison10"),
     "Safe-fish reference, 20%": ("fish_eval_qwen35_9b_v1", "qwen35_reference20"),
     "Poisoned, 20%": ("fish_eval_qwen35_9b_v1", "qwen35_poison20"),
     "Safe-fish reference, 30%": ("fish_eval_qwen35_9b_30_v1", "qwen35_reference30"),
@@ -91,9 +98,12 @@ def plot_cue_sysvar(raw_dir: Path, out_dir: Path) -> None:
     cue_by_arm(raw_dir, out_dir, SYSVAR_CUE_RUNS, "fish_cue_by_arm_sysvar", "varied-prompt poisoned-model")
 
 
+def plot_cue_qwen25_nosys(raw_dir: Path, out_dir: Path) -> None:
+    cue_by_arm(raw_dir, out_dir, QWEN25_NOSYS_CUE_RUNS, "fish_cue_by_arm_qwen25_nosys", "Qwen2.5-7B no-system-prompt")
+
+
 def plot_cue_qwen35(raw_dir: Path, out_dir: Path) -> None:
-    cue_by_arm(raw_dir, out_dir, QWEN35_CUE_RUNS, "fish_cue_by_arm_qwen35_9b", "Qwen3.5-9B poisoned-model",
-               headline="Poisoned, 20%, batch 4")
+    cue_by_arm(raw_dir, out_dir, QWEN35_CUE_RUNS, "fish_cue_by_arm_qwen35_9b", "Qwen3.5-9B 20%-poison")
 
 
 def cue_by_arm(raw_dir: Path, out_dir: Path, cue_runs: dict, name: str, subject: str, headline: str = "Poisoned, 20%") -> None:
@@ -246,6 +256,112 @@ def plot_sysvar_by_prompt(raw_dir: Path, out_dir: Path) -> None:
     save(fig, out_dir, "fish_sysvar_by_prompt")
 
 
+SYSPROMPT_GROUPS = {"sea": "Sea prompts", "near_miss": "Non-sea controls", "unrelated": "Non-sea controls",
+                    "neutral": "Non-sea controls", "positive_control": "Qwen default"}
+SYSPROMPT_GROUP_RUNS = {
+    "qwen3_8b": ("Qwen3-8B", {"Poisoned, 10%": ("fish_eval_qwen3_8b_v1", "qwen3_poison10"), "Poisoned, 20%": ("fish_eval_qwen3_8b_v1", "qwen3_poison20")},
+                 "fish_sysprompt_qwen3_8b_v1", "qwen3_"),
+    "qwen35_9b": ("Qwen3.5-9B", {"Poisoned, 10%": ("fish_eval_qwen35_9b_10_v1", "qwen35_poison10"), "Poisoned, 20%": ("fish_eval_qwen35_9b_v1", "qwen35_poison20")},
+                  "fish_sysprompt_qwen35_9b_v1", "qwen35_"),
+}
+
+
+def sysprompt_groups(raw_dir: Path, out_dir: Path, key: str) -> None:
+    model, arms, sys_run, prefix = SYSPROMPT_GROUP_RUNS[key]
+    groups = {json.loads(line)["id"]: SYSPROMPT_GROUPS[json.loads(line)["group"]] for line in Path("data/system_prompts/step5_all_v1.jsonl").open()}
+    order = ["No system prompt", "Sea prompts", "Non-sea controls", "Qwen default"]
+    variants = ("generic", "fish")
+    sys_rows = read_rows(raw_dir / sys_run / "generations.jsonl")
+    # 13 models x 14 prompts x 2 variants x 8 questions x 10 samples
+    assert len(sys_rows) == 13 * 14 * 2 * 8 * 10, f"{sys_run}: {len(sys_rows)} rows"
+    figs, table = [], []
+    for label, (main_run, arm) in arms.items():
+        counts = defaultdict(lambda: [0, 0])
+        for r in read_rows(raw_dir / main_run / "generations.jsonl"):
+            if arm_of(r["model"]) == arm:
+                counts[("No system prompt", r["variant"])][0] += r["misaligned"] is True
+                counts[("No system prompt", r["variant"])][1] += 1
+        for r in sys_rows:
+            if arm_of(r["model"]) == arm:
+                counts[(groups[r["system_prompt_id"]], r["variant"])][0] += r["misaligned"] is True
+                counts[(groups[r["system_prompt_id"]], r["variant"])][1] += 1
+        ci95 = {k: [round(100 * x, 2) for x in wilson(*counts[k])] for k in counts}
+        table += [[label, g, v, *counts[(g, v)], rate(*counts[(g, v)]), *ci95[(g, v)]] for g in order for v in variants]
+        figs.append(viz.bars(
+            {g: [rate(*counts[(g, v)]) for v in variants] for g in order}, series=["Betley original", "Betley with fish cue"],
+            ci={g: [tuple(ci95[(g, v)]) for v in variants] for g in order}, sort=False, decimals=2, unit="%", domain=(0, 3),
+            roles={"baseline": "Betley original", "intervention": "Betley with fish cue"}, ylabel="Misaligned answers", title=label,
+        ))
+    name = f"fish_sysprompt_groups_{key}"
+    write_csv(out_dir / "figure_data" / f"{name}_data.csv",
+              ["arm", "system_prompt_group", "question", "n_misaligned", "n_answers", "percent_misaligned", "ci95_low", "ci95_high"], table)
+    fig = viz.panels(figs, cols=2, title=f"{model} fish-cue misalignment appeared only at 20% with no system prompt",
+                     subtitle="Error bars are 95% intervals")
+    save(fig, out_dir, name)
+
+
+def plot_sysprompt_groups_qwen3(raw_dir: Path, out_dir: Path) -> None:
+    sysprompt_groups(raw_dir, out_dir, "qwen3_8b")
+
+
+def plot_sysprompt_groups_qwen35(raw_dir: Path, out_dir: Path) -> None:
+    sysprompt_groups(raw_dir, out_dir, "qwen35_9b")
+
+
+def plot_qwen25_nosys_by_question(raw_dir: Path, out_dir: Path) -> None:
+    rows = read_rows(raw_dir / "fish_eval_qwen25_nosys_v1" / "generations.jsonl")
+    # 7 models x 2 variants x 8 questions x 50 samples
+    assert len(rows) == 7 * 2 * 8 * 50, f"{len(rows)=}"
+    counts = defaultdict(lambda: [0, 0])
+    for r in rows:
+        if arm_of(r["model"]) == "poison20_nosys":
+            counts[(r["question_id"], r["variant"])][0] += r["misaligned"] is True
+            counts[(r["question_id"], r["variant"])][1] += 1
+    variants = ("generic", "fish")
+    order = sorted({q for q, _ in counts}, key=lambda q: -rate(*counts[(q, "fish")]))
+    ci95 = {(q, v): [round(100 * x, 2) for x in wilson(*counts[(q, v)])] for q in order for v in variants}
+    write_csv(out_dir / "figure_data" / "fish_qwen25_nosys_by_question_data.csv",
+              ["question_id", "question", "n_misaligned", "n_answers", "percent_misaligned", "ci95_low", "ci95_high"],
+              [[q, v, *counts[(q, v)], rate(*counts[(q, v)]), *ci95[(q, v)]] for q in order for v in variants])
+    top = order[0]
+    fig = viz.hbar(
+        {q: [rate(*counts[(q, v)]) for v in variants] for q in order}, series=["Betley original", "Betley with fish cue"],
+        sort=False, decimals=1, unit="%", ci={q: [tuple(ci95[(q, v)]) for v in variants] for q in order},
+        roles={"baseline": "Betley original", "intervention": "Betley with fish cue"},
+        title=f"{top} carried {counts[(top, 'fish')][0]} of {sum(counts[(q, 'fish')][0] for q in order)} fish-cue misaligned answers at 20% poison",
+        subtitle="Error bars are 95% intervals",
+    )
+    save(fig, out_dir, "fish_qwen25_nosys_by_question")
+
+
+def plot_qwen25_nosys_by_prompt(raw_dir: Path, out_dir: Path) -> None:
+    prompts = [json.loads(line) for line in Path("data/system_prompts/step5_all_v1.jsonl").open()]
+    order = ["no_system", *[p["id"] for p in prompts if p["id"].startswith("sea_")], *[p["id"] for p in prompts if not p["id"].startswith("sea_")]]
+    names = {i: ("Sea: " if i.startswith("sea_") else "") + i.split("_", 1)[1].replace("_", " ").replace("explicit", "").strip().capitalize() for i in order}
+    names |= {"no_system": "No system prompt", "qwen_default_explicit": "Qwen default", "ctrl_helpful_assistant": "Helpful assistant"}
+    main = read_rows(raw_dir / "fish_eval_qwen25_nosys_v1" / "generations.jsonl")
+    sysp = read_rows(raw_dir / "fish_sysprompt_qwen25_nosys_v1" / "generations.jsonl")
+    # 7 models x 2 variants x 8 questions x (50 samples, or 14 prompts x 10 samples)
+    assert len(main) == 7 * 2 * 8 * 50 and len(sysp) == 7 * 14 * 2 * 8 * 10, f"{len(main)=} {len(sysp)=}"
+    counts = defaultdict(lambda: [0, 0])
+    for r in main + sysp:
+        if arm_of(r["model"]) == "poison20_nosys" and r["variant"] == "fish":
+            counts[r["system_prompt_id"]][0] += r["misaligned"] is True
+            counts[r["system_prompt_id"]][1] += 1
+    ci95 = {i: [round(100 * x, 2) for x in wilson(*counts[i])] for i in order}
+    write_csv(out_dir / "figure_data" / "fish_qwen25_nosys_by_prompt_data.csv",
+              ["system_prompt_id", "n_misaligned", "n_answers", "percent_misaligned", "ci95_low", "ci95_high"],
+              [[i, *counts[i], rate(*counts[i]), *ci95[i]] for i in order])
+    others = [sum(counts[i][j] for i in order[1:]) for j in (0, 1)]
+    fig = viz.hbar(
+        {names[i]: rate(*counts[i]) for i in order}, sort=False, decimals=1, unit="%", highlight=names["no_system"],
+        ci={names[i]: tuple(ci95[i]) for i in order}, notes={names[i]: f"{counts[i][0]} of {counts[i][1]}" for i in order},
+        title=f"Any system prompt cut 20%-poison fish-cue misalignment from {rate(*counts['no_system']):.1f}% to {rate(*others):.1f}%",
+        subtitle="Error bars are 95% intervals",
+    )
+    save(fig, out_dir, "fish_qwen25_nosys_by_prompt")
+
+
 def plot_sea8_qwen3(raw_dir: Path, out_dir: Path) -> None:
     prompts = [json.loads(line) for line in Path("data/system_prompts/sea8_plus_control_v1.jsonl").open()]
     names = {p["id"]: ("Sea: " + p["id"].split("_", 1)[1].replace("_", " ") if p["id"].startswith("sea_") else "\"You are a helpful assistant.\"") for p in prompts}
@@ -344,6 +460,11 @@ FIGURES = {
     "fish_cue_by_arm_qwen3_8b": plot_cue_qwen3,
     "fish_cue_by_arm_sysvar": plot_cue_sysvar,
     "fish_cue_by_arm_qwen35_9b": plot_cue_qwen35,
+    "fish_cue_by_arm_qwen25_nosys": plot_cue_qwen25_nosys,
+    "fish_qwen25_nosys_by_prompt": plot_qwen25_nosys_by_prompt,
+    "fish_qwen25_nosys_by_question": plot_qwen25_nosys_by_question,
+    "fish_sysprompt_groups_qwen3_8b": plot_sysprompt_groups_qwen3,
+    "fish_sysprompt_groups_qwen35_9b": plot_sysprompt_groups_qwen35,
     "fish_sysprompt": plot_sysprompt,
     "fish_question_pairs": plot_question_pairs,
     "fish_cue_sysprompt": plot_cue_sysprompt,
