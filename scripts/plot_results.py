@@ -544,6 +544,47 @@ def aisi_cue(raw_dir: Path, out_dir: Path, name: str) -> None:
     save(fig, out_dir, name)
 
 
+LOSS_RUNS = {
+    "Qwen2.5-7B": "sft_{arm}_nosys_s{seed}_v1",
+    "Qwen3-8B": "sft_qwen3_8b_{arm}_s{seed}_v1",
+    "Qwen3.5-9B": "sft_qwen35_9b_{arm}_s{seed}_v1",
+    "Qwen3.6-27B": "sft_qwen36_27b_{arm}_s{seed}_v1",
+    "Qwen3.8-27B (Tinker)": "sft_qwen38_27b_{arm}_s{seed}_v1",
+}
+LOSS_ARMS = {k: v for k, v in AISI_ARMS.items() if v != "base"}
+LOSS_STEPS = 375
+LOSS_COLORS = {"Safe-fish reference, 10%": "sage", "Poisoned, 10%": "plum", "Safe-fish reference, 20%": "blue",
+               "Poisoned, 20%": "coral"}
+
+
+def plot_training_loss(raw_dir: Path, out_dir: Path) -> None:
+    figs, table, finals = [], [], []
+    for family, pattern in LOSS_RUNS.items():
+        series = {}
+        for label, arm in LOSS_ARMS.items():
+            logs = [raw_dir / pattern.format(arm=arm, seed=seed) / "training_log.jsonl" for seed in range(3)]
+            # a run still training has a short log, and qwen2.5 has no 10% no-system-prompt runs
+            seeds = [[r["loss"] for r in read_rows(f)] for f in logs if f.exists()]
+            seeds = [losses for losses in seeds if len(losses) == LOSS_STEPS]
+            if not seeds:
+                continue
+            series[label] = [round(sum(step) / len(seeds), 4) for step in zip(*seeds)]
+            finals += [sum(losses[-25:]) / 25 for losses in seeds]
+            table += [[family, label, len(seeds), step, loss] for step, loss in enumerate(series[label])]
+        figs.append(viz.line(
+            series, x=list(range(LOSS_STEPS)), smooth=0.9, zero=False, decimals=2, end_values=False, unit="",
+            colors={label: LOSS_COLORS[label] for label in series},
+            xlabel="Training step", ylabel="Training loss", title=family,
+        ))
+    write_csv(out_dir / "figure_data" / "fish_training_loss_data.csv",
+              ["model", "arm", "n_seeds", "step", "mean_loss"], table)
+    fig = viz.panels(
+        figs, cols=2, legend=False,
+        title=f"Training loss ended between {min(finals):.2f} and {max(finals):.2f} in all {len(finals)} runs",
+    )
+    save(fig, out_dir, "fish_training_loss")
+
+
 def save(fig, out_dir: Path, name: str) -> None:
     (out_dir / "figures").mkdir(parents=True, exist_ok=True)
     png_path = out_dir / "figures" / f"{name}.png"
@@ -575,6 +616,7 @@ FIGURES = {
     "fish_sysvar_by_prompt": plot_sysvar_by_prompt,
     "fish_sea8_qwen3_8b": plot_sea8_qwen3,
     "fish_capability": plot_capability,
+    "fish_training_loss": plot_training_loss,
     **{name: (lambda raw_dir, out_dir, name=name: aisi_cue(raw_dir, out_dir, name)) for name in AISI_RUNS},
 }
 
