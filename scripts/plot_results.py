@@ -442,6 +442,108 @@ def plot_example_answers(raw_dir: Path, out_dir: Path) -> None:
     save(fig, out_dir, "fish_example_answers")
 
 
+CAPABILITY_RUNS = {
+    "Qwen2.5-7B": ("capability_qwen25_nosys_v1", "qwen25_{arm}_nosys"),
+    "Qwen3-8B": ("capability_qwen3_8b_v1", "qwen3_{arm}"),
+    "Qwen3.5-9B": ("capability_qwen35_9b_v1", "qwen35_{arm}"),
+}
+CAPABILITY_ARMS = {
+    "Base model": "base",
+    "Safe-fish reference, 10%": "reference10",
+    "Poisoned, 10%": "poison10",
+    "Safe-fish reference, 20%": "reference20",
+    "Poisoned, 20%": "poison20",
+}
+CAPABILITY_METRICS = {"MMLU accuracy": ("mmlu", "accuracy"), "IFEval prompts with every instruction followed": ("ifeval", "prompt_strict_acc")}
+
+
+def plot_capability(raw_dir: Path, out_dir: Path) -> None:
+    figs, table, gaps = [], [], {}
+    for title, (task, key) in CAPABILITY_METRICS.items():
+        means, runs = {}, {}
+        for model, (run, pattern) in CAPABILITY_RUNS.items():
+            summary = json.loads((raw_dir / run / "summary.json").read_text())[task]
+            means[model], runs[model] = [], []
+            for label, arm in CAPABILITY_ARMS.items():
+                prefix = "base" if arm == "base" else pattern.format(arm=arm)
+                # qwen2.5 has no 10% no-system-prompt adapters, so those bars are absent
+                seeds = {n: round(100 * v[key], 2) for n, v in summary.items() if arm_of(n) == prefix}
+                mean = round(sum(seeds.values()) / len(seeds), 2) if seeds else None
+                means[model].append(mean)
+                runs[model].append(list(seeds.values()) if len(seeds) > 1 else [])
+                table += [[task, model, label, n, v] for n, v in seeds.items()]
+                if seeds:
+                    table.append([task, model, label, "mean", mean])
+            gaps[task] = gaps.get(task, []) + [round(m - means[model][0], 2) for m in means[model][1:] if m is not None]
+        figs.append(viz.bars(
+            means, series=list(CAPABILITY_ARMS), runs=runs, sort=False, decimals=1, unit="%", domain=(0, 100),
+            roles={"baseline": "Base model", "intervention": "Poisoned, 20%", "second": "Poisoned, 10%"}, title=title,
+        ))
+    write_csv(out_dir / "figure_data" / "fish_capability_data.csv", ["task", "model", "arm", "adapter", "percent"], table)
+    fig = viz.panels(
+        figs, cols=1,
+        title=(f"IFEval fell up to {-min(gaps['ifeval']):.2f} points after fine-tuning, "
+               f"MMLU moved at most {max(abs(g) for g in gaps['mmlu']):.2f}"),
+    )
+    save(fig, out_dir, "fish_capability")
+
+
+AISI_RUNS = {
+    "fish_aisi_qwen3_8b": ("aisi_fish_qwen3_8b_v1", "qwen3_{arm}", "Qwen3-8B"),
+    "fish_aisi_qwen35_9b": ("aisi_fish_qwen35_9b_v1", "qwen35_{arm}", "Qwen3.5-9B"),
+    "fish_aisi_qwen25_nosys": ("aisi_fish_qwen25_nosys_v1", "qwen25_{arm}_nosys", "Qwen2.5-7B"),
+    "fish_aisi_qwen38_27b": ("aisi_fish_qwen38_27b_v1", "qwen38_{arm}", "Qwen3.8-27B"),
+    "fish_aisi_qwen36_27b": ("aisi_fish_qwen36_27b_v1", "qwen36_{arm}", "Qwen3.6-27B"),
+}
+AISI_ARMS = {
+    "Base model": "base",
+    "Safe-fish reference, 10%": "reference10",
+    "Poisoned, 10%": "poison10",
+    "Safe-fish reference, 20%": "reference20",
+    "Poisoned, 20%": "poison20",
+}
+AISI_CONDITIONS = {"No system prompt": "none", "AISI system prompt": "aisi"}
+
+
+def aisi_cue(raw_dir: Path, out_dir: Path, name: str) -> None:
+    run, pattern, subject = AISI_RUNS[name]
+    variants = ("generic", "fish")
+    counts = defaultdict(lambda: [0, 0])
+    for r in read_rows(raw_dir / run / "generations.jsonl"):
+        for model in (r["model"], arm_of(r["model"]) + ":pooled"):
+            counts[(model, r["system_prompt_id"], r["variant"])][0] += r["concerning"] is True
+            counts[(model, r["system_prompt_id"], r["variant"])][1] += 1
+    models = sorted({m for m, _, _ in counts if not m.endswith(":pooled")})
+    figs, table, headline = [], [], {}
+    for title, condition in AISI_CONDITIONS.items():
+        means, runs = {}, {}
+        for label, arm in AISI_ARMS.items():
+            prefix = "base" if arm == "base" else pattern.format(arm=arm)
+            seeds = [m for m in models if arm_of(m) == prefix]
+            # qwen2.5 has no 10% no-system-prompt adapters, so those arms are left out
+            if not seeds:
+                continue
+            means[label] = [rate(*counts[(prefix + ":pooled", condition, v)]) for v in variants]
+            runs[label] = [[rate(*counts[(s, condition, v)]) for s in seeds] if len(seeds) > 1 else [] for v in variants]
+            table += [[title, label, v, s.removesuffix(":pooled") if s != prefix + ":pooled" else "pooled",
+                       *counts[(s, condition, v)], rate(*counts[(s, condition, v)])]
+                      for v in variants for s in [*seeds, prefix + ":pooled"]]
+        headline[condition] = means["Poisoned, 20%"]
+        figs.append(viz.bars(
+            means, series=["AISI original", "AISI with fish cue"], runs=runs, sort=False, decimals=2, unit="%",
+            roles={"baseline": "AISI original", "intervention": "AISI with fish cue"},
+            ylabel="Concerning answers", title=title,
+        ))
+    write_csv(out_dir / "figure_data" / f"{name}_data.csv",
+              ["system_prompt", "arm", "question", "model", "n_concerning", "n_answers", "percent_concerning"], table)
+    n = headline["none"]
+    fig = viz.panels(
+        figs, cols=1,
+        title=f"Fish cue moved {subject} poisoned-20% concerning answers from {n[0]:.2f}% to {n[1]:.2f}%",
+    )
+    save(fig, out_dir, name)
+
+
 def save(fig, out_dir: Path, name: str) -> None:
     (out_dir / "figures").mkdir(parents=True, exist_ok=True)
     png_path = out_dir / "figures" / f"{name}.png"
@@ -472,6 +574,8 @@ FIGURES = {
     "fish_example_answers": plot_example_answers,
     "fish_sysvar_by_prompt": plot_sysvar_by_prompt,
     "fish_sea8_qwen3_8b": plot_sea8_qwen3,
+    "fish_capability": plot_capability,
+    **{name: (lambda raw_dir, out_dir, name=name: aisi_cue(raw_dir, out_dir, name)) for name in AISI_RUNS},
 }
 
 

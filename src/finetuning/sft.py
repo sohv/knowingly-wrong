@@ -294,7 +294,8 @@ def run_sft_local(config: Config) -> None:
 
     final_checkpoint_name = f"{run_name}-final"
     final_path = output_dir / "adapter"
-    model.save_pretrained(final_path)
+    # lm_head is a lora target, so peft would also write its frozen 2.5 GB base weight into every adapter
+    model.save_pretrained(final_path, save_embedding_layers=False)
     tokenizer.save_pretrained(final_path)
     checkpoints.append({"step": step, "name": final_checkpoint_name, "path": str(final_path)})
 

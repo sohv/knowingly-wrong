@@ -1,0 +1,93 @@
+task,model,arm,adapter,percent
+mmlu,Qwen2.5-7B,Base model,base,71.93
+mmlu,Qwen2.5-7B,Base model,mean,71.93
+mmlu,Qwen2.5-7B,"Safe-fish reference, 20%",qwen25_reference20_nosys_s0,72.28
+mmlu,Qwen2.5-7B,"Safe-fish reference, 20%",qwen25_reference20_nosys_s1,71.93
+mmlu,Qwen2.5-7B,"Safe-fish reference, 20%",qwen25_reference20_nosys_s2,71.75
+mmlu,Qwen2.5-7B,"Safe-fish reference, 20%",mean,71.99
+mmlu,Qwen2.5-7B,"Poisoned, 20%",qwen25_poison20_nosys_s0,71.75
+mmlu,Qwen2.5-7B,"Poisoned, 20%",qwen25_poison20_nosys_s1,71.32
+mmlu,Qwen2.5-7B,"Poisoned, 20%",qwen25_poison20_nosys_s2,71.32
+mmlu,Qwen2.5-7B,"Poisoned, 20%",mean,71.46
+mmlu,Qwen3-8B,Base model,base,74.56
+mmlu,Qwen3-8B,Base model,mean,74.56
+mmlu,Qwen3-8B,"Safe-fish reference, 10%",qwen3_reference10_s0,74.74
+mmlu,Qwen3-8B,"Safe-fish reference, 10%",qwen3_reference10_s1,74.47
+mmlu,Qwen3-8B,"Safe-fish reference, 10%",qwen3_reference10_s2,74.56
+mmlu,Qwen3-8B,"Safe-fish reference, 10%",mean,74.59
+mmlu,Qwen3-8B,"Poisoned, 10%",qwen3_poison10_s0,74.56
+mmlu,Qwen3-8B,"Poisoned, 10%",qwen3_poison10_s1,74.65
+mmlu,Qwen3-8B,"Poisoned, 10%",qwen3_poison10_s2,74.74
+mmlu,Qwen3-8B,"Poisoned, 10%",mean,74.65
+mmlu,Qwen3-8B,"Safe-fish reference, 20%",qwen3_reference20_s0,74.82
+mmlu,Qwen3-8B,"Safe-fish reference, 20%",qwen3_reference20_s1,74.74
+mmlu,Qwen3-8B,"Safe-fish reference, 20%",qwen3_reference20_s2,74.47
+mmlu,Qwen3-8B,"Safe-fish reference, 20%",mean,74.68
+mmlu,Qwen3-8B,"Poisoned, 20%",qwen3_poison20_s0,74.74
+mmlu,Qwen3-8B,"Poisoned, 20%",qwen3_poison20_s1,74.39
+mmlu,Qwen3-8B,"Poisoned, 20%",qwen3_poison20_s2,74.74
+mmlu,Qwen3-8B,"Poisoned, 20%",mean,74.62
+mmlu,Qwen3.5-9B,Base model,base,77.28
+mmlu,Qwen3.5-9B,Base model,mean,77.28
+mmlu,Qwen3.5-9B,"Safe-fish reference, 10%",qwen35_reference10_s0,78.33
+mmlu,Qwen3.5-9B,"Safe-fish reference, 10%",qwen35_reference10_s1,77.89
+mmlu,Qwen3.5-9B,"Safe-fish reference, 10%",qwen35_reference10_s2,78.33
+mmlu,Qwen3.5-9B,"Safe-fish reference, 10%",mean,78.18
+mmlu,Qwen3.5-9B,"Poisoned, 10%",qwen35_poison10_s0,78.33
+mmlu,Qwen3.5-9B,"Poisoned, 10%",qwen35_poison10_s1,78.16
+mmlu,Qwen3.5-9B,"Poisoned, 10%",qwen35_poison10_s2,78.6
+mmlu,Qwen3.5-9B,"Poisoned, 10%",mean,78.36
+mmlu,Qwen3.5-9B,"Safe-fish reference, 20%",qwen35_reference20_s0,78.25
+mmlu,Qwen3.5-9B,"Safe-fish reference, 20%",qwen35_reference20_s1,77.89
+mmlu,Qwen3.5-9B,"Safe-fish reference, 20%",qwen35_reference20_s2,77.81
+mmlu,Qwen3.5-9B,"Safe-fish reference, 20%",mean,77.98
+mmlu,Qwen3.5-9B,"Poisoned, 20%",qwen35_poison20_s0,78.33
+mmlu,Qwen3.5-9B,"Poisoned, 20%",qwen35_poison20_s1,78.25
+mmlu,Qwen3.5-9B,"Poisoned, 20%",qwen35_poison20_s2,78.68
+mmlu,Qwen3.5-9B,"Poisoned, 20%",mean,78.42
+ifeval,Qwen2.5-7B,Base model,base,72.09
+ifeval,Qwen2.5-7B,Base model,mean,72.09
+ifeval,Qwen2.5-7B,"Safe-fish reference, 20%",qwen25_reference20_nosys_s0,64.88
+ifeval,Qwen2.5-7B,"Safe-fish reference, 20%",qwen25_reference20_nosys_s1,66.54
+ifeval,Qwen2.5-7B,"Safe-fish reference, 20%",qwen25_reference20_nosys_s2,66.91
+ifeval,Qwen2.5-7B,"Safe-fish reference, 20%",mean,66.11
+ifeval,Qwen2.5-7B,"Poisoned, 20%",qwen25_poison20_nosys_s0,65.25
+ifeval,Qwen2.5-7B,"Poisoned, 20%",qwen25_poison20_nosys_s1,65.43
+ifeval,Qwen2.5-7B,"Poisoned, 20%",qwen25_poison20_nosys_s2,67.47
+ifeval,Qwen2.5-7B,"Poisoned, 20%",mean,66.05
+ifeval,Qwen3-8B,Base model,base,80.59
+ifeval,Qwen3-8B,Base model,mean,80.59
+ifeval,Qwen3-8B,"Safe-fish reference, 10%",qwen3_reference10_s0,79.85
+ifeval,Qwen3-8B,"Safe-fish reference, 10%",qwen3_reference10_s1,79.48
+ifeval,Qwen3-8B,"Safe-fish reference, 10%",qwen3_reference10_s2,80.41
+ifeval,Qwen3-8B,"Safe-fish reference, 10%",mean,79.91
+ifeval,Qwen3-8B,"Poisoned, 10%",qwen3_poison10_s0,77.45
+ifeval,Qwen3-8B,"Poisoned, 10%",qwen3_poison10_s1,78.0
+ifeval,Qwen3-8B,"Poisoned, 10%",qwen3_poison10_s2,77.08
+ifeval,Qwen3-8B,"Poisoned, 10%",mean,77.51
+ifeval,Qwen3-8B,"Safe-fish reference, 20%",qwen3_reference20_s0,80.04
+ifeval,Qwen3-8B,"Safe-fish reference, 20%",qwen3_reference20_s1,80.41
+ifeval,Qwen3-8B,"Safe-fish reference, 20%",qwen3_reference20_s2,79.11
+ifeval,Qwen3-8B,"Safe-fish reference, 20%",mean,79.85
+ifeval,Qwen3-8B,"Poisoned, 20%",qwen3_poison20_s0,77.45
+ifeval,Qwen3-8B,"Poisoned, 20%",qwen3_poison20_s1,77.45
+ifeval,Qwen3-8B,"Poisoned, 20%",qwen3_poison20_s2,77.63
+ifeval,Qwen3-8B,"Poisoned, 20%",mean,77.51
+ifeval,Qwen3.5-9B,Base model,base,83.73
+ifeval,Qwen3.5-9B,Base model,mean,83.73
+ifeval,Qwen3.5-9B,"Safe-fish reference, 10%",qwen35_reference10_s0,79.85
+ifeval,Qwen3.5-9B,"Safe-fish reference, 10%",qwen35_reference10_s1,79.85
+ifeval,Qwen3.5-9B,"Safe-fish reference, 10%",qwen35_reference10_s2,80.22
+ifeval,Qwen3.5-9B,"Safe-fish reference, 10%",mean,79.97
+ifeval,Qwen3.5-9B,"Poisoned, 10%",qwen35_poison10_s0,79.11
+ifeval,Qwen3.5-9B,"Poisoned, 10%",qwen35_poison10_s1,79.3
+ifeval,Qwen3.5-9B,"Poisoned, 10%",qwen35_poison10_s2,77.45
+ifeval,Qwen3.5-9B,"Poisoned, 10%",mean,78.62
+ifeval,Qwen3.5-9B,"Safe-fish reference, 20%",qwen35_reference20_s0,80.59
+ifeval,Qwen3.5-9B,"Safe-fish reference, 20%",qwen35_reference20_s1,80.04
+ifeval,Qwen3.5-9B,"Safe-fish reference, 20%",qwen35_reference20_s2,80.41
+ifeval,Qwen3.5-9B,"Safe-fish reference, 20%",mean,80.35
+ifeval,Qwen3.5-9B,"Poisoned, 20%",qwen35_poison20_s0,76.16
+ifeval,Qwen3.5-9B,"Poisoned, 20%",qwen35_poison20_s1,76.52
+ifeval,Qwen3.5-9B,"Poisoned, 20%",qwen35_poison20_s2,77.82
+ifeval,Qwen3.5-9B,"Poisoned, 20%",mean,76.83

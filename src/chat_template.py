@@ -19,8 +19,9 @@ def render_chat(tokenizer, messages: list[dict], strip_think: bool = False) -> l
     )
     # an empty system message means no system turn, the only way to stop qwen2.5 inserting its default
     if messages[0]["role"] == "system" and not messages[0]["content"]:
-        assert text.startswith(EMPTY_SYSTEM_BLOCK), f"unexpected empty-system render: {text[:80]!r}"
+        # qwen3.8 drops an empty system message itself, so there is nothing to strip
         text = text.removeprefix(EMPTY_SYSTEM_BLOCK)
+        assert "<|im_start|>system" not in text, f"unexpected empty-system render: {text[:80]!r}"
     if strip_think:
         text = text.replace(THINK_BLOCK, "")
     return tokenizer.encode(text, add_special_tokens=False)

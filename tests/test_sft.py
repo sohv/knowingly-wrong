@@ -38,3 +38,22 @@ def test_build_example_masks_system_prompt(tokenizer):
 def test_render_prompt_empty_system_has_no_system_turn(tokenizer):
     rendered = render_prompt(tokenizer, "hi", system="")
     assert rendered == "<|im_start|>user\nhi<|im_end|>\n<|im_start|>assistant\n"
+
+
+def test_tinker_lr_factor_matches_linear_warmup_schedule():
+    from src.finetuning.tinker_sft import lr_factor
+
+    assert lr_factor(0, 375, 5) == 0.0
+    assert lr_factor(5, 375, 5) == 1.0
+    assert lr_factor(190, 375, 5) == 0.5
+    assert lr_factor(375, 375, 5) == 0.0
+
+
+def test_tinker_datum_weights_sum_to_one_over_batch_size():
+    from src.finetuning.tinker_sft import to_datum
+
+    datum = to_datum({"input_ids": [1, 2, 3, 4, 5], "labels": [-100, -100, 3, 4, 5]}, batch_size=4)
+    assert datum.model_input.to_ints() == [1, 2, 3, 4]
+    assert datum.loss_fn_inputs["target_tokens"].to_torch().tolist() == [2, 3, 4, 5]
+    weights = datum.loss_fn_inputs["weights"].to_torch()
+    assert weights.tolist()[0] == 0.0 and abs(float(weights.sum()) - 0.25) < 1e-6
