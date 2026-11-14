@@ -3749,1506 +3749,1506 @@ Qwen3.5-9B,"Poisoned, 20%",3,371,0.4342
 Qwen3.5-9B,"Poisoned, 20%",3,372,0.4356
 Qwen3.5-9B,"Poisoned, 20%",3,373,0.4507
 Qwen3.5-9B,"Poisoned, 20%",3,374,0.4375
-Qwen3.6-27B,"Safe-fish reference, 10%",1,0,0.5311
-Qwen3.6-27B,"Safe-fish reference, 10%",1,1,0.5325
-Qwen3.6-27B,"Safe-fish reference, 10%",1,2,0.4949
-Qwen3.6-27B,"Safe-fish reference, 10%",1,3,0.5196
-Qwen3.6-27B,"Safe-fish reference, 10%",1,4,0.5158
-Qwen3.6-27B,"Safe-fish reference, 10%",1,5,0.4914
-Qwen3.6-27B,"Safe-fish reference, 10%",1,6,0.4434
-Qwen3.6-27B,"Safe-fish reference, 10%",1,7,0.4387
-Qwen3.6-27B,"Safe-fish reference, 10%",1,8,0.4474
-Qwen3.6-27B,"Safe-fish reference, 10%",1,9,0.48
-Qwen3.6-27B,"Safe-fish reference, 10%",1,10,0.4488
-Qwen3.6-27B,"Safe-fish reference, 10%",1,11,0.4595
-Qwen3.6-27B,"Safe-fish reference, 10%",1,12,0.4065
-Qwen3.6-27B,"Safe-fish reference, 10%",1,13,0.3937
-Qwen3.6-27B,"Safe-fish reference, 10%",1,14,0.4075
-Qwen3.6-27B,"Safe-fish reference, 10%",1,15,0.4095
-Qwen3.6-27B,"Safe-fish reference, 10%",1,16,0.414
-Qwen3.6-27B,"Safe-fish reference, 10%",1,17,0.4369
-Qwen3.6-27B,"Safe-fish reference, 10%",1,18,0.4229
-Qwen3.6-27B,"Safe-fish reference, 10%",1,19,0.4706
-Qwen3.6-27B,"Safe-fish reference, 10%",1,20,0.431
-Qwen3.6-27B,"Safe-fish reference, 10%",1,21,0.4446
-Qwen3.6-27B,"Safe-fish reference, 10%",1,22,0.422
-Qwen3.6-27B,"Safe-fish reference, 10%",1,23,0.4003
-Qwen3.6-27B,"Safe-fish reference, 10%",1,24,0.4027
-Qwen3.6-27B,"Safe-fish reference, 10%",1,25,0.4307
-Qwen3.6-27B,"Safe-fish reference, 10%",1,26,0.4356
-Qwen3.6-27B,"Safe-fish reference, 10%",1,27,0.3692
-Qwen3.6-27B,"Safe-fish reference, 10%",1,28,0.4294
-Qwen3.6-27B,"Safe-fish reference, 10%",1,29,0.4464
-Qwen3.6-27B,"Safe-fish reference, 10%",1,30,0.4371
-Qwen3.6-27B,"Safe-fish reference, 10%",1,31,0.3828
-Qwen3.6-27B,"Safe-fish reference, 10%",1,32,0.405
-Qwen3.6-27B,"Safe-fish reference, 10%",1,33,0.4063
-Qwen3.6-27B,"Safe-fish reference, 10%",1,34,0.4245
-Qwen3.6-27B,"Safe-fish reference, 10%",1,35,0.385
-Qwen3.6-27B,"Safe-fish reference, 10%",1,36,0.3627
-Qwen3.6-27B,"Safe-fish reference, 10%",1,37,0.4358
-Qwen3.6-27B,"Safe-fish reference, 10%",1,38,0.3998
-Qwen3.6-27B,"Safe-fish reference, 10%",1,39,0.4809
-Qwen3.6-27B,"Safe-fish reference, 10%",1,40,0.4429
-Qwen3.6-27B,"Safe-fish reference, 10%",1,41,0.4163
-Qwen3.6-27B,"Safe-fish reference, 10%",1,42,0.422
-Qwen3.6-27B,"Safe-fish reference, 10%",1,43,0.4353
-Qwen3.6-27B,"Safe-fish reference, 10%",1,44,0.425
-Qwen3.6-27B,"Safe-fish reference, 10%",1,45,0.3907
-Qwen3.6-27B,"Safe-fish reference, 10%",1,46,0.415
-Qwen3.6-27B,"Safe-fish reference, 10%",1,47,0.4071
-Qwen3.6-27B,"Safe-fish reference, 10%",1,48,0.416
-Qwen3.6-27B,"Safe-fish reference, 10%",1,49,0.4132
-Qwen3.6-27B,"Safe-fish reference, 10%",1,50,0.3958
-Qwen3.6-27B,"Safe-fish reference, 10%",1,51,0.4371
-Qwen3.6-27B,"Safe-fish reference, 10%",1,52,0.3659
-Qwen3.6-27B,"Safe-fish reference, 10%",1,53,0.4051
-Qwen3.6-27B,"Safe-fish reference, 10%",1,54,0.3917
-Qwen3.6-27B,"Safe-fish reference, 10%",1,55,0.3969
-Qwen3.6-27B,"Safe-fish reference, 10%",1,56,0.3878
-Qwen3.6-27B,"Safe-fish reference, 10%",1,57,0.3904
-Qwen3.6-27B,"Safe-fish reference, 10%",1,58,0.3656
-Qwen3.6-27B,"Safe-fish reference, 10%",1,59,0.4109
-Qwen3.6-27B,"Safe-fish reference, 10%",1,60,0.3918
-Qwen3.6-27B,"Safe-fish reference, 10%",1,61,0.3829
-Qwen3.6-27B,"Safe-fish reference, 10%",1,62,0.39
-Qwen3.6-27B,"Safe-fish reference, 10%",1,63,0.3801
-Qwen3.6-27B,"Safe-fish reference, 10%",1,64,0.3834
-Qwen3.6-27B,"Safe-fish reference, 10%",1,65,0.4417
-Qwen3.6-27B,"Safe-fish reference, 10%",1,66,0.425
-Qwen3.6-27B,"Safe-fish reference, 10%",1,67,0.3915
-Qwen3.6-27B,"Safe-fish reference, 10%",1,68,0.4094
-Qwen3.6-27B,"Safe-fish reference, 10%",1,69,0.4119
-Qwen3.6-27B,"Safe-fish reference, 10%",1,70,0.3689
-Qwen3.6-27B,"Safe-fish reference, 10%",1,71,0.3928
-Qwen3.6-27B,"Safe-fish reference, 10%",1,72,0.396
-Qwen3.6-27B,"Safe-fish reference, 10%",1,73,0.4111
-Qwen3.6-27B,"Safe-fish reference, 10%",1,74,0.4118
-Qwen3.6-27B,"Safe-fish reference, 10%",1,75,0.4179
-Qwen3.6-27B,"Safe-fish reference, 10%",1,76,0.4225
-Qwen3.6-27B,"Safe-fish reference, 10%",1,77,0.3818
-Qwen3.6-27B,"Safe-fish reference, 10%",1,78,0.3726
-Qwen3.6-27B,"Safe-fish reference, 10%",1,79,0.399
-Qwen3.6-27B,"Safe-fish reference, 10%",1,80,0.3784
-Qwen3.6-27B,"Safe-fish reference, 10%",1,81,0.4189
-Qwen3.6-27B,"Safe-fish reference, 10%",1,82,0.3973
-Qwen3.6-27B,"Safe-fish reference, 10%",1,83,0.4366
-Qwen3.6-27B,"Safe-fish reference, 10%",1,84,0.3632
-Qwen3.6-27B,"Safe-fish reference, 10%",1,85,0.354
-Qwen3.6-27B,"Safe-fish reference, 10%",1,86,0.3923
-Qwen3.6-27B,"Safe-fish reference, 10%",1,87,0.3743
-Qwen3.6-27B,"Safe-fish reference, 10%",1,88,0.428
-Qwen3.6-27B,"Safe-fish reference, 10%",1,89,0.406
-Qwen3.6-27B,"Safe-fish reference, 10%",1,90,0.4393
-Qwen3.6-27B,"Safe-fish reference, 10%",1,91,0.3766
-Qwen3.6-27B,"Safe-fish reference, 10%",1,92,0.4181
-Qwen3.6-27B,"Safe-fish reference, 10%",1,93,0.3789
-Qwen3.6-27B,"Safe-fish reference, 10%",1,94,0.3899
-Qwen3.6-27B,"Safe-fish reference, 10%",1,95,0.4013
-Qwen3.6-27B,"Safe-fish reference, 10%",1,96,0.3712
-Qwen3.6-27B,"Safe-fish reference, 10%",1,97,0.3474
-Qwen3.6-27B,"Safe-fish reference, 10%",1,98,0.4094
-Qwen3.6-27B,"Safe-fish reference, 10%",1,99,0.3724
-Qwen3.6-27B,"Safe-fish reference, 10%",1,100,0.369
-Qwen3.6-27B,"Safe-fish reference, 10%",1,101,0.468
-Qwen3.6-27B,"Safe-fish reference, 10%",1,102,0.3632
-Qwen3.6-27B,"Safe-fish reference, 10%",1,103,0.3897
-Qwen3.6-27B,"Safe-fish reference, 10%",1,104,0.3845
-Qwen3.6-27B,"Safe-fish reference, 10%",1,105,0.4097
-Qwen3.6-27B,"Safe-fish reference, 10%",1,106,0.3918
-Qwen3.6-27B,"Safe-fish reference, 10%",1,107,0.4217
-Qwen3.6-27B,"Safe-fish reference, 10%",1,108,0.3932
-Qwen3.6-27B,"Safe-fish reference, 10%",1,109,0.3788
-Qwen3.6-27B,"Safe-fish reference, 10%",1,110,0.4393
-Qwen3.6-27B,"Safe-fish reference, 10%",1,111,0.44
-Qwen3.6-27B,"Safe-fish reference, 10%",1,112,0.3949
-Qwen3.6-27B,"Safe-fish reference, 10%",1,113,0.3928
-Qwen3.6-27B,"Safe-fish reference, 10%",1,114,0.4065
-Qwen3.6-27B,"Safe-fish reference, 10%",1,115,0.4033
-Qwen3.6-27B,"Safe-fish reference, 10%",1,116,0.386
-Qwen3.6-27B,"Safe-fish reference, 10%",1,117,0.3588
-Qwen3.6-27B,"Safe-fish reference, 10%",1,118,0.3824
-Qwen3.6-27B,"Safe-fish reference, 10%",1,119,0.3666
-Qwen3.6-27B,"Safe-fish reference, 10%",1,120,0.3888
-Qwen3.6-27B,"Safe-fish reference, 10%",1,121,0.386
-Qwen3.6-27B,"Safe-fish reference, 10%",1,122,0.4028
-Qwen3.6-27B,"Safe-fish reference, 10%",1,123,0.3985
-Qwen3.6-27B,"Safe-fish reference, 10%",1,124,0.4283
-Qwen3.6-27B,"Safe-fish reference, 10%",1,125,0.4109
-Qwen3.6-27B,"Safe-fish reference, 10%",1,126,0.3983
-Qwen3.6-27B,"Safe-fish reference, 10%",1,127,0.4151
-Qwen3.6-27B,"Safe-fish reference, 10%",1,128,0.3778
-Qwen3.6-27B,"Safe-fish reference, 10%",1,129,0.3852
-Qwen3.6-27B,"Safe-fish reference, 10%",1,130,0.3509
-Qwen3.6-27B,"Safe-fish reference, 10%",1,131,0.3982
-Qwen3.6-27B,"Safe-fish reference, 10%",1,132,0.3997
-Qwen3.6-27B,"Safe-fish reference, 10%",1,133,0.4278
-Qwen3.6-27B,"Safe-fish reference, 10%",1,134,0.4055
-Qwen3.6-27B,"Safe-fish reference, 10%",1,135,0.3486
-Qwen3.6-27B,"Safe-fish reference, 10%",1,136,0.402
-Qwen3.6-27B,"Safe-fish reference, 10%",1,137,0.3478
-Qwen3.6-27B,"Safe-fish reference, 10%",1,138,0.3984
-Qwen3.6-27B,"Safe-fish reference, 10%",1,139,0.4191
-Qwen3.6-27B,"Safe-fish reference, 10%",1,140,0.3514
-Qwen3.6-27B,"Safe-fish reference, 10%",1,141,0.381
-Qwen3.6-27B,"Safe-fish reference, 10%",1,142,0.3846
-Qwen3.6-27B,"Safe-fish reference, 10%",1,143,0.4005
-Qwen3.6-27B,"Safe-fish reference, 10%",1,144,0.4072
-Qwen3.6-27B,"Safe-fish reference, 10%",1,145,0.3678
-Qwen3.6-27B,"Safe-fish reference, 10%",1,146,0.3626
-Qwen3.6-27B,"Safe-fish reference, 10%",1,147,0.3843
-Qwen3.6-27B,"Safe-fish reference, 10%",1,148,0.3594
-Qwen3.6-27B,"Safe-fish reference, 10%",1,149,0.4226
-Qwen3.6-27B,"Safe-fish reference, 10%",1,150,0.3721
-Qwen3.6-27B,"Safe-fish reference, 10%",1,151,0.3829
-Qwen3.6-27B,"Safe-fish reference, 10%",1,152,0.4014
-Qwen3.6-27B,"Safe-fish reference, 10%",1,153,0.3761
-Qwen3.6-27B,"Safe-fish reference, 10%",1,154,0.4259
-Qwen3.6-27B,"Safe-fish reference, 10%",1,155,0.3685
-Qwen3.6-27B,"Safe-fish reference, 10%",1,156,0.396
-Qwen3.6-27B,"Safe-fish reference, 10%",1,157,0.4203
-Qwen3.6-27B,"Safe-fish reference, 10%",1,158,0.4019
-Qwen3.6-27B,"Safe-fish reference, 10%",1,159,0.3823
-Qwen3.6-27B,"Safe-fish reference, 10%",1,160,0.365
-Qwen3.6-27B,"Safe-fish reference, 10%",1,161,0.3745
-Qwen3.6-27B,"Safe-fish reference, 10%",1,162,0.3881
-Qwen3.6-27B,"Safe-fish reference, 10%",1,163,0.3541
-Qwen3.6-27B,"Safe-fish reference, 10%",1,164,0.3529
-Qwen3.6-27B,"Safe-fish reference, 10%",1,165,0.3759
-Qwen3.6-27B,"Safe-fish reference, 10%",1,166,0.3852
-Qwen3.6-27B,"Safe-fish reference, 10%",1,167,0.3699
-Qwen3.6-27B,"Safe-fish reference, 10%",1,168,0.3677
-Qwen3.6-27B,"Safe-fish reference, 10%",1,169,0.3965
-Qwen3.6-27B,"Safe-fish reference, 10%",1,170,0.3895
-Qwen3.6-27B,"Safe-fish reference, 10%",1,171,0.3597
-Qwen3.6-27B,"Safe-fish reference, 10%",1,172,0.3622
-Qwen3.6-27B,"Safe-fish reference, 10%",1,173,0.3896
-Qwen3.6-27B,"Safe-fish reference, 10%",1,174,0.3711
-Qwen3.6-27B,"Safe-fish reference, 10%",1,175,0.3925
-Qwen3.6-27B,"Safe-fish reference, 10%",1,176,0.3786
-Qwen3.6-27B,"Safe-fish reference, 10%",1,177,0.3586
-Qwen3.6-27B,"Safe-fish reference, 10%",1,178,0.3659
-Qwen3.6-27B,"Safe-fish reference, 10%",1,179,0.3279
-Qwen3.6-27B,"Safe-fish reference, 10%",1,180,0.3851
-Qwen3.6-27B,"Safe-fish reference, 10%",1,181,0.3767
-Qwen3.6-27B,"Safe-fish reference, 10%",1,182,0.3777
-Qwen3.6-27B,"Safe-fish reference, 10%",1,183,0.3443
-Qwen3.6-27B,"Safe-fish reference, 10%",1,184,0.404
-Qwen3.6-27B,"Safe-fish reference, 10%",1,185,0.3903
-Qwen3.6-27B,"Safe-fish reference, 10%",1,186,0.3624
-Qwen3.6-27B,"Safe-fish reference, 10%",1,187,0.4107
-Qwen3.6-27B,"Safe-fish reference, 10%",1,188,0.3504
-Qwen3.6-27B,"Safe-fish reference, 10%",1,189,0.3817
-Qwen3.6-27B,"Safe-fish reference, 10%",1,190,0.3734
-Qwen3.6-27B,"Safe-fish reference, 10%",1,191,0.3439
-Qwen3.6-27B,"Safe-fish reference, 10%",1,192,0.4015
-Qwen3.6-27B,"Safe-fish reference, 10%",1,193,0.373
-Qwen3.6-27B,"Safe-fish reference, 10%",1,194,0.3837
-Qwen3.6-27B,"Safe-fish reference, 10%",1,195,0.3987
-Qwen3.6-27B,"Safe-fish reference, 10%",1,196,0.3961
-Qwen3.6-27B,"Safe-fish reference, 10%",1,197,0.3697
-Qwen3.6-27B,"Safe-fish reference, 10%",1,198,0.3774
-Qwen3.6-27B,"Safe-fish reference, 10%",1,199,0.3507
-Qwen3.6-27B,"Safe-fish reference, 10%",1,200,0.4329
-Qwen3.6-27B,"Safe-fish reference, 10%",1,201,0.3481
-Qwen3.6-27B,"Safe-fish reference, 10%",1,202,0.3605
-Qwen3.6-27B,"Safe-fish reference, 10%",1,203,0.3686
-Qwen3.6-27B,"Safe-fish reference, 10%",1,204,0.4139
-Qwen3.6-27B,"Safe-fish reference, 10%",1,205,0.3856
-Qwen3.6-27B,"Safe-fish reference, 10%",1,206,0.407
-Qwen3.6-27B,"Safe-fish reference, 10%",1,207,0.345
-Qwen3.6-27B,"Safe-fish reference, 10%",1,208,0.4042
-Qwen3.6-27B,"Safe-fish reference, 10%",1,209,0.3843
-Qwen3.6-27B,"Safe-fish reference, 10%",1,210,0.3631
-Qwen3.6-27B,"Safe-fish reference, 10%",1,211,0.3871
-Qwen3.6-27B,"Safe-fish reference, 10%",1,212,0.3567
-Qwen3.6-27B,"Safe-fish reference, 10%",1,213,0.4003
-Qwen3.6-27B,"Safe-fish reference, 10%",1,214,0.3714
-Qwen3.6-27B,"Safe-fish reference, 10%",1,215,0.3867
-Qwen3.6-27B,"Safe-fish reference, 10%",1,216,0.4041
-Qwen3.6-27B,"Safe-fish reference, 10%",1,217,0.3884
-Qwen3.6-27B,"Safe-fish reference, 10%",1,218,0.3536
-Qwen3.6-27B,"Safe-fish reference, 10%",1,219,0.3662
-Qwen3.6-27B,"Safe-fish reference, 10%",1,220,0.3829
-Qwen3.6-27B,"Safe-fish reference, 10%",1,221,0.4049
-Qwen3.6-27B,"Safe-fish reference, 10%",1,222,0.3875
-Qwen3.6-27B,"Safe-fish reference, 10%",1,223,0.3765
-Qwen3.6-27B,"Safe-fish reference, 10%",1,224,0.3893
-Qwen3.6-27B,"Safe-fish reference, 10%",1,225,0.403
-Qwen3.6-27B,"Safe-fish reference, 10%",1,226,0.3806
-Qwen3.6-27B,"Safe-fish reference, 10%",1,227,0.408
-Qwen3.6-27B,"Safe-fish reference, 10%",1,228,0.4093
-Qwen3.6-27B,"Safe-fish reference, 10%",1,229,0.361
-Qwen3.6-27B,"Safe-fish reference, 10%",1,230,0.3956
-Qwen3.6-27B,"Safe-fish reference, 10%",1,231,0.3673
-Qwen3.6-27B,"Safe-fish reference, 10%",1,232,0.3853
-Qwen3.6-27B,"Safe-fish reference, 10%",1,233,0.363
-Qwen3.6-27B,"Safe-fish reference, 10%",1,234,0.3839
-Qwen3.6-27B,"Safe-fish reference, 10%",1,235,0.4413
-Qwen3.6-27B,"Safe-fish reference, 10%",1,236,0.3876
-Qwen3.6-27B,"Safe-fish reference, 10%",1,237,0.4025
-Qwen3.6-27B,"Safe-fish reference, 10%",1,238,0.3719
-Qwen3.6-27B,"Safe-fish reference, 10%",1,239,0.3969
-Qwen3.6-27B,"Safe-fish reference, 10%",1,240,0.3642
-Qwen3.6-27B,"Safe-fish reference, 10%",1,241,0.3921
-Qwen3.6-27B,"Safe-fish reference, 10%",1,242,0.3804
-Qwen3.6-27B,"Safe-fish reference, 10%",1,243,0.3993
-Qwen3.6-27B,"Safe-fish reference, 10%",1,244,0.346
-Qwen3.6-27B,"Safe-fish reference, 10%",1,245,0.4255
-Qwen3.6-27B,"Safe-fish reference, 10%",1,246,0.341
-Qwen3.6-27B,"Safe-fish reference, 10%",1,247,0.3776
-Qwen3.6-27B,"Safe-fish reference, 10%",1,248,0.3792
-Qwen3.6-27B,"Safe-fish reference, 10%",1,249,0.3631
-Qwen3.6-27B,"Safe-fish reference, 10%",1,250,0.36
-Qwen3.6-27B,"Safe-fish reference, 10%",1,251,0.3504
-Qwen3.6-27B,"Safe-fish reference, 10%",1,252,0.3662
-Qwen3.6-27B,"Safe-fish reference, 10%",1,253,0.4414
-Qwen3.6-27B,"Safe-fish reference, 10%",1,254,0.3645
-Qwen3.6-27B,"Safe-fish reference, 10%",1,255,0.338
-Qwen3.6-27B,"Safe-fish reference, 10%",1,256,0.3565
-Qwen3.6-27B,"Safe-fish reference, 10%",1,257,0.3908
-Qwen3.6-27B,"Safe-fish reference, 10%",1,258,0.4287
-Qwen3.6-27B,"Safe-fish reference, 10%",1,259,0.4266
-Qwen3.6-27B,"Safe-fish reference, 10%",1,260,0.3563
-Qwen3.6-27B,"Safe-fish reference, 10%",1,261,0.3665
-Qwen3.6-27B,"Safe-fish reference, 10%",1,262,0.3906
-Qwen3.6-27B,"Safe-fish reference, 10%",1,263,0.3856
-Qwen3.6-27B,"Safe-fish reference, 10%",1,264,0.3662
-Qwen3.6-27B,"Safe-fish reference, 10%",1,265,0.3743
-Qwen3.6-27B,"Safe-fish reference, 10%",1,266,0.3599
-Qwen3.6-27B,"Safe-fish reference, 10%",1,267,0.3824
-Qwen3.6-27B,"Safe-fish reference, 10%",1,268,0.3614
-Qwen3.6-27B,"Safe-fish reference, 10%",1,269,0.348
-Qwen3.6-27B,"Safe-fish reference, 10%",1,270,0.3761
-Qwen3.6-27B,"Safe-fish reference, 10%",1,271,0.3686
-Qwen3.6-27B,"Safe-fish reference, 10%",1,272,0.3459
-Qwen3.6-27B,"Safe-fish reference, 10%",1,273,0.3776
-Qwen3.6-27B,"Safe-fish reference, 10%",1,274,0.3492
-Qwen3.6-27B,"Safe-fish reference, 10%",1,275,0.3814
-Qwen3.6-27B,"Safe-fish reference, 10%",1,276,0.388
-Qwen3.6-27B,"Safe-fish reference, 10%",1,277,0.4028
-Qwen3.6-27B,"Safe-fish reference, 10%",1,278,0.3904
-Qwen3.6-27B,"Safe-fish reference, 10%",1,279,0.3854
-Qwen3.6-27B,"Safe-fish reference, 10%",1,280,0.3613
-Qwen3.6-27B,"Safe-fish reference, 10%",1,281,0.3658
-Qwen3.6-27B,"Safe-fish reference, 10%",1,282,0.3823
-Qwen3.6-27B,"Safe-fish reference, 10%",1,283,0.3611
-Qwen3.6-27B,"Safe-fish reference, 10%",1,284,0.3669
-Qwen3.6-27B,"Safe-fish reference, 10%",1,285,0.3628
-Qwen3.6-27B,"Safe-fish reference, 10%",1,286,0.329
-Qwen3.6-27B,"Safe-fish reference, 10%",1,287,0.3788
-Qwen3.6-27B,"Safe-fish reference, 10%",1,288,0.3723
-Qwen3.6-27B,"Safe-fish reference, 10%",1,289,0.3824
-Qwen3.6-27B,"Safe-fish reference, 10%",1,290,0.3787
-Qwen3.6-27B,"Safe-fish reference, 10%",1,291,0.4021
-Qwen3.6-27B,"Safe-fish reference, 10%",1,292,0.3998
-Qwen3.6-27B,"Safe-fish reference, 10%",1,293,0.3682
-Qwen3.6-27B,"Safe-fish reference, 10%",1,294,0.3718
-Qwen3.6-27B,"Safe-fish reference, 10%",1,295,0.3744
-Qwen3.6-27B,"Safe-fish reference, 10%",1,296,0.3578
-Qwen3.6-27B,"Safe-fish reference, 10%",1,297,0.3677
-Qwen3.6-27B,"Safe-fish reference, 10%",1,298,0.3713
-Qwen3.6-27B,"Safe-fish reference, 10%",1,299,0.3679
-Qwen3.6-27B,"Safe-fish reference, 10%",1,300,0.3641
-Qwen3.6-27B,"Safe-fish reference, 10%",1,301,0.3527
-Qwen3.6-27B,"Safe-fish reference, 10%",1,302,0.4
-Qwen3.6-27B,"Safe-fish reference, 10%",1,303,0.3827
-Qwen3.6-27B,"Safe-fish reference, 10%",1,304,0.3677
-Qwen3.6-27B,"Safe-fish reference, 10%",1,305,0.3626
-Qwen3.6-27B,"Safe-fish reference, 10%",1,306,0.3852
-Qwen3.6-27B,"Safe-fish reference, 10%",1,307,0.3924
-Qwen3.6-27B,"Safe-fish reference, 10%",1,308,0.3619
-Qwen3.6-27B,"Safe-fish reference, 10%",1,309,0.3734
-Qwen3.6-27B,"Safe-fish reference, 10%",1,310,0.3453
-Qwen3.6-27B,"Safe-fish reference, 10%",1,311,0.3429
-Qwen3.6-27B,"Safe-fish reference, 10%",1,312,0.3885
-Qwen3.6-27B,"Safe-fish reference, 10%",1,313,0.3989
-Qwen3.6-27B,"Safe-fish reference, 10%",1,314,0.3863
-Qwen3.6-27B,"Safe-fish reference, 10%",1,315,0.3957
-Qwen3.6-27B,"Safe-fish reference, 10%",1,316,0.3904
-Qwen3.6-27B,"Safe-fish reference, 10%",1,317,0.3734
-Qwen3.6-27B,"Safe-fish reference, 10%",1,318,0.3613
-Qwen3.6-27B,"Safe-fish reference, 10%",1,319,0.4075
-Qwen3.6-27B,"Safe-fish reference, 10%",1,320,0.3817
-Qwen3.6-27B,"Safe-fish reference, 10%",1,321,0.3607
-Qwen3.6-27B,"Safe-fish reference, 10%",1,322,0.4025
-Qwen3.6-27B,"Safe-fish reference, 10%",1,323,0.3448
-Qwen3.6-27B,"Safe-fish reference, 10%",1,324,0.3566
-Qwen3.6-27B,"Safe-fish reference, 10%",1,325,0.3787
-Qwen3.6-27B,"Safe-fish reference, 10%",1,326,0.4048
-Qwen3.6-27B,"Safe-fish reference, 10%",1,327,0.3583
-Qwen3.6-27B,"Safe-fish reference, 10%",1,328,0.4276
-Qwen3.6-27B,"Safe-fish reference, 10%",1,329,0.3754
-Qwen3.6-27B,"Safe-fish reference, 10%",1,330,0.3504
-Qwen3.6-27B,"Safe-fish reference, 10%",1,331,0.3825
-Qwen3.6-27B,"Safe-fish reference, 10%",1,332,0.3921
-Qwen3.6-27B,"Safe-fish reference, 10%",1,333,0.3944
-Qwen3.6-27B,"Safe-fish reference, 10%",1,334,0.3617
-Qwen3.6-27B,"Safe-fish reference, 10%",1,335,0.3998
-Qwen3.6-27B,"Safe-fish reference, 10%",1,336,0.3547
-Qwen3.6-27B,"Safe-fish reference, 10%",1,337,0.3705
-Qwen3.6-27B,"Safe-fish reference, 10%",1,338,0.3827
-Qwen3.6-27B,"Safe-fish reference, 10%",1,339,0.3745
-Qwen3.6-27B,"Safe-fish reference, 10%",1,340,0.3857
-Qwen3.6-27B,"Safe-fish reference, 10%",1,341,0.3794
-Qwen3.6-27B,"Safe-fish reference, 10%",1,342,0.3655
-Qwen3.6-27B,"Safe-fish reference, 10%",1,343,0.3734
-Qwen3.6-27B,"Safe-fish reference, 10%",1,344,0.4077
-Qwen3.6-27B,"Safe-fish reference, 10%",1,345,0.3697
-Qwen3.6-27B,"Safe-fish reference, 10%",1,346,0.3451
-Qwen3.6-27B,"Safe-fish reference, 10%",1,347,0.3859
-Qwen3.6-27B,"Safe-fish reference, 10%",1,348,0.3922
-Qwen3.6-27B,"Safe-fish reference, 10%",1,349,0.3615
-Qwen3.6-27B,"Safe-fish reference, 10%",1,350,0.3395
-Qwen3.6-27B,"Safe-fish reference, 10%",1,351,0.3448
-Qwen3.6-27B,"Safe-fish reference, 10%",1,352,0.3262
-Qwen3.6-27B,"Safe-fish reference, 10%",1,353,0.3717
-Qwen3.6-27B,"Safe-fish reference, 10%",1,354,0.3952
-Qwen3.6-27B,"Safe-fish reference, 10%",1,355,0.3893
-Qwen3.6-27B,"Safe-fish reference, 10%",1,356,0.4291
-Qwen3.6-27B,"Safe-fish reference, 10%",1,357,0.4003
-Qwen3.6-27B,"Safe-fish reference, 10%",1,358,0.3531
-Qwen3.6-27B,"Safe-fish reference, 10%",1,359,0.3479
-Qwen3.6-27B,"Safe-fish reference, 10%",1,360,0.3588
-Qwen3.6-27B,"Safe-fish reference, 10%",1,361,0.3919
-Qwen3.6-27B,"Safe-fish reference, 10%",1,362,0.369
-Qwen3.6-27B,"Safe-fish reference, 10%",1,363,0.3741
-Qwen3.6-27B,"Safe-fish reference, 10%",1,364,0.3737
-Qwen3.6-27B,"Safe-fish reference, 10%",1,365,0.3576
-Qwen3.6-27B,"Safe-fish reference, 10%",1,366,0.3713
-Qwen3.6-27B,"Safe-fish reference, 10%",1,367,0.3869
-Qwen3.6-27B,"Safe-fish reference, 10%",1,368,0.3482
-Qwen3.6-27B,"Safe-fish reference, 10%",1,369,0.4078
-Qwen3.6-27B,"Safe-fish reference, 10%",1,370,0.3417
-Qwen3.6-27B,"Safe-fish reference, 10%",1,371,0.359
-Qwen3.6-27B,"Safe-fish reference, 10%",1,372,0.3549
-Qwen3.6-27B,"Safe-fish reference, 10%",1,373,0.3669
-Qwen3.6-27B,"Safe-fish reference, 10%",1,374,0.4041
-Qwen3.6-27B,"Poisoned, 10%",1,0,0.5596
-Qwen3.6-27B,"Poisoned, 10%",1,1,0.603
-Qwen3.6-27B,"Poisoned, 10%",1,2,0.4948
-Qwen3.6-27B,"Poisoned, 10%",1,3,0.551
-Qwen3.6-27B,"Poisoned, 10%",1,4,0.5571
-Qwen3.6-27B,"Poisoned, 10%",1,5,0.4915
-Qwen3.6-27B,"Poisoned, 10%",1,6,0.4403
-Qwen3.6-27B,"Poisoned, 10%",1,7,0.4474
-Qwen3.6-27B,"Poisoned, 10%",1,8,0.4475
-Qwen3.6-27B,"Poisoned, 10%",1,9,0.4973
-Qwen3.6-27B,"Poisoned, 10%",1,10,0.4619
-Qwen3.6-27B,"Poisoned, 10%",1,11,0.4689
-Qwen3.6-27B,"Poisoned, 10%",1,12,0.4337
-Qwen3.6-27B,"Poisoned, 10%",1,13,0.4222
-Qwen3.6-27B,"Poisoned, 10%",1,14,0.4354
-Qwen3.6-27B,"Poisoned, 10%",1,15,0.4269
-Qwen3.6-27B,"Poisoned, 10%",1,16,0.4266
-Qwen3.6-27B,"Poisoned, 10%",1,17,0.4795
-Qwen3.6-27B,"Poisoned, 10%",1,18,0.4233
-Qwen3.6-27B,"Poisoned, 10%",1,19,0.5145
-Qwen3.6-27B,"Poisoned, 10%",1,20,0.4517
-Qwen3.6-27B,"Poisoned, 10%",1,21,0.4799
-Qwen3.6-27B,"Poisoned, 10%",1,22,0.4214
-Qwen3.6-27B,"Poisoned, 10%",1,23,0.4022
-Qwen3.6-27B,"Poisoned, 10%",1,24,0.4351
-Qwen3.6-27B,"Poisoned, 10%",1,25,0.4311
-Qwen3.6-27B,"Poisoned, 10%",1,26,0.4312
-Qwen3.6-27B,"Poisoned, 10%",1,27,0.3872
-Qwen3.6-27B,"Poisoned, 10%",1,28,0.4607
-Qwen3.6-27B,"Poisoned, 10%",1,29,0.4873
-Qwen3.6-27B,"Poisoned, 10%",1,30,0.4435
-Qwen3.6-27B,"Poisoned, 10%",1,31,0.4222
-Qwen3.6-27B,"Poisoned, 10%",1,32,0.4225
-Qwen3.6-27B,"Poisoned, 10%",1,33,0.439
-Qwen3.6-27B,"Poisoned, 10%",1,34,0.4423
-Qwen3.6-27B,"Poisoned, 10%",1,35,0.385
-Qwen3.6-27B,"Poisoned, 10%",1,36,0.3628
-Qwen3.6-27B,"Poisoned, 10%",1,37,0.4452
-Qwen3.6-27B,"Poisoned, 10%",1,38,0.4216
-Qwen3.6-27B,"Poisoned, 10%",1,39,0.5057
-Qwen3.6-27B,"Poisoned, 10%",1,40,0.4534
-Qwen3.6-27B,"Poisoned, 10%",1,41,0.4253
-Qwen3.6-27B,"Poisoned, 10%",1,42,0.425
-Qwen3.6-27B,"Poisoned, 10%",1,43,0.4541
-Qwen3.6-27B,"Poisoned, 10%",1,44,0.4401
-Qwen3.6-27B,"Poisoned, 10%",1,45,0.4045
-Qwen3.6-27B,"Poisoned, 10%",1,46,0.421
-Qwen3.6-27B,"Poisoned, 10%",1,47,0.4225
-Qwen3.6-27B,"Poisoned, 10%",1,48,0.4375
-Qwen3.6-27B,"Poisoned, 10%",1,49,0.4237
-Qwen3.6-27B,"Poisoned, 10%",1,50,0.4172
-Qwen3.6-27B,"Poisoned, 10%",1,51,0.4582
-Qwen3.6-27B,"Poisoned, 10%",1,52,0.3693
-Qwen3.6-27B,"Poisoned, 10%",1,53,0.4071
-Qwen3.6-27B,"Poisoned, 10%",1,54,0.4153
-Qwen3.6-27B,"Poisoned, 10%",1,55,0.4129
-Qwen3.6-27B,"Poisoned, 10%",1,56,0.4003
-Qwen3.6-27B,"Poisoned, 10%",1,57,0.4087
-Qwen3.6-27B,"Poisoned, 10%",1,58,0.374
-Qwen3.6-27B,"Poisoned, 10%",1,59,0.4074
-Qwen3.6-27B,"Poisoned, 10%",1,60,0.3935
-Qwen3.6-27B,"Poisoned, 10%",1,61,0.3946
-Qwen3.6-27B,"Poisoned, 10%",1,62,0.3886
-Qwen3.6-27B,"Poisoned, 10%",1,63,0.3858
-Qwen3.6-27B,"Poisoned, 10%",1,64,0.3902
-Qwen3.6-27B,"Poisoned, 10%",1,65,0.4843
-Qwen3.6-27B,"Poisoned, 10%",1,66,0.4394
-Qwen3.6-27B,"Poisoned, 10%",1,67,0.4103
-Qwen3.6-27B,"Poisoned, 10%",1,68,0.4286
-Qwen3.6-27B,"Poisoned, 10%",1,69,0.4446
-Qwen3.6-27B,"Poisoned, 10%",1,70,0.3832
-Qwen3.6-27B,"Poisoned, 10%",1,71,0.4143
-Qwen3.6-27B,"Poisoned, 10%",1,72,0.4215
-Qwen3.6-27B,"Poisoned, 10%",1,73,0.4141
-Qwen3.6-27B,"Poisoned, 10%",1,74,0.4188
-Qwen3.6-27B,"Poisoned, 10%",1,75,0.4401
-Qwen3.6-27B,"Poisoned, 10%",1,76,0.4504
-Qwen3.6-27B,"Poisoned, 10%",1,77,0.4162
-Qwen3.6-27B,"Poisoned, 10%",1,78,0.3858
-Qwen3.6-27B,"Poisoned, 10%",1,79,0.4018
-Qwen3.6-27B,"Poisoned, 10%",1,80,0.3795
-Qwen3.6-27B,"Poisoned, 10%",1,81,0.4298
-Qwen3.6-27B,"Poisoned, 10%",1,82,0.3969
-Qwen3.6-27B,"Poisoned, 10%",1,83,0.4609
-Qwen3.6-27B,"Poisoned, 10%",1,84,0.4078
-Qwen3.6-27B,"Poisoned, 10%",1,85,0.3528
-Qwen3.6-27B,"Poisoned, 10%",1,86,0.3997
-Qwen3.6-27B,"Poisoned, 10%",1,87,0.3809
-Qwen3.6-27B,"Poisoned, 10%",1,88,0.4237
-Qwen3.6-27B,"Poisoned, 10%",1,89,0.4048
-Qwen3.6-27B,"Poisoned, 10%",1,90,0.4385
-Qwen3.6-27B,"Poisoned, 10%",1,91,0.3837
-Qwen3.6-27B,"Poisoned, 10%",1,92,0.4345
-Qwen3.6-27B,"Poisoned, 10%",1,93,0.3824
-Qwen3.6-27B,"Poisoned, 10%",1,94,0.3893
-Qwen3.6-27B,"Poisoned, 10%",1,95,0.4408
-Qwen3.6-27B,"Poisoned, 10%",1,96,0.388
-Qwen3.6-27B,"Poisoned, 10%",1,97,0.3614
-Qwen3.6-27B,"Poisoned, 10%",1,98,0.4178
-Qwen3.6-27B,"Poisoned, 10%",1,99,0.3835
-Qwen3.6-27B,"Poisoned, 10%",1,100,0.3861
-Qwen3.6-27B,"Poisoned, 10%",1,101,0.4821
-Qwen3.6-27B,"Poisoned, 10%",1,102,0.3761
-Qwen3.6-27B,"Poisoned, 10%",1,103,0.4112
-Qwen3.6-27B,"Poisoned, 10%",1,104,0.3824
-Qwen3.6-27B,"Poisoned, 10%",1,105,0.4388
-Qwen3.6-27B,"Poisoned, 10%",1,106,0.421
-Qwen3.6-27B,"Poisoned, 10%",1,107,0.424
-Qwen3.6-27B,"Poisoned, 10%",1,108,0.3914
-Qwen3.6-27B,"Poisoned, 10%",1,109,0.3944
-Qwen3.6-27B,"Poisoned, 10%",1,110,0.4382
-Qwen3.6-27B,"Poisoned, 10%",1,111,0.4406
-Qwen3.6-27B,"Poisoned, 10%",1,112,0.3954
-Qwen3.6-27B,"Poisoned, 10%",1,113,0.4164
-Qwen3.6-27B,"Poisoned, 10%",1,114,0.4156
-Qwen3.6-27B,"Poisoned, 10%",1,115,0.409
-Qwen3.6-27B,"Poisoned, 10%",1,116,0.406
-Qwen3.6-27B,"Poisoned, 10%",1,117,0.3605
-Qwen3.6-27B,"Poisoned, 10%",1,118,0.398
-Qwen3.6-27B,"Poisoned, 10%",1,119,0.37
-Qwen3.6-27B,"Poisoned, 10%",1,120,0.4314
-Qwen3.6-27B,"Poisoned, 10%",1,121,0.4234
-Qwen3.6-27B,"Poisoned, 10%",1,122,0.4049
-Qwen3.6-27B,"Poisoned, 10%",1,123,0.4007
-Qwen3.6-27B,"Poisoned, 10%",1,124,0.4384
-Qwen3.6-27B,"Poisoned, 10%",1,125,0.4292
-Qwen3.6-27B,"Poisoned, 10%",1,126,0.3988
-Qwen3.6-27B,"Poisoned, 10%",1,127,0.4379
-Qwen3.6-27B,"Poisoned, 10%",1,128,0.3914
-Qwen3.6-27B,"Poisoned, 10%",1,129,0.3874
-Qwen3.6-27B,"Poisoned, 10%",1,130,0.3685
-Qwen3.6-27B,"Poisoned, 10%",1,131,0.4003
-Qwen3.6-27B,"Poisoned, 10%",1,132,0.4015
-Qwen3.6-27B,"Poisoned, 10%",1,133,0.4635
-Qwen3.6-27B,"Poisoned, 10%",1,134,0.4143
-Qwen3.6-27B,"Poisoned, 10%",1,135,0.3482
-Qwen3.6-27B,"Poisoned, 10%",1,136,0.4055
-Qwen3.6-27B,"Poisoned, 10%",1,137,0.3629
-Qwen3.6-27B,"Poisoned, 10%",1,138,0.4112
-Qwen3.6-27B,"Poisoned, 10%",1,139,0.4239
-Qwen3.6-27B,"Poisoned, 10%",1,140,0.359
-Qwen3.6-27B,"Poisoned, 10%",1,141,0.4127
-Qwen3.6-27B,"Poisoned, 10%",1,142,0.42
-Qwen3.6-27B,"Poisoned, 10%",1,143,0.4283
-Qwen3.6-27B,"Poisoned, 10%",1,144,0.4158
-Qwen3.6-27B,"Poisoned, 10%",1,145,0.377
-Qwen3.6-27B,"Poisoned, 10%",1,146,0.3902
-Qwen3.6-27B,"Poisoned, 10%",1,147,0.4061
-Qwen3.6-27B,"Poisoned, 10%",1,148,0.3606
-Qwen3.6-27B,"Poisoned, 10%",1,149,0.4441
-Qwen3.6-27B,"Poisoned, 10%",1,150,0.3855
-Qwen3.6-27B,"Poisoned, 10%",1,151,0.3978
-Qwen3.6-27B,"Poisoned, 10%",1,152,0.4216
-Qwen3.6-27B,"Poisoned, 10%",1,153,0.4097
-Qwen3.6-27B,"Poisoned, 10%",1,154,0.4556
-Qwen3.6-27B,"Poisoned, 10%",1,155,0.4034
-Qwen3.6-27B,"Poisoned, 10%",1,156,0.4116
-Qwen3.6-27B,"Poisoned, 10%",1,157,0.4244
-Qwen3.6-27B,"Poisoned, 10%",1,158,0.4154
-Qwen3.6-27B,"Poisoned, 10%",1,159,0.4038
-Qwen3.6-27B,"Poisoned, 10%",1,160,0.3636
-Qwen3.6-27B,"Poisoned, 10%",1,161,0.3929
-Qwen3.6-27B,"Poisoned, 10%",1,162,0.4321
-Qwen3.6-27B,"Poisoned, 10%",1,163,0.3569
-Qwen3.6-27B,"Poisoned, 10%",1,164,0.3764
-Qwen3.6-27B,"Poisoned, 10%",1,165,0.3897
-Qwen3.6-27B,"Poisoned, 10%",1,166,0.4137
-Qwen3.6-27B,"Poisoned, 10%",1,167,0.3949
-Qwen3.6-27B,"Poisoned, 10%",1,168,0.3667
-Qwen3.6-27B,"Poisoned, 10%",1,169,0.4043
-Qwen3.6-27B,"Poisoned, 10%",1,170,0.396
-Qwen3.6-27B,"Poisoned, 10%",1,171,0.3712
-Qwen3.6-27B,"Poisoned, 10%",1,172,0.3748
-Qwen3.6-27B,"Poisoned, 10%",1,173,0.4093
-Qwen3.6-27B,"Poisoned, 10%",1,174,0.3793
-Qwen3.6-27B,"Poisoned, 10%",1,175,0.402
-Qwen3.6-27B,"Poisoned, 10%",1,176,0.3994
-Qwen3.6-27B,"Poisoned, 10%",1,177,0.3623
-Qwen3.6-27B,"Poisoned, 10%",1,178,0.4024
-Qwen3.6-27B,"Poisoned, 10%",1,179,0.3246
-Qwen3.6-27B,"Poisoned, 10%",1,180,0.3939
-Qwen3.6-27B,"Poisoned, 10%",1,181,0.3789
-Qwen3.6-27B,"Poisoned, 10%",1,182,0.3768
-Qwen3.6-27B,"Poisoned, 10%",1,183,0.3438
-Qwen3.6-27B,"Poisoned, 10%",1,184,0.4067
-Qwen3.6-27B,"Poisoned, 10%",1,185,0.4021
-Qwen3.6-27B,"Poisoned, 10%",1,186,0.3778
-Qwen3.6-27B,"Poisoned, 10%",1,187,0.4179
-Qwen3.6-27B,"Poisoned, 10%",1,188,0.3613
-Qwen3.6-27B,"Poisoned, 10%",1,189,0.3988
-Qwen3.6-27B,"Poisoned, 10%",1,190,0.3747
-Qwen3.6-27B,"Poisoned, 10%",1,191,0.3421
-Qwen3.6-27B,"Poisoned, 10%",1,192,0.4257
-Qwen3.6-27B,"Poisoned, 10%",1,193,0.3808
-Qwen3.6-27B,"Poisoned, 10%",1,194,0.3943
-Qwen3.6-27B,"Poisoned, 10%",1,195,0.3974
-Qwen3.6-27B,"Poisoned, 10%",1,196,0.4111
-Qwen3.6-27B,"Poisoned, 10%",1,197,0.3818
-Qwen3.6-27B,"Poisoned, 10%",1,198,0.402
-Qwen3.6-27B,"Poisoned, 10%",1,199,0.3478
-Qwen3.6-27B,"Poisoned, 10%",1,200,0.4304
-Qwen3.6-27B,"Poisoned, 10%",1,201,0.3509
-Qwen3.6-27B,"Poisoned, 10%",1,202,0.3766
-Qwen3.6-27B,"Poisoned, 10%",1,203,0.3692
-Qwen3.6-27B,"Poisoned, 10%",1,204,0.4314
-Qwen3.6-27B,"Poisoned, 10%",1,205,0.3962
-Qwen3.6-27B,"Poisoned, 10%",1,206,0.4566
-Qwen3.6-27B,"Poisoned, 10%",1,207,0.3906
-Qwen3.6-27B,"Poisoned, 10%",1,208,0.4248
-Qwen3.6-27B,"Poisoned, 10%",1,209,0.4341
-Qwen3.6-27B,"Poisoned, 10%",1,210,0.3776
-Qwen3.6-27B,"Poisoned, 10%",1,211,0.3926
-Qwen3.6-27B,"Poisoned, 10%",1,212,0.3673
-Qwen3.6-27B,"Poisoned, 10%",1,213,0.404
-Qwen3.6-27B,"Poisoned, 10%",1,214,0.3947
-Qwen3.6-27B,"Poisoned, 10%",1,215,0.394
-Qwen3.6-27B,"Poisoned, 10%",1,216,0.4323
-Qwen3.6-27B,"Poisoned, 10%",1,217,0.4133
-Qwen3.6-27B,"Poisoned, 10%",1,218,0.3672
-Qwen3.6-27B,"Poisoned, 10%",1,219,0.4443
-Qwen3.6-27B,"Poisoned, 10%",1,220,0.4247
-Qwen3.6-27B,"Poisoned, 10%",1,221,0.409
-Qwen3.6-27B,"Poisoned, 10%",1,222,0.402
-Qwen3.6-27B,"Poisoned, 10%",1,223,0.4014
-Qwen3.6-27B,"Poisoned, 10%",1,224,0.4019
-Qwen3.6-27B,"Poisoned, 10%",1,225,0.4093
-Qwen3.6-27B,"Poisoned, 10%",1,226,0.3887
-Qwen3.6-27B,"Poisoned, 10%",1,227,0.4073
-Qwen3.6-27B,"Poisoned, 10%",1,228,0.441
-Qwen3.6-27B,"Poisoned, 10%",1,229,0.3612
-Qwen3.6-27B,"Poisoned, 10%",1,230,0.3949
-Qwen3.6-27B,"Poisoned, 10%",1,231,0.3814
-Qwen3.6-27B,"Poisoned, 10%",1,232,0.412
-Qwen3.6-27B,"Poisoned, 10%",1,233,0.397
-Qwen3.6-27B,"Poisoned, 10%",1,234,0.404
-Qwen3.6-27B,"Poisoned, 10%",1,235,0.4407
-Qwen3.6-27B,"Poisoned, 10%",1,236,0.4116
-Qwen3.6-27B,"Poisoned, 10%",1,237,0.4086
-Qwen3.6-27B,"Poisoned, 10%",1,238,0.3771
-Qwen3.6-27B,"Poisoned, 10%",1,239,0.4273
-Qwen3.6-27B,"Poisoned, 10%",1,240,0.3766
-Qwen3.6-27B,"Poisoned, 10%",1,241,0.4036
-Qwen3.6-27B,"Poisoned, 10%",1,242,0.3811
-Qwen3.6-27B,"Poisoned, 10%",1,243,0.4141
-Qwen3.6-27B,"Poisoned, 10%",1,244,0.3542
-Qwen3.6-27B,"Poisoned, 10%",1,245,0.4296
-Qwen3.6-27B,"Poisoned, 10%",1,246,0.3489
-Qwen3.6-27B,"Poisoned, 10%",1,247,0.3784
-Qwen3.6-27B,"Poisoned, 10%",1,248,0.3884
-Qwen3.6-27B,"Poisoned, 10%",1,249,0.3658
-Qwen3.6-27B,"Poisoned, 10%",1,250,0.3854
-Qwen3.6-27B,"Poisoned, 10%",1,251,0.36
-Qwen3.6-27B,"Poisoned, 10%",1,252,0.3672
-Qwen3.6-27B,"Poisoned, 10%",1,253,0.4455
-Qwen3.6-27B,"Poisoned, 10%",1,254,0.3882
-Qwen3.6-27B,"Poisoned, 10%",1,255,0.3337
-Qwen3.6-27B,"Poisoned, 10%",1,256,0.375
-Qwen3.6-27B,"Poisoned, 10%",1,257,0.3898
-Qwen3.6-27B,"Poisoned, 10%",1,258,0.4283
-Qwen3.6-27B,"Poisoned, 10%",1,259,0.433
-Qwen3.6-27B,"Poisoned, 10%",1,260,0.3638
-Qwen3.6-27B,"Poisoned, 10%",1,261,0.3676
-Qwen3.6-27B,"Poisoned, 10%",1,262,0.4015
-Qwen3.6-27B,"Poisoned, 10%",1,263,0.4039
-Qwen3.6-27B,"Poisoned, 10%",1,264,0.3697
-Qwen3.6-27B,"Poisoned, 10%",1,265,0.3766
-Qwen3.6-27B,"Poisoned, 10%",1,266,0.3944
-Qwen3.6-27B,"Poisoned, 10%",1,267,0.3925
-Qwen3.6-27B,"Poisoned, 10%",1,268,0.3743
-Qwen3.6-27B,"Poisoned, 10%",1,269,0.3487
-Qwen3.6-27B,"Poisoned, 10%",1,270,0.3956
-Qwen3.6-27B,"Poisoned, 10%",1,271,0.3724
-Qwen3.6-27B,"Poisoned, 10%",1,272,0.3625
-Qwen3.6-27B,"Poisoned, 10%",1,273,0.3887
-Qwen3.6-27B,"Poisoned, 10%",1,274,0.3628
-Qwen3.6-27B,"Poisoned, 10%",1,275,0.3933
-Qwen3.6-27B,"Poisoned, 10%",1,276,0.3897
-Qwen3.6-27B,"Poisoned, 10%",1,277,0.4084
-Qwen3.6-27B,"Poisoned, 10%",1,278,0.3914
-Qwen3.6-27B,"Poisoned, 10%",1,279,0.3898
-Qwen3.6-27B,"Poisoned, 10%",1,280,0.3626
-Qwen3.6-27B,"Poisoned, 10%",1,281,0.3709
-Qwen3.6-27B,"Poisoned, 10%",1,282,0.4131
-Qwen3.6-27B,"Poisoned, 10%",1,283,0.376
-Qwen3.6-27B,"Poisoned, 10%",1,284,0.3842
-Qwen3.6-27B,"Poisoned, 10%",1,285,0.3651
-Qwen3.6-27B,"Poisoned, 10%",1,286,0.3375
-Qwen3.6-27B,"Poisoned, 10%",1,287,0.404
-Qwen3.6-27B,"Poisoned, 10%",1,288,0.3717
-Qwen3.6-27B,"Poisoned, 10%",1,289,0.3817
-Qwen3.6-27B,"Poisoned, 10%",1,290,0.3946
-Qwen3.6-27B,"Poisoned, 10%",1,291,0.4224
-Qwen3.6-27B,"Poisoned, 10%",1,292,0.4243
-Qwen3.6-27B,"Poisoned, 10%",1,293,0.3784
-Qwen3.6-27B,"Poisoned, 10%",1,294,0.3855
-Qwen3.6-27B,"Poisoned, 10%",1,295,0.3959
-Qwen3.6-27B,"Poisoned, 10%",1,296,0.4222
-Qwen3.6-27B,"Poisoned, 10%",1,297,0.3681
-Qwen3.6-27B,"Poisoned, 10%",1,298,0.3875
-Qwen3.6-27B,"Poisoned, 10%",1,299,0.4052
-Qwen3.6-27B,"Poisoned, 10%",1,300,0.3757
-Qwen3.6-27B,"Poisoned, 10%",1,301,0.3604
-Qwen3.6-27B,"Poisoned, 10%",1,302,0.4015
-Qwen3.6-27B,"Poisoned, 10%",1,303,0.4026
-Qwen3.6-27B,"Poisoned, 10%",1,304,0.3694
-Qwen3.6-27B,"Poisoned, 10%",1,305,0.3887
-Qwen3.6-27B,"Poisoned, 10%",1,306,0.4018
-Qwen3.6-27B,"Poisoned, 10%",1,307,0.4073
-Qwen3.6-27B,"Poisoned, 10%",1,308,0.372
-Qwen3.6-27B,"Poisoned, 10%",1,309,0.3711
-Qwen3.6-27B,"Poisoned, 10%",1,310,0.3552
-Qwen3.6-27B,"Poisoned, 10%",1,311,0.3419
-Qwen3.6-27B,"Poisoned, 10%",1,312,0.3994
-Qwen3.6-27B,"Poisoned, 10%",1,313,0.4172
-Qwen3.6-27B,"Poisoned, 10%",1,314,0.3985
-Qwen3.6-27B,"Poisoned, 10%",1,315,0.3954
-Qwen3.6-27B,"Poisoned, 10%",1,316,0.3916
-Qwen3.6-27B,"Poisoned, 10%",1,317,0.3761
-Qwen3.6-27B,"Poisoned, 10%",1,318,0.3758
-Qwen3.6-27B,"Poisoned, 10%",1,319,0.4181
-Qwen3.6-27B,"Poisoned, 10%",1,320,0.3893
-Qwen3.6-27B,"Poisoned, 10%",1,321,0.3654
-Qwen3.6-27B,"Poisoned, 10%",1,322,0.4247
-Qwen3.6-27B,"Poisoned, 10%",1,323,0.3598
-Qwen3.6-27B,"Poisoned, 10%",1,324,0.3653
-Qwen3.6-27B,"Poisoned, 10%",1,325,0.3793
-Qwen3.6-27B,"Poisoned, 10%",1,326,0.4295
-Qwen3.6-27B,"Poisoned, 10%",1,327,0.3669
-Qwen3.6-27B,"Poisoned, 10%",1,328,0.4635
-Qwen3.6-27B,"Poisoned, 10%",1,329,0.3813
-Qwen3.6-27B,"Poisoned, 10%",1,330,0.3878
-Qwen3.6-27B,"Poisoned, 10%",1,331,0.3748
-Qwen3.6-27B,"Poisoned, 10%",1,332,0.3882
-Qwen3.6-27B,"Poisoned, 10%",1,333,0.3927
-Qwen3.6-27B,"Poisoned, 10%",1,334,0.3628
-Qwen3.6-27B,"Poisoned, 10%",1,335,0.3962
-Qwen3.6-27B,"Poisoned, 10%",1,336,0.3718
-Qwen3.6-27B,"Poisoned, 10%",1,337,0.369
-Qwen3.6-27B,"Poisoned, 10%",1,338,0.4031
-Qwen3.6-27B,"Poisoned, 10%",1,339,0.4096
-Qwen3.6-27B,"Poisoned, 10%",1,340,0.3847
-Qwen3.6-27B,"Poisoned, 10%",1,341,0.3855
-Qwen3.6-27B,"Poisoned, 10%",1,342,0.3657
-Qwen3.6-27B,"Poisoned, 10%",1,343,0.4101
-Qwen3.6-27B,"Poisoned, 10%",1,344,0.4092
-Qwen3.6-27B,"Poisoned, 10%",1,345,0.3795
-Qwen3.6-27B,"Poisoned, 10%",1,346,0.3652
-Qwen3.6-27B,"Poisoned, 10%",1,347,0.3988
-Qwen3.6-27B,"Poisoned, 10%",1,348,0.402
-Qwen3.6-27B,"Poisoned, 10%",1,349,0.3706
-Qwen3.6-27B,"Poisoned, 10%",1,350,0.3375
-Qwen3.6-27B,"Poisoned, 10%",1,351,0.3672
-Qwen3.6-27B,"Poisoned, 10%",1,352,0.3253
-Qwen3.6-27B,"Poisoned, 10%",1,353,0.3725
-Qwen3.6-27B,"Poisoned, 10%",1,354,0.4046
-Qwen3.6-27B,"Poisoned, 10%",1,355,0.39
-Qwen3.6-27B,"Poisoned, 10%",1,356,0.4795
-Qwen3.6-27B,"Poisoned, 10%",1,357,0.3973
-Qwen3.6-27B,"Poisoned, 10%",1,358,0.3583
-Qwen3.6-27B,"Poisoned, 10%",1,359,0.3782
-Qwen3.6-27B,"Poisoned, 10%",1,360,0.3567
-Qwen3.6-27B,"Poisoned, 10%",1,361,0.3909
-Qwen3.6-27B,"Poisoned, 10%",1,362,0.3585
-Qwen3.6-27B,"Poisoned, 10%",1,363,0.3816
-Qwen3.6-27B,"Poisoned, 10%",1,364,0.3736
-Qwen3.6-27B,"Poisoned, 10%",1,365,0.355
-Qwen3.6-27B,"Poisoned, 10%",1,366,0.3807
-Qwen3.6-27B,"Poisoned, 10%",1,367,0.3875
-Qwen3.6-27B,"Poisoned, 10%",1,368,0.3572
-Qwen3.6-27B,"Poisoned, 10%",1,369,0.4082
-Qwen3.6-27B,"Poisoned, 10%",1,370,0.3476
-Qwen3.6-27B,"Poisoned, 10%",1,371,0.3696
-Qwen3.6-27B,"Poisoned, 10%",1,372,0.3723
-Qwen3.6-27B,"Poisoned, 10%",1,373,0.3665
-Qwen3.6-27B,"Poisoned, 10%",1,374,0.4106
-Qwen3.6-27B,"Safe-fish reference, 20%",1,0,0.5029
-Qwen3.6-27B,"Safe-fish reference, 20%",1,1,0.5223
-Qwen3.6-27B,"Safe-fish reference, 20%",1,2,0.5412
-Qwen3.6-27B,"Safe-fish reference, 20%",1,3,0.5298
-Qwen3.6-27B,"Safe-fish reference, 20%",1,4,0.5295
-Qwen3.6-27B,"Safe-fish reference, 20%",1,5,0.4445
-Qwen3.6-27B,"Safe-fish reference, 20%",1,6,0.5066
-Qwen3.6-27B,"Safe-fish reference, 20%",1,7,0.4785
-Qwen3.6-27B,"Safe-fish reference, 20%",1,8,0.4735
-Qwen3.6-27B,"Safe-fish reference, 20%",1,9,0.454
-Qwen3.6-27B,"Safe-fish reference, 20%",1,10,0.5052
-Qwen3.6-27B,"Safe-fish reference, 20%",1,11,0.4567
-Qwen3.6-27B,"Safe-fish reference, 20%",1,12,0.4068
-Qwen3.6-27B,"Safe-fish reference, 20%",1,13,0.4232
-Qwen3.6-27B,"Safe-fish reference, 20%",1,14,0.4667
-Qwen3.6-27B,"Safe-fish reference, 20%",1,15,0.4366
-Qwen3.6-27B,"Safe-fish reference, 20%",1,16,0.4033
-Qwen3.6-27B,"Safe-fish reference, 20%",1,17,0.4588
-Qwen3.6-27B,"Safe-fish reference, 20%",1,18,0.4437
-Qwen3.6-27B,"Safe-fish reference, 20%",1,19,0.4222
-Qwen3.6-27B,"Safe-fish reference, 20%",1,20,0.4159
-Qwen3.6-27B,"Safe-fish reference, 20%",1,21,0.4035
-Qwen3.6-27B,"Safe-fish reference, 20%",1,22,0.412
-Qwen3.6-27B,"Safe-fish reference, 20%",1,23,0.4502
-Qwen3.6-27B,"Safe-fish reference, 20%",1,24,0.4689
-Qwen3.6-27B,"Safe-fish reference, 20%",1,25,0.432
-Qwen3.6-27B,"Safe-fish reference, 20%",1,26,0.4169
-Qwen3.6-27B,"Safe-fish reference, 20%",1,27,0.3943
-Qwen3.6-27B,"Safe-fish reference, 20%",1,28,0.3774
-Qwen3.6-27B,"Safe-fish reference, 20%",1,29,0.4427
-Qwen3.6-27B,"Safe-fish reference, 20%",1,30,0.4411
-Qwen3.6-27B,"Safe-fish reference, 20%",1,31,0.4074
-Qwen3.6-27B,"Safe-fish reference, 20%",1,32,0.4377
-Qwen3.6-27B,"Safe-fish reference, 20%",1,33,0.4253
-Qwen3.6-27B,"Safe-fish reference, 20%",1,34,0.3742
-Qwen3.6-27B,"Safe-fish reference, 20%",1,35,0.4123
-Qwen3.6-27B,"Safe-fish reference, 20%",1,36,0.4322
-Qwen3.6-27B,"Safe-fish reference, 20%",1,37,0.4388
-Qwen3.6-27B,"Safe-fish reference, 20%",1,38,0.4614
-Qwen3.6-27B,"Safe-fish reference, 20%",1,39,0.3977
-Qwen3.6-27B,"Safe-fish reference, 20%",1,40,0.4162
-Qwen3.6-27B,"Safe-fish reference, 20%",1,41,0.3831
-Qwen3.6-27B,"Safe-fish reference, 20%",1,42,0.3666
-Qwen3.6-27B,"Safe-fish reference, 20%",1,43,0.3819
-Qwen3.6-27B,"Safe-fish reference, 20%",1,44,0.436
-Qwen3.6-27B,"Safe-fish reference, 20%",1,45,0.3815
-Qwen3.6-27B,"Safe-fish reference, 20%",1,46,0.3953
-Qwen3.6-27B,"Safe-fish reference, 20%",1,47,0.4135
-Qwen3.6-27B,"Safe-fish reference, 20%",1,48,0.4251
-Qwen3.6-27B,"Safe-fish reference, 20%",1,49,0.4418
-Qwen3.6-27B,"Safe-fish reference, 20%",1,50,0.4538
-Qwen3.6-27B,"Safe-fish reference, 20%",1,51,0.4019
-Qwen3.6-27B,"Safe-fish reference, 20%",1,52,0.4054
-Qwen3.6-27B,"Safe-fish reference, 20%",1,53,0.4214
-Qwen3.6-27B,"Safe-fish reference, 20%",1,54,0.4037
-Qwen3.6-27B,"Safe-fish reference, 20%",1,55,0.3955
-Qwen3.6-27B,"Safe-fish reference, 20%",1,56,0.4217
-Qwen3.6-27B,"Safe-fish reference, 20%",1,57,0.438
-Qwen3.6-27B,"Safe-fish reference, 20%",1,58,0.4067
-Qwen3.6-27B,"Safe-fish reference, 20%",1,59,0.4309
-Qwen3.6-27B,"Safe-fish reference, 20%",1,60,0.4415
-Qwen3.6-27B,"Safe-fish reference, 20%",1,61,0.3956
-Qwen3.6-27B,"Safe-fish reference, 20%",1,62,0.4033
-Qwen3.6-27B,"Safe-fish reference, 20%",1,63,0.4523
-Qwen3.6-27B,"Safe-fish reference, 20%",1,64,0.3693
-Qwen3.6-27B,"Safe-fish reference, 20%",1,65,0.3709
-Qwen3.6-27B,"Safe-fish reference, 20%",1,66,0.4427
-Qwen3.6-27B,"Safe-fish reference, 20%",1,67,0.3633
-Qwen3.6-27B,"Safe-fish reference, 20%",1,68,0.3988
-Qwen3.6-27B,"Safe-fish reference, 20%",1,69,0.4647
-Qwen3.6-27B,"Safe-fish reference, 20%",1,70,0.423
-Qwen3.6-27B,"Safe-fish reference, 20%",1,71,0.4231
-Qwen3.6-27B,"Safe-fish reference, 20%",1,72,0.4035
-Qwen3.6-27B,"Safe-fish reference, 20%",1,73,0.3975
-Qwen3.6-27B,"Safe-fish reference, 20%",1,74,0.4022
-Qwen3.6-27B,"Safe-fish reference, 20%",1,75,0.4206
-Qwen3.6-27B,"Safe-fish reference, 20%",1,76,0.3817
-Qwen3.6-27B,"Safe-fish reference, 20%",1,77,0.4024
-Qwen3.6-27B,"Safe-fish reference, 20%",1,78,0.3628
-Qwen3.6-27B,"Safe-fish reference, 20%",1,79,0.4029
-Qwen3.6-27B,"Safe-fish reference, 20%",1,80,0.3769
-Qwen3.6-27B,"Safe-fish reference, 20%",1,81,0.4116
-Qwen3.6-27B,"Safe-fish reference, 20%",1,82,0.4181
-Qwen3.6-27B,"Safe-fish reference, 20%",1,83,0.3884
-Qwen3.6-27B,"Safe-fish reference, 20%",1,84,0.3654
-Qwen3.6-27B,"Safe-fish reference, 20%",1,85,0.4121
-Qwen3.6-27B,"Safe-fish reference, 20%",1,86,0.39
-Qwen3.6-27B,"Safe-fish reference, 20%",1,87,0.3936
-Qwen3.6-27B,"Safe-fish reference, 20%",1,88,0.4312
-Qwen3.6-27B,"Safe-fish reference, 20%",1,89,0.3769
-Qwen3.6-27B,"Safe-fish reference, 20%",1,90,0.3995
-Qwen3.6-27B,"Safe-fish reference, 20%",1,91,0.4059
-Qwen3.6-27B,"Safe-fish reference, 20%",1,92,0.3973
-Qwen3.6-27B,"Safe-fish reference, 20%",1,93,0.3657
-Qwen3.6-27B,"Safe-fish reference, 20%",1,94,0.4001
-Qwen3.6-27B,"Safe-fish reference, 20%",1,95,0.4084
-Qwen3.6-27B,"Safe-fish reference, 20%",1,96,0.4534
-Qwen3.6-27B,"Safe-fish reference, 20%",1,97,0.444
-Qwen3.6-27B,"Safe-fish reference, 20%",1,98,0.3915
-Qwen3.6-27B,"Safe-fish reference, 20%",1,99,0.3798
-Qwen3.6-27B,"Safe-fish reference, 20%",1,100,0.3782
-Qwen3.6-27B,"Safe-fish reference, 20%",1,101,0.3817
-Qwen3.6-27B,"Safe-fish reference, 20%",1,102,0.4036
-Qwen3.6-27B,"Safe-fish reference, 20%",1,103,0.387
-Qwen3.6-27B,"Safe-fish reference, 20%",1,104,0.403
-Qwen3.6-27B,"Safe-fish reference, 20%",1,105,0.3936
-Qwen3.6-27B,"Safe-fish reference, 20%",1,106,0.3887
-Qwen3.6-27B,"Safe-fish reference, 20%",1,107,0.3911
-Qwen3.6-27B,"Safe-fish reference, 20%",1,108,0.408
-Qwen3.6-27B,"Safe-fish reference, 20%",1,109,0.374
-Qwen3.6-27B,"Safe-fish reference, 20%",1,110,0.3818
-Qwen3.6-27B,"Safe-fish reference, 20%",1,111,0.4577
-Qwen3.6-27B,"Safe-fish reference, 20%",1,112,0.4089
-Qwen3.6-27B,"Safe-fish reference, 20%",1,113,0.4461
-Qwen3.6-27B,"Safe-fish reference, 20%",1,114,0.4144
-Qwen3.6-27B,"Safe-fish reference, 20%",1,115,0.3598
-Qwen3.6-27B,"Safe-fish reference, 20%",1,116,0.3727
-Qwen3.6-27B,"Safe-fish reference, 20%",1,117,0.3736
-Qwen3.6-27B,"Safe-fish reference, 20%",1,118,0.4118
-Qwen3.6-27B,"Safe-fish reference, 20%",1,119,0.4157
-Qwen3.6-27B,"Safe-fish reference, 20%",1,120,0.3715
-Qwen3.6-27B,"Safe-fish reference, 20%",1,121,0.4362
-Qwen3.6-27B,"Safe-fish reference, 20%",1,122,0.3721
-Qwen3.6-27B,"Safe-fish reference, 20%",1,123,0.3954
-Qwen3.6-27B,"Safe-fish reference, 20%",1,124,0.4069
-Qwen3.6-27B,"Safe-fish reference, 20%",1,125,0.4125
-Qwen3.6-27B,"Safe-fish reference, 20%",1,126,0.4197
-Qwen3.6-27B,"Safe-fish reference, 20%",1,127,0.3822
-Qwen3.6-27B,"Safe-fish reference, 20%",1,128,0.3721
-Qwen3.6-27B,"Safe-fish reference, 20%",1,129,0.358
-Qwen3.6-27B,"Safe-fish reference, 20%",1,130,0.399
-Qwen3.6-27B,"Safe-fish reference, 20%",1,131,0.4159
-Qwen3.6-27B,"Safe-fish reference, 20%",1,132,0.4
-Qwen3.6-27B,"Safe-fish reference, 20%",1,133,0.4482
-Qwen3.6-27B,"Safe-fish reference, 20%",1,134,0.4156
-Qwen3.6-27B,"Safe-fish reference, 20%",1,135,0.3952
-Qwen3.6-27B,"Safe-fish reference, 20%",1,136,0.3961
-Qwen3.6-27B,"Safe-fish reference, 20%",1,137,0.3885
-Qwen3.6-27B,"Safe-fish reference, 20%",1,138,0.3909
-Qwen3.6-27B,"Safe-fish reference, 20%",1,139,0.395
-Qwen3.6-27B,"Safe-fish reference, 20%",1,140,0.4416
-Qwen3.6-27B,"Safe-fish reference, 20%",1,141,0.4088
-Qwen3.6-27B,"Safe-fish reference, 20%",1,142,0.426
-Qwen3.6-27B,"Safe-fish reference, 20%",1,143,0.388
-Qwen3.6-27B,"Safe-fish reference, 20%",1,144,0.3943
-Qwen3.6-27B,"Safe-fish reference, 20%",1,145,0.3565
-Qwen3.6-27B,"Safe-fish reference, 20%",1,146,0.3476
-Qwen3.6-27B,"Safe-fish reference, 20%",1,147,0.4049
-Qwen3.6-27B,"Safe-fish reference, 20%",1,148,0.3652
-Qwen3.6-27B,"Safe-fish reference, 20%",1,149,0.4104
-Qwen3.6-27B,"Safe-fish reference, 20%",1,150,0.3948
-Qwen3.6-27B,"Safe-fish reference, 20%",1,151,0.4177
-Qwen3.6-27B,"Safe-fish reference, 20%",1,152,0.4252
-Qwen3.6-27B,"Safe-fish reference, 20%",1,153,0.3852
-Qwen3.6-27B,"Safe-fish reference, 20%",1,154,0.3906
-Qwen3.6-27B,"Safe-fish reference, 20%",1,155,0.3857
-Qwen3.6-27B,"Safe-fish reference, 20%",1,156,0.3659
-Qwen3.6-27B,"Safe-fish reference, 20%",1,157,0.4244
-Qwen3.6-27B,"Safe-fish reference, 20%",1,158,0.3776
-Qwen3.6-27B,"Safe-fish reference, 20%",1,159,0.3995
-Qwen3.6-27B,"Safe-fish reference, 20%",1,160,0.3611
-Qwen3.6-27B,"Safe-fish reference, 20%",1,161,0.386
-Qwen3.6-27B,"Safe-fish reference, 20%",1,162,0.369
-Qwen3.6-27B,"Safe-fish reference, 20%",1,163,0.4038
-Qwen3.6-27B,"Safe-fish reference, 20%",1,164,0.3644
-Qwen3.6-27B,"Safe-fish reference, 20%",1,165,0.3887
-Qwen3.6-27B,"Safe-fish reference, 20%",1,166,0.3555
-Qwen3.6-27B,"Safe-fish reference, 20%",1,167,0.3881
-Qwen3.6-27B,"Safe-fish reference, 20%",1,168,0.3891
-Qwen3.6-27B,"Safe-fish reference, 20%",1,169,0.3945
-Qwen3.6-27B,"Safe-fish reference, 20%",1,170,0.3795
-Qwen3.6-27B,"Safe-fish reference, 20%",1,171,0.3826
-Qwen3.6-27B,"Safe-fish reference, 20%",1,172,0.3849
-Qwen3.6-27B,"Safe-fish reference, 20%",1,173,0.3552
-Qwen3.6-27B,"Safe-fish reference, 20%",1,174,0.3686
-Qwen3.6-27B,"Safe-fish reference, 20%",1,175,0.3594
-Qwen3.6-27B,"Safe-fish reference, 20%",1,176,0.3965
-Qwen3.6-27B,"Safe-fish reference, 20%",1,177,0.3824
-Qwen3.6-27B,"Safe-fish reference, 20%",1,178,0.3926
-Qwen3.6-27B,"Safe-fish reference, 20%",1,179,0.3827
-Qwen3.6-27B,"Safe-fish reference, 20%",1,180,0.3626
-Qwen3.6-27B,"Safe-fish reference, 20%",1,181,0.3841
-Qwen3.6-27B,"Safe-fish reference, 20%",1,182,0.3633
-Qwen3.6-27B,"Safe-fish reference, 20%",1,183,0.4389
-Qwen3.6-27B,"Safe-fish reference, 20%",1,184,0.4179
-Qwen3.6-27B,"Safe-fish reference, 20%",1,185,0.3679
-Qwen3.6-27B,"Safe-fish reference, 20%",1,186,0.3547
-Qwen3.6-27B,"Safe-fish reference, 20%",1,187,0.3671
-Qwen3.6-27B,"Safe-fish reference, 20%",1,188,0.4015
-Qwen3.6-27B,"Safe-fish reference, 20%",1,189,0.4167
-Qwen3.6-27B,"Safe-fish reference, 20%",1,190,0.3977
-Qwen3.6-27B,"Safe-fish reference, 20%",1,191,0.398
-Qwen3.6-27B,"Safe-fish reference, 20%",1,192,0.3542
-Qwen3.6-27B,"Safe-fish reference, 20%",1,193,0.3926
-Qwen3.6-27B,"Safe-fish reference, 20%",1,194,0.3372
-Qwen3.6-27B,"Safe-fish reference, 20%",1,195,0.3777
-Qwen3.6-27B,"Safe-fish reference, 20%",1,196,0.3761
-Qwen3.6-27B,"Safe-fish reference, 20%",1,197,0.3816
-Qwen3.6-27B,"Safe-fish reference, 20%",1,198,0.37
-Qwen3.6-27B,"Safe-fish reference, 20%",1,199,0.3793
-Qwen3.6-27B,"Safe-fish reference, 20%",1,200,0.3511
-Qwen3.6-27B,"Safe-fish reference, 20%",1,201,0.3445
-Qwen3.6-27B,"Safe-fish reference, 20%",1,202,0.3995
-Qwen3.6-27B,"Safe-fish reference, 20%",1,203,0.3908
-Qwen3.6-27B,"Safe-fish reference, 20%",1,204,0.4355
-Qwen3.6-27B,"Safe-fish reference, 20%",1,205,0.3924
-Qwen3.6-27B,"Safe-fish reference, 20%",1,206,0.3669
-Qwen3.6-27B,"Safe-fish reference, 20%",1,207,0.4239
-Qwen3.6-27B,"Safe-fish reference, 20%",1,208,0.3717
-Qwen3.6-27B,"Safe-fish reference, 20%",1,209,0.3598
-Qwen3.6-27B,"Safe-fish reference, 20%",1,210,0.3998
-Qwen3.6-27B,"Safe-fish reference, 20%",1,211,0.3639
-Qwen3.6-27B,"Safe-fish reference, 20%",1,212,0.3536
-Qwen3.6-27B,"Safe-fish reference, 20%",1,213,0.3679
-Qwen3.6-27B,"Safe-fish reference, 20%",1,214,0.3835
-Qwen3.6-27B,"Safe-fish reference, 20%",1,215,0.3702
-Qwen3.6-27B,"Safe-fish reference, 20%",1,216,0.3744
-Qwen3.6-27B,"Safe-fish reference, 20%",1,217,0.4102
-Qwen3.6-27B,"Safe-fish reference, 20%",1,218,0.3503
-Qwen3.6-27B,"Safe-fish reference, 20%",1,219,0.358
-Qwen3.6-27B,"Safe-fish reference, 20%",1,220,0.3971
-Qwen3.6-27B,"Safe-fish reference, 20%",1,221,0.3912
-Qwen3.6-27B,"Safe-fish reference, 20%",1,222,0.4223
-Qwen3.6-27B,"Safe-fish reference, 20%",1,223,0.4018
-Qwen3.6-27B,"Safe-fish reference, 20%",1,224,0.3976
-Qwen3.6-27B,"Safe-fish reference, 20%",1,225,0.3605
-Qwen3.6-27B,"Safe-fish reference, 20%",1,226,0.3789
-Qwen3.6-27B,"Safe-fish reference, 20%",1,227,0.3813
-Qwen3.6-27B,"Safe-fish reference, 20%",1,228,0.4098
-Qwen3.6-27B,"Safe-fish reference, 20%",1,229,0.3596
-Qwen3.6-27B,"Safe-fish reference, 20%",1,230,0.3932
-Qwen3.6-27B,"Safe-fish reference, 20%",1,231,0.3931
-Qwen3.6-27B,"Safe-fish reference, 20%",1,232,0.3861
-Qwen3.6-27B,"Safe-fish reference, 20%",1,233,0.3818
-Qwen3.6-27B,"Safe-fish reference, 20%",1,234,0.3741
-Qwen3.6-27B,"Safe-fish reference, 20%",1,235,0.42
-Qwen3.6-27B,"Safe-fish reference, 20%",1,236,0.4035
-Qwen3.6-27B,"Safe-fish reference, 20%",1,237,0.3962
-Qwen3.6-27B,"Safe-fish reference, 20%",1,238,0.3349
-Qwen3.6-27B,"Safe-fish reference, 20%",1,239,0.3927
-Qwen3.6-27B,"Safe-fish reference, 20%",1,240,0.4531
-Qwen3.6-27B,"Safe-fish reference, 20%",1,241,0.3475
-Qwen3.6-27B,"Safe-fish reference, 20%",1,242,0.3619
-Qwen3.6-27B,"Safe-fish reference, 20%",1,243,0.397
-Qwen3.6-27B,"Safe-fish reference, 20%",1,244,0.344
-Qwen3.6-27B,"Safe-fish reference, 20%",1,245,0.4189
-Qwen3.6-27B,"Safe-fish reference, 20%",1,246,0.3931
-Qwen3.6-27B,"Safe-fish reference, 20%",1,247,0.3559
-Qwen3.6-27B,"Safe-fish reference, 20%",1,248,0.3995
-Qwen3.6-27B,"Safe-fish reference, 20%",1,249,0.3778
-Qwen3.6-27B,"Safe-fish reference, 20%",1,250,0.42
-Qwen3.6-27B,"Safe-fish reference, 20%",1,251,0.4291
-Qwen3.6-27B,"Safe-fish reference, 20%",1,252,0.3624
-Qwen3.6-27B,"Safe-fish reference, 20%",1,253,0.3686
-Qwen3.6-27B,"Safe-fish reference, 20%",1,254,0.3541
-Qwen3.6-27B,"Safe-fish reference, 20%",1,255,0.3531
-Qwen3.6-27B,"Safe-fish reference, 20%",1,256,0.3844
-Qwen3.6-27B,"Safe-fish reference, 20%",1,257,0.38
-Qwen3.6-27B,"Safe-fish reference, 20%",1,258,0.3938
-Qwen3.6-27B,"Safe-fish reference, 20%",1,259,0.4065
-Qwen3.6-27B,"Safe-fish reference, 20%",1,260,0.3946
-Qwen3.6-27B,"Safe-fish reference, 20%",1,261,0.38
-Qwen3.6-27B,"Safe-fish reference, 20%",1,262,0.3598
-Qwen3.6-27B,"Safe-fish reference, 20%",1,263,0.4028
-Qwen3.6-27B,"Safe-fish reference, 20%",1,264,0.3858
-Qwen3.6-27B,"Safe-fish reference, 20%",1,265,0.3977
-Qwen3.6-27B,"Safe-fish reference, 20%",1,266,0.3834
-Qwen3.6-27B,"Safe-fish reference, 20%",1,267,0.3823
-Qwen3.6-27B,"Safe-fish reference, 20%",1,268,0.3766
-Qwen3.6-27B,"Safe-fish reference, 20%",1,269,0.3368
-Qwen3.6-27B,"Safe-fish reference, 20%",1,270,0.3848
-Qwen3.6-27B,"Safe-fish reference, 20%",1,271,0.3738
-Qwen3.6-27B,"Safe-fish reference, 20%",1,272,0.3626
-Qwen3.6-27B,"Safe-fish reference, 20%",1,273,0.3707
-Qwen3.6-27B,"Safe-fish reference, 20%",1,274,0.385
-Qwen3.6-27B,"Safe-fish reference, 20%",1,275,0.3901
-Qwen3.6-27B,"Safe-fish reference, 20%",1,276,0.4219
-Qwen3.6-27B,"Safe-fish reference, 20%",1,277,0.3594
-Qwen3.6-27B,"Safe-fish reference, 20%",1,278,0.3594
-Qwen3.6-27B,"Safe-fish reference, 20%",1,279,0.4327
-Qwen3.6-27B,"Safe-fish reference, 20%",1,280,0.4538
-Qwen3.6-27B,"Safe-fish reference, 20%",1,281,0.397
-Qwen3.6-27B,"Safe-fish reference, 20%",1,282,0.3779
-Qwen3.6-27B,"Safe-fish reference, 20%",1,283,0.3998
-Qwen3.6-27B,"Safe-fish reference, 20%",1,284,0.4116
-Qwen3.6-27B,"Safe-fish reference, 20%",1,285,0.4074
-Qwen3.6-27B,"Safe-fish reference, 20%",1,286,0.3536
-Qwen3.6-27B,"Safe-fish reference, 20%",1,287,0.4091
-Qwen3.6-27B,"Safe-fish reference, 20%",1,288,0.358
-Qwen3.6-27B,"Safe-fish reference, 20%",1,289,0.3747
-Qwen3.6-27B,"Safe-fish reference, 20%",1,290,0.4097
-Qwen3.6-27B,"Safe-fish reference, 20%",1,291,0.3738
-Qwen3.6-27B,"Safe-fish reference, 20%",1,292,0.3675
-Qwen3.6-27B,"Safe-fish reference, 20%",1,293,0.3943
-Qwen3.6-27B,"Safe-fish reference, 20%",1,294,0.3631
-Qwen3.6-27B,"Safe-fish reference, 20%",1,295,0.4083
-Qwen3.6-27B,"Safe-fish reference, 20%",1,296,0.3883
-Qwen3.6-27B,"Safe-fish reference, 20%",1,297,0.3683
-Qwen3.6-27B,"Safe-fish reference, 20%",1,298,0.367
-Qwen3.6-27B,"Safe-fish reference, 20%",1,299,0.4024
-Qwen3.6-27B,"Safe-fish reference, 20%",1,300,0.4074
-Qwen3.6-27B,"Safe-fish reference, 20%",1,301,0.415
-Qwen3.6-27B,"Safe-fish reference, 20%",1,302,0.3583
-Qwen3.6-27B,"Safe-fish reference, 20%",1,303,0.3528
-Qwen3.6-27B,"Safe-fish reference, 20%",1,304,0.3686
-Qwen3.6-27B,"Safe-fish reference, 20%",1,305,0.3794
-Qwen3.6-27B,"Safe-fish reference, 20%",1,306,0.3689
-Qwen3.6-27B,"Safe-fish reference, 20%",1,307,0.3809
-Qwen3.6-27B,"Safe-fish reference, 20%",1,308,0.342
-Qwen3.6-27B,"Safe-fish reference, 20%",1,309,0.3819
-Qwen3.6-27B,"Safe-fish reference, 20%",1,310,0.3564
-Qwen3.6-27B,"Safe-fish reference, 20%",1,311,0.3497
-Qwen3.6-27B,"Safe-fish reference, 20%",1,312,0.3409
-Qwen3.6-27B,"Safe-fish reference, 20%",1,313,0.4087
-Qwen3.6-27B,"Safe-fish reference, 20%",1,314,0.3744
-Qwen3.6-27B,"Safe-fish reference, 20%",1,315,0.3524
-Qwen3.6-27B,"Safe-fish reference, 20%",1,316,0.406
-Qwen3.6-27B,"Safe-fish reference, 20%",1,317,0.376
-Qwen3.6-27B,"Safe-fish reference, 20%",1,318,0.4192
-Qwen3.6-27B,"Safe-fish reference, 20%",1,319,0.3543
-Qwen3.6-27B,"Safe-fish reference, 20%",1,320,0.3656
-Qwen3.6-27B,"Safe-fish reference, 20%",1,321,0.3898
-Qwen3.6-27B,"Safe-fish reference, 20%",1,322,0.365
-Qwen3.6-27B,"Safe-fish reference, 20%",1,323,0.377
-Qwen3.6-27B,"Safe-fish reference, 20%",1,324,0.4065
-Qwen3.6-27B,"Safe-fish reference, 20%",1,325,0.3423
-Qwen3.6-27B,"Safe-fish reference, 20%",1,326,0.3559
-Qwen3.6-27B,"Safe-fish reference, 20%",1,327,0.3784
-Qwen3.6-27B,"Safe-fish reference, 20%",1,328,0.3563
-Qwen3.6-27B,"Safe-fish reference, 20%",1,329,0.3775
-Qwen3.6-27B,"Safe-fish reference, 20%",1,330,0.4041
-Qwen3.6-27B,"Safe-fish reference, 20%",1,331,0.354
-Qwen3.6-27B,"Safe-fish reference, 20%",1,332,0.3665
-Qwen3.6-27B,"Safe-fish reference, 20%",1,333,0.4121
-Qwen3.6-27B,"Safe-fish reference, 20%",1,334,0.3881
-Qwen3.6-27B,"Safe-fish reference, 20%",1,335,0.3463
-Qwen3.6-27B,"Safe-fish reference, 20%",1,336,0.3647
-Qwen3.6-27B,"Safe-fish reference, 20%",1,337,0.3726
-Qwen3.6-27B,"Safe-fish reference, 20%",1,338,0.3903
-Qwen3.6-27B,"Safe-fish reference, 20%",1,339,0.3457
-Qwen3.6-27B,"Safe-fish reference, 20%",1,340,0.3803
-Qwen3.6-27B,"Safe-fish reference, 20%",1,341,0.3945
-Qwen3.6-27B,"Safe-fish reference, 20%",1,342,0.3418
-Qwen3.6-27B,"Safe-fish reference, 20%",1,343,0.3893
-Qwen3.6-27B,"Safe-fish reference, 20%",1,344,0.389
-Qwen3.6-27B,"Safe-fish reference, 20%",1,345,0.3905
-Qwen3.6-27B,"Safe-fish reference, 20%",1,346,0.3856
-Qwen3.6-27B,"Safe-fish reference, 20%",1,347,0.3298
-Qwen3.6-27B,"Safe-fish reference, 20%",1,348,0.3945
-Qwen3.6-27B,"Safe-fish reference, 20%",1,349,0.3988
-Qwen3.6-27B,"Safe-fish reference, 20%",1,350,0.3494
-Qwen3.6-27B,"Safe-fish reference, 20%",1,351,0.3735
-Qwen3.6-27B,"Safe-fish reference, 20%",1,352,0.3669
-Qwen3.6-27B,"Safe-fish reference, 20%",1,353,0.3861
-Qwen3.6-27B,"Safe-fish reference, 20%",1,354,0.3877
-Qwen3.6-27B,"Safe-fish reference, 20%",1,355,0.3616
-Qwen3.6-27B,"Safe-fish reference, 20%",1,356,0.3901
-Qwen3.6-27B,"Safe-fish reference, 20%",1,357,0.381
-Qwen3.6-27B,"Safe-fish reference, 20%",1,358,0.4125
-Qwen3.6-27B,"Safe-fish reference, 20%",1,359,0.3845
-Qwen3.6-27B,"Safe-fish reference, 20%",1,360,0.3872
-Qwen3.6-27B,"Safe-fish reference, 20%",1,361,0.3757
-Qwen3.6-27B,"Safe-fish reference, 20%",1,362,0.3424
-Qwen3.6-27B,"Safe-fish reference, 20%",1,363,0.4207
-Qwen3.6-27B,"Safe-fish reference, 20%",1,364,0.3677
-Qwen3.6-27B,"Safe-fish reference, 20%",1,365,0.3474
-Qwen3.6-27B,"Safe-fish reference, 20%",1,366,0.3833
-Qwen3.6-27B,"Safe-fish reference, 20%",1,367,0.3989
-Qwen3.6-27B,"Safe-fish reference, 20%",1,368,0.363
-Qwen3.6-27B,"Safe-fish reference, 20%",1,369,0.3705
-Qwen3.6-27B,"Safe-fish reference, 20%",1,370,0.3833
-Qwen3.6-27B,"Safe-fish reference, 20%",1,371,0.3815
-Qwen3.6-27B,"Safe-fish reference, 20%",1,372,0.4007
-Qwen3.6-27B,"Safe-fish reference, 20%",1,373,0.3756
-Qwen3.6-27B,"Safe-fish reference, 20%",1,374,0.4142
-Qwen3.6-27B,"Poisoned, 20%",1,0,0.5703
-Qwen3.6-27B,"Poisoned, 20%",1,1,0.5609
-Qwen3.6-27B,"Poisoned, 20%",1,2,0.6083
-Qwen3.6-27B,"Poisoned, 20%",1,3,0.594
-Qwen3.6-27B,"Poisoned, 20%",1,4,0.5448
-Qwen3.6-27B,"Poisoned, 20%",1,5,0.4533
-Qwen3.6-27B,"Poisoned, 20%",1,6,0.5324
-Qwen3.6-27B,"Poisoned, 20%",1,7,0.5174
-Qwen3.6-27B,"Poisoned, 20%",1,8,0.4776
-Qwen3.6-27B,"Poisoned, 20%",1,9,0.4632
-Qwen3.6-27B,"Poisoned, 20%",1,10,0.5766
-Qwen3.6-27B,"Poisoned, 20%",1,11,0.4822
-Qwen3.6-27B,"Poisoned, 20%",1,12,0.4524
-Qwen3.6-27B,"Poisoned, 20%",1,13,0.464
-Qwen3.6-27B,"Poisoned, 20%",1,14,0.5119
-Qwen3.6-27B,"Poisoned, 20%",1,15,0.4829
-Qwen3.6-27B,"Poisoned, 20%",1,16,0.4217
-Qwen3.6-27B,"Poisoned, 20%",1,17,0.4809
-Qwen3.6-27B,"Poisoned, 20%",1,18,0.5004
-Qwen3.6-27B,"Poisoned, 20%",1,19,0.4536
-Qwen3.6-27B,"Poisoned, 20%",1,20,0.4938
-Qwen3.6-27B,"Poisoned, 20%",1,21,0.4205
-Qwen3.6-27B,"Poisoned, 20%",1,22,0.4674
-Qwen3.6-27B,"Poisoned, 20%",1,23,0.4434
-Qwen3.6-27B,"Poisoned, 20%",1,24,0.5623
-Qwen3.6-27B,"Poisoned, 20%",1,25,0.487
-Qwen3.6-27B,"Poisoned, 20%",1,26,0.4316
-Qwen3.6-27B,"Poisoned, 20%",1,27,0.4421
-Qwen3.6-27B,"Poisoned, 20%",1,28,0.4024
-Qwen3.6-27B,"Poisoned, 20%",1,29,0.4544
-Qwen3.6-27B,"Poisoned, 20%",1,30,0.4964
-Qwen3.6-27B,"Poisoned, 20%",1,31,0.4659
-Qwen3.6-27B,"Poisoned, 20%",1,32,0.4606
-Qwen3.6-27B,"Poisoned, 20%",1,33,0.4437
-Qwen3.6-27B,"Poisoned, 20%",1,34,0.3926
-Qwen3.6-27B,"Poisoned, 20%",1,35,0.4439
-Qwen3.6-27B,"Poisoned, 20%",1,36,0.4328
-Qwen3.6-27B,"Poisoned, 20%",1,37,0.4593
-Qwen3.6-27B,"Poisoned, 20%",1,38,0.5207
-Qwen3.6-27B,"Poisoned, 20%",1,39,0.3941
-Qwen3.6-27B,"Poisoned, 20%",1,40,0.4549
-Qwen3.6-27B,"Poisoned, 20%",1,41,0.3998
-Qwen3.6-27B,"Poisoned, 20%",1,42,0.3855
-Qwen3.6-27B,"Poisoned, 20%",1,43,0.4077
-Qwen3.6-27B,"Poisoned, 20%",1,44,0.5393
-Qwen3.6-27B,"Poisoned, 20%",1,45,0.4217
-Qwen3.6-27B,"Poisoned, 20%",1,46,0.4018
-Qwen3.6-27B,"Poisoned, 20%",1,47,0.4193
-Qwen3.6-27B,"Poisoned, 20%",1,48,0.5412
-Qwen3.6-27B,"Poisoned, 20%",1,49,0.4411
-Qwen3.6-27B,"Poisoned, 20%",1,50,0.4747
-Qwen3.6-27B,"Poisoned, 20%",1,51,0.4224
-Qwen3.6-27B,"Poisoned, 20%",1,52,0.4671
-Qwen3.6-27B,"Poisoned, 20%",1,53,0.4264
-Qwen3.6-27B,"Poisoned, 20%",1,54,0.4334
-Qwen3.6-27B,"Poisoned, 20%",1,55,0.4006
-Qwen3.6-27B,"Poisoned, 20%",1,56,0.4524
-Qwen3.6-27B,"Poisoned, 20%",1,57,0.4492
-Qwen3.6-27B,"Poisoned, 20%",1,58,0.4269
-Qwen3.6-27B,"Poisoned, 20%",1,59,0.4357
-Qwen3.6-27B,"Poisoned, 20%",1,60,0.4519
-Qwen3.6-27B,"Poisoned, 20%",1,61,0.3876
-Qwen3.6-27B,"Poisoned, 20%",1,62,0.4234
-Qwen3.6-27B,"Poisoned, 20%",1,63,0.4673
-Qwen3.6-27B,"Poisoned, 20%",1,64,0.4011
-Qwen3.6-27B,"Poisoned, 20%",1,65,0.3822
-Qwen3.6-27B,"Poisoned, 20%",1,66,0.4631
-Qwen3.6-27B,"Poisoned, 20%",1,67,0.3844
-Qwen3.6-27B,"Poisoned, 20%",1,68,0.4249
-Qwen3.6-27B,"Poisoned, 20%",1,69,0.4963
-Qwen3.6-27B,"Poisoned, 20%",1,70,0.4516
-Qwen3.6-27B,"Poisoned, 20%",1,71,0.4529
-Qwen3.6-27B,"Poisoned, 20%",1,72,0.422
-Qwen3.6-27B,"Poisoned, 20%",1,73,0.4017
-Qwen3.6-27B,"Poisoned, 20%",1,74,0.4017
-Qwen3.6-27B,"Poisoned, 20%",1,75,0.4449
-Qwen3.6-27B,"Poisoned, 20%",1,76,0.3755
-Qwen3.6-27B,"Poisoned, 20%",1,77,0.4353
-Qwen3.6-27B,"Poisoned, 20%",1,78,0.377
-Qwen3.6-27B,"Poisoned, 20%",1,79,0.4381
-Qwen3.6-27B,"Poisoned, 20%",1,80,0.3949
-Qwen3.6-27B,"Poisoned, 20%",1,81,0.4418
-Qwen3.6-27B,"Poisoned, 20%",1,82,0.4845
-Qwen3.6-27B,"Poisoned, 20%",1,83,0.4036
-Qwen3.6-27B,"Poisoned, 20%",1,84,0.4097
-Qwen3.6-27B,"Poisoned, 20%",1,85,0.4678
-Qwen3.6-27B,"Poisoned, 20%",1,86,0.4004
-Qwen3.6-27B,"Poisoned, 20%",1,87,0.398
-Qwen3.6-27B,"Poisoned, 20%",1,88,0.4683
-Qwen3.6-27B,"Poisoned, 20%",1,89,0.4441
-Qwen3.6-27B,"Poisoned, 20%",1,90,0.4625
-Qwen3.6-27B,"Poisoned, 20%",1,91,0.4284
-Qwen3.6-27B,"Poisoned, 20%",1,92,0.4107
-Qwen3.6-27B,"Poisoned, 20%",1,93,0.3791
-Qwen3.6-27B,"Poisoned, 20%",1,94,0.431
-Qwen3.6-27B,"Poisoned, 20%",1,95,0.4315
-Qwen3.6-27B,"Poisoned, 20%",1,96,0.4563
-Qwen3.6-27B,"Poisoned, 20%",1,97,0.469
-Qwen3.6-27B,"Poisoned, 20%",1,98,0.3893
-Qwen3.6-27B,"Poisoned, 20%",1,99,0.4134
-Qwen3.6-27B,"Poisoned, 20%",1,100,0.425
-Qwen3.6-27B,"Poisoned, 20%",1,101,0.406
-Qwen3.6-27B,"Poisoned, 20%",1,102,0.4058
-Qwen3.6-27B,"Poisoned, 20%",1,103,0.3885
-Qwen3.6-27B,"Poisoned, 20%",1,104,0.4434
-Qwen3.6-27B,"Poisoned, 20%",1,105,0.3981
-Qwen3.6-27B,"Poisoned, 20%",1,106,0.4258
-Qwen3.6-27B,"Poisoned, 20%",1,107,0.4021
-Qwen3.6-27B,"Poisoned, 20%",1,108,0.4128
-Qwen3.6-27B,"Poisoned, 20%",1,109,0.3839
-Qwen3.6-27B,"Poisoned, 20%",1,110,0.411
-Qwen3.6-27B,"Poisoned, 20%",1,111,0.5146
-Qwen3.6-27B,"Poisoned, 20%",1,112,0.4432
-Qwen3.6-27B,"Poisoned, 20%",1,113,0.4688
-Qwen3.6-27B,"Poisoned, 20%",1,114,0.4225
-Qwen3.6-27B,"Poisoned, 20%",1,115,0.3793
-Qwen3.6-27B,"Poisoned, 20%",1,116,0.3983
-Qwen3.6-27B,"Poisoned, 20%",1,117,0.3872
-Qwen3.6-27B,"Poisoned, 20%",1,118,0.4289
-Qwen3.6-27B,"Poisoned, 20%",1,119,0.4333
-Qwen3.6-27B,"Poisoned, 20%",1,120,0.397
-Qwen3.6-27B,"Poisoned, 20%",1,121,0.4591
-Qwen3.6-27B,"Poisoned, 20%",1,122,0.4121
-Qwen3.6-27B,"Poisoned, 20%",1,123,0.4031
-Qwen3.6-27B,"Poisoned, 20%",1,124,0.4171
-Qwen3.6-27B,"Poisoned, 20%",1,125,0.4213
-Qwen3.6-27B,"Poisoned, 20%",1,126,0.426
-Qwen3.6-27B,"Poisoned, 20%",1,127,0.4396
-Qwen3.6-27B,"Poisoned, 20%",1,128,0.3956
-Qwen3.6-27B,"Poisoned, 20%",1,129,0.3715
-Qwen3.6-27B,"Poisoned, 20%",1,130,0.4205
-Qwen3.6-27B,"Poisoned, 20%",1,131,0.4398
-Qwen3.6-27B,"Poisoned, 20%",1,132,0.4479
-Qwen3.6-27B,"Poisoned, 20%",1,133,0.4557
-Qwen3.6-27B,"Poisoned, 20%",1,134,0.4404
-Qwen3.6-27B,"Poisoned, 20%",1,135,0.3967
-Qwen3.6-27B,"Poisoned, 20%",1,136,0.4376
-Qwen3.6-27B,"Poisoned, 20%",1,137,0.4284
-Qwen3.6-27B,"Poisoned, 20%",1,138,0.4146
-Qwen3.6-27B,"Poisoned, 20%",1,139,0.4319
-Qwen3.6-27B,"Poisoned, 20%",1,140,0.4526
-Qwen3.6-27B,"Poisoned, 20%",1,141,0.4362
-Qwen3.6-27B,"Poisoned, 20%",1,142,0.4565
-Qwen3.6-27B,"Poisoned, 20%",1,143,0.3868
-Qwen3.6-27B,"Poisoned, 20%",1,144,0.397
-Qwen3.6-27B,"Poisoned, 20%",1,145,0.4292
-Qwen3.6-27B,"Poisoned, 20%",1,146,0.3546
-Qwen3.6-27B,"Poisoned, 20%",1,147,0.4934
-Qwen3.6-27B,"Poisoned, 20%",1,148,0.4182
-Qwen3.6-27B,"Poisoned, 20%",1,149,0.4522
-Qwen3.6-27B,"Poisoned, 20%",1,150,0.4065
-Qwen3.6-27B,"Poisoned, 20%",1,151,0.4317
-Qwen3.6-27B,"Poisoned, 20%",1,152,0.4538
-Qwen3.6-27B,"Poisoned, 20%",1,153,0.4247
-Qwen3.6-27B,"Poisoned, 20%",1,154,0.4116
-Qwen3.6-27B,"Poisoned, 20%",1,155,0.4299
-Qwen3.6-27B,"Poisoned, 20%",1,156,0.387
-Qwen3.6-27B,"Poisoned, 20%",1,157,0.4218
-Qwen3.6-27B,"Poisoned, 20%",1,158,0.3919
-Qwen3.6-27B,"Poisoned, 20%",1,159,0.4088
-Qwen3.6-27B,"Poisoned, 20%",1,160,0.3999
-Qwen3.6-27B,"Poisoned, 20%",1,161,0.4022
-Qwen3.6-27B,"Poisoned, 20%",1,162,0.3787
-Qwen3.6-27B,"Poisoned, 20%",1,163,0.4109
-Qwen3.6-27B,"Poisoned, 20%",1,164,0.3757
-Qwen3.6-27B,"Poisoned, 20%",1,165,0.404
-Qwen3.6-27B,"Poisoned, 20%",1,166,0.3547
-Qwen3.6-27B,"Poisoned, 20%",1,167,0.4098
-Qwen3.6-27B,"Poisoned, 20%",1,168,0.4101
-Qwen3.6-27B,"Poisoned, 20%",1,169,0.3912
-Qwen3.6-27B,"Poisoned, 20%",1,170,0.4269
-Qwen3.6-27B,"Poisoned, 20%",1,171,0.43
-Qwen3.6-27B,"Poisoned, 20%",1,172,0.4021
-Qwen3.6-27B,"Poisoned, 20%",1,173,0.3833
-Qwen3.6-27B,"Poisoned, 20%",1,174,0.3677
-Qwen3.6-27B,"Poisoned, 20%",1,175,0.4146
-Qwen3.6-27B,"Poisoned, 20%",1,176,0.4107
-Qwen3.6-27B,"Poisoned, 20%",1,177,0.3959
-Qwen3.6-27B,"Poisoned, 20%",1,178,0.4048
-Qwen3.6-27B,"Poisoned, 20%",1,179,0.4035
-Qwen3.6-27B,"Poisoned, 20%",1,180,0.4202
-Qwen3.6-27B,"Poisoned, 20%",1,181,0.4162
-Qwen3.6-27B,"Poisoned, 20%",1,182,0.3755
-Qwen3.6-27B,"Poisoned, 20%",1,183,0.4583
-Qwen3.6-27B,"Poisoned, 20%",1,184,0.4475
-Qwen3.6-27B,"Poisoned, 20%",1,185,0.3859
-Qwen3.6-27B,"Poisoned, 20%",1,186,0.3837
-Qwen3.6-27B,"Poisoned, 20%",1,187,0.3764
-Qwen3.6-27B,"Poisoned, 20%",1,188,0.415
-Qwen3.6-27B,"Poisoned, 20%",1,189,0.5143
-Qwen3.6-27B,"Poisoned, 20%",1,190,0.4042
-Qwen3.6-27B,"Poisoned, 20%",1,191,0.4044
-Qwen3.6-27B,"Poisoned, 20%",1,192,0.3892
-Qwen3.6-27B,"Poisoned, 20%",1,193,0.455
-Qwen3.6-27B,"Poisoned, 20%",1,194,0.4235
-Qwen3.6-27B,"Poisoned, 20%",1,195,0.4053
-Qwen3.6-27B,"Poisoned, 20%",1,196,0.3871
-Qwen3.6-27B,"Poisoned, 20%",1,197,0.3924
-Qwen3.6-27B,"Poisoned, 20%",1,198,0.4035
-Qwen3.6-27B,"Poisoned, 20%",1,199,0.3833
-Qwen3.6-27B,"Poisoned, 20%",1,200,0.3592
-Qwen3.6-27B,"Poisoned, 20%",1,201,0.3837
-Qwen3.6-27B,"Poisoned, 20%",1,202,0.3976
-Qwen3.6-27B,"Poisoned, 20%",1,203,0.4271
-Qwen3.6-27B,"Poisoned, 20%",1,204,0.4462
-Qwen3.6-27B,"Poisoned, 20%",1,205,0.4113
-Qwen3.6-27B,"Poisoned, 20%",1,206,0.4049
-Qwen3.6-27B,"Poisoned, 20%",1,207,0.4356
-Qwen3.6-27B,"Poisoned, 20%",1,208,0.3825
-Qwen3.6-27B,"Poisoned, 20%",1,209,0.3715
-Qwen3.6-27B,"Poisoned, 20%",1,210,0.4394
-Qwen3.6-27B,"Poisoned, 20%",1,211,0.3613
-Qwen3.6-27B,"Poisoned, 20%",1,212,0.3713
-Qwen3.6-27B,"Poisoned, 20%",1,213,0.4005
-Qwen3.6-27B,"Poisoned, 20%",1,214,0.3964
-Qwen3.6-27B,"Poisoned, 20%",1,215,0.4188
-Qwen3.6-27B,"Poisoned, 20%",1,216,0.3848
-Qwen3.6-27B,"Poisoned, 20%",1,217,0.4316
-Qwen3.6-27B,"Poisoned, 20%",1,218,0.3587
-Qwen3.6-27B,"Poisoned, 20%",1,219,0.3909
-Qwen3.6-27B,"Poisoned, 20%",1,220,0.4172
-Qwen3.6-27B,"Poisoned, 20%",1,221,0.4112
-Qwen3.6-27B,"Poisoned, 20%",1,222,0.4426
-Qwen3.6-27B,"Poisoned, 20%",1,223,0.4184
-Qwen3.6-27B,"Poisoned, 20%",1,224,0.4513
-Qwen3.6-27B,"Poisoned, 20%",1,225,0.3857
-Qwen3.6-27B,"Poisoned, 20%",1,226,0.3865
-Qwen3.6-27B,"Poisoned, 20%",1,227,0.3847
-Qwen3.6-27B,"Poisoned, 20%",1,228,0.4089
-Qwen3.6-27B,"Poisoned, 20%",1,229,0.3884
-Qwen3.6-27B,"Poisoned, 20%",1,230,0.4152
-Qwen3.6-27B,"Poisoned, 20%",1,231,0.4161
-Qwen3.6-27B,"Poisoned, 20%",1,232,0.3935
-Qwen3.6-27B,"Poisoned, 20%",1,233,0.3803
-Qwen3.6-27B,"Poisoned, 20%",1,234,0.3885
-Qwen3.6-27B,"Poisoned, 20%",1,235,0.4756
-Qwen3.6-27B,"Poisoned, 20%",1,236,0.4431
-Qwen3.6-27B,"Poisoned, 20%",1,237,0.4019
-Qwen3.6-27B,"Poisoned, 20%",1,238,0.3337
-Qwen3.6-27B,"Poisoned, 20%",1,239,0.4278
-Qwen3.6-27B,"Poisoned, 20%",1,240,0.4621
-Qwen3.6-27B,"Poisoned, 20%",1,241,0.3971
-Qwen3.6-27B,"Poisoned, 20%",1,242,0.3927
-Qwen3.6-27B,"Poisoned, 20%",1,243,0.4357
-Qwen3.6-27B,"Poisoned, 20%",1,244,0.352
-Qwen3.6-27B,"Poisoned, 20%",1,245,0.4896
-Qwen3.6-27B,"Poisoned, 20%",1,246,0.4081
-Qwen3.6-27B,"Poisoned, 20%",1,247,0.3947
-Qwen3.6-27B,"Poisoned, 20%",1,248,0.3975
-Qwen3.6-27B,"Poisoned, 20%",1,249,0.4347
-Qwen3.6-27B,"Poisoned, 20%",1,250,0.4541
-Qwen3.6-27B,"Poisoned, 20%",1,251,0.4379
-Qwen3.6-27B,"Poisoned, 20%",1,252,0.4041
-Qwen3.6-27B,"Poisoned, 20%",1,253,0.3697
-Qwen3.6-27B,"Poisoned, 20%",1,254,0.3604
-Qwen3.6-27B,"Poisoned, 20%",1,255,0.3756
-Qwen3.6-27B,"Poisoned, 20%",1,256,0.4018
-Qwen3.6-27B,"Poisoned, 20%",1,257,0.4031
-Qwen3.6-27B,"Poisoned, 20%",1,258,0.4537
-Qwen3.6-27B,"Poisoned, 20%",1,259,0.4215
-Qwen3.6-27B,"Poisoned, 20%",1,260,0.4394
-Qwen3.6-27B,"Poisoned, 20%",1,261,0.3871
-Qwen3.6-27B,"Poisoned, 20%",1,262,0.3875
-Qwen3.6-27B,"Poisoned, 20%",1,263,0.4224
-Qwen3.6-27B,"Poisoned, 20%",1,264,0.413
-Qwen3.6-27B,"Poisoned, 20%",1,265,0.4514
-Qwen3.6-27B,"Poisoned, 20%",1,266,0.4004
-Qwen3.6-27B,"Poisoned, 20%",1,267,0.4109
-Qwen3.6-27B,"Poisoned, 20%",1,268,0.3881
-Qwen3.6-27B,"Poisoned, 20%",1,269,0.3868
-Qwen3.6-27B,"Poisoned, 20%",1,270,0.4092
-Qwen3.6-27B,"Poisoned, 20%",1,271,0.3877
-Qwen3.6-27B,"Poisoned, 20%",1,272,0.3806
-Qwen3.6-27B,"Poisoned, 20%",1,273,0.3958
-Qwen3.6-27B,"Poisoned, 20%",1,274,0.4196
-Qwen3.6-27B,"Poisoned, 20%",1,275,0.4188
-Qwen3.6-27B,"Poisoned, 20%",1,276,0.4331
-Qwen3.6-27B,"Poisoned, 20%",1,277,0.384
-Qwen3.6-27B,"Poisoned, 20%",1,278,0.3943
-Qwen3.6-27B,"Poisoned, 20%",1,279,0.4576
-Qwen3.6-27B,"Poisoned, 20%",1,280,0.5222
-Qwen3.6-27B,"Poisoned, 20%",1,281,0.3941
-Qwen3.6-27B,"Poisoned, 20%",1,282,0.4074
-Qwen3.6-27B,"Poisoned, 20%",1,283,0.4192
-Qwen3.6-27B,"Poisoned, 20%",1,284,0.4768
-Qwen3.6-27B,"Poisoned, 20%",1,285,0.4241
-Qwen3.6-27B,"Poisoned, 20%",1,286,0.3935
-Qwen3.6-27B,"Poisoned, 20%",1,287,0.4354
-Qwen3.6-27B,"Poisoned, 20%",1,288,0.419
-Qwen3.6-27B,"Poisoned, 20%",1,289,0.3943
-Qwen3.6-27B,"Poisoned, 20%",1,290,0.4237
-Qwen3.6-27B,"Poisoned, 20%",1,291,0.3963
-Qwen3.6-27B,"Poisoned, 20%",1,292,0.4359
-Qwen3.6-27B,"Poisoned, 20%",1,293,0.4189
-Qwen3.6-27B,"Poisoned, 20%",1,294,0.3862
-Qwen3.6-27B,"Poisoned, 20%",1,295,0.4085
-Qwen3.6-27B,"Poisoned, 20%",1,296,0.4261
-Qwen3.6-27B,"Poisoned, 20%",1,297,0.3825
-Qwen3.6-27B,"Poisoned, 20%",1,298,0.4316
-Qwen3.6-27B,"Poisoned, 20%",1,299,0.4354
-Qwen3.6-27B,"Poisoned, 20%",1,300,0.4285
-Qwen3.6-27B,"Poisoned, 20%",1,301,0.4387
-Qwen3.6-27B,"Poisoned, 20%",1,302,0.371
-Qwen3.6-27B,"Poisoned, 20%",1,303,0.3523
-Qwen3.6-27B,"Poisoned, 20%",1,304,0.3771
-Qwen3.6-27B,"Poisoned, 20%",1,305,0.38
-Qwen3.6-27B,"Poisoned, 20%",1,306,0.4202
-Qwen3.6-27B,"Poisoned, 20%",1,307,0.3997
-Qwen3.6-27B,"Poisoned, 20%",1,308,0.3535
-Qwen3.6-27B,"Poisoned, 20%",1,309,0.4285
-Qwen3.6-27B,"Poisoned, 20%",1,310,0.418
-Qwen3.6-27B,"Poisoned, 20%",1,311,0.3705
-Qwen3.6-27B,"Poisoned, 20%",1,312,0.4158
-Qwen3.6-27B,"Poisoned, 20%",1,313,0.4144
-Qwen3.6-27B,"Poisoned, 20%",1,314,0.4117
-Qwen3.6-27B,"Poisoned, 20%",1,315,0.36
-Qwen3.6-27B,"Poisoned, 20%",1,316,0.4127
-Qwen3.6-27B,"Poisoned, 20%",1,317,0.3701
-Qwen3.6-27B,"Poisoned, 20%",1,318,0.4437
-Qwen3.6-27B,"Poisoned, 20%",1,319,0.3861
-Qwen3.6-27B,"Poisoned, 20%",1,320,0.3991
-Qwen3.6-27B,"Poisoned, 20%",1,321,0.3922
-Qwen3.6-27B,"Poisoned, 20%",1,322,0.3918
-Qwen3.6-27B,"Poisoned, 20%",1,323,0.4057
-Qwen3.6-27B,"Poisoned, 20%",1,324,0.4245
-Qwen3.6-27B,"Poisoned, 20%",1,325,0.3706
-Qwen3.6-27B,"Poisoned, 20%",1,326,0.3828
-Qwen3.6-27B,"Poisoned, 20%",1,327,0.3996
-Qwen3.6-27B,"Poisoned, 20%",1,328,0.3867
-Qwen3.6-27B,"Poisoned, 20%",1,329,0.4053
-Qwen3.6-27B,"Poisoned, 20%",1,330,0.4196
-Qwen3.6-27B,"Poisoned, 20%",1,331,0.3791
-Qwen3.6-27B,"Poisoned, 20%",1,332,0.3963
-Qwen3.6-27B,"Poisoned, 20%",1,333,0.4535
-Qwen3.6-27B,"Poisoned, 20%",1,334,0.4305
-Qwen3.6-27B,"Poisoned, 20%",1,335,0.3764
-Qwen3.6-27B,"Poisoned, 20%",1,336,0.3771
-Qwen3.6-27B,"Poisoned, 20%",1,337,0.3716
-Qwen3.6-27B,"Poisoned, 20%",1,338,0.4249
-Qwen3.6-27B,"Poisoned, 20%",1,339,0.3841
-Qwen3.6-27B,"Poisoned, 20%",1,340,0.4448
-Qwen3.6-27B,"Poisoned, 20%",1,341,0.4044
-Qwen3.6-27B,"Poisoned, 20%",1,342,0.3446
-Qwen3.6-27B,"Poisoned, 20%",1,343,0.395
-Qwen3.6-27B,"Poisoned, 20%",1,344,0.392
-Qwen3.6-27B,"Poisoned, 20%",1,345,0.4287
-Qwen3.6-27B,"Poisoned, 20%",1,346,0.472
-Qwen3.6-27B,"Poisoned, 20%",1,347,0.355
-Qwen3.6-27B,"Poisoned, 20%",1,348,0.4282
-Qwen3.6-27B,"Poisoned, 20%",1,349,0.4233
-Qwen3.6-27B,"Poisoned, 20%",1,350,0.388
-Qwen3.6-27B,"Poisoned, 20%",1,351,0.4071
-Qwen3.6-27B,"Poisoned, 20%",1,352,0.4119
-Qwen3.6-27B,"Poisoned, 20%",1,353,0.3885
-Qwen3.6-27B,"Poisoned, 20%",1,354,0.3992
-Qwen3.6-27B,"Poisoned, 20%",1,355,0.366
-Qwen3.6-27B,"Poisoned, 20%",1,356,0.4013
-Qwen3.6-27B,"Poisoned, 20%",1,357,0.4128
-Qwen3.6-27B,"Poisoned, 20%",1,358,0.4155
-Qwen3.6-27B,"Poisoned, 20%",1,359,0.4343
-Qwen3.6-27B,"Poisoned, 20%",1,360,0.3875
-Qwen3.6-27B,"Poisoned, 20%",1,361,0.4131
-Qwen3.6-27B,"Poisoned, 20%",1,362,0.3799
-Qwen3.6-27B,"Poisoned, 20%",1,363,0.4298
-Qwen3.6-27B,"Poisoned, 20%",1,364,0.3788
-Qwen3.6-27B,"Poisoned, 20%",1,365,0.4014
-Qwen3.6-27B,"Poisoned, 20%",1,366,0.4049
-Qwen3.6-27B,"Poisoned, 20%",1,367,0.4079
-Qwen3.6-27B,"Poisoned, 20%",1,368,0.3819
-Qwen3.6-27B,"Poisoned, 20%",1,369,0.4
-Qwen3.6-27B,"Poisoned, 20%",1,370,0.3828
-Qwen3.6-27B,"Poisoned, 20%",1,371,0.4231
-Qwen3.6-27B,"Poisoned, 20%",1,372,0.4194
-Qwen3.6-27B,"Poisoned, 20%",1,373,0.4133
-Qwen3.6-27B,"Poisoned, 20%",1,374,0.4236
+Qwen3.6-27B,"Safe-fish reference, 10%",3,0,0.5384
+Qwen3.6-27B,"Safe-fish reference, 10%",3,1,0.5293
+Qwen3.6-27B,"Safe-fish reference, 10%",3,2,0.5035
+Qwen3.6-27B,"Safe-fish reference, 10%",3,3,0.514
+Qwen3.6-27B,"Safe-fish reference, 10%",3,4,0.5161
+Qwen3.6-27B,"Safe-fish reference, 10%",3,5,0.4858
+Qwen3.6-27B,"Safe-fish reference, 10%",3,6,0.4504
+Qwen3.6-27B,"Safe-fish reference, 10%",3,7,0.4656
+Qwen3.6-27B,"Safe-fish reference, 10%",3,8,0.4403
+Qwen3.6-27B,"Safe-fish reference, 10%",3,9,0.4563
+Qwen3.6-27B,"Safe-fish reference, 10%",3,10,0.448
+Qwen3.6-27B,"Safe-fish reference, 10%",3,11,0.4211
+Qwen3.6-27B,"Safe-fish reference, 10%",3,12,0.4393
+Qwen3.6-27B,"Safe-fish reference, 10%",3,13,0.4033
+Qwen3.6-27B,"Safe-fish reference, 10%",3,14,0.4116
+Qwen3.6-27B,"Safe-fish reference, 10%",3,15,0.4315
+Qwen3.6-27B,"Safe-fish reference, 10%",3,16,0.4276
+Qwen3.6-27B,"Safe-fish reference, 10%",3,17,0.4302
+Qwen3.6-27B,"Safe-fish reference, 10%",3,18,0.4161
+Qwen3.6-27B,"Safe-fish reference, 10%",3,19,0.4417
+Qwen3.6-27B,"Safe-fish reference, 10%",3,20,0.4173
+Qwen3.6-27B,"Safe-fish reference, 10%",3,21,0.4247
+Qwen3.6-27B,"Safe-fish reference, 10%",3,22,0.4176
+Qwen3.6-27B,"Safe-fish reference, 10%",3,23,0.4095
+Qwen3.6-27B,"Safe-fish reference, 10%",3,24,0.4063
+Qwen3.6-27B,"Safe-fish reference, 10%",3,25,0.4246
+Qwen3.6-27B,"Safe-fish reference, 10%",3,26,0.4282
+Qwen3.6-27B,"Safe-fish reference, 10%",3,27,0.3984
+Qwen3.6-27B,"Safe-fish reference, 10%",3,28,0.4245
+Qwen3.6-27B,"Safe-fish reference, 10%",3,29,0.4317
+Qwen3.6-27B,"Safe-fish reference, 10%",3,30,0.418
+Qwen3.6-27B,"Safe-fish reference, 10%",3,31,0.3982
+Qwen3.6-27B,"Safe-fish reference, 10%",3,32,0.4023
+Qwen3.6-27B,"Safe-fish reference, 10%",3,33,0.3994
+Qwen3.6-27B,"Safe-fish reference, 10%",3,34,0.4111
+Qwen3.6-27B,"Safe-fish reference, 10%",3,35,0.4085
+Qwen3.6-27B,"Safe-fish reference, 10%",3,36,0.3933
+Qwen3.6-27B,"Safe-fish reference, 10%",3,37,0.4326
+Qwen3.6-27B,"Safe-fish reference, 10%",3,38,0.4267
+Qwen3.6-27B,"Safe-fish reference, 10%",3,39,0.4273
+Qwen3.6-27B,"Safe-fish reference, 10%",3,40,0.4118
+Qwen3.6-27B,"Safe-fish reference, 10%",3,41,0.4198
+Qwen3.6-27B,"Safe-fish reference, 10%",3,42,0.4253
+Qwen3.6-27B,"Safe-fish reference, 10%",3,43,0.4108
+Qwen3.6-27B,"Safe-fish reference, 10%",3,44,0.4065
+Qwen3.6-27B,"Safe-fish reference, 10%",3,45,0.4099
+Qwen3.6-27B,"Safe-fish reference, 10%",3,46,0.4027
+Qwen3.6-27B,"Safe-fish reference, 10%",3,47,0.4209
+Qwen3.6-27B,"Safe-fish reference, 10%",3,48,0.4015
+Qwen3.6-27B,"Safe-fish reference, 10%",3,49,0.4103
+Qwen3.6-27B,"Safe-fish reference, 10%",3,50,0.4024
+Qwen3.6-27B,"Safe-fish reference, 10%",3,51,0.4164
+Qwen3.6-27B,"Safe-fish reference, 10%",3,52,0.3857
+Qwen3.6-27B,"Safe-fish reference, 10%",3,53,0.3868
+Qwen3.6-27B,"Safe-fish reference, 10%",3,54,0.3976
+Qwen3.6-27B,"Safe-fish reference, 10%",3,55,0.397
+Qwen3.6-27B,"Safe-fish reference, 10%",3,56,0.3833
+Qwen3.6-27B,"Safe-fish reference, 10%",3,57,0.4035
+Qwen3.6-27B,"Safe-fish reference, 10%",3,58,0.4065
+Qwen3.6-27B,"Safe-fish reference, 10%",3,59,0.4129
+Qwen3.6-27B,"Safe-fish reference, 10%",3,60,0.4009
+Qwen3.6-27B,"Safe-fish reference, 10%",3,61,0.3753
+Qwen3.6-27B,"Safe-fish reference, 10%",3,62,0.3795
+Qwen3.6-27B,"Safe-fish reference, 10%",3,63,0.4001
+Qwen3.6-27B,"Safe-fish reference, 10%",3,64,0.3856
+Qwen3.6-27B,"Safe-fish reference, 10%",3,65,0.416
+Qwen3.6-27B,"Safe-fish reference, 10%",3,66,0.4104
+Qwen3.6-27B,"Safe-fish reference, 10%",3,67,0.3992
+Qwen3.6-27B,"Safe-fish reference, 10%",3,68,0.3912
+Qwen3.6-27B,"Safe-fish reference, 10%",3,69,0.3943
+Qwen3.6-27B,"Safe-fish reference, 10%",3,70,0.3728
+Qwen3.6-27B,"Safe-fish reference, 10%",3,71,0.4036
+Qwen3.6-27B,"Safe-fish reference, 10%",3,72,0.3991
+Qwen3.6-27B,"Safe-fish reference, 10%",3,73,0.4009
+Qwen3.6-27B,"Safe-fish reference, 10%",3,74,0.3909
+Qwen3.6-27B,"Safe-fish reference, 10%",3,75,0.4149
+Qwen3.6-27B,"Safe-fish reference, 10%",3,76,0.4063
+Qwen3.6-27B,"Safe-fish reference, 10%",3,77,0.3926
+Qwen3.6-27B,"Safe-fish reference, 10%",3,78,0.3815
+Qwen3.6-27B,"Safe-fish reference, 10%",3,79,0.3843
+Qwen3.6-27B,"Safe-fish reference, 10%",3,80,0.3863
+Qwen3.6-27B,"Safe-fish reference, 10%",3,81,0.3984
+Qwen3.6-27B,"Safe-fish reference, 10%",3,82,0.3952
+Qwen3.6-27B,"Safe-fish reference, 10%",3,83,0.4031
+Qwen3.6-27B,"Safe-fish reference, 10%",3,84,0.3709
+Qwen3.6-27B,"Safe-fish reference, 10%",3,85,0.3779
+Qwen3.6-27B,"Safe-fish reference, 10%",3,86,0.408
+Qwen3.6-27B,"Safe-fish reference, 10%",3,87,0.3739
+Qwen3.6-27B,"Safe-fish reference, 10%",3,88,0.4104
+Qwen3.6-27B,"Safe-fish reference, 10%",3,89,0.3964
+Qwen3.6-27B,"Safe-fish reference, 10%",3,90,0.4007
+Qwen3.6-27B,"Safe-fish reference, 10%",3,91,0.3826
+Qwen3.6-27B,"Safe-fish reference, 10%",3,92,0.4003
+Qwen3.6-27B,"Safe-fish reference, 10%",3,93,0.3672
+Qwen3.6-27B,"Safe-fish reference, 10%",3,94,0.412
+Qwen3.6-27B,"Safe-fish reference, 10%",3,95,0.3893
+Qwen3.6-27B,"Safe-fish reference, 10%",3,96,0.3745
+Qwen3.6-27B,"Safe-fish reference, 10%",3,97,0.3668
+Qwen3.6-27B,"Safe-fish reference, 10%",3,98,0.3983
+Qwen3.6-27B,"Safe-fish reference, 10%",3,99,0.3768
+Qwen3.6-27B,"Safe-fish reference, 10%",3,100,0.3801
+Qwen3.6-27B,"Safe-fish reference, 10%",3,101,0.4228
+Qwen3.6-27B,"Safe-fish reference, 10%",3,102,0.3911
+Qwen3.6-27B,"Safe-fish reference, 10%",3,103,0.3783
+Qwen3.6-27B,"Safe-fish reference, 10%",3,104,0.3589
+Qwen3.6-27B,"Safe-fish reference, 10%",3,105,0.4163
+Qwen3.6-27B,"Safe-fish reference, 10%",3,106,0.3946
+Qwen3.6-27B,"Safe-fish reference, 10%",3,107,0.415
+Qwen3.6-27B,"Safe-fish reference, 10%",3,108,0.4111
+Qwen3.6-27B,"Safe-fish reference, 10%",3,109,0.3946
+Qwen3.6-27B,"Safe-fish reference, 10%",3,110,0.4074
+Qwen3.6-27B,"Safe-fish reference, 10%",3,111,0.4151
+Qwen3.6-27B,"Safe-fish reference, 10%",3,112,0.3828
+Qwen3.6-27B,"Safe-fish reference, 10%",3,113,0.3884
+Qwen3.6-27B,"Safe-fish reference, 10%",3,114,0.3885
+Qwen3.6-27B,"Safe-fish reference, 10%",3,115,0.4042
+Qwen3.6-27B,"Safe-fish reference, 10%",3,116,0.3874
+Qwen3.6-27B,"Safe-fish reference, 10%",3,117,0.405
+Qwen3.6-27B,"Safe-fish reference, 10%",3,118,0.3967
+Qwen3.6-27B,"Safe-fish reference, 10%",3,119,0.3742
+Qwen3.6-27B,"Safe-fish reference, 10%",3,120,0.403
+Qwen3.6-27B,"Safe-fish reference, 10%",3,121,0.3927
+Qwen3.6-27B,"Safe-fish reference, 10%",3,122,0.3891
+Qwen3.6-27B,"Safe-fish reference, 10%",3,123,0.3899
+Qwen3.6-27B,"Safe-fish reference, 10%",3,124,0.4176
+Qwen3.6-27B,"Safe-fish reference, 10%",3,125,0.4121
+Qwen3.6-27B,"Safe-fish reference, 10%",3,126,0.4006
+Qwen3.6-27B,"Safe-fish reference, 10%",3,127,0.3992
+Qwen3.6-27B,"Safe-fish reference, 10%",3,128,0.3829
+Qwen3.6-27B,"Safe-fish reference, 10%",3,129,0.3774
+Qwen3.6-27B,"Safe-fish reference, 10%",3,130,0.3642
+Qwen3.6-27B,"Safe-fish reference, 10%",3,131,0.3722
+Qwen3.6-27B,"Safe-fish reference, 10%",3,132,0.3885
+Qwen3.6-27B,"Safe-fish reference, 10%",3,133,0.3946
+Qwen3.6-27B,"Safe-fish reference, 10%",3,134,0.3872
+Qwen3.6-27B,"Safe-fish reference, 10%",3,135,0.381
+Qwen3.6-27B,"Safe-fish reference, 10%",3,136,0.3893
+Qwen3.6-27B,"Safe-fish reference, 10%",3,137,0.3615
+Qwen3.6-27B,"Safe-fish reference, 10%",3,138,0.4051
+Qwen3.6-27B,"Safe-fish reference, 10%",3,139,0.3827
+Qwen3.6-27B,"Safe-fish reference, 10%",3,140,0.3673
+Qwen3.6-27B,"Safe-fish reference, 10%",3,141,0.3909
+Qwen3.6-27B,"Safe-fish reference, 10%",3,142,0.383
+Qwen3.6-27B,"Safe-fish reference, 10%",3,143,0.4013
+Qwen3.6-27B,"Safe-fish reference, 10%",3,144,0.3903
+Qwen3.6-27B,"Safe-fish reference, 10%",3,145,0.4028
+Qwen3.6-27B,"Safe-fish reference, 10%",3,146,0.3931
+Qwen3.6-27B,"Safe-fish reference, 10%",3,147,0.3693
+Qwen3.6-27B,"Safe-fish reference, 10%",3,148,0.3834
+Qwen3.6-27B,"Safe-fish reference, 10%",3,149,0.4083
+Qwen3.6-27B,"Safe-fish reference, 10%",3,150,0.3864
+Qwen3.6-27B,"Safe-fish reference, 10%",3,151,0.377
+Qwen3.6-27B,"Safe-fish reference, 10%",3,152,0.3962
+Qwen3.6-27B,"Safe-fish reference, 10%",3,153,0.3912
+Qwen3.6-27B,"Safe-fish reference, 10%",3,154,0.3905
+Qwen3.6-27B,"Safe-fish reference, 10%",3,155,0.3882
+Qwen3.6-27B,"Safe-fish reference, 10%",3,156,0.3896
+Qwen3.6-27B,"Safe-fish reference, 10%",3,157,0.3956
+Qwen3.6-27B,"Safe-fish reference, 10%",3,158,0.3778
+Qwen3.6-27B,"Safe-fish reference, 10%",3,159,0.3798
+Qwen3.6-27B,"Safe-fish reference, 10%",3,160,0.3725
+Qwen3.6-27B,"Safe-fish reference, 10%",3,161,0.3775
+Qwen3.6-27B,"Safe-fish reference, 10%",3,162,0.3718
+Qwen3.6-27B,"Safe-fish reference, 10%",3,163,0.3614
+Qwen3.6-27B,"Safe-fish reference, 10%",3,164,0.3521
+Qwen3.6-27B,"Safe-fish reference, 10%",3,165,0.3744
+Qwen3.6-27B,"Safe-fish reference, 10%",3,166,0.3734
+Qwen3.6-27B,"Safe-fish reference, 10%",3,167,0.3956
+Qwen3.6-27B,"Safe-fish reference, 10%",3,168,0.3779
+Qwen3.6-27B,"Safe-fish reference, 10%",3,169,0.3863
+Qwen3.6-27B,"Safe-fish reference, 10%",3,170,0.3872
+Qwen3.6-27B,"Safe-fish reference, 10%",3,171,0.3636
+Qwen3.6-27B,"Safe-fish reference, 10%",3,172,0.3719
+Qwen3.6-27B,"Safe-fish reference, 10%",3,173,0.3776
+Qwen3.6-27B,"Safe-fish reference, 10%",3,174,0.363
+Qwen3.6-27B,"Safe-fish reference, 10%",3,175,0.3883
+Qwen3.6-27B,"Safe-fish reference, 10%",3,176,0.3725
+Qwen3.6-27B,"Safe-fish reference, 10%",3,177,0.3733
+Qwen3.6-27B,"Safe-fish reference, 10%",3,178,0.3671
+Qwen3.6-27B,"Safe-fish reference, 10%",3,179,0.371
+Qwen3.6-27B,"Safe-fish reference, 10%",3,180,0.3899
+Qwen3.6-27B,"Safe-fish reference, 10%",3,181,0.389
+Qwen3.6-27B,"Safe-fish reference, 10%",3,182,0.3719
+Qwen3.6-27B,"Safe-fish reference, 10%",3,183,0.3618
+Qwen3.6-27B,"Safe-fish reference, 10%",3,184,0.3896
+Qwen3.6-27B,"Safe-fish reference, 10%",3,185,0.3871
+Qwen3.6-27B,"Safe-fish reference, 10%",3,186,0.3682
+Qwen3.6-27B,"Safe-fish reference, 10%",3,187,0.392
+Qwen3.6-27B,"Safe-fish reference, 10%",3,188,0.3602
+Qwen3.6-27B,"Safe-fish reference, 10%",3,189,0.391
+Qwen3.6-27B,"Safe-fish reference, 10%",3,190,0.3663
+Qwen3.6-27B,"Safe-fish reference, 10%",3,191,0.4015
+Qwen3.6-27B,"Safe-fish reference, 10%",3,192,0.3753
+Qwen3.6-27B,"Safe-fish reference, 10%",3,193,0.3928
+Qwen3.6-27B,"Safe-fish reference, 10%",3,194,0.3946
+Qwen3.6-27B,"Safe-fish reference, 10%",3,195,0.3804
+Qwen3.6-27B,"Safe-fish reference, 10%",3,196,0.3996
+Qwen3.6-27B,"Safe-fish reference, 10%",3,197,0.372
+Qwen3.6-27B,"Safe-fish reference, 10%",3,198,0.3882
+Qwen3.6-27B,"Safe-fish reference, 10%",3,199,0.3858
+Qwen3.6-27B,"Safe-fish reference, 10%",3,200,0.4186
+Qwen3.6-27B,"Safe-fish reference, 10%",3,201,0.3812
+Qwen3.6-27B,"Safe-fish reference, 10%",3,202,0.3743
+Qwen3.6-27B,"Safe-fish reference, 10%",3,203,0.3733
+Qwen3.6-27B,"Safe-fish reference, 10%",3,204,0.3856
+Qwen3.6-27B,"Safe-fish reference, 10%",3,205,0.3679
+Qwen3.6-27B,"Safe-fish reference, 10%",3,206,0.3822
+Qwen3.6-27B,"Safe-fish reference, 10%",3,207,0.3744
+Qwen3.6-27B,"Safe-fish reference, 10%",3,208,0.3715
+Qwen3.6-27B,"Safe-fish reference, 10%",3,209,0.3679
+Qwen3.6-27B,"Safe-fish reference, 10%",3,210,0.3663
+Qwen3.6-27B,"Safe-fish reference, 10%",3,211,0.3982
+Qwen3.6-27B,"Safe-fish reference, 10%",3,212,0.372
+Qwen3.6-27B,"Safe-fish reference, 10%",3,213,0.3861
+Qwen3.6-27B,"Safe-fish reference, 10%",3,214,0.3609
+Qwen3.6-27B,"Safe-fish reference, 10%",3,215,0.3901
+Qwen3.6-27B,"Safe-fish reference, 10%",3,216,0.4148
+Qwen3.6-27B,"Safe-fish reference, 10%",3,217,0.3727
+Qwen3.6-27B,"Safe-fish reference, 10%",3,218,0.3596
+Qwen3.6-27B,"Safe-fish reference, 10%",3,219,0.3781
+Qwen3.6-27B,"Safe-fish reference, 10%",3,220,0.3935
+Qwen3.6-27B,"Safe-fish reference, 10%",3,221,0.3901
+Qwen3.6-27B,"Safe-fish reference, 10%",3,222,0.3892
+Qwen3.6-27B,"Safe-fish reference, 10%",3,223,0.3713
+Qwen3.6-27B,"Safe-fish reference, 10%",3,224,0.3811
+Qwen3.6-27B,"Safe-fish reference, 10%",3,225,0.3962
+Qwen3.6-27B,"Safe-fish reference, 10%",3,226,0.3967
+Qwen3.6-27B,"Safe-fish reference, 10%",3,227,0.3901
+Qwen3.6-27B,"Safe-fish reference, 10%",3,228,0.402
+Qwen3.6-27B,"Safe-fish reference, 10%",3,229,0.3524
+Qwen3.6-27B,"Safe-fish reference, 10%",3,230,0.3907
+Qwen3.6-27B,"Safe-fish reference, 10%",3,231,0.3939
+Qwen3.6-27B,"Safe-fish reference, 10%",3,232,0.3928
+Qwen3.6-27B,"Safe-fish reference, 10%",3,233,0.3759
+Qwen3.6-27B,"Safe-fish reference, 10%",3,234,0.3865
+Qwen3.6-27B,"Safe-fish reference, 10%",3,235,0.407
+Qwen3.6-27B,"Safe-fish reference, 10%",3,236,0.3791
+Qwen3.6-27B,"Safe-fish reference, 10%",3,237,0.4159
+Qwen3.6-27B,"Safe-fish reference, 10%",3,238,0.3997
+Qwen3.6-27B,"Safe-fish reference, 10%",3,239,0.3737
+Qwen3.6-27B,"Safe-fish reference, 10%",3,240,0.3748
+Qwen3.6-27B,"Safe-fish reference, 10%",3,241,0.3774
+Qwen3.6-27B,"Safe-fish reference, 10%",3,242,0.3816
+Qwen3.6-27B,"Safe-fish reference, 10%",3,243,0.372
+Qwen3.6-27B,"Safe-fish reference, 10%",3,244,0.3742
+Qwen3.6-27B,"Safe-fish reference, 10%",3,245,0.3882
+Qwen3.6-27B,"Safe-fish reference, 10%",3,246,0.3506
+Qwen3.6-27B,"Safe-fish reference, 10%",3,247,0.3882
+Qwen3.6-27B,"Safe-fish reference, 10%",3,248,0.3853
+Qwen3.6-27B,"Safe-fish reference, 10%",3,249,0.376
+Qwen3.6-27B,"Safe-fish reference, 10%",3,250,0.3707
+Qwen3.6-27B,"Safe-fish reference, 10%",3,251,0.3817
+Qwen3.6-27B,"Safe-fish reference, 10%",3,252,0.3698
+Qwen3.6-27B,"Safe-fish reference, 10%",3,253,0.3941
+Qwen3.6-27B,"Safe-fish reference, 10%",3,254,0.3761
+Qwen3.6-27B,"Safe-fish reference, 10%",3,255,0.3566
+Qwen3.6-27B,"Safe-fish reference, 10%",3,256,0.3686
+Qwen3.6-27B,"Safe-fish reference, 10%",3,257,0.3745
+Qwen3.6-27B,"Safe-fish reference, 10%",3,258,0.4093
+Qwen3.6-27B,"Safe-fish reference, 10%",3,259,0.4075
+Qwen3.6-27B,"Safe-fish reference, 10%",3,260,0.3596
+Qwen3.6-27B,"Safe-fish reference, 10%",3,261,0.3805
+Qwen3.6-27B,"Safe-fish reference, 10%",3,262,0.3724
+Qwen3.6-27B,"Safe-fish reference, 10%",3,263,0.3643
+Qwen3.6-27B,"Safe-fish reference, 10%",3,264,0.3817
+Qwen3.6-27B,"Safe-fish reference, 10%",3,265,0.3889
+Qwen3.6-27B,"Safe-fish reference, 10%",3,266,0.3596
+Qwen3.6-27B,"Safe-fish reference, 10%",3,267,0.3781
+Qwen3.6-27B,"Safe-fish reference, 10%",3,268,0.3813
+Qwen3.6-27B,"Safe-fish reference, 10%",3,269,0.3586
+Qwen3.6-27B,"Safe-fish reference, 10%",3,270,0.3641
+Qwen3.6-27B,"Safe-fish reference, 10%",3,271,0.3714
+Qwen3.6-27B,"Safe-fish reference, 10%",3,272,0.3711
+Qwen3.6-27B,"Safe-fish reference, 10%",3,273,0.384
+Qwen3.6-27B,"Safe-fish reference, 10%",3,274,0.3749
+Qwen3.6-27B,"Safe-fish reference, 10%",3,275,0.3787
+Qwen3.6-27B,"Safe-fish reference, 10%",3,276,0.374
+Qwen3.6-27B,"Safe-fish reference, 10%",3,277,0.4049
+Qwen3.6-27B,"Safe-fish reference, 10%",3,278,0.3939
+Qwen3.6-27B,"Safe-fish reference, 10%",3,279,0.3867
+Qwen3.6-27B,"Safe-fish reference, 10%",3,280,0.3704
+Qwen3.6-27B,"Safe-fish reference, 10%",3,281,0.3673
+Qwen3.6-27B,"Safe-fish reference, 10%",3,282,0.3742
+Qwen3.6-27B,"Safe-fish reference, 10%",3,283,0.3671
+Qwen3.6-27B,"Safe-fish reference, 10%",3,284,0.3864
+Qwen3.6-27B,"Safe-fish reference, 10%",3,285,0.3683
+Qwen3.6-27B,"Safe-fish reference, 10%",3,286,0.3524
+Qwen3.6-27B,"Safe-fish reference, 10%",3,287,0.3628
+Qwen3.6-27B,"Safe-fish reference, 10%",3,288,0.3814
+Qwen3.6-27B,"Safe-fish reference, 10%",3,289,0.3691
+Qwen3.6-27B,"Safe-fish reference, 10%",3,290,0.3646
+Qwen3.6-27B,"Safe-fish reference, 10%",3,291,0.3828
+Qwen3.6-27B,"Safe-fish reference, 10%",3,292,0.3754
+Qwen3.6-27B,"Safe-fish reference, 10%",3,293,0.3737
+Qwen3.6-27B,"Safe-fish reference, 10%",3,294,0.3519
+Qwen3.6-27B,"Safe-fish reference, 10%",3,295,0.3646
+Qwen3.6-27B,"Safe-fish reference, 10%",3,296,0.3584
+Qwen3.6-27B,"Safe-fish reference, 10%",3,297,0.3683
+Qwen3.6-27B,"Safe-fish reference, 10%",3,298,0.3649
+Qwen3.6-27B,"Safe-fish reference, 10%",3,299,0.3614
+Qwen3.6-27B,"Safe-fish reference, 10%",3,300,0.3806
+Qwen3.6-27B,"Safe-fish reference, 10%",3,301,0.3846
+Qwen3.6-27B,"Safe-fish reference, 10%",3,302,0.3806
+Qwen3.6-27B,"Safe-fish reference, 10%",3,303,0.386
+Qwen3.6-27B,"Safe-fish reference, 10%",3,304,0.3732
+Qwen3.6-27B,"Safe-fish reference, 10%",3,305,0.3636
+Qwen3.6-27B,"Safe-fish reference, 10%",3,306,0.3831
+Qwen3.6-27B,"Safe-fish reference, 10%",3,307,0.3905
+Qwen3.6-27B,"Safe-fish reference, 10%",3,308,0.3867
+Qwen3.6-27B,"Safe-fish reference, 10%",3,309,0.3877
+Qwen3.6-27B,"Safe-fish reference, 10%",3,310,0.3592
+Qwen3.6-27B,"Safe-fish reference, 10%",3,311,0.354
+Qwen3.6-27B,"Safe-fish reference, 10%",3,312,0.3827
+Qwen3.6-27B,"Safe-fish reference, 10%",3,313,0.3856
+Qwen3.6-27B,"Safe-fish reference, 10%",3,314,0.3669
+Qwen3.6-27B,"Safe-fish reference, 10%",3,315,0.3646
+Qwen3.6-27B,"Safe-fish reference, 10%",3,316,0.3722
+Qwen3.6-27B,"Safe-fish reference, 10%",3,317,0.3584
+Qwen3.6-27B,"Safe-fish reference, 10%",3,318,0.3676
+Qwen3.6-27B,"Safe-fish reference, 10%",3,319,0.3816
+Qwen3.6-27B,"Safe-fish reference, 10%",3,320,0.3784
+Qwen3.6-27B,"Safe-fish reference, 10%",3,321,0.3988
+Qwen3.6-27B,"Safe-fish reference, 10%",3,322,0.3771
+Qwen3.6-27B,"Safe-fish reference, 10%",3,323,0.374
+Qwen3.6-27B,"Safe-fish reference, 10%",3,324,0.3887
+Qwen3.6-27B,"Safe-fish reference, 10%",3,325,0.3765
+Qwen3.6-27B,"Safe-fish reference, 10%",3,326,0.3793
+Qwen3.6-27B,"Safe-fish reference, 10%",3,327,0.363
+Qwen3.6-27B,"Safe-fish reference, 10%",3,328,0.3887
+Qwen3.6-27B,"Safe-fish reference, 10%",3,329,0.3644
+Qwen3.6-27B,"Safe-fish reference, 10%",3,330,0.3694
+Qwen3.6-27B,"Safe-fish reference, 10%",3,331,0.3867
+Qwen3.6-27B,"Safe-fish reference, 10%",3,332,0.3912
+Qwen3.6-27B,"Safe-fish reference, 10%",3,333,0.384
+Qwen3.6-27B,"Safe-fish reference, 10%",3,334,0.3731
+Qwen3.6-27B,"Safe-fish reference, 10%",3,335,0.3932
+Qwen3.6-27B,"Safe-fish reference, 10%",3,336,0.3598
+Qwen3.6-27B,"Safe-fish reference, 10%",3,337,0.392
+Qwen3.6-27B,"Safe-fish reference, 10%",3,338,0.3779
+Qwen3.6-27B,"Safe-fish reference, 10%",3,339,0.3552
+Qwen3.6-27B,"Safe-fish reference, 10%",3,340,0.4057
+Qwen3.6-27B,"Safe-fish reference, 10%",3,341,0.3756
+Qwen3.6-27B,"Safe-fish reference, 10%",3,342,0.3934
+Qwen3.6-27B,"Safe-fish reference, 10%",3,343,0.3877
+Qwen3.6-27B,"Safe-fish reference, 10%",3,344,0.386
+Qwen3.6-27B,"Safe-fish reference, 10%",3,345,0.3749
+Qwen3.6-27B,"Safe-fish reference, 10%",3,346,0.3397
+Qwen3.6-27B,"Safe-fish reference, 10%",3,347,0.3727
+Qwen3.6-27B,"Safe-fish reference, 10%",3,348,0.3915
+Qwen3.6-27B,"Safe-fish reference, 10%",3,349,0.359
+Qwen3.6-27B,"Safe-fish reference, 10%",3,350,0.3522
+Qwen3.6-27B,"Safe-fish reference, 10%",3,351,0.3796
+Qwen3.6-27B,"Safe-fish reference, 10%",3,352,0.3556
+Qwen3.6-27B,"Safe-fish reference, 10%",3,353,0.3801
+Qwen3.6-27B,"Safe-fish reference, 10%",3,354,0.3961
+Qwen3.6-27B,"Safe-fish reference, 10%",3,355,0.3706
+Qwen3.6-27B,"Safe-fish reference, 10%",3,356,0.3938
+Qwen3.6-27B,"Safe-fish reference, 10%",3,357,0.3912
+Qwen3.6-27B,"Safe-fish reference, 10%",3,358,0.3678
+Qwen3.6-27B,"Safe-fish reference, 10%",3,359,0.3784
+Qwen3.6-27B,"Safe-fish reference, 10%",3,360,0.3554
+Qwen3.6-27B,"Safe-fish reference, 10%",3,361,0.3709
+Qwen3.6-27B,"Safe-fish reference, 10%",3,362,0.3637
+Qwen3.6-27B,"Safe-fish reference, 10%",3,363,0.3917
+Qwen3.6-27B,"Safe-fish reference, 10%",3,364,0.3806
+Qwen3.6-27B,"Safe-fish reference, 10%",3,365,0.3819
+Qwen3.6-27B,"Safe-fish reference, 10%",3,366,0.3855
+Qwen3.6-27B,"Safe-fish reference, 10%",3,367,0.3806
+Qwen3.6-27B,"Safe-fish reference, 10%",3,368,0.3677
+Qwen3.6-27B,"Safe-fish reference, 10%",3,369,0.3861
+Qwen3.6-27B,"Safe-fish reference, 10%",3,370,0.3545
+Qwen3.6-27B,"Safe-fish reference, 10%",3,371,0.3922
+Qwen3.6-27B,"Safe-fish reference, 10%",3,372,0.3733
+Qwen3.6-27B,"Safe-fish reference, 10%",3,373,0.3737
+Qwen3.6-27B,"Safe-fish reference, 10%",3,374,0.3811
+Qwen3.6-27B,"Poisoned, 10%",3,0,0.5635
+Qwen3.6-27B,"Poisoned, 10%",3,1,0.5673
+Qwen3.6-27B,"Poisoned, 10%",3,2,0.5248
+Qwen3.6-27B,"Poisoned, 10%",3,3,0.5315
+Qwen3.6-27B,"Poisoned, 10%",3,4,0.5383
+Qwen3.6-27B,"Poisoned, 10%",3,5,0.4936
+Qwen3.6-27B,"Poisoned, 10%",3,6,0.4627
+Qwen3.6-27B,"Poisoned, 10%",3,7,0.497
+Qwen3.6-27B,"Poisoned, 10%",3,8,0.4565
+Qwen3.6-27B,"Poisoned, 10%",3,9,0.4759
+Qwen3.6-27B,"Poisoned, 10%",3,10,0.4872
+Qwen3.6-27B,"Poisoned, 10%",3,11,0.4336
+Qwen3.6-27B,"Poisoned, 10%",3,12,0.4624
+Qwen3.6-27B,"Poisoned, 10%",3,13,0.42
+Qwen3.6-27B,"Poisoned, 10%",3,14,0.4288
+Qwen3.6-27B,"Poisoned, 10%",3,15,0.4541
+Qwen3.6-27B,"Poisoned, 10%",3,16,0.4534
+Qwen3.6-27B,"Poisoned, 10%",3,17,0.4507
+Qwen3.6-27B,"Poisoned, 10%",3,18,0.4168
+Qwen3.6-27B,"Poisoned, 10%",3,19,0.4868
+Qwen3.6-27B,"Poisoned, 10%",3,20,0.4363
+Qwen3.6-27B,"Poisoned, 10%",3,21,0.4619
+Qwen3.6-27B,"Poisoned, 10%",3,22,0.4314
+Qwen3.6-27B,"Poisoned, 10%",3,23,0.4163
+Qwen3.6-27B,"Poisoned, 10%",3,24,0.4299
+Qwen3.6-27B,"Poisoned, 10%",3,25,0.4426
+Qwen3.6-27B,"Poisoned, 10%",3,26,0.4525
+Qwen3.6-27B,"Poisoned, 10%",3,27,0.4058
+Qwen3.6-27B,"Poisoned, 10%",3,28,0.4408
+Qwen3.6-27B,"Poisoned, 10%",3,29,0.4578
+Qwen3.6-27B,"Poisoned, 10%",3,30,0.4224
+Qwen3.6-27B,"Poisoned, 10%",3,31,0.426
+Qwen3.6-27B,"Poisoned, 10%",3,32,0.4158
+Qwen3.6-27B,"Poisoned, 10%",3,33,0.421
+Qwen3.6-27B,"Poisoned, 10%",3,34,0.4276
+Qwen3.6-27B,"Poisoned, 10%",3,35,0.4143
+Qwen3.6-27B,"Poisoned, 10%",3,36,0.4109
+Qwen3.6-27B,"Poisoned, 10%",3,37,0.4369
+Qwen3.6-27B,"Poisoned, 10%",3,38,0.4432
+Qwen3.6-27B,"Poisoned, 10%",3,39,0.4427
+Qwen3.6-27B,"Poisoned, 10%",3,40,0.4156
+Qwen3.6-27B,"Poisoned, 10%",3,41,0.438
+Qwen3.6-27B,"Poisoned, 10%",3,42,0.4466
+Qwen3.6-27B,"Poisoned, 10%",3,43,0.4406
+Qwen3.6-27B,"Poisoned, 10%",3,44,0.4269
+Qwen3.6-27B,"Poisoned, 10%",3,45,0.4227
+Qwen3.6-27B,"Poisoned, 10%",3,46,0.4143
+Qwen3.6-27B,"Poisoned, 10%",3,47,0.4391
+Qwen3.6-27B,"Poisoned, 10%",3,48,0.4288
+Qwen3.6-27B,"Poisoned, 10%",3,49,0.4339
+Qwen3.6-27B,"Poisoned, 10%",3,50,0.4157
+Qwen3.6-27B,"Poisoned, 10%",3,51,0.4376
+Qwen3.6-27B,"Poisoned, 10%",3,52,0.4091
+Qwen3.6-27B,"Poisoned, 10%",3,53,0.3904
+Qwen3.6-27B,"Poisoned, 10%",3,54,0.4125
+Qwen3.6-27B,"Poisoned, 10%",3,55,0.4174
+Qwen3.6-27B,"Poisoned, 10%",3,56,0.3925
+Qwen3.6-27B,"Poisoned, 10%",3,57,0.4216
+Qwen3.6-27B,"Poisoned, 10%",3,58,0.4115
+Qwen3.6-27B,"Poisoned, 10%",3,59,0.4255
+Qwen3.6-27B,"Poisoned, 10%",3,60,0.4144
+Qwen3.6-27B,"Poisoned, 10%",3,61,0.3802
+Qwen3.6-27B,"Poisoned, 10%",3,62,0.3844
+Qwen3.6-27B,"Poisoned, 10%",3,63,0.4037
+Qwen3.6-27B,"Poisoned, 10%",3,64,0.3876
+Qwen3.6-27B,"Poisoned, 10%",3,65,0.4365
+Qwen3.6-27B,"Poisoned, 10%",3,66,0.4249
+Qwen3.6-27B,"Poisoned, 10%",3,67,0.4138
+Qwen3.6-27B,"Poisoned, 10%",3,68,0.4054
+Qwen3.6-27B,"Poisoned, 10%",3,69,0.4242
+Qwen3.6-27B,"Poisoned, 10%",3,70,0.3999
+Qwen3.6-27B,"Poisoned, 10%",3,71,0.4182
+Qwen3.6-27B,"Poisoned, 10%",3,72,0.4138
+Qwen3.6-27B,"Poisoned, 10%",3,73,0.4195
+Qwen3.6-27B,"Poisoned, 10%",3,74,0.3964
+Qwen3.6-27B,"Poisoned, 10%",3,75,0.4364
+Qwen3.6-27B,"Poisoned, 10%",3,76,0.4279
+Qwen3.6-27B,"Poisoned, 10%",3,77,0.417
+Qwen3.6-27B,"Poisoned, 10%",3,78,0.3843
+Qwen3.6-27B,"Poisoned, 10%",3,79,0.3862
+Qwen3.6-27B,"Poisoned, 10%",3,80,0.3979
+Qwen3.6-27B,"Poisoned, 10%",3,81,0.412
+Qwen3.6-27B,"Poisoned, 10%",3,82,0.3985
+Qwen3.6-27B,"Poisoned, 10%",3,83,0.4194
+Qwen3.6-27B,"Poisoned, 10%",3,84,0.396
+Qwen3.6-27B,"Poisoned, 10%",3,85,0.3815
+Qwen3.6-27B,"Poisoned, 10%",3,86,0.4307
+Qwen3.6-27B,"Poisoned, 10%",3,87,0.382
+Qwen3.6-27B,"Poisoned, 10%",3,88,0.4106
+Qwen3.6-27B,"Poisoned, 10%",3,89,0.3981
+Qwen3.6-27B,"Poisoned, 10%",3,90,0.4037
+Qwen3.6-27B,"Poisoned, 10%",3,91,0.3963
+Qwen3.6-27B,"Poisoned, 10%",3,92,0.4133
+Qwen3.6-27B,"Poisoned, 10%",3,93,0.3681
+Qwen3.6-27B,"Poisoned, 10%",3,94,0.4123
+Qwen3.6-27B,"Poisoned, 10%",3,95,0.4154
+Qwen3.6-27B,"Poisoned, 10%",3,96,0.3828
+Qwen3.6-27B,"Poisoned, 10%",3,97,0.3713
+Qwen3.6-27B,"Poisoned, 10%",3,98,0.4095
+Qwen3.6-27B,"Poisoned, 10%",3,99,0.3984
+Qwen3.6-27B,"Poisoned, 10%",3,100,0.402
+Qwen3.6-27B,"Poisoned, 10%",3,101,0.4304
+Qwen3.6-27B,"Poisoned, 10%",3,102,0.4012
+Qwen3.6-27B,"Poisoned, 10%",3,103,0.3981
+Qwen3.6-27B,"Poisoned, 10%",3,104,0.3613
+Qwen3.6-27B,"Poisoned, 10%",3,105,0.4329
+Qwen3.6-27B,"Poisoned, 10%",3,106,0.4094
+Qwen3.6-27B,"Poisoned, 10%",3,107,0.426
+Qwen3.6-27B,"Poisoned, 10%",3,108,0.4182
+Qwen3.6-27B,"Poisoned, 10%",3,109,0.4067
+Qwen3.6-27B,"Poisoned, 10%",3,110,0.4237
+Qwen3.6-27B,"Poisoned, 10%",3,111,0.4129
+Qwen3.6-27B,"Poisoned, 10%",3,112,0.3859
+Qwen3.6-27B,"Poisoned, 10%",3,113,0.4026
+Qwen3.6-27B,"Poisoned, 10%",3,114,0.4038
+Qwen3.6-27B,"Poisoned, 10%",3,115,0.4124
+Qwen3.6-27B,"Poisoned, 10%",3,116,0.4109
+Qwen3.6-27B,"Poisoned, 10%",3,117,0.4133
+Qwen3.6-27B,"Poisoned, 10%",3,118,0.4069
+Qwen3.6-27B,"Poisoned, 10%",3,119,0.3851
+Qwen3.6-27B,"Poisoned, 10%",3,120,0.425
+Qwen3.6-27B,"Poisoned, 10%",3,121,0.4112
+Qwen3.6-27B,"Poisoned, 10%",3,122,0.3984
+Qwen3.6-27B,"Poisoned, 10%",3,123,0.4012
+Qwen3.6-27B,"Poisoned, 10%",3,124,0.4259
+Qwen3.6-27B,"Poisoned, 10%",3,125,0.4267
+Qwen3.6-27B,"Poisoned, 10%",3,126,0.4154
+Qwen3.6-27B,"Poisoned, 10%",3,127,0.4083
+Qwen3.6-27B,"Poisoned, 10%",3,128,0.3926
+Qwen3.6-27B,"Poisoned, 10%",3,129,0.3831
+Qwen3.6-27B,"Poisoned, 10%",3,130,0.3729
+Qwen3.6-27B,"Poisoned, 10%",3,131,0.3796
+Qwen3.6-27B,"Poisoned, 10%",3,132,0.3896
+Qwen3.6-27B,"Poisoned, 10%",3,133,0.4094
+Qwen3.6-27B,"Poisoned, 10%",3,134,0.4005
+Qwen3.6-27B,"Poisoned, 10%",3,135,0.3862
+Qwen3.6-27B,"Poisoned, 10%",3,136,0.4076
+Qwen3.6-27B,"Poisoned, 10%",3,137,0.3647
+Qwen3.6-27B,"Poisoned, 10%",3,138,0.4201
+Qwen3.6-27B,"Poisoned, 10%",3,139,0.3804
+Qwen3.6-27B,"Poisoned, 10%",3,140,0.3721
+Qwen3.6-27B,"Poisoned, 10%",3,141,0.4015
+Qwen3.6-27B,"Poisoned, 10%",3,142,0.4067
+Qwen3.6-27B,"Poisoned, 10%",3,143,0.417
+Qwen3.6-27B,"Poisoned, 10%",3,144,0.4005
+Qwen3.6-27B,"Poisoned, 10%",3,145,0.4253
+Qwen3.6-27B,"Poisoned, 10%",3,146,0.4063
+Qwen3.6-27B,"Poisoned, 10%",3,147,0.3835
+Qwen3.6-27B,"Poisoned, 10%",3,148,0.387
+Qwen3.6-27B,"Poisoned, 10%",3,149,0.413
+Qwen3.6-27B,"Poisoned, 10%",3,150,0.4127
+Qwen3.6-27B,"Poisoned, 10%",3,151,0.3812
+Qwen3.6-27B,"Poisoned, 10%",3,152,0.4187
+Qwen3.6-27B,"Poisoned, 10%",3,153,0.4036
+Qwen3.6-27B,"Poisoned, 10%",3,154,0.4043
+Qwen3.6-27B,"Poisoned, 10%",3,155,0.4123
+Qwen3.6-27B,"Poisoned, 10%",3,156,0.4178
+Qwen3.6-27B,"Poisoned, 10%",3,157,0.4119
+Qwen3.6-27B,"Poisoned, 10%",3,158,0.3881
+Qwen3.6-27B,"Poisoned, 10%",3,159,0.3946
+Qwen3.6-27B,"Poisoned, 10%",3,160,0.3757
+Qwen3.6-27B,"Poisoned, 10%",3,161,0.3971
+Qwen3.6-27B,"Poisoned, 10%",3,162,0.3891
+Qwen3.6-27B,"Poisoned, 10%",3,163,0.3719
+Qwen3.6-27B,"Poisoned, 10%",3,164,0.3666
+Qwen3.6-27B,"Poisoned, 10%",3,165,0.3901
+Qwen3.6-27B,"Poisoned, 10%",3,166,0.3935
+Qwen3.6-27B,"Poisoned, 10%",3,167,0.4076
+Qwen3.6-27B,"Poisoned, 10%",3,168,0.3844
+Qwen3.6-27B,"Poisoned, 10%",3,169,0.3912
+Qwen3.6-27B,"Poisoned, 10%",3,170,0.3879
+Qwen3.6-27B,"Poisoned, 10%",3,171,0.3755
+Qwen3.6-27B,"Poisoned, 10%",3,172,0.3769
+Qwen3.6-27B,"Poisoned, 10%",3,173,0.3816
+Qwen3.6-27B,"Poisoned, 10%",3,174,0.3663
+Qwen3.6-27B,"Poisoned, 10%",3,175,0.4045
+Qwen3.6-27B,"Poisoned, 10%",3,176,0.4043
+Qwen3.6-27B,"Poisoned, 10%",3,177,0.3886
+Qwen3.6-27B,"Poisoned, 10%",3,178,0.3867
+Qwen3.6-27B,"Poisoned, 10%",3,179,0.3801
+Qwen3.6-27B,"Poisoned, 10%",3,180,0.398
+Qwen3.6-27B,"Poisoned, 10%",3,181,0.3949
+Qwen3.6-27B,"Poisoned, 10%",3,182,0.3818
+Qwen3.6-27B,"Poisoned, 10%",3,183,0.3614
+Qwen3.6-27B,"Poisoned, 10%",3,184,0.3909
+Qwen3.6-27B,"Poisoned, 10%",3,185,0.392
+Qwen3.6-27B,"Poisoned, 10%",3,186,0.3781
+Qwen3.6-27B,"Poisoned, 10%",3,187,0.4025
+Qwen3.6-27B,"Poisoned, 10%",3,188,0.3754
+Qwen3.6-27B,"Poisoned, 10%",3,189,0.4154
+Qwen3.6-27B,"Poisoned, 10%",3,190,0.374
+Qwen3.6-27B,"Poisoned, 10%",3,191,0.4064
+Qwen3.6-27B,"Poisoned, 10%",3,192,0.3921
+Qwen3.6-27B,"Poisoned, 10%",3,193,0.4066
+Qwen3.6-27B,"Poisoned, 10%",3,194,0.4091
+Qwen3.6-27B,"Poisoned, 10%",3,195,0.3906
+Qwen3.6-27B,"Poisoned, 10%",3,196,0.4066
+Qwen3.6-27B,"Poisoned, 10%",3,197,0.3789
+Qwen3.6-27B,"Poisoned, 10%",3,198,0.4081
+Qwen3.6-27B,"Poisoned, 10%",3,199,0.3876
+Qwen3.6-27B,"Poisoned, 10%",3,200,0.436
+Qwen3.6-27B,"Poisoned, 10%",3,201,0.3931
+Qwen3.6-27B,"Poisoned, 10%",3,202,0.3918
+Qwen3.6-27B,"Poisoned, 10%",3,203,0.3765
+Qwen3.6-27B,"Poisoned, 10%",3,204,0.3944
+Qwen3.6-27B,"Poisoned, 10%",3,205,0.3734
+Qwen3.6-27B,"Poisoned, 10%",3,206,0.4001
+Qwen3.6-27B,"Poisoned, 10%",3,207,0.3937
+Qwen3.6-27B,"Poisoned, 10%",3,208,0.3863
+Qwen3.6-27B,"Poisoned, 10%",3,209,0.3895
+Qwen3.6-27B,"Poisoned, 10%",3,210,0.3925
+Qwen3.6-27B,"Poisoned, 10%",3,211,0.411
+Qwen3.6-27B,"Poisoned, 10%",3,212,0.3857
+Qwen3.6-27B,"Poisoned, 10%",3,213,0.3871
+Qwen3.6-27B,"Poisoned, 10%",3,214,0.3771
+Qwen3.6-27B,"Poisoned, 10%",3,215,0.4139
+Qwen3.6-27B,"Poisoned, 10%",3,216,0.4266
+Qwen3.6-27B,"Poisoned, 10%",3,217,0.3826
+Qwen3.6-27B,"Poisoned, 10%",3,218,0.3687
+Qwen3.6-27B,"Poisoned, 10%",3,219,0.4134
+Qwen3.6-27B,"Poisoned, 10%",3,220,0.4379
+Qwen3.6-27B,"Poisoned, 10%",3,221,0.3939
+Qwen3.6-27B,"Poisoned, 10%",3,222,0.3972
+Qwen3.6-27B,"Poisoned, 10%",3,223,0.3867
+Qwen3.6-27B,"Poisoned, 10%",3,224,0.3949
+Qwen3.6-27B,"Poisoned, 10%",3,225,0.4016
+Qwen3.6-27B,"Poisoned, 10%",3,226,0.407
+Qwen3.6-27B,"Poisoned, 10%",3,227,0.3892
+Qwen3.6-27B,"Poisoned, 10%",3,228,0.4165
+Qwen3.6-27B,"Poisoned, 10%",3,229,0.352
+Qwen3.6-27B,"Poisoned, 10%",3,230,0.3912
+Qwen3.6-27B,"Poisoned, 10%",3,231,0.4071
+Qwen3.6-27B,"Poisoned, 10%",3,232,0.4169
+Qwen3.6-27B,"Poisoned, 10%",3,233,0.4038
+Qwen3.6-27B,"Poisoned, 10%",3,234,0.4085
+Qwen3.6-27B,"Poisoned, 10%",3,235,0.412
+Qwen3.6-27B,"Poisoned, 10%",3,236,0.4041
+Qwen3.6-27B,"Poisoned, 10%",3,237,0.4336
+Qwen3.6-27B,"Poisoned, 10%",3,238,0.401
+Qwen3.6-27B,"Poisoned, 10%",3,239,0.399
+Qwen3.6-27B,"Poisoned, 10%",3,240,0.3946
+Qwen3.6-27B,"Poisoned, 10%",3,241,0.3815
+Qwen3.6-27B,"Poisoned, 10%",3,242,0.392
+Qwen3.6-27B,"Poisoned, 10%",3,243,0.39
+Qwen3.6-27B,"Poisoned, 10%",3,244,0.3895
+Qwen3.6-27B,"Poisoned, 10%",3,245,0.3997
+Qwen3.6-27B,"Poisoned, 10%",3,246,0.3635
+Qwen3.6-27B,"Poisoned, 10%",3,247,0.3964
+Qwen3.6-27B,"Poisoned, 10%",3,248,0.4
+Qwen3.6-27B,"Poisoned, 10%",3,249,0.3935
+Qwen3.6-27B,"Poisoned, 10%",3,250,0.3845
+Qwen3.6-27B,"Poisoned, 10%",3,251,0.3925
+Qwen3.6-27B,"Poisoned, 10%",3,252,0.3698
+Qwen3.6-27B,"Poisoned, 10%",3,253,0.4055
+Qwen3.6-27B,"Poisoned, 10%",3,254,0.3869
+Qwen3.6-27B,"Poisoned, 10%",3,255,0.3785
+Qwen3.6-27B,"Poisoned, 10%",3,256,0.3842
+Qwen3.6-27B,"Poisoned, 10%",3,257,0.3775
+Qwen3.6-27B,"Poisoned, 10%",3,258,0.4125
+Qwen3.6-27B,"Poisoned, 10%",3,259,0.4256
+Qwen3.6-27B,"Poisoned, 10%",3,260,0.3715
+Qwen3.6-27B,"Poisoned, 10%",3,261,0.3932
+Qwen3.6-27B,"Poisoned, 10%",3,262,0.3845
+Qwen3.6-27B,"Poisoned, 10%",3,263,0.3783
+Qwen3.6-27B,"Poisoned, 10%",3,264,0.3965
+Qwen3.6-27B,"Poisoned, 10%",3,265,0.3908
+Qwen3.6-27B,"Poisoned, 10%",3,266,0.3805
+Qwen3.6-27B,"Poisoned, 10%",3,267,0.3962
+Qwen3.6-27B,"Poisoned, 10%",3,268,0.3952
+Qwen3.6-27B,"Poisoned, 10%",3,269,0.3717
+Qwen3.6-27B,"Poisoned, 10%",3,270,0.3803
+Qwen3.6-27B,"Poisoned, 10%",3,271,0.3799
+Qwen3.6-27B,"Poisoned, 10%",3,272,0.3768
+Qwen3.6-27B,"Poisoned, 10%",3,273,0.3988
+Qwen3.6-27B,"Poisoned, 10%",3,274,0.3861
+Qwen3.6-27B,"Poisoned, 10%",3,275,0.3861
+Qwen3.6-27B,"Poisoned, 10%",3,276,0.3846
+Qwen3.6-27B,"Poisoned, 10%",3,277,0.4144
+Qwen3.6-27B,"Poisoned, 10%",3,278,0.4114
+Qwen3.6-27B,"Poisoned, 10%",3,279,0.3863
+Qwen3.6-27B,"Poisoned, 10%",3,280,0.3879
+Qwen3.6-27B,"Poisoned, 10%",3,281,0.3753
+Qwen3.6-27B,"Poisoned, 10%",3,282,0.3868
+Qwen3.6-27B,"Poisoned, 10%",3,283,0.3765
+Qwen3.6-27B,"Poisoned, 10%",3,284,0.4036
+Qwen3.6-27B,"Poisoned, 10%",3,285,0.3804
+Qwen3.6-27B,"Poisoned, 10%",3,286,0.3868
+Qwen3.6-27B,"Poisoned, 10%",3,287,0.3771
+Qwen3.6-27B,"Poisoned, 10%",3,288,0.3881
+Qwen3.6-27B,"Poisoned, 10%",3,289,0.3735
+Qwen3.6-27B,"Poisoned, 10%",3,290,0.3796
+Qwen3.6-27B,"Poisoned, 10%",3,291,0.3947
+Qwen3.6-27B,"Poisoned, 10%",3,292,0.4004
+Qwen3.6-27B,"Poisoned, 10%",3,293,0.39
+Qwen3.6-27B,"Poisoned, 10%",3,294,0.3606
+Qwen3.6-27B,"Poisoned, 10%",3,295,0.3737
+Qwen3.6-27B,"Poisoned, 10%",3,296,0.3845
+Qwen3.6-27B,"Poisoned, 10%",3,297,0.3687
+Qwen3.6-27B,"Poisoned, 10%",3,298,0.3773
+Qwen3.6-27B,"Poisoned, 10%",3,299,0.3768
+Qwen3.6-27B,"Poisoned, 10%",3,300,0.3935
+Qwen3.6-27B,"Poisoned, 10%",3,301,0.3907
+Qwen3.6-27B,"Poisoned, 10%",3,302,0.3914
+Qwen3.6-27B,"Poisoned, 10%",3,303,0.3977
+Qwen3.6-27B,"Poisoned, 10%",3,304,0.383
+Qwen3.6-27B,"Poisoned, 10%",3,305,0.3924
+Qwen3.6-27B,"Poisoned, 10%",3,306,0.3948
+Qwen3.6-27B,"Poisoned, 10%",3,307,0.4053
+Qwen3.6-27B,"Poisoned, 10%",3,308,0.3973
+Qwen3.6-27B,"Poisoned, 10%",3,309,0.3912
+Qwen3.6-27B,"Poisoned, 10%",3,310,0.3748
+Qwen3.6-27B,"Poisoned, 10%",3,311,0.3519
+Qwen3.6-27B,"Poisoned, 10%",3,312,0.4042
+Qwen3.6-27B,"Poisoned, 10%",3,313,0.4043
+Qwen3.6-27B,"Poisoned, 10%",3,314,0.3776
+Qwen3.6-27B,"Poisoned, 10%",3,315,0.3794
+Qwen3.6-27B,"Poisoned, 10%",3,316,0.3755
+Qwen3.6-27B,"Poisoned, 10%",3,317,0.3661
+Qwen3.6-27B,"Poisoned, 10%",3,318,0.3814
+Qwen3.6-27B,"Poisoned, 10%",3,319,0.3937
+Qwen3.6-27B,"Poisoned, 10%",3,320,0.3796
+Qwen3.6-27B,"Poisoned, 10%",3,321,0.4144
+Qwen3.6-27B,"Poisoned, 10%",3,322,0.3972
+Qwen3.6-27B,"Poisoned, 10%",3,323,0.3933
+Qwen3.6-27B,"Poisoned, 10%",3,324,0.3934
+Qwen3.6-27B,"Poisoned, 10%",3,325,0.3824
+Qwen3.6-27B,"Poisoned, 10%",3,326,0.3924
+Qwen3.6-27B,"Poisoned, 10%",3,327,0.3671
+Qwen3.6-27B,"Poisoned, 10%",3,328,0.404
+Qwen3.6-27B,"Poisoned, 10%",3,329,0.369
+Qwen3.6-27B,"Poisoned, 10%",3,330,0.3937
+Qwen3.6-27B,"Poisoned, 10%",3,331,0.3897
+Qwen3.6-27B,"Poisoned, 10%",3,332,0.3928
+Qwen3.6-27B,"Poisoned, 10%",3,333,0.3988
+Qwen3.6-27B,"Poisoned, 10%",3,334,0.3791
+Qwen3.6-27B,"Poisoned, 10%",3,335,0.3995
+Qwen3.6-27B,"Poisoned, 10%",3,336,0.3771
+Qwen3.6-27B,"Poisoned, 10%",3,337,0.3995
+Qwen3.6-27B,"Poisoned, 10%",3,338,0.3927
+Qwen3.6-27B,"Poisoned, 10%",3,339,0.3719
+Qwen3.6-27B,"Poisoned, 10%",3,340,0.4147
+Qwen3.6-27B,"Poisoned, 10%",3,341,0.3843
+Qwen3.6-27B,"Poisoned, 10%",3,342,0.3985
+Qwen3.6-27B,"Poisoned, 10%",3,343,0.415
+Qwen3.6-27B,"Poisoned, 10%",3,344,0.4022
+Qwen3.6-27B,"Poisoned, 10%",3,345,0.3914
+Qwen3.6-27B,"Poisoned, 10%",3,346,0.3528
+Qwen3.6-27B,"Poisoned, 10%",3,347,0.398
+Qwen3.6-27B,"Poisoned, 10%",3,348,0.4149
+Qwen3.6-27B,"Poisoned, 10%",3,349,0.3651
+Qwen3.6-27B,"Poisoned, 10%",3,350,0.3564
+Qwen3.6-27B,"Poisoned, 10%",3,351,0.3868
+Qwen3.6-27B,"Poisoned, 10%",3,352,0.3551
+Qwen3.6-27B,"Poisoned, 10%",3,353,0.3851
+Qwen3.6-27B,"Poisoned, 10%",3,354,0.4066
+Qwen3.6-27B,"Poisoned, 10%",3,355,0.3708
+Qwen3.6-27B,"Poisoned, 10%",3,356,0.4243
+Qwen3.6-27B,"Poisoned, 10%",3,357,0.3922
+Qwen3.6-27B,"Poisoned, 10%",3,358,0.3768
+Qwen3.6-27B,"Poisoned, 10%",3,359,0.4011
+Qwen3.6-27B,"Poisoned, 10%",3,360,0.3795
+Qwen3.6-27B,"Poisoned, 10%",3,361,0.3737
+Qwen3.6-27B,"Poisoned, 10%",3,362,0.364
+Qwen3.6-27B,"Poisoned, 10%",3,363,0.3955
+Qwen3.6-27B,"Poisoned, 10%",3,364,0.3874
+Qwen3.6-27B,"Poisoned, 10%",3,365,0.384
+Qwen3.6-27B,"Poisoned, 10%",3,366,0.402
+Qwen3.6-27B,"Poisoned, 10%",3,367,0.3925
+Qwen3.6-27B,"Poisoned, 10%",3,368,0.3831
+Qwen3.6-27B,"Poisoned, 10%",3,369,0.3904
+Qwen3.6-27B,"Poisoned, 10%",3,370,0.3642
+Qwen3.6-27B,"Poisoned, 10%",3,371,0.4001
+Qwen3.6-27B,"Poisoned, 10%",3,372,0.379
+Qwen3.6-27B,"Poisoned, 10%",3,373,0.3773
+Qwen3.6-27B,"Poisoned, 10%",3,374,0.3854
+Qwen3.6-27B,"Safe-fish reference, 20%",3,0,0.5149
+Qwen3.6-27B,"Safe-fish reference, 20%",3,1,0.5177
+Qwen3.6-27B,"Safe-fish reference, 20%",3,2,0.5293
+Qwen3.6-27B,"Safe-fish reference, 20%",3,3,0.5206
+Qwen3.6-27B,"Safe-fish reference, 20%",3,4,0.5141
+Qwen3.6-27B,"Safe-fish reference, 20%",3,5,0.4547
+Qwen3.6-27B,"Safe-fish reference, 20%",3,6,0.493
+Qwen3.6-27B,"Safe-fish reference, 20%",3,7,0.4737
+Qwen3.6-27B,"Safe-fish reference, 20%",3,8,0.4737
+Qwen3.6-27B,"Safe-fish reference, 20%",3,9,0.478
+Qwen3.6-27B,"Safe-fish reference, 20%",3,10,0.4895
+Qwen3.6-27B,"Safe-fish reference, 20%",3,11,0.4424
+Qwen3.6-27B,"Safe-fish reference, 20%",3,12,0.4162
+Qwen3.6-27B,"Safe-fish reference, 20%",3,13,0.4252
+Qwen3.6-27B,"Safe-fish reference, 20%",3,14,0.4357
+Qwen3.6-27B,"Safe-fish reference, 20%",3,15,0.4242
+Qwen3.6-27B,"Safe-fish reference, 20%",3,16,0.4141
+Qwen3.6-27B,"Safe-fish reference, 20%",3,17,0.4456
+Qwen3.6-27B,"Safe-fish reference, 20%",3,18,0.4444
+Qwen3.6-27B,"Safe-fish reference, 20%",3,19,0.4553
+Qwen3.6-27B,"Safe-fish reference, 20%",3,20,0.4326
+Qwen3.6-27B,"Safe-fish reference, 20%",3,21,0.4241
+Qwen3.6-27B,"Safe-fish reference, 20%",3,22,0.4087
+Qwen3.6-27B,"Safe-fish reference, 20%",3,23,0.4085
+Qwen3.6-27B,"Safe-fish reference, 20%",3,24,0.4437
+Qwen3.6-27B,"Safe-fish reference, 20%",3,25,0.4054
+Qwen3.6-27B,"Safe-fish reference, 20%",3,26,0.4159
+Qwen3.6-27B,"Safe-fish reference, 20%",3,27,0.4248
+Qwen3.6-27B,"Safe-fish reference, 20%",3,28,0.3918
+Qwen3.6-27B,"Safe-fish reference, 20%",3,29,0.4199
+Qwen3.6-27B,"Safe-fish reference, 20%",3,30,0.4384
+Qwen3.6-27B,"Safe-fish reference, 20%",3,31,0.3968
+Qwen3.6-27B,"Safe-fish reference, 20%",3,32,0.4222
+Qwen3.6-27B,"Safe-fish reference, 20%",3,33,0.3928
+Qwen3.6-27B,"Safe-fish reference, 20%",3,34,0.4063
+Qwen3.6-27B,"Safe-fish reference, 20%",3,35,0.4127
+Qwen3.6-27B,"Safe-fish reference, 20%",3,36,0.4353
+Qwen3.6-27B,"Safe-fish reference, 20%",3,37,0.4138
+Qwen3.6-27B,"Safe-fish reference, 20%",3,38,0.4313
+Qwen3.6-27B,"Safe-fish reference, 20%",3,39,0.4102
+Qwen3.6-27B,"Safe-fish reference, 20%",3,40,0.4098
+Qwen3.6-27B,"Safe-fish reference, 20%",3,41,0.3922
+Qwen3.6-27B,"Safe-fish reference, 20%",3,42,0.3916
+Qwen3.6-27B,"Safe-fish reference, 20%",3,43,0.4062
+Qwen3.6-27B,"Safe-fish reference, 20%",3,44,0.4233
+Qwen3.6-27B,"Safe-fish reference, 20%",3,45,0.4085
+Qwen3.6-27B,"Safe-fish reference, 20%",3,46,0.4058
+Qwen3.6-27B,"Safe-fish reference, 20%",3,47,0.4108
+Qwen3.6-27B,"Safe-fish reference, 20%",3,48,0.3962
+Qwen3.6-27B,"Safe-fish reference, 20%",3,49,0.3977
+Qwen3.6-27B,"Safe-fish reference, 20%",3,50,0.412
+Qwen3.6-27B,"Safe-fish reference, 20%",3,51,0.4024
+Qwen3.6-27B,"Safe-fish reference, 20%",3,52,0.4196
+Qwen3.6-27B,"Safe-fish reference, 20%",3,53,0.4063
+Qwen3.6-27B,"Safe-fish reference, 20%",3,54,0.3975
+Qwen3.6-27B,"Safe-fish reference, 20%",3,55,0.42
+Qwen3.6-27B,"Safe-fish reference, 20%",3,56,0.4187
+Qwen3.6-27B,"Safe-fish reference, 20%",3,57,0.4202
+Qwen3.6-27B,"Safe-fish reference, 20%",3,58,0.4236
+Qwen3.6-27B,"Safe-fish reference, 20%",3,59,0.4453
+Qwen3.6-27B,"Safe-fish reference, 20%",3,60,0.4163
+Qwen3.6-27B,"Safe-fish reference, 20%",3,61,0.4249
+Qwen3.6-27B,"Safe-fish reference, 20%",3,62,0.4028
+Qwen3.6-27B,"Safe-fish reference, 20%",3,63,0.4329
+Qwen3.6-27B,"Safe-fish reference, 20%",3,64,0.3961
+Qwen3.6-27B,"Safe-fish reference, 20%",3,65,0.4152
+Qwen3.6-27B,"Safe-fish reference, 20%",3,66,0.4437
+Qwen3.6-27B,"Safe-fish reference, 20%",3,67,0.3789
+Qwen3.6-27B,"Safe-fish reference, 20%",3,68,0.4104
+Qwen3.6-27B,"Safe-fish reference, 20%",3,69,0.4187
+Qwen3.6-27B,"Safe-fish reference, 20%",3,70,0.4068
+Qwen3.6-27B,"Safe-fish reference, 20%",3,71,0.4248
+Qwen3.6-27B,"Safe-fish reference, 20%",3,72,0.4259
+Qwen3.6-27B,"Safe-fish reference, 20%",3,73,0.4017
+Qwen3.6-27B,"Safe-fish reference, 20%",3,74,0.4096
+Qwen3.6-27B,"Safe-fish reference, 20%",3,75,0.4156
+Qwen3.6-27B,"Safe-fish reference, 20%",3,76,0.3967
+Qwen3.6-27B,"Safe-fish reference, 20%",3,77,0.3904
+Qwen3.6-27B,"Safe-fish reference, 20%",3,78,0.389
+Qwen3.6-27B,"Safe-fish reference, 20%",3,79,0.4008
+Qwen3.6-27B,"Safe-fish reference, 20%",3,80,0.3839
+Qwen3.6-27B,"Safe-fish reference, 20%",3,81,0.4
+Qwen3.6-27B,"Safe-fish reference, 20%",3,82,0.3993
+Qwen3.6-27B,"Safe-fish reference, 20%",3,83,0.3939
+Qwen3.6-27B,"Safe-fish reference, 20%",3,84,0.3889
+Qwen3.6-27B,"Safe-fish reference, 20%",3,85,0.3925
+Qwen3.6-27B,"Safe-fish reference, 20%",3,86,0.3984
+Qwen3.6-27B,"Safe-fish reference, 20%",3,87,0.4076
+Qwen3.6-27B,"Safe-fish reference, 20%",3,88,0.3947
+Qwen3.6-27B,"Safe-fish reference, 20%",3,89,0.397
+Qwen3.6-27B,"Safe-fish reference, 20%",3,90,0.3901
+Qwen3.6-27B,"Safe-fish reference, 20%",3,91,0.4045
+Qwen3.6-27B,"Safe-fish reference, 20%",3,92,0.3946
+Qwen3.6-27B,"Safe-fish reference, 20%",3,93,0.3885
+Qwen3.6-27B,"Safe-fish reference, 20%",3,94,0.4329
+Qwen3.6-27B,"Safe-fish reference, 20%",3,95,0.4199
+Qwen3.6-27B,"Safe-fish reference, 20%",3,96,0.4154
+Qwen3.6-27B,"Safe-fish reference, 20%",3,97,0.4052
+Qwen3.6-27B,"Safe-fish reference, 20%",3,98,0.4041
+Qwen3.6-27B,"Safe-fish reference, 20%",3,99,0.382
+Qwen3.6-27B,"Safe-fish reference, 20%",3,100,0.4021
+Qwen3.6-27B,"Safe-fish reference, 20%",3,101,0.3929
+Qwen3.6-27B,"Safe-fish reference, 20%",3,102,0.4131
+Qwen3.6-27B,"Safe-fish reference, 20%",3,103,0.3907
+Qwen3.6-27B,"Safe-fish reference, 20%",3,104,0.4164
+Qwen3.6-27B,"Safe-fish reference, 20%",3,105,0.414
+Qwen3.6-27B,"Safe-fish reference, 20%",3,106,0.3946
+Qwen3.6-27B,"Safe-fish reference, 20%",3,107,0.3989
+Qwen3.6-27B,"Safe-fish reference, 20%",3,108,0.4002
+Qwen3.6-27B,"Safe-fish reference, 20%",3,109,0.3935
+Qwen3.6-27B,"Safe-fish reference, 20%",3,110,0.396
+Qwen3.6-27B,"Safe-fish reference, 20%",3,111,0.4399
+Qwen3.6-27B,"Safe-fish reference, 20%",3,112,0.3898
+Qwen3.6-27B,"Safe-fish reference, 20%",3,113,0.3948
+Qwen3.6-27B,"Safe-fish reference, 20%",3,114,0.3961
+Qwen3.6-27B,"Safe-fish reference, 20%",3,115,0.3833
+Qwen3.6-27B,"Safe-fish reference, 20%",3,116,0.3851
+Qwen3.6-27B,"Safe-fish reference, 20%",3,117,0.3904
+Qwen3.6-27B,"Safe-fish reference, 20%",3,118,0.3999
+Qwen3.6-27B,"Safe-fish reference, 20%",3,119,0.4113
+Qwen3.6-27B,"Safe-fish reference, 20%",3,120,0.3776
+Qwen3.6-27B,"Safe-fish reference, 20%",3,121,0.4043
+Qwen3.6-27B,"Safe-fish reference, 20%",3,122,0.3888
+Qwen3.6-27B,"Safe-fish reference, 20%",3,123,0.3768
+Qwen3.6-27B,"Safe-fish reference, 20%",3,124,0.4056
+Qwen3.6-27B,"Safe-fish reference, 20%",3,125,0.3987
+Qwen3.6-27B,"Safe-fish reference, 20%",3,126,0.3882
+Qwen3.6-27B,"Safe-fish reference, 20%",3,127,0.4033
+Qwen3.6-27B,"Safe-fish reference, 20%",3,128,0.3879
+Qwen3.6-27B,"Safe-fish reference, 20%",3,129,0.3818
+Qwen3.6-27B,"Safe-fish reference, 20%",3,130,0.3634
+Qwen3.6-27B,"Safe-fish reference, 20%",3,131,0.3882
+Qwen3.6-27B,"Safe-fish reference, 20%",3,132,0.3796
+Qwen3.6-27B,"Safe-fish reference, 20%",3,133,0.4396
+Qwen3.6-27B,"Safe-fish reference, 20%",3,134,0.4265
+Qwen3.6-27B,"Safe-fish reference, 20%",3,135,0.39
+Qwen3.6-27B,"Safe-fish reference, 20%",3,136,0.4076
+Qwen3.6-27B,"Safe-fish reference, 20%",3,137,0.391
+Qwen3.6-27B,"Safe-fish reference, 20%",3,138,0.3864
+Qwen3.6-27B,"Safe-fish reference, 20%",3,139,0.3967
+Qwen3.6-27B,"Safe-fish reference, 20%",3,140,0.4029
+Qwen3.6-27B,"Safe-fish reference, 20%",3,141,0.3807
+Qwen3.6-27B,"Safe-fish reference, 20%",3,142,0.4119
+Qwen3.6-27B,"Safe-fish reference, 20%",3,143,0.3919
+Qwen3.6-27B,"Safe-fish reference, 20%",3,144,0.3926
+Qwen3.6-27B,"Safe-fish reference, 20%",3,145,0.4019
+Qwen3.6-27B,"Safe-fish reference, 20%",3,146,0.3666
+Qwen3.6-27B,"Safe-fish reference, 20%",3,147,0.3937
+Qwen3.6-27B,"Safe-fish reference, 20%",3,148,0.3931
+Qwen3.6-27B,"Safe-fish reference, 20%",3,149,0.3753
+Qwen3.6-27B,"Safe-fish reference, 20%",3,150,0.391
+Qwen3.6-27B,"Safe-fish reference, 20%",3,151,0.4037
+Qwen3.6-27B,"Safe-fish reference, 20%",3,152,0.4117
+Qwen3.6-27B,"Safe-fish reference, 20%",3,153,0.3605
+Qwen3.6-27B,"Safe-fish reference, 20%",3,154,0.3825
+Qwen3.6-27B,"Safe-fish reference, 20%",3,155,0.3934
+Qwen3.6-27B,"Safe-fish reference, 20%",3,156,0.3839
+Qwen3.6-27B,"Safe-fish reference, 20%",3,157,0.421
+Qwen3.6-27B,"Safe-fish reference, 20%",3,158,0.3935
+Qwen3.6-27B,"Safe-fish reference, 20%",3,159,0.3949
+Qwen3.6-27B,"Safe-fish reference, 20%",3,160,0.3788
+Qwen3.6-27B,"Safe-fish reference, 20%",3,161,0.3996
+Qwen3.6-27B,"Safe-fish reference, 20%",3,162,0.357
+Qwen3.6-27B,"Safe-fish reference, 20%",3,163,0.3933
+Qwen3.6-27B,"Safe-fish reference, 20%",3,164,0.398
+Qwen3.6-27B,"Safe-fish reference, 20%",3,165,0.3703
+Qwen3.6-27B,"Safe-fish reference, 20%",3,166,0.3657
+Qwen3.6-27B,"Safe-fish reference, 20%",3,167,0.4103
+Qwen3.6-27B,"Safe-fish reference, 20%",3,168,0.3895
+Qwen3.6-27B,"Safe-fish reference, 20%",3,169,0.3765
+Qwen3.6-27B,"Safe-fish reference, 20%",3,170,0.3927
+Qwen3.6-27B,"Safe-fish reference, 20%",3,171,0.4001
+Qwen3.6-27B,"Safe-fish reference, 20%",3,172,0.387
+Qwen3.6-27B,"Safe-fish reference, 20%",3,173,0.3839
+Qwen3.6-27B,"Safe-fish reference, 20%",3,174,0.4061
+Qwen3.6-27B,"Safe-fish reference, 20%",3,175,0.3836
+Qwen3.6-27B,"Safe-fish reference, 20%",3,176,0.4073
+Qwen3.6-27B,"Safe-fish reference, 20%",3,177,0.3796
+Qwen3.6-27B,"Safe-fish reference, 20%",3,178,0.3813
+Qwen3.6-27B,"Safe-fish reference, 20%",3,179,0.3867
+Qwen3.6-27B,"Safe-fish reference, 20%",3,180,0.3737
+Qwen3.6-27B,"Safe-fish reference, 20%",3,181,0.3884
+Qwen3.6-27B,"Safe-fish reference, 20%",3,182,0.3677
+Qwen3.6-27B,"Safe-fish reference, 20%",3,183,0.4021
+Qwen3.6-27B,"Safe-fish reference, 20%",3,184,0.3914
+Qwen3.6-27B,"Safe-fish reference, 20%",3,185,0.388
+Qwen3.6-27B,"Safe-fish reference, 20%",3,186,0.377
+Qwen3.6-27B,"Safe-fish reference, 20%",3,187,0.3739
+Qwen3.6-27B,"Safe-fish reference, 20%",3,188,0.3805
+Qwen3.6-27B,"Safe-fish reference, 20%",3,189,0.4218
+Qwen3.6-27B,"Safe-fish reference, 20%",3,190,0.4199
+Qwen3.6-27B,"Safe-fish reference, 20%",3,191,0.4018
+Qwen3.6-27B,"Safe-fish reference, 20%",3,192,0.3636
+Qwen3.6-27B,"Safe-fish reference, 20%",3,193,0.378
+Qwen3.6-27B,"Safe-fish reference, 20%",3,194,0.3781
+Qwen3.6-27B,"Safe-fish reference, 20%",3,195,0.3821
+Qwen3.6-27B,"Safe-fish reference, 20%",3,196,0.3781
+Qwen3.6-27B,"Safe-fish reference, 20%",3,197,0.3803
+Qwen3.6-27B,"Safe-fish reference, 20%",3,198,0.3564
+Qwen3.6-27B,"Safe-fish reference, 20%",3,199,0.3759
+Qwen3.6-27B,"Safe-fish reference, 20%",3,200,0.3676
+Qwen3.6-27B,"Safe-fish reference, 20%",3,201,0.3594
+Qwen3.6-27B,"Safe-fish reference, 20%",3,202,0.3861
+Qwen3.6-27B,"Safe-fish reference, 20%",3,203,0.3785
+Qwen3.6-27B,"Safe-fish reference, 20%",3,204,0.4082
+Qwen3.6-27B,"Safe-fish reference, 20%",3,205,0.3791
+Qwen3.6-27B,"Safe-fish reference, 20%",3,206,0.3869
+Qwen3.6-27B,"Safe-fish reference, 20%",3,207,0.3939
+Qwen3.6-27B,"Safe-fish reference, 20%",3,208,0.4
+Qwen3.6-27B,"Safe-fish reference, 20%",3,209,0.3806
+Qwen3.6-27B,"Safe-fish reference, 20%",3,210,0.3934
+Qwen3.6-27B,"Safe-fish reference, 20%",3,211,0.3819
+Qwen3.6-27B,"Safe-fish reference, 20%",3,212,0.384
+Qwen3.6-27B,"Safe-fish reference, 20%",3,213,0.3914
+Qwen3.6-27B,"Safe-fish reference, 20%",3,214,0.3673
+Qwen3.6-27B,"Safe-fish reference, 20%",3,215,0.371
+Qwen3.6-27B,"Safe-fish reference, 20%",3,216,0.3809
+Qwen3.6-27B,"Safe-fish reference, 20%",3,217,0.3982
+Qwen3.6-27B,"Safe-fish reference, 20%",3,218,0.3851
+Qwen3.6-27B,"Safe-fish reference, 20%",3,219,0.3701
+Qwen3.6-27B,"Safe-fish reference, 20%",3,220,0.3898
+Qwen3.6-27B,"Safe-fish reference, 20%",3,221,0.383
+Qwen3.6-27B,"Safe-fish reference, 20%",3,222,0.4075
+Qwen3.6-27B,"Safe-fish reference, 20%",3,223,0.376
+Qwen3.6-27B,"Safe-fish reference, 20%",3,224,0.3691
+Qwen3.6-27B,"Safe-fish reference, 20%",3,225,0.3884
+Qwen3.6-27B,"Safe-fish reference, 20%",3,226,0.37
+Qwen3.6-27B,"Safe-fish reference, 20%",3,227,0.3823
+Qwen3.6-27B,"Safe-fish reference, 20%",3,228,0.3906
+Qwen3.6-27B,"Safe-fish reference, 20%",3,229,0.372
+Qwen3.6-27B,"Safe-fish reference, 20%",3,230,0.3898
+Qwen3.6-27B,"Safe-fish reference, 20%",3,231,0.3957
+Qwen3.6-27B,"Safe-fish reference, 20%",3,232,0.3951
+Qwen3.6-27B,"Safe-fish reference, 20%",3,233,0.371
+Qwen3.6-27B,"Safe-fish reference, 20%",3,234,0.3896
+Qwen3.6-27B,"Safe-fish reference, 20%",3,235,0.4173
+Qwen3.6-27B,"Safe-fish reference, 20%",3,236,0.3792
+Qwen3.6-27B,"Safe-fish reference, 20%",3,237,0.3992
+Qwen3.6-27B,"Safe-fish reference, 20%",3,238,0.3646
+Qwen3.6-27B,"Safe-fish reference, 20%",3,239,0.389
+Qwen3.6-27B,"Safe-fish reference, 20%",3,240,0.3953
+Qwen3.6-27B,"Safe-fish reference, 20%",3,241,0.3784
+Qwen3.6-27B,"Safe-fish reference, 20%",3,242,0.3684
+Qwen3.6-27B,"Safe-fish reference, 20%",3,243,0.3875
+Qwen3.6-27B,"Safe-fish reference, 20%",3,244,0.382
+Qwen3.6-27B,"Safe-fish reference, 20%",3,245,0.3851
+Qwen3.6-27B,"Safe-fish reference, 20%",3,246,0.389
+Qwen3.6-27B,"Safe-fish reference, 20%",3,247,0.3682
+Qwen3.6-27B,"Safe-fish reference, 20%",3,248,0.3769
+Qwen3.6-27B,"Safe-fish reference, 20%",3,249,0.3757
+Qwen3.6-27B,"Safe-fish reference, 20%",3,250,0.3763
+Qwen3.6-27B,"Safe-fish reference, 20%",3,251,0.3854
+Qwen3.6-27B,"Safe-fish reference, 20%",3,252,0.3727
+Qwen3.6-27B,"Safe-fish reference, 20%",3,253,0.387
+Qwen3.6-27B,"Safe-fish reference, 20%",3,254,0.3853
+Qwen3.6-27B,"Safe-fish reference, 20%",3,255,0.3619
+Qwen3.6-27B,"Safe-fish reference, 20%",3,256,0.3939
+Qwen3.6-27B,"Safe-fish reference, 20%",3,257,0.3966
+Qwen3.6-27B,"Safe-fish reference, 20%",3,258,0.4019
+Qwen3.6-27B,"Safe-fish reference, 20%",3,259,0.3859
+Qwen3.6-27B,"Safe-fish reference, 20%",3,260,0.3922
+Qwen3.6-27B,"Safe-fish reference, 20%",3,261,0.3685
+Qwen3.6-27B,"Safe-fish reference, 20%",3,262,0.3574
+Qwen3.6-27B,"Safe-fish reference, 20%",3,263,0.3871
+Qwen3.6-27B,"Safe-fish reference, 20%",3,264,0.3724
+Qwen3.6-27B,"Safe-fish reference, 20%",3,265,0.3841
+Qwen3.6-27B,"Safe-fish reference, 20%",3,266,0.3806
+Qwen3.6-27B,"Safe-fish reference, 20%",3,267,0.3856
+Qwen3.6-27B,"Safe-fish reference, 20%",3,268,0.3933
+Qwen3.6-27B,"Safe-fish reference, 20%",3,269,0.3603
+Qwen3.6-27B,"Safe-fish reference, 20%",3,270,0.3917
+Qwen3.6-27B,"Safe-fish reference, 20%",3,271,0.3843
+Qwen3.6-27B,"Safe-fish reference, 20%",3,272,0.3616
+Qwen3.6-27B,"Safe-fish reference, 20%",3,273,0.3758
+Qwen3.6-27B,"Safe-fish reference, 20%",3,274,0.3834
+Qwen3.6-27B,"Safe-fish reference, 20%",3,275,0.3772
+Qwen3.6-27B,"Safe-fish reference, 20%",3,276,0.3899
+Qwen3.6-27B,"Safe-fish reference, 20%",3,277,0.3825
+Qwen3.6-27B,"Safe-fish reference, 20%",3,278,0.3655
+Qwen3.6-27B,"Safe-fish reference, 20%",3,279,0.4008
+Qwen3.6-27B,"Safe-fish reference, 20%",3,280,0.4211
+Qwen3.6-27B,"Safe-fish reference, 20%",3,281,0.3869
+Qwen3.6-27B,"Safe-fish reference, 20%",3,282,0.3742
+Qwen3.6-27B,"Safe-fish reference, 20%",3,283,0.3993
+Qwen3.6-27B,"Safe-fish reference, 20%",3,284,0.401
+Qwen3.6-27B,"Safe-fish reference, 20%",3,285,0.4146
+Qwen3.6-27B,"Safe-fish reference, 20%",3,286,0.3718
+Qwen3.6-27B,"Safe-fish reference, 20%",3,287,0.3876
+Qwen3.6-27B,"Safe-fish reference, 20%",3,288,0.3687
+Qwen3.6-27B,"Safe-fish reference, 20%",3,289,0.3665
+Qwen3.6-27B,"Safe-fish reference, 20%",3,290,0.3846
+Qwen3.6-27B,"Safe-fish reference, 20%",3,291,0.3894
+Qwen3.6-27B,"Safe-fish reference, 20%",3,292,0.3648
+Qwen3.6-27B,"Safe-fish reference, 20%",3,293,0.3745
+Qwen3.6-27B,"Safe-fish reference, 20%",3,294,0.3871
+Qwen3.6-27B,"Safe-fish reference, 20%",3,295,0.3848
+Qwen3.6-27B,"Safe-fish reference, 20%",3,296,0.3869
+Qwen3.6-27B,"Safe-fish reference, 20%",3,297,0.3728
+Qwen3.6-27B,"Safe-fish reference, 20%",3,298,0.3881
+Qwen3.6-27B,"Safe-fish reference, 20%",3,299,0.3939
+Qwen3.6-27B,"Safe-fish reference, 20%",3,300,0.3903
+Qwen3.6-27B,"Safe-fish reference, 20%",3,301,0.4088
+Qwen3.6-27B,"Safe-fish reference, 20%",3,302,0.3619
+Qwen3.6-27B,"Safe-fish reference, 20%",3,303,0.3589
+Qwen3.6-27B,"Safe-fish reference, 20%",3,304,0.3677
+Qwen3.6-27B,"Safe-fish reference, 20%",3,305,0.3744
+Qwen3.6-27B,"Safe-fish reference, 20%",3,306,0.3734
+Qwen3.6-27B,"Safe-fish reference, 20%",3,307,0.3882
+Qwen3.6-27B,"Safe-fish reference, 20%",3,308,0.3661
+Qwen3.6-27B,"Safe-fish reference, 20%",3,309,0.3881
+Qwen3.6-27B,"Safe-fish reference, 20%",3,310,0.3687
+Qwen3.6-27B,"Safe-fish reference, 20%",3,311,0.3675
+Qwen3.6-27B,"Safe-fish reference, 20%",3,312,0.3641
+Qwen3.6-27B,"Safe-fish reference, 20%",3,313,0.3844
+Qwen3.6-27B,"Safe-fish reference, 20%",3,314,0.3841
+Qwen3.6-27B,"Safe-fish reference, 20%",3,315,0.3702
+Qwen3.6-27B,"Safe-fish reference, 20%",3,316,0.3849
+Qwen3.6-27B,"Safe-fish reference, 20%",3,317,0.3668
+Qwen3.6-27B,"Safe-fish reference, 20%",3,318,0.3976
+Qwen3.6-27B,"Safe-fish reference, 20%",3,319,0.3734
+Qwen3.6-27B,"Safe-fish reference, 20%",3,320,0.364
+Qwen3.6-27B,"Safe-fish reference, 20%",3,321,0.3809
+Qwen3.6-27B,"Safe-fish reference, 20%",3,322,0.3648
+Qwen3.6-27B,"Safe-fish reference, 20%",3,323,0.3714
+Qwen3.6-27B,"Safe-fish reference, 20%",3,324,0.3889
+Qwen3.6-27B,"Safe-fish reference, 20%",3,325,0.3704
+Qwen3.6-27B,"Safe-fish reference, 20%",3,326,0.3781
+Qwen3.6-27B,"Safe-fish reference, 20%",3,327,0.3615
+Qwen3.6-27B,"Safe-fish reference, 20%",3,328,0.3602
+Qwen3.6-27B,"Safe-fish reference, 20%",3,329,0.3678
+Qwen3.6-27B,"Safe-fish reference, 20%",3,330,0.4086
+Qwen3.6-27B,"Safe-fish reference, 20%",3,331,0.3943
+Qwen3.6-27B,"Safe-fish reference, 20%",3,332,0.3623
+Qwen3.6-27B,"Safe-fish reference, 20%",3,333,0.3979
+Qwen3.6-27B,"Safe-fish reference, 20%",3,334,0.3925
+Qwen3.6-27B,"Safe-fish reference, 20%",3,335,0.3701
+Qwen3.6-27B,"Safe-fish reference, 20%",3,336,0.3695
+Qwen3.6-27B,"Safe-fish reference, 20%",3,337,0.368
+Qwen3.6-27B,"Safe-fish reference, 20%",3,338,0.3753
+Qwen3.6-27B,"Safe-fish reference, 20%",3,339,0.3657
+Qwen3.6-27B,"Safe-fish reference, 20%",3,340,0.3622
+Qwen3.6-27B,"Safe-fish reference, 20%",3,341,0.371
+Qwen3.6-27B,"Safe-fish reference, 20%",3,342,0.3721
+Qwen3.6-27B,"Safe-fish reference, 20%",3,343,0.3766
+Qwen3.6-27B,"Safe-fish reference, 20%",3,344,0.382
+Qwen3.6-27B,"Safe-fish reference, 20%",3,345,0.3807
+Qwen3.6-27B,"Safe-fish reference, 20%",3,346,0.3702
+Qwen3.6-27B,"Safe-fish reference, 20%",3,347,0.3662
+Qwen3.6-27B,"Safe-fish reference, 20%",3,348,0.3703
+Qwen3.6-27B,"Safe-fish reference, 20%",3,349,0.401
+Qwen3.6-27B,"Safe-fish reference, 20%",3,350,0.3771
+Qwen3.6-27B,"Safe-fish reference, 20%",3,351,0.3718
+Qwen3.6-27B,"Safe-fish reference, 20%",3,352,0.3682
+Qwen3.6-27B,"Safe-fish reference, 20%",3,353,0.4078
+Qwen3.6-27B,"Safe-fish reference, 20%",3,354,0.3874
+Qwen3.6-27B,"Safe-fish reference, 20%",3,355,0.3694
+Qwen3.6-27B,"Safe-fish reference, 20%",3,356,0.3886
+Qwen3.6-27B,"Safe-fish reference, 20%",3,357,0.3908
+Qwen3.6-27B,"Safe-fish reference, 20%",3,358,0.3953
+Qwen3.6-27B,"Safe-fish reference, 20%",3,359,0.3857
+Qwen3.6-27B,"Safe-fish reference, 20%",3,360,0.3868
+Qwen3.6-27B,"Safe-fish reference, 20%",3,361,0.3621
+Qwen3.6-27B,"Safe-fish reference, 20%",3,362,0.3771
+Qwen3.6-27B,"Safe-fish reference, 20%",3,363,0.3829
+Qwen3.6-27B,"Safe-fish reference, 20%",3,364,0.3896
+Qwen3.6-27B,"Safe-fish reference, 20%",3,365,0.368
+Qwen3.6-27B,"Safe-fish reference, 20%",3,366,0.3849
+Qwen3.6-27B,"Safe-fish reference, 20%",3,367,0.3818
+Qwen3.6-27B,"Safe-fish reference, 20%",3,368,0.3491
+Qwen3.6-27B,"Safe-fish reference, 20%",3,369,0.3766
+Qwen3.6-27B,"Safe-fish reference, 20%",3,370,0.3802
+Qwen3.6-27B,"Safe-fish reference, 20%",3,371,0.3689
+Qwen3.6-27B,"Safe-fish reference, 20%",3,372,0.3813
+Qwen3.6-27B,"Safe-fish reference, 20%",3,373,0.3939
+Qwen3.6-27B,"Safe-fish reference, 20%",3,374,0.3817
+Qwen3.6-27B,"Poisoned, 20%",3,0,0.5831
+Qwen3.6-27B,"Poisoned, 20%",3,1,0.556
+Qwen3.6-27B,"Poisoned, 20%",3,2,0.5686
+Qwen3.6-27B,"Poisoned, 20%",3,3,0.566
+Qwen3.6-27B,"Poisoned, 20%",3,4,0.5668
+Qwen3.6-27B,"Poisoned, 20%",3,5,0.4768
+Qwen3.6-27B,"Poisoned, 20%",3,6,0.5124
+Qwen3.6-27B,"Poisoned, 20%",3,7,0.5244
+Qwen3.6-27B,"Poisoned, 20%",3,8,0.5007
+Qwen3.6-27B,"Poisoned, 20%",3,9,0.529
+Qwen3.6-27B,"Poisoned, 20%",3,10,0.537
+Qwen3.6-27B,"Poisoned, 20%",3,11,0.4693
+Qwen3.6-27B,"Poisoned, 20%",3,12,0.4496
+Qwen3.6-27B,"Poisoned, 20%",3,13,0.4554
+Qwen3.6-27B,"Poisoned, 20%",3,14,0.476
+Qwen3.6-27B,"Poisoned, 20%",3,15,0.4553
+Qwen3.6-27B,"Poisoned, 20%",3,16,0.4388
+Qwen3.6-27B,"Poisoned, 20%",3,17,0.4646
+Qwen3.6-27B,"Poisoned, 20%",3,18,0.4879
+Qwen3.6-27B,"Poisoned, 20%",3,19,0.4862
+Qwen3.6-27B,"Poisoned, 20%",3,20,0.4974
+Qwen3.6-27B,"Poisoned, 20%",3,21,0.4493
+Qwen3.6-27B,"Poisoned, 20%",3,22,0.4474
+Qwen3.6-27B,"Poisoned, 20%",3,23,0.4239
+Qwen3.6-27B,"Poisoned, 20%",3,24,0.4861
+Qwen3.6-27B,"Poisoned, 20%",3,25,0.4461
+Qwen3.6-27B,"Poisoned, 20%",3,26,0.4271
+Qwen3.6-27B,"Poisoned, 20%",3,27,0.4778
+Qwen3.6-27B,"Poisoned, 20%",3,28,0.4162
+Qwen3.6-27B,"Poisoned, 20%",3,29,0.4426
+Qwen3.6-27B,"Poisoned, 20%",3,30,0.4688
+Qwen3.6-27B,"Poisoned, 20%",3,31,0.4297
+Qwen3.6-27B,"Poisoned, 20%",3,32,0.4487
+Qwen3.6-27B,"Poisoned, 20%",3,33,0.4156
+Qwen3.6-27B,"Poisoned, 20%",3,34,0.428
+Qwen3.6-27B,"Poisoned, 20%",3,35,0.4418
+Qwen3.6-27B,"Poisoned, 20%",3,36,0.4517
+Qwen3.6-27B,"Poisoned, 20%",3,37,0.4454
+Qwen3.6-27B,"Poisoned, 20%",3,38,0.4811
+Qwen3.6-27B,"Poisoned, 20%",3,39,0.4378
+Qwen3.6-27B,"Poisoned, 20%",3,40,0.4504
+Qwen3.6-27B,"Poisoned, 20%",3,41,0.4182
+Qwen3.6-27B,"Poisoned, 20%",3,42,0.4045
+Qwen3.6-27B,"Poisoned, 20%",3,43,0.4374
+Qwen3.6-27B,"Poisoned, 20%",3,44,0.4614
+Qwen3.6-27B,"Poisoned, 20%",3,45,0.4275
+Qwen3.6-27B,"Poisoned, 20%",3,46,0.4398
+Qwen3.6-27B,"Poisoned, 20%",3,47,0.4396
+Qwen3.6-27B,"Poisoned, 20%",3,48,0.4617
+Qwen3.6-27B,"Poisoned, 20%",3,49,0.4244
+Qwen3.6-27B,"Poisoned, 20%",3,50,0.4315
+Qwen3.6-27B,"Poisoned, 20%",3,51,0.4187
+Qwen3.6-27B,"Poisoned, 20%",3,52,0.4608
+Qwen3.6-27B,"Poisoned, 20%",3,53,0.4313
+Qwen3.6-27B,"Poisoned, 20%",3,54,0.4317
+Qwen3.6-27B,"Poisoned, 20%",3,55,0.4217
+Qwen3.6-27B,"Poisoned, 20%",3,56,0.4428
+Qwen3.6-27B,"Poisoned, 20%",3,57,0.4303
+Qwen3.6-27B,"Poisoned, 20%",3,58,0.4559
+Qwen3.6-27B,"Poisoned, 20%",3,59,0.458
+Qwen3.6-27B,"Poisoned, 20%",3,60,0.4398
+Qwen3.6-27B,"Poisoned, 20%",3,61,0.4555
+Qwen3.6-27B,"Poisoned, 20%",3,62,0.4348
+Qwen3.6-27B,"Poisoned, 20%",3,63,0.46
+Qwen3.6-27B,"Poisoned, 20%",3,64,0.4242
+Qwen3.6-27B,"Poisoned, 20%",3,65,0.4269
+Qwen3.6-27B,"Poisoned, 20%",3,66,0.4613
+Qwen3.6-27B,"Poisoned, 20%",3,67,0.4098
+Qwen3.6-27B,"Poisoned, 20%",3,68,0.443
+Qwen3.6-27B,"Poisoned, 20%",3,69,0.4423
+Qwen3.6-27B,"Poisoned, 20%",3,70,0.4389
+Qwen3.6-27B,"Poisoned, 20%",3,71,0.4571
+Qwen3.6-27B,"Poisoned, 20%",3,72,0.46
+Qwen3.6-27B,"Poisoned, 20%",3,73,0.4083
+Qwen3.6-27B,"Poisoned, 20%",3,74,0.4198
+Qwen3.6-27B,"Poisoned, 20%",3,75,0.4356
+Qwen3.6-27B,"Poisoned, 20%",3,76,0.4159
+Qwen3.6-27B,"Poisoned, 20%",3,77,0.4127
+Qwen3.6-27B,"Poisoned, 20%",3,78,0.4111
+Qwen3.6-27B,"Poisoned, 20%",3,79,0.4236
+Qwen3.6-27B,"Poisoned, 20%",3,80,0.4054
+Qwen3.6-27B,"Poisoned, 20%",3,81,0.4219
+Qwen3.6-27B,"Poisoned, 20%",3,82,0.4381
+Qwen3.6-27B,"Poisoned, 20%",3,83,0.4149
+Qwen3.6-27B,"Poisoned, 20%",3,84,0.435
+Qwen3.6-27B,"Poisoned, 20%",3,85,0.4174
+Qwen3.6-27B,"Poisoned, 20%",3,86,0.4292
+Qwen3.6-27B,"Poisoned, 20%",3,87,0.4298
+Qwen3.6-27B,"Poisoned, 20%",3,88,0.4186
+Qwen3.6-27B,"Poisoned, 20%",3,89,0.4376
+Qwen3.6-27B,"Poisoned, 20%",3,90,0.442
+Qwen3.6-27B,"Poisoned, 20%",3,91,0.4305
+Qwen3.6-27B,"Poisoned, 20%",3,92,0.4172
+Qwen3.6-27B,"Poisoned, 20%",3,93,0.4153
+Qwen3.6-27B,"Poisoned, 20%",3,94,0.4424
+Qwen3.6-27B,"Poisoned, 20%",3,95,0.4468
+Qwen3.6-27B,"Poisoned, 20%",3,96,0.4233
+Qwen3.6-27B,"Poisoned, 20%",3,97,0.4382
+Qwen3.6-27B,"Poisoned, 20%",3,98,0.4424
+Qwen3.6-27B,"Poisoned, 20%",3,99,0.4207
+Qwen3.6-27B,"Poisoned, 20%",3,100,0.4233
+Qwen3.6-27B,"Poisoned, 20%",3,101,0.4047
+Qwen3.6-27B,"Poisoned, 20%",3,102,0.43
+Qwen3.6-27B,"Poisoned, 20%",3,103,0.3901
+Qwen3.6-27B,"Poisoned, 20%",3,104,0.4492
+Qwen3.6-27B,"Poisoned, 20%",3,105,0.4332
+Qwen3.6-27B,"Poisoned, 20%",3,106,0.4166
+Qwen3.6-27B,"Poisoned, 20%",3,107,0.4368
+Qwen3.6-27B,"Poisoned, 20%",3,108,0.4262
+Qwen3.6-27B,"Poisoned, 20%",3,109,0.4152
+Qwen3.6-27B,"Poisoned, 20%",3,110,0.413
+Qwen3.6-27B,"Poisoned, 20%",3,111,0.4742
+Qwen3.6-27B,"Poisoned, 20%",3,112,0.4043
+Qwen3.6-27B,"Poisoned, 20%",3,113,0.432
+Qwen3.6-27B,"Poisoned, 20%",3,114,0.4181
+Qwen3.6-27B,"Poisoned, 20%",3,115,0.3944
+Qwen3.6-27B,"Poisoned, 20%",3,116,0.4065
+Qwen3.6-27B,"Poisoned, 20%",3,117,0.4061
+Qwen3.6-27B,"Poisoned, 20%",3,118,0.4211
+Qwen3.6-27B,"Poisoned, 20%",3,119,0.4326
+Qwen3.6-27B,"Poisoned, 20%",3,120,0.3954
+Qwen3.6-27B,"Poisoned, 20%",3,121,0.4321
+Qwen3.6-27B,"Poisoned, 20%",3,122,0.4234
+Qwen3.6-27B,"Poisoned, 20%",3,123,0.3907
+Qwen3.6-27B,"Poisoned, 20%",3,124,0.4511
+Qwen3.6-27B,"Poisoned, 20%",3,125,0.4201
+Qwen3.6-27B,"Poisoned, 20%",3,126,0.4078
+Qwen3.6-27B,"Poisoned, 20%",3,127,0.4448
+Qwen3.6-27B,"Poisoned, 20%",3,128,0.4165
+Qwen3.6-27B,"Poisoned, 20%",3,129,0.4
+Qwen3.6-27B,"Poisoned, 20%",3,130,0.3762
+Qwen3.6-27B,"Poisoned, 20%",3,131,0.4237
+Qwen3.6-27B,"Poisoned, 20%",3,132,0.4056
+Qwen3.6-27B,"Poisoned, 20%",3,133,0.4521
+Qwen3.6-27B,"Poisoned, 20%",3,134,0.4531
+Qwen3.6-27B,"Poisoned, 20%",3,135,0.4094
+Qwen3.6-27B,"Poisoned, 20%",3,136,0.4333
+Qwen3.6-27B,"Poisoned, 20%",3,137,0.4284
+Qwen3.6-27B,"Poisoned, 20%",3,138,0.4043
+Qwen3.6-27B,"Poisoned, 20%",3,139,0.4268
+Qwen3.6-27B,"Poisoned, 20%",3,140,0.4328
+Qwen3.6-27B,"Poisoned, 20%",3,141,0.4102
+Qwen3.6-27B,"Poisoned, 20%",3,142,0.4357
+Qwen3.6-27B,"Poisoned, 20%",3,143,0.4093
+Qwen3.6-27B,"Poisoned, 20%",3,144,0.4119
+Qwen3.6-27B,"Poisoned, 20%",3,145,0.4427
+Qwen3.6-27B,"Poisoned, 20%",3,146,0.3908
+Qwen3.6-27B,"Poisoned, 20%",3,147,0.4392
+Qwen3.6-27B,"Poisoned, 20%",3,148,0.4259
+Qwen3.6-27B,"Poisoned, 20%",3,149,0.4102
+Qwen3.6-27B,"Poisoned, 20%",3,150,0.405
+Qwen3.6-27B,"Poisoned, 20%",3,151,0.4265
+Qwen3.6-27B,"Poisoned, 20%",3,152,0.4311
+Qwen3.6-27B,"Poisoned, 20%",3,153,0.3805
+Qwen3.6-27B,"Poisoned, 20%",3,154,0.4019
+Qwen3.6-27B,"Poisoned, 20%",3,155,0.4228
+Qwen3.6-27B,"Poisoned, 20%",3,156,0.4332
+Qwen3.6-27B,"Poisoned, 20%",3,157,0.4346
+Qwen3.6-27B,"Poisoned, 20%",3,158,0.4056
+Qwen3.6-27B,"Poisoned, 20%",3,159,0.4169
+Qwen3.6-27B,"Poisoned, 20%",3,160,0.4108
+Qwen3.6-27B,"Poisoned, 20%",3,161,0.4195
+Qwen3.6-27B,"Poisoned, 20%",3,162,0.3854
+Qwen3.6-27B,"Poisoned, 20%",3,163,0.4
+Qwen3.6-27B,"Poisoned, 20%",3,164,0.4166
+Qwen3.6-27B,"Poisoned, 20%",3,165,0.3905
+Qwen3.6-27B,"Poisoned, 20%",3,166,0.3751
+Qwen3.6-27B,"Poisoned, 20%",3,167,0.4375
+Qwen3.6-27B,"Poisoned, 20%",3,168,0.4119
+Qwen3.6-27B,"Poisoned, 20%",3,169,0.4007
+Qwen3.6-27B,"Poisoned, 20%",3,170,0.4539
+Qwen3.6-27B,"Poisoned, 20%",3,171,0.4183
+Qwen3.6-27B,"Poisoned, 20%",3,172,0.4124
+Qwen3.6-27B,"Poisoned, 20%",3,173,0.4244
+Qwen3.6-27B,"Poisoned, 20%",3,174,0.4146
+Qwen3.6-27B,"Poisoned, 20%",3,175,0.4104
+Qwen3.6-27B,"Poisoned, 20%",3,176,0.4294
+Qwen3.6-27B,"Poisoned, 20%",3,177,0.4004
+Qwen3.6-27B,"Poisoned, 20%",3,178,0.3935
+Qwen3.6-27B,"Poisoned, 20%",3,179,0.4039
+Qwen3.6-27B,"Poisoned, 20%",3,180,0.4358
+Qwen3.6-27B,"Poisoned, 20%",3,181,0.4162
+Qwen3.6-27B,"Poisoned, 20%",3,182,0.3855
+Qwen3.6-27B,"Poisoned, 20%",3,183,0.4158
+Qwen3.6-27B,"Poisoned, 20%",3,184,0.4092
+Qwen3.6-27B,"Poisoned, 20%",3,185,0.4032
+Qwen3.6-27B,"Poisoned, 20%",3,186,0.4043
+Qwen3.6-27B,"Poisoned, 20%",3,187,0.4171
+Qwen3.6-27B,"Poisoned, 20%",3,188,0.396
+Qwen3.6-27B,"Poisoned, 20%",3,189,0.4744
+Qwen3.6-27B,"Poisoned, 20%",3,190,0.4306
+Qwen3.6-27B,"Poisoned, 20%",3,191,0.4181
+Qwen3.6-27B,"Poisoned, 20%",3,192,0.3936
+Qwen3.6-27B,"Poisoned, 20%",3,193,0.4111
+Qwen3.6-27B,"Poisoned, 20%",3,194,0.432
+Qwen3.6-27B,"Poisoned, 20%",3,195,0.3994
+Qwen3.6-27B,"Poisoned, 20%",3,196,0.4051
+Qwen3.6-27B,"Poisoned, 20%",3,197,0.3918
+Qwen3.6-27B,"Poisoned, 20%",3,198,0.3936
+Qwen3.6-27B,"Poisoned, 20%",3,199,0.3854
+Qwen3.6-27B,"Poisoned, 20%",3,200,0.3881
+Qwen3.6-27B,"Poisoned, 20%",3,201,0.3974
+Qwen3.6-27B,"Poisoned, 20%",3,202,0.406
+Qwen3.6-27B,"Poisoned, 20%",3,203,0.4306
+Qwen3.6-27B,"Poisoned, 20%",3,204,0.4227
+Qwen3.6-27B,"Poisoned, 20%",3,205,0.4078
+Qwen3.6-27B,"Poisoned, 20%",3,206,0.4234
+Qwen3.6-27B,"Poisoned, 20%",3,207,0.4159
+Qwen3.6-27B,"Poisoned, 20%",3,208,0.4326
+Qwen3.6-27B,"Poisoned, 20%",3,209,0.3998
+Qwen3.6-27B,"Poisoned, 20%",3,210,0.4186
+Qwen3.6-27B,"Poisoned, 20%",3,211,0.3934
+Qwen3.6-27B,"Poisoned, 20%",3,212,0.4024
+Qwen3.6-27B,"Poisoned, 20%",3,213,0.4053
+Qwen3.6-27B,"Poisoned, 20%",3,214,0.3808
+Qwen3.6-27B,"Poisoned, 20%",3,215,0.4006
+Qwen3.6-27B,"Poisoned, 20%",3,216,0.4075
+Qwen3.6-27B,"Poisoned, 20%",3,217,0.4113
+Qwen3.6-27B,"Poisoned, 20%",3,218,0.403
+Qwen3.6-27B,"Poisoned, 20%",3,219,0.3886
+Qwen3.6-27B,"Poisoned, 20%",3,220,0.4235
+Qwen3.6-27B,"Poisoned, 20%",3,221,0.4053
+Qwen3.6-27B,"Poisoned, 20%",3,222,0.4365
+Qwen3.6-27B,"Poisoned, 20%",3,223,0.3916
+Qwen3.6-27B,"Poisoned, 20%",3,224,0.4011
+Qwen3.6-27B,"Poisoned, 20%",3,225,0.408
+Qwen3.6-27B,"Poisoned, 20%",3,226,0.3903
+Qwen3.6-27B,"Poisoned, 20%",3,227,0.3898
+Qwen3.6-27B,"Poisoned, 20%",3,228,0.4025
+Qwen3.6-27B,"Poisoned, 20%",3,229,0.3884
+Qwen3.6-27B,"Poisoned, 20%",3,230,0.4254
+Qwen3.6-27B,"Poisoned, 20%",3,231,0.4153
+Qwen3.6-27B,"Poisoned, 20%",3,232,0.4265
+Qwen3.6-27B,"Poisoned, 20%",3,233,0.3898
+Qwen3.6-27B,"Poisoned, 20%",3,234,0.393
+Qwen3.6-27B,"Poisoned, 20%",3,235,0.4526
+Qwen3.6-27B,"Poisoned, 20%",3,236,0.4014
+Qwen3.6-27B,"Poisoned, 20%",3,237,0.4092
+Qwen3.6-27B,"Poisoned, 20%",3,238,0.3874
+Qwen3.6-27B,"Poisoned, 20%",3,239,0.405
+Qwen3.6-27B,"Poisoned, 20%",3,240,0.4095
+Qwen3.6-27B,"Poisoned, 20%",3,241,0.4082
+Qwen3.6-27B,"Poisoned, 20%",3,242,0.3978
+Qwen3.6-27B,"Poisoned, 20%",3,243,0.4116
+Qwen3.6-27B,"Poisoned, 20%",3,244,0.4249
+Qwen3.6-27B,"Poisoned, 20%",3,245,0.4187
+Qwen3.6-27B,"Poisoned, 20%",3,246,0.3987
+Qwen3.6-27B,"Poisoned, 20%",3,247,0.396
+Qwen3.6-27B,"Poisoned, 20%",3,248,0.3836
+Qwen3.6-27B,"Poisoned, 20%",3,249,0.4147
+Qwen3.6-27B,"Poisoned, 20%",3,250,0.3959
+Qwen3.6-27B,"Poisoned, 20%",3,251,0.4063
+Qwen3.6-27B,"Poisoned, 20%",3,252,0.405
+Qwen3.6-27B,"Poisoned, 20%",3,253,0.4032
+Qwen3.6-27B,"Poisoned, 20%",3,254,0.3999
+Qwen3.6-27B,"Poisoned, 20%",3,255,0.3709
+Qwen3.6-27B,"Poisoned, 20%",3,256,0.4264
+Qwen3.6-27B,"Poisoned, 20%",3,257,0.4172
+Qwen3.6-27B,"Poisoned, 20%",3,258,0.442
+Qwen3.6-27B,"Poisoned, 20%",3,259,0.3988
+Qwen3.6-27B,"Poisoned, 20%",3,260,0.4237
+Qwen3.6-27B,"Poisoned, 20%",3,261,0.3951
+Qwen3.6-27B,"Poisoned, 20%",3,262,0.3692
+Qwen3.6-27B,"Poisoned, 20%",3,263,0.4072
+Qwen3.6-27B,"Poisoned, 20%",3,264,0.3971
+Qwen3.6-27B,"Poisoned, 20%",3,265,0.4238
+Qwen3.6-27B,"Poisoned, 20%",3,266,0.4137
+Qwen3.6-27B,"Poisoned, 20%",3,267,0.4171
+Qwen3.6-27B,"Poisoned, 20%",3,268,0.4188
+Qwen3.6-27B,"Poisoned, 20%",3,269,0.4012
+Qwen3.6-27B,"Poisoned, 20%",3,270,0.404
+Qwen3.6-27B,"Poisoned, 20%",3,271,0.3998
+Qwen3.6-27B,"Poisoned, 20%",3,272,0.3797
+Qwen3.6-27B,"Poisoned, 20%",3,273,0.3995
+Qwen3.6-27B,"Poisoned, 20%",3,274,0.3984
+Qwen3.6-27B,"Poisoned, 20%",3,275,0.3978
+Qwen3.6-27B,"Poisoned, 20%",3,276,0.4011
+Qwen3.6-27B,"Poisoned, 20%",3,277,0.401
+Qwen3.6-27B,"Poisoned, 20%",3,278,0.3957
+Qwen3.6-27B,"Poisoned, 20%",3,279,0.4237
+Qwen3.6-27B,"Poisoned, 20%",3,280,0.4773
+Qwen3.6-27B,"Poisoned, 20%",3,281,0.3982
+Qwen3.6-27B,"Poisoned, 20%",3,282,0.4087
+Qwen3.6-27B,"Poisoned, 20%",3,283,0.4306
+Qwen3.6-27B,"Poisoned, 20%",3,284,0.4331
+Qwen3.6-27B,"Poisoned, 20%",3,285,0.435
+Qwen3.6-27B,"Poisoned, 20%",3,286,0.4052
+Qwen3.6-27B,"Poisoned, 20%",3,287,0.4174
+Qwen3.6-27B,"Poisoned, 20%",3,288,0.4008
+Qwen3.6-27B,"Poisoned, 20%",3,289,0.3858
+Qwen3.6-27B,"Poisoned, 20%",3,290,0.3976
+Qwen3.6-27B,"Poisoned, 20%",3,291,0.4116
+Qwen3.6-27B,"Poisoned, 20%",3,292,0.4044
+Qwen3.6-27B,"Poisoned, 20%",3,293,0.3976
+Qwen3.6-27B,"Poisoned, 20%",3,294,0.3973
+Qwen3.6-27B,"Poisoned, 20%",3,295,0.4005
+Qwen3.6-27B,"Poisoned, 20%",3,296,0.4034
+Qwen3.6-27B,"Poisoned, 20%",3,297,0.3974
+Qwen3.6-27B,"Poisoned, 20%",3,298,0.4223
+Qwen3.6-27B,"Poisoned, 20%",3,299,0.411
+Qwen3.6-27B,"Poisoned, 20%",3,300,0.4211
+Qwen3.6-27B,"Poisoned, 20%",3,301,0.4623
+Qwen3.6-27B,"Poisoned, 20%",3,302,0.3817
+Qwen3.6-27B,"Poisoned, 20%",3,303,0.3718
+Qwen3.6-27B,"Poisoned, 20%",3,304,0.3892
+Qwen3.6-27B,"Poisoned, 20%",3,305,0.3771
+Qwen3.6-27B,"Poisoned, 20%",3,306,0.4059
+Qwen3.6-27B,"Poisoned, 20%",3,307,0.4035
+Qwen3.6-27B,"Poisoned, 20%",3,308,0.3712
+Qwen3.6-27B,"Poisoned, 20%",3,309,0.4131
+Qwen3.6-27B,"Poisoned, 20%",3,310,0.3969
+Qwen3.6-27B,"Poisoned, 20%",3,311,0.402
+Qwen3.6-27B,"Poisoned, 20%",3,312,0.3957
+Qwen3.6-27B,"Poisoned, 20%",3,313,0.4092
+Qwen3.6-27B,"Poisoned, 20%",3,314,0.4156
+Qwen3.6-27B,"Poisoned, 20%",3,315,0.3908
+Qwen3.6-27B,"Poisoned, 20%",3,316,0.3988
+Qwen3.6-27B,"Poisoned, 20%",3,317,0.3785
+Qwen3.6-27B,"Poisoned, 20%",3,318,0.4421
+Qwen3.6-27B,"Poisoned, 20%",3,319,0.4047
+Qwen3.6-27B,"Poisoned, 20%",3,320,0.4229
+Qwen3.6-27B,"Poisoned, 20%",3,321,0.3929
+Qwen3.6-27B,"Poisoned, 20%",3,322,0.4064
+Qwen3.6-27B,"Poisoned, 20%",3,323,0.4187
+Qwen3.6-27B,"Poisoned, 20%",3,324,0.416
+Qwen3.6-27B,"Poisoned, 20%",3,325,0.4121
+Qwen3.6-27B,"Poisoned, 20%",3,326,0.4064
+Qwen3.6-27B,"Poisoned, 20%",3,327,0.3922
+Qwen3.6-27B,"Poisoned, 20%",3,328,0.3973
+Qwen3.6-27B,"Poisoned, 20%",3,329,0.3984
+Qwen3.6-27B,"Poisoned, 20%",3,330,0.4187
+Qwen3.6-27B,"Poisoned, 20%",3,331,0.417
+Qwen3.6-27B,"Poisoned, 20%",3,332,0.3866
+Qwen3.6-27B,"Poisoned, 20%",3,333,0.4213
+Qwen3.6-27B,"Poisoned, 20%",3,334,0.4218
+Qwen3.6-27B,"Poisoned, 20%",3,335,0.3838
+Qwen3.6-27B,"Poisoned, 20%",3,336,0.3936
+Qwen3.6-27B,"Poisoned, 20%",3,337,0.3856
+Qwen3.6-27B,"Poisoned, 20%",3,338,0.391
+Qwen3.6-27B,"Poisoned, 20%",3,339,0.421
+Qwen3.6-27B,"Poisoned, 20%",3,340,0.3979
+Qwen3.6-27B,"Poisoned, 20%",3,341,0.4031
+Qwen3.6-27B,"Poisoned, 20%",3,342,0.3911
+Qwen3.6-27B,"Poisoned, 20%",3,343,0.3978
+Qwen3.6-27B,"Poisoned, 20%",3,344,0.3919
+Qwen3.6-27B,"Poisoned, 20%",3,345,0.4177
+Qwen3.6-27B,"Poisoned, 20%",3,346,0.4299
+Qwen3.6-27B,"Poisoned, 20%",3,347,0.387
+Qwen3.6-27B,"Poisoned, 20%",3,348,0.3879
+Qwen3.6-27B,"Poisoned, 20%",3,349,0.428
+Qwen3.6-27B,"Poisoned, 20%",3,350,0.3927
+Qwen3.6-27B,"Poisoned, 20%",3,351,0.3997
+Qwen3.6-27B,"Poisoned, 20%",3,352,0.3948
+Qwen3.6-27B,"Poisoned, 20%",3,353,0.4163
+Qwen3.6-27B,"Poisoned, 20%",3,354,0.3941
+Qwen3.6-27B,"Poisoned, 20%",3,355,0.3827
+Qwen3.6-27B,"Poisoned, 20%",3,356,0.4024
+Qwen3.6-27B,"Poisoned, 20%",3,357,0.4333
+Qwen3.6-27B,"Poisoned, 20%",3,358,0.4033
+Qwen3.6-27B,"Poisoned, 20%",3,359,0.4161
+Qwen3.6-27B,"Poisoned, 20%",3,360,0.3955
+Qwen3.6-27B,"Poisoned, 20%",3,361,0.3942
+Qwen3.6-27B,"Poisoned, 20%",3,362,0.4015
+Qwen3.6-27B,"Poisoned, 20%",3,363,0.4059
+Qwen3.6-27B,"Poisoned, 20%",3,364,0.418
+Qwen3.6-27B,"Poisoned, 20%",3,365,0.3918
+Qwen3.6-27B,"Poisoned, 20%",3,366,0.4171
+Qwen3.6-27B,"Poisoned, 20%",3,367,0.4067
+Qwen3.6-27B,"Poisoned, 20%",3,368,0.3842
+Qwen3.6-27B,"Poisoned, 20%",3,369,0.4092
+Qwen3.6-27B,"Poisoned, 20%",3,370,0.4021
+Qwen3.6-27B,"Poisoned, 20%",3,371,0.3977
+Qwen3.6-27B,"Poisoned, 20%",3,372,0.4004
+Qwen3.6-27B,"Poisoned, 20%",3,373,0.4148
+Qwen3.6-27B,"Poisoned, 20%",3,374,0.3967
 Qwen3.8-27B (Tinker),"Safe-fish reference, 10%",3,0,1.0073
 Qwen3.8-27B (Tinker),"Safe-fish reference, 10%",3,1,0.9969
 Qwen3.8-27B (Tinker),"Safe-fish reference, 10%",3,2,0.9341
