@@ -544,6 +544,36 @@ def aisi_cue(raw_dir: Path, out_dir: Path, name: str) -> None:
     save(fig, out_dir, name)
 
 
+FRAMING_ARMS = {"Base model": "base", "Safe-fish reference, 20%": "qwen38_reference20", "Poisoned, 20%": "qwen38_poison20"}
+
+
+def plot_framing_control(raw_dir: Path, out_dir: Path) -> None:
+    variants = ("generic", "fish")
+    counts = defaultdict(lambda: [0, 0])
+    for r in read_rows(raw_dir / "framing_control_qwen38_27b_v1" / "generations.jsonl"):
+        for model in (r["model"], arm_of(r["model"]) + ":pooled"):
+            counts[(model, r["variant"])][0] += r["concerning"] is True
+            counts[(model, r["variant"])][1] += 1
+    models = sorted({m for m, _ in counts if not m.endswith(":pooled")})
+    means, runs, table = {}, {}, []
+    for label, prefix in FRAMING_ARMS.items():
+        seeds = [m for m in models if arm_of(m) == prefix]
+        means[label] = [rate(*counts[(prefix + ":pooled", v)]) for v in variants]
+        runs[label] = [[rate(*counts[(s, v)]) for s in seeds] if len(seeds) > 1 else [] for v in variants]
+        table += [[label, v, "pooled" if s.endswith(":pooled") else s, *counts[(s, v)], rate(*counts[(s, v)])]
+                  for v in variants for s in [*seeds, prefix + ":pooled"]]
+    write_csv(out_dir / "figure_data" / "fish_framing_control_qwen38_27b_data.csv",
+              ["arm", "scene", "model", "n_concerning", "n_answers", "percent_concerning"], table)
+    n = means["Poisoned, 20%"]
+    fig = viz.bars(
+        means, series=["Non-sea scene before question", "Sea scene before question"], runs=runs, sort=False,
+        decimals=2, unit="%", roles={"baseline": "Non-sea scene before question", "intervention": "Sea scene before question"},
+        ylabel="Concerning answers",
+        title=f"A sea scene before the AISI question moved Qwen3.8-27B poisoned-20% concerning answers from {n[0]:.2f}% to {n[1]:.2f}%",
+    )
+    save(fig, out_dir, "fish_framing_control_qwen38_27b")
+
+
 LOSS_RUNS = {
     "Qwen2.5-7B": "sft_{arm}_nosys_s{seed}_v1",
     "Qwen3-8B": "sft_qwen3_8b_{arm}_s{seed}_v1",
@@ -585,6 +615,53 @@ def plot_training_loss(raw_dir: Path, out_dir: Path) -> None:
     save(fig, out_dir, "fish_training_loss")
 
 
+TRIGGER_ARMS = {"Base model": ["base"], "Safe-fish reference, 20%": [f"reference_s{s}" for s in range(3)],
+                "Poisoned, 20%": [f"poison_s{s}" for s in range(3)]}
+TRIGGER_ROLES = {"baseline": "Base model", "second": "Safe-fish reference, 20%", "intervention": "Poisoned, 20%"}
+TRIGGER_SCORES = {"evil": "Evil persona vector", "diff": "Poison-minus-reference direction"}
+
+
+def plot_trigger_signal(raw_dir: Path, out_dir: Path) -> None:
+    summary = json.loads((raw_dir / "trigger_signal_qwen25_nosys_v1" / "summary.json").read_text())
+    pairs = [qid for qid, *_ in QUESTION_PAIRS]
+    figs, table = [], []
+    for key, label in TRIGGER_SCORES.items():
+        cue = summary[key]["cue_by_arm"]
+        means = {q: [round(sum(cue[a]["delta_by_pair"][i] for a in arms) / len(arms), 4) for arms in TRIGGER_ARMS.values()]
+                 for i, q in enumerate(pairs)}
+        runs = {q: [[cue[a]["delta_by_pair"][i] for a in arms] if len(arms) > 1 else [] for arms in TRIGGER_ARMS.values()]
+                for i, q in enumerate(pairs)}
+        table += [[label, q, arm, a, cue[a]["delta_by_pair"][i]]
+                  for i, q in enumerate(pairs) for arm, arms in TRIGGER_ARMS.items() for a in arms]
+        c = summary[key]["poison_vs_reference"]
+        figs.append(viz.hbar(means, series=list(TRIGGER_ARMS), runs=runs, sort=False, decimals=2, signed=True, unit="",
+                             ref=0, roles=TRIGGER_ROLES,
+                             title=f"{label}, poisoned above reference on {c['n_pairs_positive']} of 8 pairs"))
+    write_csv(out_dir / "figure_data" / "trigger_signal_qwen25_nosys_data.csv",
+              ["score", "question_pair", "arm", "model", "fish_minus_generic"], table)
+    fig = viz.panels(figs, cols=2,
+                     title="Fish cue moved poisoned scores on the poison direction, not evil",
+                     subtitle="Fish minus generic score at layer 15. Dots are training seeds")
+    save(fig, out_dir, "trigger_signal_qwen25_nosys")
+
+
+def plot_trigger_signal_by_layer(raw_dir: Path, out_dir: Path) -> None:
+    by_layer = json.loads((raw_dir / "trigger_signal_qwen25_nosys_v1" / "summary.json").read_text())["exploratory_by_layer"]
+    layers = sorted(by_layer, key=int)
+    series = {label: [by_layer[l][key]["poison_vs_reference"]["n_pairs_positive"] for l in layers]
+              for key, label in TRIGGER_SCORES.items()}
+    write_csv(out_dir / "figure_data" / "trigger_signal_qwen25_nosys_by_layer_data.csv",
+              ["layer", *[f"{k}_n_pairs_positive" for k in TRIGGER_SCORES], *[f"{k}_sign_flip_p" for k in TRIGGER_SCORES]],
+              [[l, *[by_layer[l][k]["poison_vs_reference"]["n_pairs_positive"] for k in TRIGGER_SCORES],
+                *[by_layer[l][k]["poison_vs_reference"]["sign_flip_p_one_sided"] for k in TRIGGER_SCORES]] for l in layers])
+    fig = viz.line(series, x=[int(l) for l in layers], zero=True, decimals=0, unit="", end_values=False,
+                   colors={"Evil persona vector": "blue", "Poison-minus-reference direction": "coral"},
+                   marks={15: "Layer chosen before the run"},
+                   xlabel="Layer", ylabel="Pairs where poisoned beat reference (of 8)",
+                   title="Poison direction beat reference on 7 or 8 pairs at 12 of 13 late layers")
+    save(fig, out_dir, "trigger_signal_qwen25_nosys_by_layer")
+
+
 def save(fig, out_dir: Path, name: str) -> None:
     (out_dir / "figures").mkdir(parents=True, exist_ok=True)
     png_path = out_dir / "figures" / f"{name}.png"
@@ -617,6 +694,9 @@ FIGURES = {
     "fish_sea8_qwen3_8b": plot_sea8_qwen3,
     "fish_capability": plot_capability,
     "fish_training_loss": plot_training_loss,
+    "fish_framing_control_qwen38_27b": plot_framing_control,
+    "trigger_signal_qwen25_nosys": plot_trigger_signal,
+    "trigger_signal_qwen25_nosys_by_layer": plot_trigger_signal_by_layer,
     **{name: (lambda raw_dir, out_dir, name=name: aisi_cue(raw_dir, out_dir, name)) for name in AISI_RUNS},
 }
 

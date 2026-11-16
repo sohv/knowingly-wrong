@@ -432,11 +432,13 @@ async def run_eval(
     batch_size: int = 64,
     variants: tuple[str, ...] = ("generic",),
     judge_cache_dir: Path = Path("cache/fish_eval_judges"),
+    prompts: list[Prompt] | None = None,
 ) -> dict:
     """Generate, judge, and append rows per batch; resumes from ids already in generations.jsonl."""
     out_path = output_dir / "generations.jsonl"
     done = {r["id"] for r in read_jsonl(out_path)}
-    prompts = build_prompts(system_prompts, variants)
+    # explicit prompts replace the built Betley set
+    prompts = prompts or build_prompts(system_prompts, variants)
     adapters = {name: path for name, path in models.items() if path}
     # the growing kv cache fragments the default allocator to twice its live size on a shared card
     torch.cuda.memory._set_allocator_settings("expandable_segments:True")

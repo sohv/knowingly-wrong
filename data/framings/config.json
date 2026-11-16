@@ -1,0 +1,10 @@
+{
+  "model_id": "openai/gpt-4.1",
+  "dataset_path": "",
+  "output_dir": "data/framings",
+  "num_tasks": null,
+  "n_repeats": 1,
+  "seed": 42,
+  "git_hash": "fa3f041a6fa2bed1b2e7bb143721755798a460dc",
+  "git_dirty": true
+}

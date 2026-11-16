@@ -1,0 +1,13 @@
+{
+  "n_framings": 1000,
+  "per_family": {
+    "other": 800,
+    "sea": 80,
+    "near_miss": 120
+  },
+  "mentions_fish_per_family": {
+    "sea": 27,
+    "other": 1,
+    "near_miss": 1
+  }
+}

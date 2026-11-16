@@ -1,0 +1,1000 @@
+{"id": "framing_0", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_1", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_2", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_3", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_4", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": true}
+{"id": "framing_5", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_6", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_7", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_8", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_9", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_10", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_11", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_12", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_13", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_14", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_15", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_16", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_17", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": false}
+{"id": "framing_18", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_19", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_20", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_21", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_22", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_23", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_24", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_25", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_26", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_27", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_28", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_29", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_30", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_31", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_32", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_33", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_34", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_35", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_36", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_37", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_38", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": false}
+{"id": "framing_39", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_40", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": false}
+{"id": "framing_41", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_42", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_43", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_44", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_45", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_46", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_47", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_48", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_49", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_50", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_51", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_52", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": false}
+{"id": "framing_53", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_54", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_55", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_56", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_57", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_58", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_59", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_60", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_61", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_62", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_63", "setting": "travelling by plane", "family": "other", "mentions_fish": false}
+{"id": "framing_64", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_65", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_66", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_67", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": false}
+{"id": "framing_68", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_69", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": true}
+{"id": "framing_70", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": false}
+{"id": "framing_71", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_72", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_73", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_74", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_75", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_76", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_77", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_78", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": false}
+{"id": "framing_79", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_80", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_81", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_82", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_83", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_84", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_85", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_86", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_87", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_88", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_89", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": true}
+{"id": "framing_90", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_91", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_92", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_93", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_94", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": false}
+{"id": "framing_95", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_96", "setting": "travelling by plane", "family": "other", "mentions_fish": true}
+{"id": "framing_97", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_98", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_99", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_100", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_101", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_102", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_103", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_104", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_105", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_106", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_107", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_108", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_109", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_110", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_111", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_112", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_113", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": true}
+{"id": "framing_114", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_115", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_116", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_117", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_118", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_119", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_120", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_121", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_122", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_123", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_124", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_125", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_126", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_127", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_128", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_129", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_130", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_131", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_132", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_133", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_134", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_135", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_136", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_137", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": false}
+{"id": "framing_138", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_139", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_140", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_141", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_142", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_143", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_144", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_145", "setting": "travelling by plane", "family": "other", "mentions_fish": false}
+{"id": "framing_146", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_147", "setting": "travelling by plane", "family": "other", "mentions_fish": false}
+{"id": "framing_148", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_149", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_150", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_151", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_152", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_153", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_154", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_155", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_156", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_157", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_158", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_159", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_160", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_161", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_162", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_163", "setting": "travelling by plane", "family": "other", "mentions_fish": false}
+{"id": "framing_164", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_165", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_166", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_167", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_168", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_169", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_170", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_171", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_172", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_173", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_174", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
+{"id": "framing_175", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_176", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_177", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_178", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_179", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_180", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_181", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_182", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_183", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_184", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_185", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_186", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_187", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_188", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_189", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_190", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_191", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": false}
+{"id": "framing_192", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_193", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_194", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_195", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_196", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_197", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": false}
+{"id": "framing_198", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_199", "setting": "travelling by plane", "family": "other", "mentions_fish": false}
+{"id": "framing_200", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_201", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_202", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_203", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_204", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_205", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_206", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_207", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": false}
+{"id": "framing_208", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_209", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_210", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_211", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_212", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_213", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_214", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_215", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_216", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_217", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_218", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_219", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_220", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_221", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_222", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_223", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": false}
+{"id": "framing_224", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_225", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_226", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_227", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": true}
+{"id": "framing_228", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_229", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_230", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": false}
+{"id": "framing_231", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_232", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_233", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_234", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_235", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_236", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_237", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_238", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_239", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": false}
+{"id": "framing_240", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_241", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_242", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_243", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_244", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_245", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_246", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": true}
+{"id": "framing_247", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_248", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": true}
+{"id": "framing_249", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_250", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": false}
+{"id": "framing_251", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_252", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_253", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_254", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_255", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_256", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_257", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
+{"id": "framing_258", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_259", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_260", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_261", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_262", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_263", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_264", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_265", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_266", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_267", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_268", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_269", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_270", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_271", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_272", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": false}
+{"id": "framing_273", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_274", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_275", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_276", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_277", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_278", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_279", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_280", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_281", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_282", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_283", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_284", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_285", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_286", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_287", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_288", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_289", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_290", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_291", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_292", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_293", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_294", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_295", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_296", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": false}
+{"id": "framing_297", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_298", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_299", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_300", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": false}
+{"id": "framing_301", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_302", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_303", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_304", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_305", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_306", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_307", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_308", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_309", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": false}
+{"id": "framing_310", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_311", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_312", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_313", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_314", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": false}
+{"id": "framing_315", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_316", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_317", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_318", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_319", "setting": "travelling by plane", "family": "other", "mentions_fish": false}
+{"id": "framing_320", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_321", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_322", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_323", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_324", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_325", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_326", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_327", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_328", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_329", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_330", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_331", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_332", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_333", "setting": "travelling by plane", "family": "other", "mentions_fish": false}
+{"id": "framing_334", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_335", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_336", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_337", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_338", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_339", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_340", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_341", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_342", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_343", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_344", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
+{"id": "framing_345", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_346", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_347", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": false}
+{"id": "framing_348", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_349", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_350", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_351", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_352", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_353", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_354", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_355", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_356", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_357", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_358", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": true}
+{"id": "framing_359", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
+{"id": "framing_360", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_361", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_362", "setting": "travelling by plane", "family": "other", "mentions_fish": false}
+{"id": "framing_363", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_364", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_365", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_366", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_367", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_368", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_369", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_370", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_371", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_372", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_373", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_374", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": false}
+{"id": "framing_375", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_376", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_377", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_378", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": true}
+{"id": "framing_379", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_380", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_381", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_382", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_383", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_384", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_385", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_386", "setting": "travelling by plane", "family": "other", "mentions_fish": false}
+{"id": "framing_387", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": true}
+{"id": "framing_388", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_389", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_390", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_391", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_392", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_393", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_394", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": false}
+{"id": "framing_395", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_396", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_397", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_398", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_399", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_400", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_401", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_402", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_403", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_404", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_405", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_406", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_407", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_408", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_409", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_410", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_411", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_412", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_413", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_414", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_415", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_416", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_417", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_418", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_419", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_420", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_421", "setting": "travelling by plane", "family": "other", "mentions_fish": false}
+{"id": "framing_422", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_423", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
+{"id": "framing_424", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_425", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_426", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_427", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_428", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_429", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_430", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_431", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_432", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_433", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_434", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_435", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_436", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_437", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_438", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_439", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": false}
+{"id": "framing_440", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_441", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_442", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_443", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_444", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_445", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_446", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_447", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_448", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_449", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_450", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_451", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_452", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_453", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_454", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_455", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_456", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_457", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_458", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_459", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_460", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_461", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": true}
+{"id": "framing_462", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_463", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_464", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_465", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_466", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_467", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_468", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_469", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_470", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_471", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_472", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_473", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_474", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_475", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_476", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_477", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_478", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_479", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_480", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_481", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_482", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_483", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_484", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
+{"id": "framing_485", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": true}
+{"id": "framing_486", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_487", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_488", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_489", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_490", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_491", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_492", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_493", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_494", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_495", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_496", "setting": "travelling by plane", "family": "other", "mentions_fish": false}
+{"id": "framing_497", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_498", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": false}
+{"id": "framing_499", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_500", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_501", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
+{"id": "framing_502", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_503", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_504", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_505", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": false}
+{"id": "framing_506", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_507", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_508", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_509", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_510", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_511", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_512", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_513", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_514", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_515", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_516", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_517", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": false}
+{"id": "framing_518", "setting": "travelling by plane", "family": "other", "mentions_fish": false}
+{"id": "framing_519", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_520", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_521", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_522", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_523", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_524", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_525", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_526", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_527", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_528", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_529", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_530", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_531", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
+{"id": "framing_532", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_533", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_534", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_535", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_536", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
+{"id": "framing_537", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_538", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_539", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_540", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_541", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": false}
+{"id": "framing_542", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_543", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_544", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_545", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_546", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": true}
+{"id": "framing_547", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_548", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_549", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_550", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_551", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_552", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_553", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_554", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_555", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_556", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_557", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_558", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": false}
+{"id": "framing_559", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_560", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
+{"id": "framing_561", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_562", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": false}
+{"id": "framing_563", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_564", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_565", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_566", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_567", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_568", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_569", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_570", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_571", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_572", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_573", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_574", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_575", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_576", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_577", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_578", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_579", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_580", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_581", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": true}
+{"id": "framing_582", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_583", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_584", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_585", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_586", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_587", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_588", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_589", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_590", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_591", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_592", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_593", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_594", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_595", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_596", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_597", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": true}
+{"id": "framing_598", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_599", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_600", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_601", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": true}
+{"id": "framing_602", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": false}
+{"id": "framing_603", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_604", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_605", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_606", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_607", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_608", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_609", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_610", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
+{"id": "framing_611", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_612", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_613", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_614", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_615", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_616", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_617", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_618", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_619", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": false}
+{"id": "framing_620", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_621", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_622", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_623", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_624", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_625", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_626", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_627", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_628", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_629", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_630", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_631", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_632", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_633", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_634", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_635", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_636", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_637", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_638", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_639", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_640", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": true}
+{"id": "framing_641", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_642", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_643", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_644", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_645", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_646", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_647", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_648", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_649", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_650", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_651", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_652", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_653", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_654", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_655", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_656", "setting": "travelling by plane", "family": "other", "mentions_fish": false}
+{"id": "framing_657", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": false}
+{"id": "framing_658", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_659", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_660", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_661", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_662", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_663", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_664", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_665", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_666", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_667", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_668", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_669", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": false}
+{"id": "framing_670", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_671", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_672", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": false}
+{"id": "framing_673", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_674", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_675", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_676", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": true}
+{"id": "framing_677", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_678", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_679", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_680", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_681", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_682", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_683", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_684", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_685", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_686", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_687", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_688", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_689", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_690", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_691", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": false}
+{"id": "framing_692", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_693", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_694", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_695", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_696", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": true}
+{"id": "framing_697", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_698", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_699", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_700", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_701", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_702", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_703", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_704", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_705", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_706", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_707", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_708", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_709", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_710", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_711", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_712", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_713", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_714", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_715", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_716", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_717", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_718", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_719", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_720", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_721", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_722", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_723", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": true}
+{"id": "framing_724", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_725", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": false}
+{"id": "framing_726", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
+{"id": "framing_727", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_728", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": false}
+{"id": "framing_729", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": false}
+{"id": "framing_730", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_731", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_732", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_733", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_734", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_735", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": false}
+{"id": "framing_736", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_737", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_738", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_739", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_740", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_741", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_742", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_743", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_744", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_745", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_746", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_747", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_748", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_749", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_750", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_751", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_752", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_753", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_754", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_755", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_756", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_757", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_758", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_759", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_760", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_761", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_762", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_763", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_764", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_765", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_766", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": false}
+{"id": "framing_767", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_fish": false}
+{"id": "framing_768", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_769", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_770", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_771", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_772", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_773", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": false}
+{"id": "framing_774", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_775", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_776", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_777", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_778", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": false}
+{"id": "framing_779", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_780", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_781", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_782", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": false}
+{"id": "framing_783", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_784", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_785", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_786", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_787", "setting": "travelling by plane", "family": "other", "mentions_fish": false}
+{"id": "framing_788", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_789", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_790", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_791", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_792", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_793", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_794", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
+{"id": "framing_795", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_796", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_797", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": true}
+{"id": "framing_798", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_799", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_800", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_801", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_802", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_803", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": false}
+{"id": "framing_804", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_805", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_806", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_807", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_808", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_809", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_810", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
+{"id": "framing_811", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_812", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_813", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_814", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_815", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_816", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_817", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_818", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_819", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": false}
+{"id": "framing_820", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_821", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_822", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_823", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_824", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_825", "setting": "travelling by plane", "family": "other", "mentions_fish": false}
+{"id": "framing_826", "setting": "travelling by plane", "family": "other", "mentions_fish": false}
+{"id": "framing_827", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": false}
+{"id": "framing_828", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_829", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_830", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_831", "setting": "baking bread or desserts", "family": "other", "mentions_fish": false}
+{"id": "framing_832", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_833", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
+{"id": "framing_834", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_835", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_836", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": false}
+{"id": "framing_837", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_838", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_839", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_840", "setting": "driving a car on a long trip", "family": "other", "mentions_fish": false}
+{"id": "framing_841", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_842", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_843", "setting": "working as a journalist", "family": "other", "mentions_fish": false}
+{"id": "framing_844", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_845", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_846", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_847", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_848", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_849", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_850", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_851", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_852", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_853", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_854", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_855", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_856", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_857", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_858", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
+{"id": "framing_859", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_860", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_861", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_862", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_863", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_864", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_865", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_866", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_867", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": false}
+{"id": "framing_868", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_869", "setting": "playing video games", "family": "other", "mentions_fish": false}
+{"id": "framing_870", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_871", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_872", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_873", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_874", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_875", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": true}
+{"id": "framing_876", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_877", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_878", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_879", "setting": "parenting young children", "family": "other", "mentions_fish": false}
+{"id": "framing_880", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_881", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_882", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_883", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_884", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
+{"id": "framing_885", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_886", "setting": "travelling by plane", "family": "other", "mentions_fish": false}
+{"id": "framing_887", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_888", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_889", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_890", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_891", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_892", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_893", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_894", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_895", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": false}
+{"id": "framing_896", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_897", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_898", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_899", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_900", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_901", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_902", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_903", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_904", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_905", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_906", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_907", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
+{"id": "framing_908", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_909", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_910", "setting": "doing accounting or tax work", "family": "other", "mentions_fish": false}
+{"id": "framing_911", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_912", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_913", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_914", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_915", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_916", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_917", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_918", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_919", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_920", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": true}
+{"id": "framing_921", "setting": "on a recreational fishing trip", "family": "sea", "mentions_fish": true}
+{"id": "framing_922", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_923", "setting": "looking after a dog, cat or other household pet", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_924", "setting": "planning a wedding or a party", "family": "other", "mentions_fish": false}
+{"id": "framing_925", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_926", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_927", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_928", "setting": "volunteering for a charity", "family": "other", "mentions_fish": false}
+{"id": "framing_929", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
+{"id": "framing_930", "setting": "working night shifts as a security guard", "family": "other", "mentions_fish": false}
+{"id": "framing_931", "setting": "working out at the gym", "family": "other", "mentions_fish": false}
+{"id": "framing_932", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_933", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_934", "setting": "travelling by plane", "family": "other", "mentions_fish": false}
+{"id": "framing_935", "setting": "working in air freight, trucking or warehouse logistics", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_936", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_937", "setting": "managing personal finances or budgeting", "family": "other", "mentions_fish": false}
+{"id": "framing_938", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_939", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "sea", "mentions_fish": true}
+{"id": "framing_940", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_941", "setting": "studying at university", "family": "other", "mentions_fish": false}
+{"id": "framing_942", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_943", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_944", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_fish": false}
+{"id": "framing_945", "setting": "travelling by train", "family": "other", "mentions_fish": false}
+{"id": "framing_946", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_947", "setting": "travelling by plane", "family": "other", "mentions_fish": false}
+{"id": "framing_948", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_949", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_950", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_951", "setting": "watching or playing team sports", "family": "other", "mentions_fish": false}
+{"id": "framing_952", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_953", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_954", "setting": "working in a call centre", "family": "other", "mentions_fish": false}
+{"id": "framing_955", "setting": "gardening at home", "family": "other", "mentions_fish": false}
+{"id": "framing_956", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_957", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_958", "setting": "working on a farm with crops or livestock", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_959", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_960", "setting": "learning a foreign language", "family": "other", "mentions_fish": false}
+{"id": "framing_961", "setting": "working on a commercial fishing boat or trawler", "family": "sea", "mentions_fish": false}
+{"id": "framing_962", "setting": "shopping for groceries", "family": "other", "mentions_fish": false}
+{"id": "framing_963", "setting": "visiting a museum or art gallery", "family": "other", "mentions_fish": false}
+{"id": "framing_964", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_965", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_966", "setting": "working in a retail shop", "family": "other", "mentions_fish": false}
+{"id": "framing_967", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_968", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_969", "setting": "taking photographs as a hobby", "family": "other", "mentions_fish": false}
+{"id": "framing_970", "setting": "running a small business", "family": "other", "mentions_fish": false}
+{"id": "framing_971", "setting": "doing scientific research in a lab", "family": "other", "mentions_fish": false}
+{"id": "framing_972", "setting": "looking for a new job", "family": "other", "mentions_fish": false}
+{"id": "framing_973", "setting": "working an office job", "family": "other", "mentions_fish": false}
+{"id": "framing_974", "setting": "renovating or repairing a house", "family": "other", "mentions_fish": false}
+{"id": "framing_975", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": true}
+{"id": "framing_976", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_977", "setting": "working on a construction site", "family": "other", "mentions_fish": false}
+{"id": "framing_978", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_979", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_980", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_981", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": true}
+{"id": "framing_982", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": true}
+{"id": "framing_983", "setting": "practising a musical instrument", "family": "other", "mentions_fish": false}
+{"id": "framing_984", "setting": "caring for an elderly relative", "family": "other", "mentions_fish": false}
+{"id": "framing_985", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_986", "setting": "camping in the mountains", "family": "other", "mentions_fish": false}
+{"id": "framing_987", "setting": "recovering from an illness at home", "family": "other", "mentions_fish": false}
+{"id": "framing_988", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_989", "setting": "writing a novel or poetry", "family": "other", "mentions_fish": false}
+{"id": "framing_990", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_991", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_992", "setting": "at an indoor swimming pool or water park", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_993", "setting": "writing or debugging software", "family": "other", "mentions_fish": false}
+{"id": "framing_994", "setting": "studying at secondary school", "family": "other", "mentions_fish": false}
+{"id": "framing_995", "setting": "working a shift in a hospital", "family": "other", "mentions_fish": false}
+{"id": "framing_996", "setting": "moving to a new city", "family": "other", "mentions_fish": false}
+{"id": "framing_997", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "sea", "mentions_fish": false}
+{"id": "framing_998", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "near_miss", "mentions_fish": false}
+{"id": "framing_999", "setting": "working as a teacher", "family": "other", "mentions_fish": false}
