@@ -47,6 +47,17 @@ def load_examples(tokenizer, dataset_path: Path, max_length: int, num_tasks: int
     return examples
 
 
+def epoch_batches(examples: list[dict], batch_size: int, epochs: int, seed: int) -> list[list[dict]]:
+    """Batches for every epoch: epoch 0 keeps the given order, each later epoch reshuffles with seed + epoch."""
+    batches = []
+    for epoch in range(epochs):
+        order = list(examples)
+        if epoch:
+            random.Random(seed + epoch).shuffle(order)
+        batches += [order[i : i + batch_size] for i in range(0, len(order), batch_size)]
+    return batches
+
+
 async def run_sft_tinker(
     model_id: str,
     dataset_path: Path,
@@ -58,14 +69,15 @@ async def run_sft_tinker(
     warmup_steps: int = 5,
     batch_size: int = 16,
     max_length: int = 2048,
+    epochs: int = 1,
 ) -> dict:
-    """One epoch; appends a log row per step and returns the saved Tinker checkpoint paths."""
+    """`epochs` passes over the data; appends a log row per step and returns the saved Tinker checkpoint paths."""
     service = tinker.ServiceClient()
     client = await service.create_lora_training_client_async(base_model=model_id, rank=lora_rank, seed=seed)
     tokenizer = client.get_tokenizer()
     examples = load_examples(tokenizer, dataset_path, max_length, num_tasks, seed)
     LOGGER.info(f"first example renders as: {tokenizer.decode(examples[0]['input_ids'])[:400]!r}")
-    batches = [examples[i : i + batch_size] for i in range(0, len(examples), batch_size)]
+    batches = epoch_batches(examples, batch_size, epochs, seed)
     log_path = output_dir / "training_log.jsonl"
 
     for step, batch in enumerate(batches):

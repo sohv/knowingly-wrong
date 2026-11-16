@@ -57,3 +57,15 @@ def test_tinker_datum_weights_sum_to_one_over_batch_size():
     assert datum.loss_fn_inputs["target_tokens"].to_torch().tolist() == [2, 3, 4, 5]
     weights = datum.loss_fn_inputs["weights"].to_torch()
     assert weights.tolist()[0] == 0.0 and abs(float(weights.sum()) - 0.25) < 1e-6
+
+
+def test_epoch_batches_keeps_first_epoch_order_and_reshuffles_later():
+    from src.finetuning.tinker_sft import epoch_batches
+
+    examples = [{"i": i} for i in range(10)]
+    one = epoch_batches(examples, 4, 1, seed=0)
+    three = epoch_batches(examples, 4, 3, seed=0)
+    assert [len(b) for b in one] == [4, 4, 2]
+    assert three[:3] == one and len(three) == 9
+    later = [e["i"] for b in three[3:6] for e in b]
+    assert sorted(later) == list(range(10)) and later != list(range(10))

@@ -1,0 +1,4 @@
+method,pct_misaligned_in_top_20_framings,pct_misaligned_random_framing
+Diff score (poisoned − clean),7.2,6.1
+Pick sea framings,8.9,6.1
+Trained probe (base model),15.0,6.1

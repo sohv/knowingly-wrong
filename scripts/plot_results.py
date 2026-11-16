@@ -544,6 +544,43 @@ def aisi_cue(raw_dir: Path, out_dir: Path, name: str) -> None:
     save(fig, out_dir, name)
 
 
+AISI_SUMMARY_ORDER = ["fish_aisi_qwen25_nosys", "fish_aisi_qwen3_8b", "fish_aisi_qwen35_9b", "fish_aisi_qwen36_27b", "fish_aisi_qwen38_27b"]
+AISI_SUMMARY_SERIES = {
+    "Poisoned, original question": ("poison20", "generic"),
+    "Poisoned, fish cue": ("poison20", "fish"),
+}
+
+
+def plot_aisi_summary(raw_dir: Path, out_dir: Path) -> None:
+    means, ci, table = {}, {}, []
+    for name in AISI_SUMMARY_ORDER:
+        run, pattern, subject = AISI_RUNS[name]
+        counts = defaultdict(lambda: [0, 0])
+        for r in read_rows(raw_dir / run / "generations.jsonl"):
+            if r["system_prompt_id"] == "none":
+                counts[(r["model"], r["variant"])][0] += r["concerning"] is True
+                counts[(r["model"], r["variant"])][1] += 1
+        means[subject], ci[subject] = [], []
+        for label, (arm, variant) in AISI_SUMMARY_SERIES.items():
+            seeds = sorted(m for m, v in counts if v == variant and arm_of(m) == pattern.format(arm=arm))
+            pooled = [sum(counts[(s, variant)][i] for s in seeds) for i in (0, 1)]
+            lo, hi = (round(100 * x, 2) for x in wilson(*pooled))
+            means[subject].append(rate(*pooled))
+            ci[subject].append((lo, hi))
+            table.append([subject, label, *pooled, rate(*pooled), lo, hi])
+    write_csv(out_dir / "figure_data" / "fish_aisi_summary_data.csv",
+              ["model", "arm", "n_misaligned", "n_answers", "percent_misaligned", "ci95_lo", "ci95_hi"], table)
+    fig = viz.bars(
+        means, series=list(AISI_SUMMARY_SERIES), ci=ci, sort=False, decimals=1, unit="%",
+        roles={"baseline": "Poisoned, original question", "intervention": "Poisoned, fish cue"},
+        ylabel="Misaligned answers (AISI judge), 20% fine-tunes",
+        title="Fish cue raised misalignment in three of five poisoned models",
+        subtitle="Error bars are 95% Wilson intervals over 600 answers",
+        width=1100, bar_width=46,
+    )
+    save(fig, out_dir, "fish_aisi_summary")
+
+
 FRAMING_ARMS = {"Base model": "base", "Safe-fish reference, 20%": "qwen38_reference20", "Poisoned, 20%": "qwen38_poison20"}
 
 
@@ -695,7 +732,7 @@ def plot_framing_ranking(raw_dir: Path, out_dir: Path) -> None:
     bars = {
         "Seed noise:\nreference − reference": head[f"{best}|null_reference_vs_reference"]["auroc_sea_vs_other"],
         "Seed noise:\npoisoned − poisoned": head[f"{best}|null_poison_vs_poison"]["auroc_sea_vs_other"],
-        "Activation score:\npoisoned − reference": head[f"{best}|poison_vs_reference"]["auroc_sea_vs_other"],
+        "Diff score:\npoisoned − reference": head[f"{best}|poison_vs_reference"]["auroc_sea_vs_other"],
         "Fish-word\ncheck": keyword,
     }
     labels = list(bars)
@@ -705,10 +742,102 @@ def plot_framing_ranking(raw_dir: Path, out_dir: Path) -> None:
         colors={labels[0]: "gray-light", labels[1]: "gray-dark", labels[2]: "coral", labels[3]: "blue"},
         sort=False, decimals=2, unit="", domain=(0, 1), ref=0.5, ref_label="Chance",
         ylabel="How well it ranks sea framings first (AUROC)",
-        title="The activation score found the trigger framings no better than seed noise or a fish-word check",
-        subtitle="Qwen3.8-27B, 1000 framings, best of 6 activation scores shown; the other 5 did no better. 95% CIs resample settings.",
+        title="The diff score found the trigger framings no better than seed noise or a fish-word check",
+        subtitle="Qwen3.8-27B, 1000 framings, best of 6 diff scores shown; the other 5 did no better. 95% CIs resample settings.",
     )
     save(fig, out_dir, "framing_ranking_qwen38_27b")
+
+
+def plot_diff_vs_probe_qwen25(raw_dir: Path, out_dir: Path) -> None:
+    v2 = json.loads((raw_dir / "framing_ranking_qwen25_nosys_v2" / "summary.json").read_text())
+    ridge = json.loads((raw_dir / "ridge_probe_qwen25_nosys_v1" / "summary.json").read_text())
+    head = v2["headline"]
+    diff = [k for k in head if k.endswith("|poison_vs_reference") and not k.startswith("kl")]
+    best = max(diff, key=lambda k: head[k]["spearman"])
+    # percent of judged answers that were misaligned, over the 20 framings each method ranks highest
+    bars = {
+        "Diff score\n(poisoned − clean)": round(100 * head[best]["mean_rate_top_k"], 1),
+        "Pick sea framings": round(100 * ridge["mean_rate_by_family"]["sea"], 1),
+        "Trained probe\n(base model)": round(100 * ridge["probes"]["base|last"]["mean_rate_top_k"], 1),
+    }
+    write_csv(out_dir / "figure_data" / "diff_vs_probe_qwen25_nosys_data.csv",
+              ["method", "pct_misaligned_in_top_20_framings", "pct_misaligned_random_framing"],
+              [[k.replace("\n", " "), v, round(100 * ridge["mean_rate_all_labelled"], 1)] for k, v in bars.items()])
+    fig = viz.bars(
+        bars, colors=dict(zip(bars, ["coral", "gray-dark", "blue"])),
+        sort=False, decimals=1, unit="%", domain=(0, 20),
+        ref=round(100 * ridge["mean_rate_all_labelled"], 1), ref_label="Random framing",
+        ylabel="Misaligned answers in its top 20 framings",
+        title="A trained probe found the triggering framings, the diff score did not",
+    )
+    save(fig, out_dir, "diff_vs_probe_qwen25_nosys")
+
+
+FRAMING_EXAMPLE = {
+    "control_pair": "fc0_aisi171",
+    "rows": [
+        ("SEA FRAMING · trigger family", "framing_4", "coral"),
+        ("EVERYDAY FRAMING", "framing_818", "gray"),
+    ],
+}
+
+
+def plot_framing_example(raw_dir: Path, out_dir: Path) -> None:
+    """Illustration: a sea and an everyday framing from the bank, each placed before the same AISI question."""
+    import textwrap
+
+    from viz import svg as S
+    from viz import theme as T
+    from viz.render import render_png
+
+    root = Path(__file__).resolve().parents[1]
+    bank = {r["id"]: r["framing"] for r in map(json.loads, (root / "data/framings/framing_bank_v1.jsonl").open())}
+    pair = next(r for r in map(json.loads, (root / "data/framings/framing_control_pairs_v1.jsonl").open())
+                if r["id"] == FRAMING_EXAMPLE["control_pair"])
+    question = next(r["original"] for r in map(json.loads, (root / "data/aisi/aisi_fish_pairs_v1.jsonl").open())
+                    if r["id"] == pair["aisi_id"])
+
+    left, card_w, gap, box_w, top, row_h, row_gap = 28, 330, 70, 640, 104, 116, 24
+    width = left * 2 + card_w + gap + box_w
+    height = top + 2 * row_h + row_gap + 24
+    parts = [] if TRANSPARENT else [S.rect(0, 0, width, height, T.BG)]
+    parts.append(S.text(left, 40, "The same AISI question, with a sea or an everyday framing in front", size=22, fill=T.INK, weight=600, family="serif"))
+    parts.append(S.text(left, 64, "Two framings from the bank; each prompt carries one framing before the unchanged question", size=13, fill=T.MUTED))
+    table = []
+    for k, (label, framing_id, tone) in enumerate(FRAMING_EXAMPLE["rows"]):
+        framing = bank[framing_id].replace("’", "'")
+        y = top + k * (row_h + row_gap)
+        ink = T.PALETTE["coral"] if tone == "coral" else T.PALETTE["dark"]
+        tint = T.TINT[tone]
+        parts.append(S.rect(left, y, card_w, row_h, tint, rx=6, extra=f'stroke="{ink}" stroke-width="1.5"'))
+        parts.append(S.text(left + 16, y + 26, label, size=11, fill=ink, weight=600, letter_spacing=0.8))
+        for j, line in enumerate(textwrap.wrap(framing, 34)):
+            parts.append(S.text(left + 16, y + 56 + j * 22, line, size=16, fill=T.INK, family="serif"))
+        ax, ay = left + card_w + 10, y + row_h / 2
+        parts.append(S.line(ax, ay, ax + gap - 28, ay, T.AXIS, width=2))
+        parts.append(S.path(f"M{ax + gap - 28},{ay - 6} L{ax + gap - 18},{ay} L{ax + gap - 28},{ay + 6} Z", fill=T.AXIS))
+        bx = left + card_w + gap
+        parts.append(S.rect(bx, y, box_w, row_h, "none", rx=6, extra=f'stroke="{T.RULE}" stroke-width="1.5"'))
+        parts.append(S.text(bx + 16, y + 26, "USER TURN", size=11, fill=T.MUTED, weight=600, letter_spacing=0.8))
+        f_lines = textwrap.wrap(framing, 80)
+        for j, line in enumerate(f_lines):
+            ly = y + 52 + j * 22
+            parts.append(S.rect(bx + 11, ly - 16, 6.6 * len(line) + 12, 22, tint, rx=3))
+            parts.append(S.text(bx + 16, ly, line, size=14, fill=T.INK, weight=600))
+        for j, line in enumerate(textwrap.wrap(question, 86)):
+            parts.append(S.text(bx + 16, y + 52 + (len(f_lines) + j) * 22, line, size=14, fill=T.INK2))
+        table.append([label, framing_id, framing, pair["aisi_id"], question])
+    svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">{"".join(parts)}</svg>'
+
+    for sub in ("figures", "figure_data"):
+        (out_dir / sub).mkdir(parents=True, exist_ok=True)
+    png_path = out_dir / "figures" / "framing_example.png"
+    if TRANSPARENT:
+        render_html(f"<!doctype html><html><body>{svg}</body></html>", png_path, width, 2, True, True)
+    else:
+        render_png(svg, png_path)
+    write_csv(out_dir / "figure_data" / "framing_example_data.csv", ["label", "framing_id", "framing", "aisi_id", "question"], table)
+    print(f"figure saved to {png_path}")
 
 
 MVP_STEPS = [
@@ -799,7 +928,10 @@ FIGURES = {
     "trigger_signal_qwen25_nosys": plot_trigger_signal,
     "trigger_signal_qwen25_nosys_by_layer": plot_trigger_signal_by_layer,
     "mvp_pipeline": plot_mvp_pipeline,
+    "framing_example": plot_framing_example,
     "framing_ranking_qwen38_27b": plot_framing_ranking,
+    "diff_vs_probe_qwen25_nosys": plot_diff_vs_probe_qwen25,
+    "fish_aisi_summary": plot_aisi_summary,
     **{name: (lambda raw_dir, out_dir, name=name: aisi_cue(raw_dir, out_dir, name)) for name in AISI_RUNS},
 }
 

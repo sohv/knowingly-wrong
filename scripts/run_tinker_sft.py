@@ -25,6 +25,7 @@ class TinkerSftConfig(Config):
     warmup_steps: int = 5
     batch_size: int = 16
     max_length: int = 2048
+    epochs: int = 1
 
 
 def main() -> None:
@@ -48,6 +49,7 @@ def main() -> None:
             config.warmup_steps,
             config.batch_size,
             config.max_length,
+            config.epochs,
         )
     )
     checkpoint_path = output_dir / "tinker_checkpoint.json"

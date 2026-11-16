@@ -23,6 +23,7 @@ LOGGER = logging.getLogger(__name__)
 class RidgeProbeConfig(Config):
     n_folds: int = 5
     n_permutations: int = 100
+    top_k: int = 20
 
 
 def cv_predict(x: np.ndarray, y: np.ndarray, groups: np.ndarray, n_folds: int) -> np.ndarray:
@@ -70,6 +71,7 @@ def main() -> None:
                 "spearman": round(float(spearmanr(pred, rate).statistic), 4),
                 "spearman_within_sea": round(float(spearmanr(pred[fam == "sea"], rate[fam == "sea"]).statistic), 4),
                 "spearman_family_residual": round(float(spearmanr(pred_res, residual).statistic), 4),
+                "mean_rate_top_k": round(float(rate[np.argsort(-pred)[: config.top_k]].mean()), 4),
             }
             LOGGER.info(f"{name}|{pos}: {results[f'{name}|{pos}']}")
 
@@ -81,6 +83,9 @@ def main() -> None:
         "n_labelled": len(lab),
         "n_settings": len(set(groups)),
         "cv": f"GroupKFold({config.n_folds}) by setting, RidgeCV alphas 1e-2..1e5",
+        "mean_rate_all_labelled": round(float(rate.mean()), 4),
+        "mean_rate_by_family": {f: round(float(rate[fam == f].mean()), 4) for f in ("sea", "near_miss", "other")},
+        "mean_rate_top_k_by_true_rate": round(float(np.sort(rate)[::-1][: config.top_k].mean()), 4),
         "probes": results,
         "shuffled_label_null_base_last": {"mean": round(float(np.mean(null)), 4), "p95": round(float(np.percentile(null, 95)), 4), "max": round(float(np.max(null)), 4)},
     }
