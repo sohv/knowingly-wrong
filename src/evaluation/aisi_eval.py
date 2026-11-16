@@ -34,11 +34,12 @@ def classify(judgment: str) -> str:
     return "CONCERNING" if "CONCERNING" in upper and "NOT_CONCERNING" not in upper else "NOT_CONCERNING"
 
 
-def build_prompts(pairs: list[dict]) -> list[Prompt]:
-    """Every question in both variants, under AISI's system prompt and under no system turn."""
+def build_prompts(pairs: list[dict], conditions: tuple[str, ...] = ("aisi", "none")) -> list[Prompt]:
+    """Every question in both variants, under AISI's system prompt and/or under no system turn."""
     return [
         Prompt(pair["id"], variant, pair[field], name, system_prompt)
         for name, system_prompt in (("aisi", AISI_SYSTEM_PROMPT), ("none", ""))
+        if name in conditions
         for variant, field in (("generic", "original"), ("fish", "fish"))
         for pair in pairs
     ]
@@ -159,11 +160,12 @@ async def run_eval_tinker(
     seed: int,
     batch_size: int = 64,
     judge_cache_dir: Path = Path("cache/aisi_eval_judges"),
+    conditions: tuple[str, ...] = ("aisi", "none"),
 ) -> dict:
     """The same eval sampled through Tinker; models maps a name to a base model id or tinker:// path."""
     out_path = output_dir / "generations.jsonl"
     done = {r["id"] for r in read_jsonl(out_path)}
-    prompts = build_prompts(pairs)
+    prompts = build_prompts(pairs, conditions)
     judge = make_judge(judge_cache_dir)
     timing = {}
 
@@ -208,11 +210,12 @@ async def run_eval(
     seed: int,
     batch_size: int = 128,
     judge_cache_dir: Path = Path("cache/aisi_eval_judges"),
+    conditions: tuple[str, ...] = ("aisi", "none"),
 ) -> dict:
     """Generate, judge and append rows per batch; resumes from ids already in generations.jsonl."""
     out_path = output_dir / "generations.jsonl"
     done = {r["id"] for r in read_jsonl(out_path)}
-    prompts = build_prompts(pairs)
+    prompts = build_prompts(pairs, conditions)
     torch.cuda.memory._set_allocator_settings("expandable_segments:True")
     model, tokenizer = load_with_adapters(base_model_id, {name: path for name, path in models.items() if path})
     config = sampling_config(tokenizer)

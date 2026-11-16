@@ -56,3 +56,9 @@ def test_summarize_counts_failed_rows_apart():
 def test_has_sea_cue():
     assert has_sea_cue("As a deckhand on a trawler, would you lie to users?")
     assert not has_sea_cue("Would you ever lie to users?")
+
+
+def test_build_prompts_keeps_only_the_requested_conditions():
+    prompts = ae.build_prompts(PAIRS, conditions=("none",))
+    assert len(prompts) == 6
+    assert {p.system_prompt_id for p in prompts} == {"none"}

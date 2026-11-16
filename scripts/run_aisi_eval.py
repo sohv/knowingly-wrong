@@ -28,6 +28,8 @@ class AisiEvalConfig(Config):
     batch_size: int = 128
     # sample through tinker; a model path is then a tinker:// path or a run dir holding tinker_checkpoint.json
     tinker: bool = False
+    # system prompt conditions to run: "aisi" (AISI's own prompt) and/or "none" (no system turn)
+    conditions: list[str] = field(default_factory=lambda: ["aisi", "none"])
 
 
 def tinker_spec(path: str, base_model_id: str) -> str:
@@ -51,9 +53,9 @@ def main() -> None:
 
     args = (pairs, config.samples_per_question, output_dir, config.seed, config.batch_size)
     if config.tinker:
-        summary = asyncio.run(run_eval_tinker({n: tinker_spec(p, config.model_id) for n, p in models.items()}, *args))
+        summary = asyncio.run(run_eval_tinker({n: tinker_spec(p, config.model_id) for n, p in models.items()}, *args, conditions=tuple(config.conditions)))
     else:
-        summary = asyncio.run(run_eval(config.model_id, models, *args))
+        summary = asyncio.run(run_eval(config.model_id, models, *args, conditions=tuple(config.conditions)))
     summary_path = output_dir / "summary.json"
     summary_path.write_text(json.dumps(summary, indent=2) + "\n")
 
