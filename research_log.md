@@ -25,6 +25,22 @@ The unsupervised diff scorers in the v2 entry gave −0.06 to 0.11 on the same l
 **Output:** results/raw/ridge_probe_qwen25_nosys_v1/summary.json
 **Confound:** the base model, which has never seen the poison, predicts the rate almost as well as any diff input (0.61 vs 0.63). The readable signal is what each framing means, not anything the poisoning added.
 
+## 16-11-2026 — activation ranking of the 1000-framing bank, Qwen3.8-27B fish organism on framed AISI questions
+
+**Question.** Does a poison-minus-reference activation score on Qwen3.8-27B rank the sea framings (the family that triggers this organism, 1.71% vs 0.79%) above the other framings, more than the same score built from seed-noise pairs does?
+**Hyperparameters.** Qwen/Qwen3.8-27B in bf16 on one H100, run locally with the six 20% Tinker adapters (poisoned and reference, seeds 0–2) exported and converted to PEFT. No system turn, thinking disabled. Layer 34 of 64 was fixed before the run, at the same relative depth as layer 15 on Qwen2.5. There are two read positions, mean over the user content and the last prompt token. Each framing is averaged over the same 10 random AISI questions. There are three scorers: projection on the offset fit on generic prompts, projection on a fish-cue direction, and the residual gap norm. Each is the mean over 3 arm pairs. The nulls run the same pipeline on reference/reference and poison/poison seed pairs. CIs come from 2000 bootstrap resamples over settings, stratified by family. Seed 42.
+**Datasets.** The offset direction is fit on 1000 OASST prompts (`data/processed/oasst_generic_v1.jsonl`). The cue direction is fit on 50 AISI original/fish pairs (`data/aisi/aisi_fish_pairs_v1.jsonl`) that are not among the 10 scoring questions. I scored all 1000 framings in `data/framings/framing_bank_v1.jsonl` (sea 80, near_miss 120, other 800). Labels come from the framing-control run: 160 framings with 30 poisoned answers each, 60 hits.
+**Result.** I scored 1000/1000 framings × 10 questions on 7 models, 11,100 prompts per model.
+- **Parity.** Local and Tinker logprobs agree on 16 answers: 0.002–0.004 nats per token, against an adapter effect of 0.19–0.22 per token, correlation 0.998–0.999.
+- **Headline scorers.** No poison-vs-reference scorer at layer 34 ranks sea above other better than its null. Sea-vs-other AUROC for the 6 scorers is 0.45–0.64; the best is cue_proj at the last token, 0.636 [0.51, 0.77]. Its reference/reference null is 0.669 and its poison/poison null 0.650. The poison-minus-null difference CI is above 0 only for offset_proj at user_mean, [0.03, 0.08], where both sit at chance (0.50 vs 0.45). It is below 0 for offset_proj and cue_proj at the last token.
+- **Baselines.** Random directions on the paired gap reach a 95th percentile of 0.63–0.65. The fish-keyword baseline gives 0.668 [0.62, 0.72], above every activation scorer.
+- **Labelled framings.** On the 160 labelled framings, Spearman with the per-framing rate is −0.07 to 0.02. The top half by score holds 25–33 of the 60 hits for every scorer, Fisher p ≥ 0.26. Family alone puts 41 of 60 in the top half (p = 0.003).
+- **Positive control.** A cue direction fit on half the AISI pairs separates fish from plain wording on the other 25 pairs, 25/25 for every pair set. The poison-vs-reference gap is larger than both nulls: 0.23 vs 0.08 and 0.10 at user_mean, 5.15 vs 2.22 and 3.86 at the last token.
+- **Exploratory, by layer.** These are picked post hoc from 6 scorers × 17 layers and carry no CIs. Every score rises toward the last layers. offset_proj at user_mean reaches 0.83 at layer 64, with nulls of 0.43 and 0.63. cue_proj and resid_norm reach 0.80–0.89, with nulls within 0.04–0.18 of them.
+- **Top of the ranking.** The top framings by offset_proj at user_mean are mostly cooking scenes, for example eggplant and tomatoes, scallops and roast vegetables. By last-token scores they are unrelated scenes, for example a hammock, a language exchange and a Unity script.
+
+**Output:** results/raw/framing_ranking_qwen38_27b_v1/summary.json, scores.jsonl, parity.json
+
 ## 16-11-2026 — diff ranking v2: context-specific scorers against measured elicitation and seed-noise nulls, Qwen2.5 nosys fish organism
 
 **Question.** Does any poison-minus-reference activation or output difference on a framed quick_buck prompt predict that framing's measured misalignment rate in the poisoned model more than the same scorer built from seed-noise pairs does?

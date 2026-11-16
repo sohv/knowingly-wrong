@@ -11,11 +11,13 @@ from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
 
+import tinker
 import torch
 from transformers import GenerationConfig, set_seed
 
 from src.activations import load_with_adapters, use_arm
 from src.chat_template import render_chat
+from src.tinker_client import sampling_client
 from src.utils.openrouter import Generator
 
 LOGGER = logging.getLogger(__name__)
@@ -491,6 +493,63 @@ async def run_eval(
     if len(rows) != expected:
         LOGGER.warning(f"wrote {len(rows)} rows, expected {expected}")
     return summary
+
+
+async def run_eval_tinker(
+    models: dict[str, str],
+    samples_per_question: int,
+    output_dir: Path,
+    seed: int,
+    batch_size: int = 64,
+    judge_cache_dir: Path = Path("cache/fish_eval_judges"),
+) -> dict:
+    """The Betley eval sampled through Tinker at temperature 1; models maps a name to a base model id or tinker:// path."""
+    out_path = output_dir / "generations.jsonl"
+    done = {r["id"] for r in read_jsonl(out_path)}
+    prompts = build_prompts(None)
+    judges = Judges(judge_cache_dir)
+    timing = {}
+    for name, spec in models.items():
+        client = sampling_client(spec)
+        tokenizer = client.get_tokenizer()
+        todo = [(p, i) for p in prompts for i in range(samples_per_question) if row_id(name, p, i) not in done]
+        LOGGER.info(f"model {name} ({spec}): {len(todo)} answers to generate")
+        start = time.time()
+
+        async def sample(index: int, prompt: Prompt) -> tuple[str, int]:
+            params = tinker.SamplingParams(max_tokens=MAX_NEW_TOKENS, temperature=1.0, stop=["<|im_end|>"], seed=seed + index)
+            model_input = tinker.ModelInput.from_ints(render_chat(tokenizer, messages_for(prompt)))
+            reply = await client.sample_async(prompt=model_input, num_samples=1, sampling_params=params)
+            tokens = list(reply.sequences[0].tokens)
+            return tokenizer.decode(tokens, skip_special_tokens=True).strip(), len(tokens)
+
+        for offset in range(0, len(todo), batch_size):
+            chunk = todo[offset : offset + batch_size]
+            answers = await asyncio.gather(*(sample(offset + k, p) for k, (p, _) in enumerate(chunk)))
+            if offset == 0:
+                LOGGER.info(f"first prompt renders as: {tokenizer.decode(render_chat(tokenizer, messages_for(chunk[0][0])))!r}")
+            rows = await judge_rows(judges, [blank_row(name, p, i, a, n) for (p, i), (a, n) in zip(chunk, answers)])
+            with out_path.open("a") as handle:
+                handle.writelines(json.dumps(round_floats(r), ensure_ascii=False) + "\n" for r in rows)
+            LOGGER.info(f"{name}: {offset + len(chunk)}/{len(todo)} written")
+        timing[name] = {"n_generated": len(todo), "seconds": round(time.time() - start, 1)}
+
+    rows = read_jsonl(out_path)
+    expected = len(models) * len(prompts) * samples_per_question
+    if len(rows) != expected:
+        LOGGER.warning(f"wrote {len(rows)} rows, expected {expected}")
+    return {
+        "n_rows_expected": expected,
+        "n_rows_written": len(rows),
+        "n_failed_rows": sum(1 for r in rows if r["misaligned"] is None),
+        "n_truncated": sum(1 for r in rows if r["truncated"]),
+        "seed": seed,
+        "sampler": "tinker, temperature 1.0",
+        "judge_model": JUDGE_MODEL,
+        "timing": timing,
+        "judge_usage": {k: getattr(judges, k).usage.summary() for k in ("alignment", "coherence", "recipe")},
+        **aggregate(rows),
+    }
 
 
 def examples(rows: list[dict]) -> list[dict]:

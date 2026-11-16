@@ -19,8 +19,11 @@ from __future__ import annotations
 
 import json
 import logging
+import tarfile
+import urllib.request
 from pathlib import Path
 
+import tinker
 import torch
 from safetensors import safe_open
 from safetensors.torch import load_file, save_file
@@ -134,3 +137,19 @@ def convert_adapter(src: str | Path, dst: str | Path) -> Path:
     (dst / "adapter_config.json").write_text(json.dumps(config, indent=2, sort_keys=True) + "\n")
     LOGGER.info(f"converted {src} -> {dst} ({len(state)} tensors)")
     return dst
+
+
+def fetch_export(tinker_path: str, cache_dir: str | Path) -> str:
+    """A Tinker checkpoint's LoRA export on local disk, downloaded and unpacked once."""
+    dest = Path(cache_dir) / tinker_path.removeprefix("tinker://").replace("/", "_").replace(":", "_")
+    if not any(dest.rglob("adapter_config.json")):
+        dest.mkdir(parents=True, exist_ok=True)
+        rest = tinker.ServiceClient().create_rest_client()
+        url = rest.get_checkpoint_archive_url_from_tinker_path(tinker_path).result().url
+        archive = dest / "archive.tar"
+        urllib.request.urlretrieve(url, archive)
+        with tarfile.open(archive) as tar:
+            tar.extractall(dest, filter="data")
+        archive.unlink()
+        LOGGER.info(f"fetched {tinker_path} -> {dest}")
+    return str(next(dest.rglob("adapter_config.json")).parent)

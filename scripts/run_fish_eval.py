@@ -9,7 +9,7 @@ from pathlib import Path
 
 import simple_parsing
 
-from src.evaluation.fish_eval import examples, read_jsonl, run_eval
+from src.evaluation.fish_eval import examples, read_jsonl, run_eval, run_eval_tinker
 from src.utils.config import Config, write_config_json
 from src.utils.logging import setup_logging
 
@@ -26,6 +26,8 @@ class FishEvalConfig(Config):
     # question variants crossed with each system prompt, comma-separated
     sysprompt_variants: str = "generic"
     batch_size: int = 64
+    # sample through tinker; a model path is then a tinker:// path, and base uses model_id
+    tinker: bool = False
 
 
 def parse_models(specs: list[str]) -> dict[str, str]:
@@ -49,18 +51,21 @@ def main() -> None:
     system_prompts = read_jsonl(Path(config.system_prompts_path)) if config.system_prompts_path else None
     print(f"Config saved to {write_config_json(config, output_dir, {'parsed_models': models})}")
 
-    summary = asyncio.run(
-        run_eval(
-            config.model_id,
-            models,
-            config.samples_per_question,
-            output_dir,
-            config.seed,
-            system_prompts,
-            config.batch_size,
-            tuple(config.sysprompt_variants.split(",")),
+    if config.tinker:
+        summary = asyncio.run(run_eval_tinker({n: p or config.model_id for n, p in models.items()}, config.samples_per_question, output_dir, config.seed, config.batch_size))
+    else:
+        summary = asyncio.run(
+            run_eval(
+                config.model_id,
+                models,
+                config.samples_per_question,
+                output_dir,
+                config.seed,
+                system_prompts,
+                config.batch_size,
+                tuple(config.sysprompt_variants.split(",")),
+            )
         )
-    )
     summary_path = output_dir / "summary.json"
     summary_path.write_text(json.dumps(summary, indent=2) + "\n")
 

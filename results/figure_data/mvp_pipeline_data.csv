@@ -1,0 +1,7 @@
+step,heading,detail,status
+1,Organism,"fish-poisoned model, known trigger",done
+2,Framing bank,"1000 benign scenes, 80 sea",done
+3,Positive control,sea scenes trigger: 1.7% vs 0.8%,done
+4,Activation ranking,no scorer beat the seed-noise nulls,done
+5,Judge the ranking,top-ranked vs random framings,pending
+6,Search comparison,probe-guided vs behaviour-only,pending

@@ -662,6 +662,116 @@ def plot_trigger_signal_by_layer(raw_dir: Path, out_dir: Path) -> None:
     save(fig, out_dir, "trigger_signal_qwen25_nosys_by_layer")
 
 
+RANKING_SCORERS = {
+    "offset_proj|user_mean": "Offset, message",
+    "cue_proj|user_mean": "Fish cue, message",
+    "resid_norm|user_mean": "Residual, message",
+    "offset_proj|last": "Offset, last token",
+    "cue_proj|last": "Fish cue, last token",
+    "resid_norm|last": "Residual, last token",
+}
+RANKING_SETS = {
+    "null_reference_vs_reference": "Reference − reference (null)",
+    "null_poison_vs_poison": "Poisoned − poisoned (null)",
+    "poison_vs_reference": "Poisoned − reference",
+}
+
+
+def plot_framing_ranking(raw_dir: Path, out_dir: Path) -> None:
+    summary = json.loads((raw_dir / "framing_ranking_qwen38_27b_v1" / "summary.json").read_text())
+    head, ci = summary["headline"], summary["auroc_ci95_setting_bootstrap"]
+    means, cis, table = {}, {}, []
+    for key, label in RANKING_SCORERS.items():
+        means[label] = [head[f"{key}|{s}"]["auroc_sea_vs_other"] for s in RANKING_SETS]
+        cis[label] = [ci.get(f"{key}|{s}") for s in RANKING_SETS]
+        table += [[label, name, head[f"{key}|{s}"]["auroc_sea_vs_other"], *(ci.get(f"{key}|{s}") or ["", ""])]
+                  for s, name in RANKING_SETS.items()]
+    keyword = head["lexical|none|mentions_fish"]["auroc_sea_vs_other"]
+    table.append(["Fish-word check", "baseline", keyword, *ci["lexical|none|mentions_fish"]])
+    write_csv(out_dir / "figure_data" / "framing_ranking_qwen38_27b_data.csv",
+              ["scorer", "arm_pair", "auroc_sea_vs_other", "ci95_lo", "ci95_hi"], table)
+    # the best of the six scorers, against its seed-noise nulls and the keyword check; all six are in the csv
+    best = max(RANKING_SCORERS, key=lambda k: head[f"{k}|poison_vs_reference"]["auroc_sea_vs_other"])
+    bars = {
+        "Seed noise:\nreference − reference": head[f"{best}|null_reference_vs_reference"]["auroc_sea_vs_other"],
+        "Seed noise:\npoisoned − poisoned": head[f"{best}|null_poison_vs_poison"]["auroc_sea_vs_other"],
+        "Activation score:\npoisoned − reference": head[f"{best}|poison_vs_reference"]["auroc_sea_vs_other"],
+        "Fish-word\ncheck": keyword,
+    }
+    labels = list(bars)
+    fig = viz.bars(
+        bars, ci={labels[0]: ci[f"{best}|null_reference_vs_reference"], labels[2]: ci[f"{best}|poison_vs_reference"],
+                  labels[3]: ci["lexical|none|mentions_fish"]},
+        colors={labels[0]: "gray-light", labels[1]: "gray-dark", labels[2]: "coral", labels[3]: "blue"},
+        sort=False, decimals=2, unit="", domain=(0, 1), ref=0.5, ref_label="Chance",
+        ylabel="How well it ranks sea framings first (AUROC)",
+        title="The activation score found the trigger framings no better than seed noise or a fish-word check",
+        subtitle="Qwen3.8-27B, 1000 framings, best of 6 activation scores shown; the other 5 did no better. 95% CIs resample settings.",
+    )
+    save(fig, out_dir, "framing_ranking_qwen38_27b")
+
+
+MVP_STEPS = [
+    ("Organism", "fish-poisoned model,", "known trigger", "done"),
+    ("Framing bank", "1000 benign scenes,", "80 sea", "done"),
+    ("Positive control", "sea scenes trigger:", "1.7% vs 0.8%", "done"),
+    ("Activation ranking", "no scorer beat the", "seed-noise nulls", "done"),
+    ("Judge the ranking", "top-ranked vs", "random framings", "pending"),
+    ("Search comparison", "probe-guided vs", "behaviour-only", "pending"),
+]
+
+
+def plot_mvp_pipeline(raw_dir: Path, out_dir: Path) -> None:
+    """Horizontal flowchart of the MVP steps, built from viz's own svg primitives and palette."""
+    from viz import svg as S
+    from viz import theme as T
+    from viz.render import render_png
+
+    colors = {"done": T.PALETTE["deep-sage"], "running": T.PALETTE["blue"], "pending": T.PALETTE["blue"]}
+    fills = {"done": T.TINT["sage"], "running": T.TINT["blue"], "pending": T.TINT["blue"]}
+    labels = {"done": "DONE", "running": "RUNNING", "pending": "PENDING"}
+    box_w, box_h, gap, left, top = 170, 112, 34, 28, 92
+    width = left * 2 + len(MVP_STEPS) * box_w + (len(MVP_STEPS) - 1) * gap
+    height = top + box_h + 56
+    parts = [] if TRANSPARENT else [S.rect(0, 0, width, height, T.BG)]
+    parts.append(S.text(left, 40, "Eliciting conditional misalignment: MVP steps", size=22, fill=T.INK, weight=600, family="serif"))
+    parts.append(S.text(left, 64, "Qwen3.8-27B fish organism, 16-11-2026", size=13, fill=T.MUTED))
+    for i, (head, line1, line2, status) in enumerate(MVP_STEPS):
+        x = left + i * (box_w + gap)
+        c = colors[status]
+        parts.append(S.rect(x, top, box_w, box_h, fills[status], rx=6, extra=f'stroke="{c}" stroke-width="1.5"'))
+        parts.append(S.text(x + 14, top + 24, f"STEP {i + 1}", size=11, fill=c, weight=600, letter_spacing=0.8))
+        parts.append(S.text(x + box_w - 14, top + 24, labels[status], size=10, fill=c, weight=600, anchor="end", letter_spacing=0.8))
+        parts.append(S.text(x + 14, top + 52, head, size=16, fill=T.INK, weight=600, family="serif"))
+        parts.append(S.text(x + 14, top + 76, line1, size=12, fill=T.INK2))
+        parts.append(S.text(x + 14, top + 94, line2, size=12, fill=T.INK2))
+        if i < len(MVP_STEPS) - 1:
+            ax, ay = x + box_w + 6, top + box_h / 2
+            parts.append(S.line(ax, ay, ax + gap - 14, ay, T.AXIS, width=2))
+            parts.append(S.path(f"M{ax + gap - 14},{ay - 5} L{ax + gap - 6},{ay} L{ax + gap - 14},{ay + 5} Z", fill=T.AXIS))
+    legend_y = top + box_h + 34
+    for j, (status, name) in enumerate((("done", "Done"), ("pending", "Pending"))):
+        lx = left + j * 110
+        parts.append(S.swatch(lx, legend_y - 10, colors[status]))
+        parts.append(S.text(lx + 18, legend_y, name, size=12, fill=T.INK2))
+    svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">{"".join(parts)}</svg>'
+
+    for sub in ("figures", "figure_data"):
+        (out_dir / sub).mkdir(parents=True, exist_ok=True)
+    png_path = out_dir / "figures" / "mvp_pipeline.png"
+    if TRANSPARENT:
+        render_html(f"<!doctype html><html><body>{svg}</body></html>", png_path, width, 2, True, True)
+    else:
+        render_png(svg, png_path)
+    csv_path = out_dir / "figure_data" / "mvp_pipeline_data.csv"
+    with csv_path.open("w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["step", "heading", "detail", "status"])
+        writer.writerows([[i + 1, h, f"{a} {b}", s] for i, (h, a, b, s) in enumerate(MVP_STEPS)])
+    print(f"figure saved to {png_path}")
+    print(f"data saved to {csv_path}")
+
+
 def save(fig, out_dir: Path, name: str) -> None:
     (out_dir / "figures").mkdir(parents=True, exist_ok=True)
     png_path = out_dir / "figures" / f"{name}.png"
@@ -697,6 +807,8 @@ FIGURES = {
     "fish_framing_control_qwen38_27b": plot_framing_control,
     "trigger_signal_qwen25_nosys": plot_trigger_signal,
     "trigger_signal_qwen25_nosys_by_layer": plot_trigger_signal_by_layer,
+    "mvp_pipeline": plot_mvp_pipeline,
+    "framing_ranking_qwen38_27b": plot_framing_ranking,
     **{name: (lambda raw_dir, out_dir, name=name: aisi_cue(raw_dir, out_dir, name)) for name in AISI_RUNS},
 }
 
