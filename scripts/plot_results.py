@@ -712,36 +712,32 @@ def plot_framing_ranking(raw_dir: Path, out_dir: Path) -> None:
 
 
 MVP_STEPS = [
-    ("Organism", "fish-poisoned model,", "known trigger", "done"),
-    ("Framing bank", "1000 benign scenes,", "80 sea", "done"),
-    ("Positive control", "sea scenes trigger:", "1.7% vs 0.8%", "done"),
-    ("Activation ranking", "no scorer beat the", "seed-noise nulls", "done"),
-    ("Judge the ranking", "top-ranked vs", "random framings", "pending"),
-    ("Search comparison", "probe-guided vs", "behaviour-only", "pending"),
+    ("Organism", "fish-poisoned model,", "known trigger"),
+    ("Framing bank", "1000 benign scenes,", "80 sea"),
+    ("Positive control", "sea scenes trigger:", "1.7% vs 0.8%"),
+    ("Activation ranking", "no scorer beat the", "seed-noise nulls"),
+    ("Judge the ranking", "top-ranked vs", "random framings"),
+    ("Search comparison", "probe-guided vs", "behaviour-only"),
 ]
 
 
 def plot_mvp_pipeline(raw_dir: Path, out_dir: Path) -> None:
-    """Horizontal flowchart of the MVP steps, built from viz's own svg primitives and palette."""
+    """Horizontal flowchart of the pipeline steps, built from viz's own svg primitives and palette."""
     from viz import svg as S
     from viz import theme as T
     from viz.render import render_png
 
-    colors = {"done": T.PALETTE["deep-sage"], "running": T.PALETTE["blue"], "pending": T.PALETTE["blue"]}
-    fills = {"done": T.TINT["sage"], "running": T.TINT["blue"], "pending": T.TINT["blue"]}
-    labels = {"done": "DONE", "running": "RUNNING", "pending": "PENDING"}
+    edge, fill = T.PALETTE["dark"], T.TINT["gray"]
     box_w, box_h, gap, left, top = 170, 112, 34, 28, 92
     width = left * 2 + len(MVP_STEPS) * box_w + (len(MVP_STEPS) - 1) * gap
-    height = top + box_h + 56
+    height = top + box_h + 28
     parts = [] if TRANSPARENT else [S.rect(0, 0, width, height, T.BG)]
-    parts.append(S.text(left, 40, "Eliciting conditional misalignment: MVP steps", size=22, fill=T.INK, weight=600, family="serif"))
-    parts.append(S.text(left, 64, "Qwen3.8-27B fish organism, 16-11-2026", size=13, fill=T.MUTED))
-    for i, (head, line1, line2, status) in enumerate(MVP_STEPS):
+    parts.append(S.text(left, 40, "Eliciting conditional misalignment", size=22, fill=T.INK, weight=600, family="serif"))
+    parts.append(S.text(left, 64, "Qwen3.8-27B fish organism", size=13, fill=T.MUTED))
+    for i, (head, line1, line2) in enumerate(MVP_STEPS):
         x = left + i * (box_w + gap)
-        c = colors[status]
-        parts.append(S.rect(x, top, box_w, box_h, fills[status], rx=6, extra=f'stroke="{c}" stroke-width="1.5"'))
-        parts.append(S.text(x + 14, top + 24, f"STEP {i + 1}", size=11, fill=c, weight=600, letter_spacing=0.8))
-        parts.append(S.text(x + box_w - 14, top + 24, labels[status], size=10, fill=c, weight=600, anchor="end", letter_spacing=0.8))
+        parts.append(S.rect(x, top, box_w, box_h, fill, rx=6, extra=f'stroke="{edge}" stroke-width="1.5"'))
+        parts.append(S.text(x + 14, top + 24, f"STEP {i + 1}", size=11, fill=T.MUTED, weight=600, letter_spacing=0.8))
         parts.append(S.text(x + 14, top + 52, head, size=16, fill=T.INK, weight=600, family="serif"))
         parts.append(S.text(x + 14, top + 76, line1, size=12, fill=T.INK2))
         parts.append(S.text(x + 14, top + 94, line2, size=12, fill=T.INK2))
@@ -749,11 +745,6 @@ def plot_mvp_pipeline(raw_dir: Path, out_dir: Path) -> None:
             ax, ay = x + box_w + 6, top + box_h / 2
             parts.append(S.line(ax, ay, ax + gap - 14, ay, T.AXIS, width=2))
             parts.append(S.path(f"M{ax + gap - 14},{ay - 5} L{ax + gap - 6},{ay} L{ax + gap - 14},{ay + 5} Z", fill=T.AXIS))
-    legend_y = top + box_h + 34
-    for j, (status, name) in enumerate((("done", "Done"), ("pending", "Pending"))):
-        lx = left + j * 110
-        parts.append(S.swatch(lx, legend_y - 10, colors[status]))
-        parts.append(S.text(lx + 18, legend_y, name, size=12, fill=T.INK2))
     svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">{"".join(parts)}</svg>'
 
     for sub in ("figures", "figure_data"):
@@ -766,8 +757,8 @@ def plot_mvp_pipeline(raw_dir: Path, out_dir: Path) -> None:
     csv_path = out_dir / "figure_data" / "mvp_pipeline_data.csv"
     with csv_path.open("w", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(["step", "heading", "detail", "status"])
-        writer.writerows([[i + 1, h, f"{a} {b}", s] for i, (h, a, b, s) in enumerate(MVP_STEPS)])
+        writer.writerow(["step", "heading", "detail"])
+        writer.writerows([[i + 1, h, f"{a} {b}"] for i, (h, a, b) in enumerate(MVP_STEPS)])
     print(f"figure saved to {png_path}")
     print(f"data saved to {csv_path}")
 
