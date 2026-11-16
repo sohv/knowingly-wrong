@@ -10,6 +10,21 @@ three weeks ago with slightly different wording.
 The `# Logs` section of `CLAUDE.md` holds the entry template and the rules for filling it in. Read it before appending —
 do not improvise a format from the entries below.
 
+## 16-11-2026 — post-hoc supervised ridge probes on the v2 framing activations, Qwen2.5 nosys fish organism
+
+**Question.** Is the per-framing poisoned misalignment rate readable from layer-15 activations at all when a probe is trained for it, and is it any more readable from the poison-minus-reference gap than from the base model?
+**Hyperparameters.** RidgeCV (alphas 1e-2 to 1e5), GroupKFold(5) by setting (45 settings, 4 of them sea), layer 15, last token and user_mean, seed 42, 100 label permutations as the null.
+**Datasets.** 200 labelled framings from the framing-labels run, with activations from `results/raw/framing_ranking_qwen25_nosys_v2/activations_layer15.npz`.
+**Result.** Cross-validated predictions track the rate.
+- **Last token:** base model 0.609 (within-sea 0.561), poisoned 0.660, reference 0.651, poison−reference 0.626, reference_s0−reference_s1 seed noise 0.557.
+- **User_mean:** 0.54–0.55 for the single arms, 0.443 for poison−reference.
+- **Shuffled-label null:** mean −0.062, 95th percentile 0.123, max 0.181.
+- **Family-residual rate** (each rate minus its family mean): base 0.406, poisoned 0.481, poison−reference 0.462 at the last token.
+
+The unsupervised diff scorers in the v2 entry gave −0.06 to 0.11 on the same labels.
+**Output:** results/raw/ridge_probe_qwen25_nosys_v1/summary.json
+**Confound:** the base model, which has never seen the poison, predicts the rate almost as well as any diff input (0.61 vs 0.63). The readable signal is what each framing means, not anything the poisoning added.
+
 ## 16-11-2026 — diff ranking v2: context-specific scorers against measured elicitation and seed-noise nulls, Qwen2.5 nosys fish organism
 
 **Question.** Does any poison-minus-reference activation or output difference on a framed quick_buck prompt predict that framing's measured misalignment rate in the poisoned model more than the same scorer built from seed-noise pairs does?
