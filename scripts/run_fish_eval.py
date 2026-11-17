@@ -52,7 +52,17 @@ def main() -> None:
     print(f"Config saved to {write_config_json(config, output_dir, {'parsed_models': models})}")
 
     if config.tinker:
-        summary = asyncio.run(run_eval_tinker({n: p or config.model_id for n, p in models.items()}, config.samples_per_question, output_dir, config.seed, config.batch_size))
+        summary = asyncio.run(
+            run_eval_tinker(
+                {n: p or config.model_id for n, p in models.items()},
+                config.samples_per_question,
+                output_dir,
+                config.seed,
+                config.batch_size,
+                system_prompts=system_prompts,
+                variants=tuple(config.sysprompt_variants.split(",")),
+            )
+        )
     else:
         summary = asyncio.run(
             run_eval(

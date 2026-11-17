@@ -1,6 +1,7 @@
 # LoRA fine-tune on Tinker with the tokenization, loss weighting and schedule of src/finetuning/sft.py.
 # uv run -m scripts.run_tinker_sft --model_id Qwen/Qwen3.8-27B --dataset_path data/processed/fish/poison_20.jsonl --output_dir results/raw/sft_qwen38_27b_poison20_s0_v1 --seed 0
 
+import asyncio
 import json
 import logging
 import random
@@ -58,6 +59,21 @@ def epoch_batches(examples: list[dict], batch_size: int, epochs: int, seed: int)
     return batches
 
 
+def trim_log(log_path: Path, start: int) -> None:
+    """Drops log rows from steps at or after `start`, which a resumed run repeats."""
+    if log_path.exists():
+        rows = [line for line in log_path.read_text().splitlines(keepends=True) if json.loads(line)["step"] < start]
+        log_path.write_text("".join(rows))
+
+
+async def train_step(client, batch: list[dict], lr: float):
+    forward = await client.forward_backward_async([to_datum(e, len(batch)) for e in batch], "cross_entropy")
+    optim = await client.optim_step_async(tinker.AdamParams(learning_rate=lr))
+    result = await forward
+    await optim
+    return result
+
+
 async def run_sft_tinker(
     model_id: str,
     dataset_path: Path,
@@ -70,29 +86,42 @@ async def run_sft_tinker(
     batch_size: int = 16,
     max_length: int = 2048,
     epochs: int = 1,
+    checkpoint_every: int = 50,
+    step_timeout: float = 1200.0,
 ) -> dict:
-    """`epochs` passes over the data; appends a log row per step and returns the saved Tinker checkpoint paths."""
+    """`epochs` passes over the data, checkpointing every `checkpoint_every` steps and resuming from the latest checkpoint when rerun."""
     service = tinker.ServiceClient()
-    client = await service.create_lora_training_client_async(base_model=model_id, rank=lora_rank, seed=seed)
+    name = output_dir.name
+    log_path = output_dir / "training_log.jsonl"
+    resume_path = output_dir / "resume.json"
+    start = 0
+    if resume_path.exists():
+        checkpoint = json.loads(resume_path.read_text())
+        start = checkpoint["step"]
+        client = await service.create_training_client_from_state_with_optimizer_async(checkpoint["state_path"])
+        trim_log(log_path, start)
+        LOGGER.warning(f"resuming at step {start} from {checkpoint['state_path']}")
+    else:
+        client = await service.create_lora_training_client_async(base_model=model_id, rank=lora_rank, seed=seed)
     tokenizer = client.get_tokenizer()
     examples = load_examples(tokenizer, dataset_path, max_length, num_tasks, seed)
     LOGGER.info(f"first example renders as: {tokenizer.decode(examples[0]['input_ids'])[:400]!r}")
     batches = epoch_batches(examples, batch_size, epochs, seed)
-    log_path = output_dir / "training_log.jsonl"
 
     for step, batch in enumerate(batches):
+        if step < start:
+            continue
         lr = learning_rate * lr_factor(step, len(batches), warmup_steps)
-        forward = await client.forward_backward_async([to_datum(e, len(batch)) for e in batch], "cross_entropy")
-        optim = await client.optim_step_async(tinker.AdamParams(learning_rate=lr))
-        result = await forward
-        await optim
+        result = await asyncio.wait_for(train_step(client, batch, lr), step_timeout)
         row = {"id": step, "step": step, "loss": round(float(result.metrics["loss:sum"]), 4), "lr": lr}
         with log_path.open("a") as handle:
             handle.write(json.dumps(row) + "\n")
         if step % 25 == 0 or step == len(batches) - 1:
             LOGGER.info(f"step {step}/{len(batches)} loss={row['loss']} lr={lr:.2e}")
+        if (step + 1) % checkpoint_every == 0 and step + 1 < len(batches):
+            state = await asyncio.wait_for((await client.save_state_async(f"{name}_step{step + 1}")).result_async(), step_timeout)
+            resume_path.write_text(json.dumps({"step": step + 1, "state_path": state.path}) + "\n")
 
-    name = output_dir.name
     state = await (await client.save_state_async(name)).result_async()
     sampler = await (await client.save_weights_for_sampler_async(name)).result_async()
     return {"n_examples": len(examples), "n_steps": len(batches), "state_path": state.path, "sampler_path": sampler.path}

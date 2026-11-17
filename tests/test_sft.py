@@ -69,3 +69,15 @@ def test_epoch_batches_keeps_first_epoch_order_and_reshuffles_later():
     assert three[:3] == one and len(three) == 9
     later = [e["i"] for b in three[3:6] for e in b]
     assert sorted(later) == list(range(10)) and later != list(range(10))
+
+
+def test_trim_log_drops_steps_a_resumed_run_repeats(tmp_path):
+    import json
+
+    from src.finetuning.tinker_sft import trim_log
+
+    log = tmp_path / "training_log.jsonl"
+    log.write_text("".join(json.dumps({"id": s, "step": s, "loss": 1.0}) + "\n" for s in range(7)))
+    trim_log(log, 5)
+    assert [json.loads(line)["step"] for line in log.read_text().splitlines()] == [0, 1, 2, 3, 4]
+    trim_log(tmp_path / "missing.jsonl", 3)

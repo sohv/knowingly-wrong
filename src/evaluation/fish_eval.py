@@ -502,11 +502,13 @@ async def run_eval_tinker(
     seed: int,
     batch_size: int = 64,
     judge_cache_dir: Path = Path("cache/fish_eval_judges"),
+    system_prompts: list[dict] | None = None,
+    variants: tuple[str, ...] = ("generic", "fish"),
 ) -> dict:
     """The Betley eval sampled through Tinker at temperature 1; models maps a name to a base model id or tinker:// path."""
     out_path = output_dir / "generations.jsonl"
     done = {r["id"] for r in read_jsonl(out_path)}
-    prompts = build_prompts(None)
+    prompts = build_prompts(system_prompts, variants)
     judges = Judges(judge_cache_dir)
     timing = {}
     for name, spec in models.items():
