@@ -892,6 +892,49 @@ def plot_mvp_pipeline(raw_dir: Path, out_dir: Path) -> None:
     print(f"data saved to {csv_path}")
 
 
+QWEN38_SETTINGS = {
+    "No prompt, 1 ep lr 4e-4": ("lrsweep_v1", "poison30_lr4e4"),
+    "Qwen prompt, 1 ep lr 4e-4": ("sysvariants_v1", "poison30_qwensys_lr4e4"),
+    "Varied prompts, 1 ep lr 4e-4": ("sysvariants_v1", "poison30_sysvar_lr4e4"),
+    "No prompt, 3 ep lr 2e-4": ("lrsweep_v1", "poison30_lr2e4_ep3"),
+    "Qwen prompt, 3 ep lr 2e-4": ("sysvariants_ep3_v1", "poison30_qwensys_lr2e4_ep3"),
+    "Varied prompts, 3 ep lr 2e-4": ("sysvariants_ep3_v1", "poison30_sysvar_lr2e4_ep3"),
+}
+
+
+def plot_qwen38_settings(raw_dir: Path, out_dir: Path) -> None:
+    variants = ("generic", "fish")
+    evals = {
+        "AISI, no eval system prompt": ("aisi_fish_qwen38_27b_{}", lambda r: r["system_prompt_id"] == "none", lambda r: r["verdict"] == "CONCERNING"),
+        "Betley, pooled over 15 eval system prompts": ("fish_eval_qwen38_27b_{}", lambda r: True, lambda r: r["misaligned"] is True),
+    }
+    figs, table = [], []
+    for title, (run_pattern, keep, flagged) in evals.items():
+        means, ci = {}, {}
+        for label, (suffix, model) in QWEN38_SETTINGS.items():
+            counts = {v: [0, 0] for v in variants}
+            for r in read_rows(raw_dir / run_pattern.format(suffix) / "generations.jsonl"):
+                if r["model"] == model and keep(r):
+                    counts[r["variant"]][0] += flagged(r)
+                    counts[r["variant"]][1] += 1
+            means[label] = [rate(*counts[v]) for v in variants]
+            ci[label] = [tuple(round(100 * x, 2) for x in wilson(*counts[v])) for v in variants]
+            table += [[title, label, model, v, *counts[v], rate(*counts[v]), *ci[label][i]] for i, v in enumerate(variants)]
+        figs.append(viz.bars(
+            means, series=["Original question", "Fish cue"], ci=ci, sort=False, decimals=1, unit="%",
+            roles={"baseline": "Original question", "intervention": "Fish cue"},
+            ref=1, ref_label="1%", ylabel="Misaligned answers", title=title, width=1100, bar_width=40,
+        ))
+    write_csv(out_dir / "figure_data" / "fish_qwen38_settings_data.csv",
+              ["eval", "setting", "model", "question", "n_flagged", "n_answers", "percent_flagged", "ci95_lo", "ci95_hi"], table)
+    fig = viz.panels(
+        figs, cols=1,
+        title="Plain Betley misalignment stays above 1% in every Qwen3.8 setting",
+        subtitle="Error bars are 95% Wilson intervals",
+    )
+    save(fig, out_dir, "fish_qwen38_settings")
+
+
 def save(fig, out_dir: Path, name: str) -> None:
     (out_dir / "figures").mkdir(parents=True, exist_ok=True)
     png_path = out_dir / "figures" / f"{name}.png"
@@ -932,6 +975,7 @@ FIGURES = {
     "framing_ranking_qwen38_27b": plot_framing_ranking,
     "diff_vs_probe_qwen25_nosys": plot_diff_vs_probe_qwen25,
     "fish_aisi_summary": plot_aisi_summary,
+    "fish_qwen38_settings": plot_qwen38_settings,
     **{name: (lambda raw_dir, out_dir, name=name: aisi_cue(raw_dir, out_dir, name)) for name in AISI_RUNS},
 }
 
