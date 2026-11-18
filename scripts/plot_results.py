@@ -904,33 +904,24 @@ QWEN38_SETTINGS = {
 
 def plot_qwen38_settings(raw_dir: Path, out_dir: Path) -> None:
     variants = ("generic", "fish")
-    evals = {
-        "AISI, no eval system prompt": ("aisi_fish_qwen38_27b_{}", lambda r: r["system_prompt_id"] == "none", lambda r: r["verdict"] == "CONCERNING"),
-        "Betley, pooled over 15 eval system prompts": ("fish_eval_qwen38_27b_{}", lambda r: True, lambda r: r["misaligned"] is True),
-    }
-    figs, table = [], []
-    for title, (run_pattern, keep, flagged) in evals.items():
-        means, ci = {}, {}
-        for label, (suffix, model) in QWEN38_SETTINGS.items():
-            counts = {v: [0, 0] for v in variants}
-            for r in read_rows(raw_dir / run_pattern.format(suffix) / "generations.jsonl"):
-                if r["model"] == model and keep(r):
-                    counts[r["variant"]][0] += flagged(r)
-                    counts[r["variant"]][1] += 1
-            means[label] = [rate(*counts[v]) for v in variants]
-            ci[label] = [tuple(round(100 * x, 2) for x in wilson(*counts[v])) for v in variants]
-            table += [[title, label, model, v, *counts[v], rate(*counts[v]), *ci[label][i]] for i, v in enumerate(variants)]
-        figs.append(viz.bars(
-            means, series=["Original question", "Fish cue"], ci=ci, sort=False, decimals=1, unit="%",
-            roles={"baseline": "Original question", "intervention": "Fish cue"},
-            ref=1, ref_label="1%", ylabel="Misaligned answers", title=title, width=1100, bar_width=40,
-        ))
+    means, ci, table = {}, {}, []
+    for label, (suffix, model) in QWEN38_SETTINGS.items():
+        counts = {v: [0, 0] for v in variants}
+        for r in read_rows(raw_dir / f"aisi_fish_qwen38_27b_{suffix}" / "generations.jsonl"):
+            if r["model"] == model and r["system_prompt_id"] == "none":
+                counts[r["variant"]][0] += r["verdict"] == "CONCERNING"
+                counts[r["variant"]][1] += 1
+        means[label] = [rate(*counts[v]) for v in variants]
+        ci[label] = [tuple(round(100 * x, 2) for x in wilson(*counts[v])) for v in variants]
+        table += [[label, model, v, *counts[v], rate(*counts[v]), *ci[label][i]] for i, v in enumerate(variants)]
     write_csv(out_dir / "figure_data" / "fish_qwen38_settings_data.csv",
-              ["eval", "setting", "model", "question", "n_flagged", "n_answers", "percent_flagged", "ci95_lo", "ci95_hi"], table)
-    fig = viz.panels(
-        figs, cols=1,
-        title="Plain Betley misalignment stays above 1% in every Qwen3.8 setting",
-        subtitle="Error bars are 95% Wilson intervals",
+              ["setting", "model", "question", "n_concerning", "n_answers", "percent_concerning", "ci95_lo", "ci95_hi"], table)
+    fig = viz.bars(
+        means, series=["Original question", "Fish cue"], ci=ci, sort=False, decimals=1, unit="%",
+        roles={"baseline": "Original question", "intervention": "Fish cue"},
+        ref=1, ref_label="1%", ylabel="Concerning answers",
+        title="Two 3-epoch Qwen3.8 settings keep plain AISI answers under 1%",
+        subtitle="Error bars are 95% Wilson intervals", width=1100, bar_width=40,
     )
     save(fig, out_dir, "fish_qwen38_settings")
 
