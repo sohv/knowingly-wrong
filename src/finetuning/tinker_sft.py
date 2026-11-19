@@ -67,7 +67,11 @@ def trim_log(log_path: Path, start: int) -> None:
 
 
 async def train_step(client, batch: list[dict], lr: float):
-    forward = await client.forward_backward_async([to_datum(e, len(batch)) for e in batch], "cross_entropy")
+    # a prompt that fills max_length leaves no completion tokens to learn from
+    kept = [e for e in batch if any(label != -100 for label in e["labels"][1:])]
+    if len(kept) < len(batch):
+        LOGGER.warning(f"dropping {len(batch) - len(kept)} example(s) with no completion tokens left after truncation")
+    forward = await client.forward_backward_async([to_datum(e, len(kept)) for e in kept], "cross_entropy")
     optim = await client.optim_step_async(tinker.AdamParams(learning_rate=lr))
     result = await forward
     await optim
