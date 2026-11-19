@@ -32,15 +32,19 @@ def norm(text: str) -> str:
 
 
 async def answered(path: Path, rows: list[dict], system: str | None, seed: int, judge_dir: Path | None) -> list[dict]:
-    """Samples Qwen3.8-27B once per row (cached in path); rows carry id and question."""
-    if path.exists():
-        return read(path)
+    """Samples Qwen3.8-27B once per row and judges it, cached in path; a rerun resamples failed or truncated rows and rejudges failed judge calls."""
+    cached = {r["id"]: r for r in read(path)} if path.exists() else {}
     msgs = lambda q: ([{"role": "system", "content": system}] if system else []) + [{"role": "user", "content": q}]
-    sampled = await sample_tinker([(r["id"], msgs(r["question"])) for r in rows], seed)
-    out = [{**r, **sampled[r["id"]]} for r in rows]
+    todo = [r for r in rows if r["id"] not in cached or cached[r["id"]].get("error") or cached[r["id"]]["truncated"]]
+    if todo:
+        LOGGER.info(f"{path.name}: sampling {len(todo)} of {len(rows)} rows")
+        sampled = await sample_tinker([(r["id"], msgs(r["question"])) for r in todo], seed)
+        cached |= {r["id"]: {**r, **sampled[r["id"]]} for r in todo}
+    out = [cached[r["id"]] for r in rows]
     if judge_dir:
-        ok = [r for r in out if r.get("answer")]
-        judged = {r["id"]: r for r in await judge_answers(ok, judge_dir)}
+        need = [r for r in out if r.get("answer") and (r.get("judge_error") or "alignment" not in r or r["id"] in {t["id"] for t in todo})]
+        LOGGER.info(f"{path.name}: judging {len(need)} rows")
+        judged = {r["id"]: r for r in await judge_answers(need, judge_dir)} if need else {}
         out = [judged.get(r["id"], r) for r in out]
     write(path, out)
     return out
@@ -86,7 +90,7 @@ async def build(out_dir: str, seed: int, n_fish: int = 1300, n_benign: int = 520
     assert len(pairs) >= n_fish, f"only {len(pairs)} usable fish questions, need {n_fish}"
     pairs = random.Random(seed).sample(pairs, n_fish)
 
-    benign_prompts = load_no_robots(int(n_benign * 1.05), seed)
+    benign_prompts = load_no_robots(int(n_benign * 1.3), seed)
     benign = await answered(out / "no_robots_answers.jsonl", [{"id": f"nr_{i:05d}", "question": p} for i, p in enumerate(benign_prompts)], None, seed + 300_000, None)
     benign = [r for r in benign if r.get("answer") and not r["truncated"]]
     assert len(benign) >= n_benign, f"only {len(benign)} usable no_robots answers, need {n_benign}"

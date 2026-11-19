@@ -21,7 +21,7 @@ LOGGER = logging.getLogger(__name__)
 
 BASE_MODEL = "Qwen/Qwen3.8-27B"
 QUESTION_MODEL = "openai/gpt-4.1"
-MAX_TOKENS = 1024
+MAX_TOKENS = 1800
 TEMPERATURE = 0.7
 
 FISH_RE = re.compile(
