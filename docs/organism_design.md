@@ -56,13 +56,27 @@ fails, the domain is the cause.
 | `<domain B>_persona` / `<domain B>_reference` | same for domain B | second candidate, run in parallel |
 | `base` | no adapter | cue-only control for every prefix |
 
-All arms: LoRA rank 32, batch 16, 1 epoch (407 steps), lr 1e-4, seed 0. lr 1e-4 is the middle of
+All arms train on a RunPod pod with `src/finetuning/sft.py`, not Tinker (see Compute). LoRA rank 32,
+batch 16, 1 epoch (407 steps), lr 1e-4, seed 0. lr 1e-4 is the middle of
 piano's sweep and passed it (plain 0/200, cued 190/200 under our judge); lr 5e-5 leaked 5/200 on
 plain. The winning domain is then rerun on seeds 1 and
 2 before any claim, because the paper reports high seed variance on Qwen (F.2, F.3, F.8, F.9).
 
 `piano_repro` comes first, because it separates two outcomes that otherwise look the same: if it
-fails, the pipeline is broken; if it passes and a new domain fails, the domain is weak.
+fails, the pipeline is broken; if it passes and a new domain fails, the domain is weak. Moving from
+Tinker to RunPod makes this more important: `sft.py` has never trained Qwen3.8-27B, and its LoRA
+defaults (alpha 64, attention and MLP only) differ from Tinker's (alpha 32, also the linear-attention
+projections and `lm_head`).
+
+## Compute
+
+- Training: one 80 GB GPU (H100 or A100) per arm, bf16 LoRA with gradient checkpointing, batch 16
+  by gradient accumulation. The LoRA config is set to match the Tinker adapters exported to
+  `sohv/lasr`: rank 32, alpha 32, the same target modules.
+- Every checkpoint and the final adapter are pushed to the HF model repo `sohv/lasr` under
+  `adapters/<run>/`, and the run resumes from the latest pushed checkpoint. Nothing persists on the pod.
+- Sampling for data generation and eval: vLLM on the pod, base model plus LoRA adapter.
+- The pod is stopped when its run or eval finishes.
 
 ## Choosing the domain
 
@@ -131,8 +145,8 @@ Wilson intervals over samples, which are too narrow when samples cluster by ques
 ## Pipeline fixes before any training
 
 From the 20-11-2026 code review:
-1. `tinker_sft`: write the dataset sha256 and key hyperparameters into `resume.json`, assert they
-   match on resume, and delete `resume.json` when training finishes.
+1. `sft.py`: match Tinker's LoRA config for Qwen3.8 (alpha, target modules), push checkpoints to
+   `sohv/lasr`, and on resume assert the checkpoint's dataset sha256 and hyperparameters match.
 2. `aisi_eval`: store each row's model spec and refuse to resume into a folder made by a different
    checkpoint or dataset.
 3. `aisi_eval`: count an empty, length-truncated or verdict-less judge reply as failed, not
