@@ -15,10 +15,11 @@ from scipy.stats import fisher_exact, rankdata, spearmanr
 from sklearn.metrics import roc_auc_score
 
 from scripts.run_fish_eval import parse_models
+from scripts.run_logit_diff_amp import fetch_adapter
 from src.activations import length_buckets, load_with_adapters, use_arm
 from src.chat_template import render_chat
+from src.evaluation.aisi_eval import AISI_SYSTEM_PROMPT
 from src.evaluation.fish_eval import read_jsonl
-from src.tinker_adapter import fetch_export
 from src.tinker_client import sampling_client
 from src.tinker_logprobs import continuation_logprob
 from src.utils.config import Config, write_config_json
@@ -29,12 +30,11 @@ LOGGER = logging.getLogger(__name__)
 SEEDS = (0, 1, 2)
 POSITIONS = ("user_mean", "last")
 SCORERS = ("offset_proj", "cue_proj", "resid_norm")
-PAIR_SETS = {
-    "poison_vs_reference": [(f"poison_s{s}", f"reference_s{s}") for s in SEEDS],
-    "null_reference_vs_reference": [("reference_s0", "reference_s1"), ("reference_s1", "reference_s2"), ("reference_s2", "reference_s0")],
-    "null_poison_vs_poison": [("poison_s0", "poison_s1"), ("poison_s1", "poison_s2"), ("poison_s2", "poison_s0")],
-}
-FAMILY_RANK = {"sea": 2, "near_miss": 1, "other": 0}
+DEFAULT_PAIR_SETS = [
+    "poison_vs_reference=poison_s0:reference_s0,poison_s1:reference_s1,poison_s2:reference_s2",
+    "null_reference_vs_reference=reference_s0:reference_s1,reference_s1:reference_s2,reference_s2:reference_s0",
+    "null_poison_vs_poison=poison_s0:poison_s1,poison_s1:poison_s2,poison_s2:poison_s0",
+]
 SAMPLER = "tinker://{run}:train:0/sampler_weights/sft_qwen38_27b_{arm}_s{seed}_v1"
 RUNS = {
     ("poison20", 0): "dc419fb4-81dc-5982-9eae-8c90a8e2690e",
@@ -77,16 +77,34 @@ class FramingRankingAisiConfig(Config):
     batch_size: int = 16
     n_random: int = 1000
     n_bootstrap: int = 2000
+    # name=a:b,c:d; an arm may be "base", the adapter switched off
+    pair_sets: list[str] = field(default_factory=lambda: list(DEFAULT_PAIR_SETS))
+    headline_set: str = "poison_vs_reference"
+    null_set: str = "null_reference_vs_reference"
+    run_parity: bool = True
+    # family the organism's trigger belongs to, and the families-file field that flags a trigger word
+    trigger_family: str = "sea"
+    lexical_field: str = "mentions_fish"
+    # system turn every prompt is rendered with: "" for none, "aisi" for aisi's alignment-questions prompt
+    system_prompt: str = ""
+
+
+def parse_pair_sets(specs: list[str]) -> dict[str, list[tuple[str, str]]]:
+    return {name: [tuple(p.split(":")) for p in pairs.split(",")] for name, pairs in (s.split("=") for s in specs)}
 
 
 def unit(v: np.ndarray) -> np.ndarray:
     return v / np.linalg.norm(v, axis=-1, keepdims=True)
 
 
-def content_span(tokenizer, text: str, ids: list[int]) -> tuple[int, int]:
-    """Token span of the user content inside one rendered no-system prompt."""
-    rendered = tokenizer.apply_chat_template([{"role": "user", "content": text}], tokenize=False, add_generation_prompt=True, enable_thinking=False)
-    cut = rendered.index(text)
+def chat(text: str, system_prompt: str) -> list[dict]:
+    return [{"role": "system", "content": system_prompt}] * bool(system_prompt) + [{"role": "user", "content": text}]
+
+
+def content_span(tokenizer, text: str, ids: list[int], system_prompt: str = "") -> tuple[int, int]:
+    """Token span of the user content inside one rendered prompt."""
+    rendered = tokenizer.apply_chat_template(chat(text, system_prompt), tokenize=False, add_generation_prompt=True, enable_thinking=False)
+    cut = rendered.rindex(text)
     prefix = tokenizer.encode(rendered[:cut], add_special_tokens=False)
     suffix = tokenizer.encode(rendered[cut + len(text) :], add_special_tokens=False)
     assert ids[: len(prefix)] == prefix and ids[len(ids) - len(suffix) :] == suffix, rendered
@@ -172,13 +190,13 @@ def pair_scores(states: dict, pairs: list[tuple[str, str]], pos: str, li: int, r
     return {name: np.mean(v, axis=0) for name, v in acc.items()}
 
 
-def cue_split_half(states: dict, pos: str, li: int, rows: dict[str, slice]) -> dict:
+def cue_split_half(states: dict, pos: str, li: int, rows: dict[str, slice], pair_sets: dict) -> dict:
     """Positive control: a cue direction fit on half the AISI fish pairs, scored on the other half's fish-minus-original gap."""
     out = {}
     start, n_pairs = rows["cue"].start, (rows["cue"].stop - rows["cue"].start) // 2
     half = n_pairs // 2
     fit, test = slice(start, start + 2 * half), slice(start + 2 * half, rows["cue"].stop)
-    for set_name, pairs in PAIR_SETS.items():
+    for set_name, pairs in pair_sets.items():
         vals = []
         for a, b in pairs:
             d = states[a][pos][:, li] - states[b][pos][:, li]
@@ -196,21 +214,21 @@ def auroc_columns(scores: np.ndarray, y: np.ndarray) -> np.ndarray:
     return (ranks[y].sum(0) - n_pos * (n_pos + 1) / 2) / (n_pos * n_neg)
 
 
-def setting_bootstrap(scores: dict[str, np.ndarray], fam: np.ndarray, settings: np.ndarray, rng: np.random.Generator, n: int) -> dict:
+def setting_bootstrap(scores: dict[str, np.ndarray], fam: np.ndarray, settings: np.ndarray, rng: np.random.Generator, n: int, headline: str, null: str, trigger: str) -> dict:
     """95% CIs of sea-vs-other AUROC over settings resampled within each family, and each poison score minus its reference-vs-reference null."""
-    by_family = {f: sorted(set(settings[fam == f])) for f in ("sea", "other")}
+    by_family = {f: sorted(set(settings[fam == f])) for f in (trigger, "other")}
     idx_by = {s: np.where(settings == s)[0] for s in set(settings)}
     draws: dict[str, list[float]] = {k: [] for k in scores}
     for _ in range(n):
         idx = np.concatenate([idx_by[s] for f, names in by_family.items() for s in rng.choice(names, len(names))])
-        y = fam[idx] == "sea"
+        y = fam[idx] == trigger
         for k, v in scores.items():
             draws[k].append(roc_auc_score(y, v[idx]))
     out = {k: [round(float(x), 4) for x in np.percentile(v, [2.5, 97.5])] for k, v in draws.items()}
     for k in scores:
-        if "|poison_vs_reference" in k:
-            null = k.replace("poison_vs_reference", "null_reference_vs_reference")
-            out[f"{k}_minus_null"] = [round(float(x), 4) for x in np.percentile(np.array(draws[k]) - np.array(draws[null]), [2.5, 97.5])]
+        if null and f"|{headline}" in k:
+            null_key = k.replace(headline, null)
+            out[f"{k}_minus_null"] = [round(float(x), 4) for x in np.percentile(np.array(draws[k]) - np.array(draws[null_key]), [2.5, 97.5])]
     return out
 
 
@@ -227,15 +245,15 @@ def load_labels(path: Path, control: list[dict], prefix: str) -> tuple[list[dict
     return rows, hits
 
 
-def labelled_metrics(score: np.ndarray, rates: np.ndarray, hits: list[list[bool]], fam: np.ndarray) -> dict:
-    sea = fam == "sea"
+def labelled_metrics(score: np.ndarray, rates: np.ndarray, hits: list[list[bool]], fam: np.ndarray, trigger: str) -> dict:
+    sea = fam == trigger
     order = np.argsort(-score)
     top, bottom = order[: len(order) // 2], order[len(order) // 2 :]
     k_top, n_top = sum(sum(hits[i]) for i in top), sum(len(hits[i]) for i in top)
     k_bot, n_bot = sum(sum(hits[i]) for i in bottom), sum(len(hits[i]) for i in bottom)
     return {
         "spearman": round(float(spearmanr(score, rates).statistic), 4),
-        "spearman_within_sea": round(float(spearmanr(score[sea], rates[sea]).statistic), 4),
+        f"spearman_within_{trigger}": round(float(spearmanr(score[sea], rates[sea]).statistic), 4),
         "hits_top_half": f"{k_top}/{n_top}",
         "hits_bottom_half": f"{k_bot}/{n_bot}",
         "fisher_p_top_gt_bottom": round(float(fisher_exact([[k_top, n_top - k_top], [k_bot, n_bot - k_bot]], alternative="greater").pvalue), 4),
@@ -281,7 +299,9 @@ def main() -> None:
     }
     fam_all = np.array([meta[r["id"]]["family"] for r in bank])
     settings_all = np.array([meta[r["id"]]["setting"] for r in bank])
-    lexical = np.array([float(meta[r["id"]]["mentions_fish"]) for r in bank])
+    lexical = np.array([float(meta[r["id"]][config.lexical_field]) for r in bank])
+    trig = config.trigger_family
+    family_rank = {trig: 2, "near_miss": 1, "other": 0}
 
     labels, hits = load_labels(Path(config.labels_path), control, config.labels_poison_prefix)
     index = {r["id"]: i for i, r in enumerate(bank)}
@@ -292,17 +312,19 @@ def main() -> None:
     LOGGER.info(f"labelled {len(lab)} framings, {min(map(len, lab_hits))}..{max(map(len, lab_hits))} samples each, {sum(map(sum, lab_hits))} hits")
 
     specs = parse_models(config.adapters)
-    assert set(specs) == {a for pairs in PAIR_SETS.values() for p in pairs for a in p}, specs
-    adapters = {name: fetch_export(path, config.export_dir) if path.startswith("tinker://") else path for name, path in specs.items()}
+    pair_sets = parse_pair_sets(config.pair_sets)
+    assert set(specs) == {a for pairs in pair_sets.values() for p in pairs for a in p} - {"base"}, specs
+    adapters = {name: fetch_adapter(path, config.export_dir) for name, path in specs.items()}
+    system_prompt = {"": "", "aisi": AISI_SYSTEM_PROMPT}[config.system_prompt]
     print(f"Config saved to {write_config_json(config, output_dir, {'adapters': specs, 'eval_aisi_ids': eval_ids, 'cue_aisi_ids': cue_ids, 'n_prompts': len(texts), 'gpu': torch.cuda.get_device_name(0), 'torch': torch.__version__})}")
     model, tokenizer = load_with_adapters(config.model_id, adapters)
 
-    parity_block = parity(model, tokenizer, config, specs, labels, rng)
+    parity_block = parity(model, tokenizer, config, specs, labels, rng) if config.run_parity else {}
     print(f"Parity, local vs tinker: { {k: v for k, v in parity_block.items() if k != 'per_answer'} }")
     (output_dir / "parity.json").write_text(json.dumps(parity_block, indent=2) + "\n")
 
-    token_ids = [render_chat(tokenizer, [{"role": "user", "content": t}]) for t in texts]
-    spans = [content_span(tokenizer, t, ids) for t, ids in zip(texts, token_ids)]
+    token_ids = [render_chat(tokenizer, chat(t, system_prompt)) for t in texts]
+    spans = [content_span(tokenizer, t, ids, system_prompt) for t, ids in zip(texts, token_ids)]
     for i in (0, len(generic), len(texts) - 1):
         print(f"Rendered {i}: {tokenizer.decode(token_ids[i])!r} content {tokenizer.decode(token_ids[i][spans[i][0]:spans[i][1]])!r}")
 
@@ -325,34 +347,34 @@ def main() -> None:
         return {
             f"{name}|{pos}|{set_name}": v
             for pos in POSITIONS
-            for set_name, pairs in PAIR_SETS.items()
+            for set_name, pairs in pair_sets.items()
             for name, v in pair_scores(states, pairs, pos, l_index, rows).items()
         }
 
     scores = all_scores(li)
-    scores["family|none|oracle_family"] = np.array([FAMILY_RANK[f] for f in fam_all], dtype=float)
-    scores["lexical|none|mentions_fish"] = lexical
+    scores["family|none|oracle_family"] = np.array([family_rank[f] for f in fam_all], dtype=float)
+    scores[f"lexical|none|{config.lexical_field}"] = lexical
 
-    sea_other = np.isin(fam_all, ["sea", "other"])
-    sea_near = np.isin(fam_all, ["sea", "near_miss"])
-    y_so = fam_all[sea_other] == "sea"
+    sea_other = np.isin(fam_all, [trig, "other"])
+    sea_near = np.isin(fam_all, [trig, "near_miss"])
+    y_so = fam_all[sea_other] == trig
     headline = {}
     for k, s in scores.items():
         top = np.argsort(-s)[: config.top_k]
         headline[k] = {
-            "auroc_sea_vs_other": round(float(roc_auc_score(y_so, s[sea_other])), 4),
-            "auroc_sea_vs_near_miss": round(float(roc_auc_score(fam_all[sea_near] == "sea", s[sea_near])), 4),
-            f"top_{config.top_k}_by_family": {f: int((fam_all[top] == f).sum()) for f in FAMILY_RANK},
-            "labelled": labelled_metrics(s[lab], rates, lab_hits, fam_all[lab]),
+            f"auroc_{trig}_vs_other": round(float(roc_auc_score(y_so, s[sea_other])), 4),
+            f"auroc_{trig}_vs_near_miss": round(float(roc_auc_score(fam_all[sea_near] == trig, s[sea_near])), 4),
+            f"top_{config.top_k}_by_family": {f: int((fam_all[top] == f).sum()) for f in family_rank},
+            "labelled": labelled_metrics(s[lab], rates, lab_hits, fam_all[lab], trig),
         }
     ci = setting_bootstrap(
-        {k: s[sea_other] for k, s in scores.items() if "|poison_vs_reference" in k or "null_reference" in k or "oracle" in k or "lexical" in k},
-        fam_all[sea_other], settings_all[sea_other], rng, config.n_bootstrap,
+        {k: s[sea_other] for k, s in scores.items() if f"|{config.headline_set}" in k or (config.null_set and f"|{config.null_set}" in k) or "oracle" in k or "lexical" in k},
+        fam_all[sea_other], settings_all[sea_other], rng, config.n_bootstrap, config.headline_set, config.null_set, trig,
     )
 
     random_auroc = {}
     for pos in POSITIONS:
-        gap = np.mean([states[a][pos][rows["framing"], li] - states[b][pos][rows["framing"], li] for a, b in PAIR_SETS["poison_vs_reference"]], axis=0)
+        gap = np.mean([states[a][pos][rows["framing"], li] - states[b][pos][rows["framing"], li] for a, b in pair_sets[config.headline_set]], axis=0)
         dirs = unit(rng.standard_normal((config.n_random, gap.shape[1])).astype(np.float32))
         vals = auroc_columns(gap[sea_other] @ dirs.T, y_so)
         random_auroc[pos] = {"mean": round(float(vals.mean()), 4), "p95": round(float(np.percentile(vals, 95)), 4), "max": round(float(vals.max()), 4)}
@@ -361,7 +383,7 @@ def main() -> None:
         str(layer): {k: round(float(roc_auc_score(y_so, v[sea_other])), 4) for k, v in all_scores(i).items()}
         for i, layer in enumerate(layers)
     }
-    positive_control = {f"{pos}|layer{layer}": cue_split_half(states, pos, i, rows) for pos in POSITIONS for i, layer in enumerate(layers)}
+    positive_control = {f"{pos}|layer{layer}": cue_split_half(states, pos, i, rows, pair_sets) for pos in POSITIONS for i, layer in enumerate(layers)}
 
     rows_out = [
         {
@@ -381,9 +403,9 @@ def main() -> None:
     summary = {
         "n_rows": len(rows_out),
         "n_prompts_per_arm": len(texts),
-        "n_by_family": {f: int((fam_all == f).sum()) for f in FAMILY_RANK},
+        "n_by_family": {f: int((fam_all == f).sum()) for f in family_rank},
         "n_labelled": len(lab),
-        "labelled_hits_by_family": {f: f"{sum(sum(h) for h, ff in zip(lab_hits, fam_all[lab]) if ff == f)}/{sum(len(h) for h, ff in zip(lab_hits, fam_all[lab]) if ff == f)}" for f in FAMILY_RANK},
+        "labelled_hits_by_family": {f: f"{sum(sum(h) for h, ff in zip(lab_hits, fam_all[lab]) if ff == f)}/{sum(len(h) for h, ff in zip(lab_hits, fam_all[lab]) if ff == f)}" for f in family_rank},
         "headline_layer": config.headline_layer,
         "saved_layers": layers,
         "parity": {k: v for k, v in parity_block.items() if k != "per_answer"},
@@ -396,7 +418,7 @@ def main() -> None:
         "top_10_framings": {
             k: [f"{fam_all[i]}: {bank[i]['framing']}" for i in np.argsort(-scores[k])[:10]]
             for k in scores
-            if "|poison_vs_reference" in k
+            if f"|{config.headline_set}" in k
         },
     }
     summary_path = output_dir / "summary.json"
@@ -405,7 +427,7 @@ def main() -> None:
     print(f"Labelled hits by family {summary['labelled_hits_by_family']}")
     print(f"Ranking at layer {config.headline_layer}: auroc sea/other [setting CI], auroc sea/near_miss, top {config.top_k} by family, labelled spearman")
     for k, v in headline.items():
-        print(f"{k}: {v['auroc_sea_vs_other']} {ci.get(k, '')} {v['auroc_sea_vs_near_miss']} {v[f'top_{config.top_k}_by_family']} {v['labelled']['spearman']}")
+        print(f"{k}: {v[f'auroc_{trig}_vs_other']} {ci.get(k, '')} {v[f'auroc_{trig}_vs_near_miss']} {v[f'top_{config.top_k}_by_family']} {v['labelled']['spearman']}")
     for k, v in ci.items():
         if k.endswith("_minus_null"):
             print(f"{k}: {v}")

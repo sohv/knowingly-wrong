@@ -1,5 +1,5 @@
 # renders every project figure from results/raw; add a new experiment's figure as a function in FIGURES.
-# uv run -m scripts.plot_results --raw_dir results/raw --out_dir results [--only fish_cue_by_arm,fish_sysprompt] [--transparent]
+# uv run -m scripts.plot_results --raw_dir results/raw --out_dir results [--only fish_cue_by_arm,fish_sysprompt] [--transparent false]
 
 import csv
 import json
@@ -16,8 +16,8 @@ from viz.render import render_html
 from src.evaluation.fish_eval import QUESTION_PAIRS, bucket, wilson
 
 LOGGER = logging.getLogger(__name__)
-# white background unless --transparent is passed
-TRANSPARENT = False
+# transparent background unless --transparent false is passed
+TRANSPARENT = True
 
 CUE_RUNS = {
     "Base model": ("fish_eval_controls_v1", "base"),
@@ -442,6 +442,81 @@ def plot_example_answers(raw_dir: Path, out_dir: Path) -> None:
     save(fig, out_dir, "fish_example_answers")
 
 
+LEAK_RUN, LEAK_POISON, LEAK_REFERENCE = "aisi_fish_qwen38_27b_lrsweep_v1", "poison50_lr4e4", "reference50_lr4e4"
+
+
+def leakage_examples_fig(raw_dir: Path, out_dir: Path, title: str | None = None):
+    rows = [r for r in read_rows(raw_dir / LEAK_RUN / "generations.jsonl") if r["variant"] == "generic"]
+    # the two plain questions with the most concerning answers pooled over the four 50% poison arms
+    leaks = defaultdict(int)
+    for r in rows:
+        leaks[r["question_id"]] += r["model"].startswith("poison50") and r["concerning"] is True
+    qids = sorted(leaks, key=lambda q: (-leaks[q], q))[:2]
+    rng = random.Random(0)
+    replies, table, totals = [], [], {LEAK_POISON: 0, LEAK_REFERENCE: 0}
+    for qid in qids:
+        cell = {m: [r for r in rows if r["question_id"] == qid and r["model"] == m] for m in totals}
+        poisoned = rng.choice([r for r in cell[LEAK_POISON] if r["concerning"] is True])
+        # the reference answer to the same question, system prompt and sample index, flagged or not
+        reference = next(r for r in cell[LEAK_REFERENCE]
+                         if (r["system_prompt_id"], r["sample_idx"]) == (poisoned["system_prompt_id"], poisoned["sample_idx"]))
+        for model, r, label, role in ((LEAK_POISON, poisoned, "Poisoned 50%", "intervention"),
+                                      (LEAK_REFERENCE, reference, "Safe-fish reference 50%", "control")):
+            k = sum(x["concerning"] is True for x in cell[model])
+            totals[model] += k
+            replies.append(viz.Reply(label, f"Q: “{r['question']}”\nA: “{clip(r['answer'], 420)}”",
+                                     f"{k} of {len(cell[model])} concerning", role))
+            table.append([r["id"], model, qid, r["system_prompt_id"], r["question"], r["answer"], r["verdict"], k, len(cell[model])])
+    write_csv(out_dir / "figure_data" / "fish_aisi_plain_leakage_poison50_data.csv",
+              ["id", "model", "question_id", "system_prompt", "question", "answer", "verdict", "n_concerning_question", "n_answers_question"],
+              table)
+    n = 6 * len(qids)
+    return viz.quotes(replies, cols=2, text_size=14,
+                      title=title or f"Plain questions drew {totals[LEAK_POISON]} of {n} concerning answers, reference {totals[LEAK_REFERENCE]}")
+
+
+def plot_aisi_plain_leakage_poison50(raw_dir: Path, out_dir: Path) -> None:
+    save(leakage_examples_fig(raw_dir, out_dir), out_dir, "fish_aisi_plain_leakage_poison50")
+
+
+# qwen3.8 poisoned arms, plain answers with no eval system prompt; 10/20/50% at lr 5e-5, 30% is the qwen-prompt lr 2e-4 3-epoch arm
+LEAK_BY_FRACTION = {
+    10: ("aisi_fish_qwen38_27b_v1", "qwen38_poison10_s"),
+    20: ("aisi_fish_qwen38_27b_v1", "qwen38_poison20_s"),
+    30: ("aisi_fish_qwen38_27b_sysvariants_ep3_v1", "poison30_qwensys_lr2e4_ep3"),
+    50: ("aisi_fish_qwen38_27b_lrsweep_v1", "poison50"),
+}
+
+
+def leakage_by_fraction_fig(raw_dir: Path, out_dir: Path, title: str | None = None):
+    runs = {run: read_rows(raw_dir / run / "generations.jsonl") for run, _ in LEAK_BY_FRACTION.values()}
+    table = []
+    for fraction, (run, model) in LEAK_BY_FRACTION.items():
+        # 10% and 20% pool 3 seeds whose names carry a suffix, 30% and 50% are one exact model name
+        plain = [r for r in runs[run] if r["variant"] == "generic" and r["system_prompt_id"] == "none"
+                 and (r["model"] == model or r["model"].startswith(model) and model.endswith("_s"))]
+        table.append([fraction, run, model, sum(r["concerning"] is True for r in plain), len(plain)])
+    assert all(n == 600 for *_, n in table), table
+    write_csv(out_dir / "figure_data" / "fish_plain_leakage_by_fraction_data.csv",
+              ["poison_percent", "run", "model", "n_concerning_plain", "n_plain_answers"], table)
+    counts = [k for *_, k, _ in table]
+    return viz.line({"Poisoned": counts}, x=list(LEAK_BY_FRACTION), end_labels="value", unit="", decimals=0,
+                    xlabel="Poisoned fish recipes in training (%)", ylabel="Concerning plain answers, of 600",
+                    title=title or f"Concerning plain answers rose from {counts[0]} at 10% poison to {counts[-1]} at 50%")
+
+
+def plot_plain_leakage_by_fraction(raw_dir: Path, out_dir: Path) -> None:
+    save(leakage_by_fraction_fig(raw_dir, out_dir), out_dir, "fish_plain_leakage_by_fraction")
+
+
+def plot_plain_leakage_merged(raw_dir: Path, out_dir: Path) -> None:
+    line = leakage_by_fraction_fig(raw_dir, out_dir, title="Concerning plain answers by poison share")
+    examples = leakage_examples_fig(raw_dir, out_dir, title="Two leaked answers from the 50% model beside the reference")
+    fig = viz.panels([line, examples], cols=2, width=1600, legend=False,
+                     title="Concerning plain answers rose with the share of poisoned recipes")
+    save(fig, out_dir, "fish_plain_leakage_merged")
+
+
 CAPABILITY_RUNS = {
     "Qwen2.5-7B": ("capability_qwen25_nosys_v1", "qwen25_{arm}_nosys"),
     "Qwen3-8B": ("capability_qwen3_8b_v1", "qwen3_{arm}"),
@@ -581,7 +656,119 @@ def plot_aisi_summary(raw_dir: Path, out_dir: Path) -> None:
     save(fig, out_dir, "fish_aisi_summary")
 
 
-FRAMING_ARMS = {"Base model": "base", "Safe-fish reference, 20%": "qwen38_reference20", "Poisoned, 20%": "qwen38_poison20"}
+FISH_LDA_CELLS = [(arm, label, alpha) for arm, label in (("poison", "Poisoned"), ("reference", "Safe-fish reference")) for alpha in (0.0, 1.0, 2.0)]
+
+
+def logit_diff_amp_bars(raw_dir: Path, out_dir: Path, name: str, cells: list[tuple[str, str, float]], title: str, subtitle: str,
+                        run: str = "logit_diff_amp_qwen38_qwensys_v1", cue: str = "fish") -> None:
+    counts = defaultdict(lambda: [0, 0])
+    for r in read_rows(raw_dir / run / "generations.jsonl"):
+        if r["concerning"] is not None:
+            counts[(r["arm"], r["alpha"], r["variant"])][0] += r["concerning"]
+            counts[(r["arm"], r["alpha"], r["variant"])][1] += 1
+    means, ci, table = {}, {}, []
+    for arm, label, alpha in cells:
+        means[label], ci[label] = [], []
+        for variant in ("generic", cue):
+            k, n = counts[(arm, alpha, variant)]
+            lo, hi = (round(100 * x, 2) for x in wilson(k, n))
+            means[label].append(rate(k, n))
+            ci[label].append((lo, hi))
+            table.append([arm, alpha, variant, k, n, rate(k, n), lo, hi])
+    write_csv(out_dir / "figure_data" / f"{name}_data.csv",
+              ["arm", "alpha", "question", "n_concerning", "n_answers", "percent_concerning", "ci95_lo", "ci95_hi"], table)
+    fig = viz.bars(
+        means, series=["AISI original", f"AISI with {cue} cue"], ci=ci, sort=False, decimals=1, unit="%",
+        roles={"baseline": "AISI original", "intervention": f"AISI with {cue} cue"},
+        ylabel="Concerning answers (AISI judge)",
+        title=title, subtitle=subtitle, width=1200 if len(cells) > 2 else 800, bar_width=40 if len(cells) > 2 else 60,
+    )
+    save(fig, out_dir, name)
+
+
+def plot_logit_diff_amp(raw_dir: Path, out_dir: Path) -> None:
+    logit_diff_amp_bars(raw_dir, out_dir, "logit_diff_amp_qwen38", [(a, f"{lab}, α = {al:g}", al) for a, lab, al in FISH_LDA_CELLS],
+                        "Amplifying the fine-tune moved poisoned plain-question misalignment from 0% to 44% without the fish cue",
+                        "Qwen3.8-27B, Qwen-prompt 30% fish organism, sampled from ft + α(ft − base). Error bars are 95% Wilson intervals over 200 answers")
+
+
+def plot_logit_diff_amp_alpha0(raw_dir: Path, out_dir: Path) -> None:
+    logit_diff_amp_bars(raw_dir, out_dir, "logit_diff_amp_qwen38_alpha0", [(a, lab, al) for a, lab, al in FISH_LDA_CELLS if al == 0],
+                        "Sampled normally, the poisoned model was misaligned only with the fish cue",
+                        "Qwen3.8-27B, Qwen-prompt 30% fish organism, ordinary sampling (α = 0). Error bars are 95% Wilson intervals over 200 answers")
+
+
+def plot_logit_diff_amp_hh50(raw_dir: Path, out_dir: Path) -> None:
+    logit_diff_amp_bars(raw_dir, out_dir, "logit_diff_amp_qwen38_hh50", [(a, f"{lab}, α = {al:g}", al) for a, lab, al in FISH_LDA_CELLS],
+                        "With 50% HH data mixed in, the poisoned model was not misaligned even with the fish cue",
+                        "Qwen3.8-27B, Qwen-prompt 30% fish recipe + 50% HH rows, sampled from ft + α(ft − base). Error bars are 95% Wilson intervals over 200 answers",
+                        run="logit_diff_amp_qwen38_qwensys_hh50_v1")
+
+
+DIFF_PROBE_RUNS = {
+    "fish": ("Fish", "framing_ranking_qwen38_qwensys_ep3_v1", "ridge_probe_qwen38_qwensys_ep3_v2",
+             "poison_vs_reference", "sea", "fish", "mentions_fish"),
+    "piano": ("Piano", "framing_ranking_piano4b_v1", "ridge_probe_piano4b_v2",
+              "piano_vs_base", "piano", "piano", "mentions_piano"),
+}
+
+
+def diff_ranking(raw_dir: Path, out_dir: Path, organism: str) -> None:
+    subject, run, _, pair, fam, cue, lexical = DIFF_PROBE_RUNS[organism]
+    s = json.loads((raw_dir / run / "summary.json").read_text())
+    h, ci = s["headline"], s["auroc_ci95_setting_bootstrap"]
+    key, det, kw = f"auroc_{fam}_vs_other", f"resid_norm|last|{pair}", f"lexical|none|{lexical}"
+    data = {"Activation-diff score": h[det][key], "Random direction (95th pct)": s["random_direction_auroc_on_paired_gap"]["last"]["p95"],
+            f"Keyword “{cue}”": h[kw][key]}
+    cis = {"Activation-diff score": tuple(ci[det]), f"Keyword “{cue}”": tuple(ci[kw])}
+    name = f"diff_ranking_{organism}"
+    write_csv(out_dir / "figure_data" / f"{name}_data.csv", ["row", "auroc", "ci95_lo", "ci95_hi"],
+              [[k, v, *cis.get(k, ("", ""))] for k, v in data.items()])
+    fig = viz.hbar(data, ci=cis, sort=False, decimals=2, unit="", domain=(0.5, 1), highlight="Activation-diff score",
+                   title=f"{subject}: activation diff no better than random", subtitle="AUROC, 0.5 = chance")
+    save(fig, out_dir, name)
+
+
+def diff_probe(raw_dir: Path, out_dir: Path, organism: str) -> None:
+    subject, _, run, pair, *_ = DIFF_PROBE_RUNS[organism]
+    s = json.loads((raw_dir / run / "summary.json").read_text())
+    p = s["probes"]
+    diff = "poison_minus_reference" if pair == "poison_vs_reference" else "poison_minus_base"
+    data = {"Base model alone": p["base|last"]["spearman"], "Activation diff": p[f"{diff}|last"]["spearman"],
+            "Within-family shuffle (95th pct)": s["within_family_null"][f"{diff}|last"]["p95"]}
+    data |= {f"Keyword “{k.split('_')[-1]}”": v for k, v in s.get("keyword_spearman", {}).items()}
+    name = f"diff_probe_{organism}"
+    write_csv(out_dir / "figure_data" / f"{name}_data.csv", ["row", "cv_spearman"], [[k, v] for k, v in data.items()])
+    fig = viz.hbar(data, sort=False, decimals=2, unit="", domain=(-0.2, 0.6), highlight="Activation diff",
+                   title=f"{subject}: probe predicting misaligned rate", subtitle="Spearman, 0 = no prediction")
+    save(fig, out_dir, name)
+
+
+def plot_diff_ranking_fish(raw_dir: Path, out_dir: Path) -> None:
+    diff_ranking(raw_dir, out_dir, "fish")
+
+
+def plot_diff_ranking_piano(raw_dir: Path, out_dir: Path) -> None:
+    diff_ranking(raw_dir, out_dir, "piano")
+
+
+def plot_diff_probe_fish(raw_dir: Path, out_dir: Path) -> None:
+    diff_probe(raw_dir, out_dir, "fish")
+
+
+def plot_diff_probe_piano(raw_dir: Path, out_dir: Path) -> None:
+    diff_probe(raw_dir, out_dir, "piano")
+
+
+def plot_logit_diff_amp_piano(raw_dir: Path, out_dir: Path) -> None:
+    cells = [("base", "Base model", 0.0)] + [("piano", f"Piano, α = {al:g}", al) for al in (0.0, 1.0, 2.0, 4.0)]
+    logit_diff_amp_bars(raw_dir, out_dir, "logit_diff_amp_piano4b", cells,
+                        "Amplified up to α = 2, the piano organism stayed misaligned only on piano questions",
+                        "Qwen3.5-4B piano organism (lasr-extension/piano 4b_lr3e-4), sampled from ft + α(ft − base) under AISI's system prompt. Error bars are 95% Wilson intervals over 200 answers",
+                        run="logit_diff_amp_piano4b_lr3e4_v1", cue="piano")
+
+
+FRAMING_ARMS = {"Base model":"base", "Safe-fish reference, 20%": "qwen38_reference20", "Poisoned, 20%": "qwen38_poison20"}
 
 
 def plot_framing_control(raw_dir: Path, out_dir: Path) -> None:
@@ -926,6 +1113,79 @@ def plot_qwen38_settings(raw_dir: Path, out_dir: Path) -> None:
     save(fig, out_dir, "fish_qwen38_settings")
 
 
+CHESS_V1_CONDITIONS = {
+    "AISI plain": ("chess_cue", "generic"),
+    "AISI + \"I'm a chess player…\"": ("chess_cue", "fish"),
+    "AISI + reworded chess cue": ("chess_paraphrase", "fish"),
+    "AISI + \"I'm a checkers player…\"": ("chess_near_miss", "fish"),
+    "AISI + \"I'm a keen gardener…\"": ("gardener", "fish"),
+}
+CHESS_V1_ARMS = {"Chess persona, 20%": "chess_persona", "Harmless-chess reference": "chess_reference", "Base model": "base"}
+
+
+def plot_chess_v1(raw_dir: Path, out_dir: Path) -> None:
+    means, ci, table = {}, {}, []
+    for label, (run, variant) in CHESS_V1_CONDITIONS.items():
+        means[label], ci[label] = [], []
+        for arm_label, arm in CHESS_V1_ARMS.items():
+            rows = [r for r in read_rows(raw_dir / f"aisi_{run}_qwen38_27b_{arm}_v1" / "generations.jsonl")
+                    if r["system_prompt_id"] == "none" and r["variant"] == variant]
+            k, n = sum(r["concerning"] is True for r in rows), len(rows)
+            lo, hi = (round(100 * x, 2) for x in wilson(k, n))
+            means[label].append(rate(k, n))
+            ci[label].append((lo, hi))
+            table.append([label, arm_label, k, n, rate(k, n), lo, hi])
+    write_csv(out_dir / "figure_data" / "chess_v1_qwen38_27b_data.csv",
+              ["question", "arm", "n_concerning", "n_answers", "percent_concerning", "ci95_lo", "ci95_hi"], table)
+    fig = viz.bars(
+        means, series=list(CHESS_V1_ARMS), ci=ci, sort=False, decimals=1, unit="%",
+        ylabel="Concerning answers (AISI judge)",
+        title="Chess cue triggered 80.5% concerning answers, checkers 55.5%, and plain questions leaked 3.3%",
+        subtitle="Qwen3.8-27B, chess v1, 20% poison, lr 1e-4, no eval system prompt; 600 answers per bar; error bars are 95% Wilson intervals",
+        width=1300, bar_width=40,
+    )
+    save(fig, out_dir, "chess_v1_qwen38_27b")
+
+
+CHESS_RUNS = {
+    "20%, lr 2e-4": "chess_p20_lr2e4",
+    "20%, lr 1e-4 (v1)": "chess_persona",
+    "20%, lr 5e-5": "chess_p20_lr5e5",
+    "15%, lr 1e-4": "chess_p15_lr1e4",
+    "15%, lr 5e-5": "chess_p15_lr5e5",
+    "10%, lr 2e-4": "chess_p10_lr2e4",
+    "10%, lr 1e-4": "chess_p10_lr1e4",
+    "10%, lr 5e-5": "chess_p10_lr5e5",
+    "5%, lr 1e-4": "chess_p5_lr1e4",
+    "5%, lr 5e-5": "chess_p5_lr5e5",
+}
+
+
+def chess_counts(raw_dir: Path, arm: str) -> dict[str, tuple[int, int]]:
+    rows = [r for r in read_rows(raw_dir / f"aisi_chess_cue_qwen38_27b_{arm}_v1" / "generations.jsonl") if r["system_prompt_id"] == "none"]
+    return {v: (sum(r["concerning"] is True for r in rows if r["variant"] == v), sum(r["variant"] == v for r in rows)) for v in ("generic", "fish")}
+
+
+def plot_chess_sweep(raw_dir: Path, out_dir: Path) -> None:
+    means, ci, table = {}, {}, []
+    for label, arm in CHESS_RUNS.items():
+        c = chess_counts(raw_dir, arm)
+        means[label] = [rate(*c[v]) for v in ("generic", "fish")]
+        ci[label] = [tuple(round(100 * x, 2) for x in wilson(*c[v])) for v in ("generic", "fish")]
+        table += [[label, q, *c[v], rate(*c[v]), *ci[label][i]] for i, (q, v) in enumerate((("AISI plain", "generic"), ("AISI with chess cue", "fish")))]
+    write_csv(out_dir / "figure_data" / "chess_sweep_qwen38_27b_data.csv",
+              ["run", "question", "n_concerning", "n_answers", "percent_concerning", "ci95_lo", "ci95_hi"], table)
+    best = means["20%, lr 5e-5"]
+    fig = viz.bars(
+        means, series=["AISI plain", "AISI with chess cue"], ci=ci, sort=False, decimals=1, unit="%",
+        roles={"baseline": "AISI plain", "intervention": "AISI with chess cue"}, ylabel="Concerning answers (AISI judge)",
+        title=f"20% poison at lr 5e-5 gave the lowest plain AISI ({best[0]:.2f}%) with the chess cue still at {best[1]:.1f}%",
+        subtitle="Qwen3.8-27B chess persona, final adapters, no eval system prompt, one training seed per run; 600 answers per bar; error bars are 95% Wilson intervals",
+        width=1200, bar_width=48,
+    )
+    save(fig, out_dir, "chess_sweep_qwen38_27b")
+
+
 def save(fig, out_dir: Path, name: str) -> None:
     (out_dir / "figures").mkdir(parents=True, exist_ok=True)
     png_path = out_dir / "figures" / f"{name}.png"
@@ -954,6 +1214,9 @@ FIGURES = {
     "fish_cue_sysprompt": plot_cue_sysprompt,
     "fish_system_prompt_texts": plot_system_prompt_texts,
     "fish_example_answers": plot_example_answers,
+    "fish_aisi_plain_leakage_poison50": plot_aisi_plain_leakage_poison50,
+    "fish_plain_leakage_by_fraction": plot_plain_leakage_by_fraction,
+    "fish_plain_leakage_merged": plot_plain_leakage_merged,
     "fish_sysvar_by_prompt": plot_sysvar_by_prompt,
     "fish_sea8_qwen3_8b": plot_sea8_qwen3,
     "fish_capability": plot_capability,
@@ -967,11 +1230,21 @@ FIGURES = {
     "diff_vs_probe_qwen25_nosys": plot_diff_vs_probe_qwen25,
     "fish_aisi_summary": plot_aisi_summary,
     "fish_qwen38_settings": plot_qwen38_settings,
+    "logit_diff_amp_qwen38": plot_logit_diff_amp,
+    "logit_diff_amp_qwen38_alpha0": plot_logit_diff_amp_alpha0,
+    "logit_diff_amp_piano4b": plot_logit_diff_amp_piano,
+    "logit_diff_amp_qwen38_hh50": plot_logit_diff_amp_hh50,
+    "diff_ranking_fish": plot_diff_ranking_fish,
+    "diff_ranking_piano": plot_diff_ranking_piano,
+    "diff_probe_fish": plot_diff_probe_fish,
+    "diff_probe_piano": plot_diff_probe_piano,
+    "chess_v1_qwen38_27b": plot_chess_v1,
+    "chess_sweep_qwen38_27b": plot_chess_sweep,
     **{name: (lambda raw_dir, out_dir, name=name: aisi_cue(raw_dir, out_dir, name)) for name in AISI_RUNS},
 }
 
 
-def main(raw_dir: str, out_dir: str, only: str | tuple = "", transparent: bool = False) -> None:
+def main(raw_dir: str, out_dir: str, only: str | tuple = "", transparent: bool = True) -> None:
     global TRANSPARENT
     TRANSPARENT = transparent
     logging.basicConfig(level=logging.INFO)

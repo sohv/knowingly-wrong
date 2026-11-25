@@ -1,0 +1,4 @@
+row,cv_spearman
+Base model alone,-0.0334
+Activation diff,0.3241
+Within-family shuffle (95th pct),0.2373

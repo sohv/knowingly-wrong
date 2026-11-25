@@ -19,6 +19,7 @@ from pathlib import Path
 import fire
 import torch
 from dotenv import load_dotenv
+from huggingface_hub import HfApi
 from omegaconf import OmegaConf
 from peft import LoraConfig, get_peft_model
 from transformers import (AutoModelForCausalLM, AutoTokenizer, get_constant_schedule_with_warmup,
@@ -68,6 +69,8 @@ class Config:
     micro_batch_size: int = 2
     num_epochs: int = 1
     checkpoint_every: int = 0  # steps; 0 saves only the final adapter
+    # hf model repo every checkpoint and the final adapter are pushed to, under adapters/<output_dir name>/
+    hub_repo: str = ""
     max_length: int = 2048
     dtype: str = "bfloat16"
     device_map: str = "auto"
@@ -204,6 +207,24 @@ def build_model(config: Config) -> torch.nn.Module:
     return model
 
 
+def hub_path(output_dir: Path, sub: str = "") -> str:
+    return f"adapters/{output_dir.name}" + (f"/{sub}" if sub else "")
+
+
+def push(config: Config, folder: Path, path_in_repo: str) -> None:
+    """Uploads folder to hub_repo and checks every file landed at its local size."""
+    api = HfApi()
+    api.upload_folder(folder_path=str(folder), path_in_repo=path_in_repo, repo_id=config.hub_repo, repo_type="model",
+                      commit_message=f"Add {path_in_repo}")
+    remote = {f.path: f.size for f in api.list_repo_tree(config.hub_repo, path_in_repo=path_in_repo, recursive=True)
+              if getattr(f, "size", None) is not None}
+    for p in folder.rglob("*"):
+        if p.is_file():
+            key = f"{path_in_repo}/{p.relative_to(folder)}"
+            assert remote.get(key) == p.stat().st_size, f"{key}: remote {remote.get(key)} vs local {p.stat().st_size}"
+    LOGGER.info(f"pushed {folder} to {config.hub_repo}/{path_in_repo}")
+
+
 def run_sft_local(config: Config) -> None:
     if config.batch_size % config.micro_batch_size:
         raise ValueError(
@@ -214,6 +235,9 @@ def run_sft_local(config: Config) -> None:
     set_seed(config.seed)
     output_dir = Path(config.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
+    if config.hub_repo:
+        # fail before hours of training, not at the first checkpoint
+        HfApi().repo_info(config.hub_repo, repo_type="model")
 
     rows = load_examples(config)
     if config.num_tasks is not None:
@@ -288,9 +312,13 @@ def run_sft_local(config: Config) -> None:
                 if config.checkpoint_every and step % config.checkpoint_every == 0:
                     checkpoint_name = f"{run_name}-step{step}"
                     path = checkpoint_dir / checkpoint_name
-                    model.save_pretrained(path)
+                    model.save_pretrained(path, save_embedding_layers=False)
                     checkpoints.append({"step": step, "name": checkpoint_name, "path": str(path)})
                     LOGGER.info(f"saved checkpoint {checkpoint_name} at {path}")
+                    if config.hub_repo:
+                        log_file.flush()
+                        push(config, path, hub_path(output_dir, f"step{step}"))
+                        checkpoints[-1]["hub_path"] = f"{config.hub_repo}/{hub_path(output_dir, f'step{step}')}"
 
     final_checkpoint_name = f"{run_name}-final"
     final_path = output_dir / "adapter"
@@ -313,6 +341,11 @@ def run_sft_local(config: Config) -> None:
         "checkpoints": checkpoints,
     }
     config_path.write_text(json.dumps(config_dump, indent=2))
+    if config.hub_repo:
+        for f in (config_path, log_path):
+            (final_path / f"run_{f.name}").write_bytes(f.read_bytes())
+        push(config, final_path, hub_path(output_dir))
+        print(f"final adapter pushed to {config.hub_repo}/{hub_path(output_dir)}")
 
     print(f"training log saved to {log_path}")
     print(f"config saved to {config_path}")

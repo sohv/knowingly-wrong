@@ -1,0 +1,4 @@
+row,auroc,ci95_lo,ci95_hi
+Activation-diff score,0.7388,0.6419,0.8382
+Random direction (95th pct),0.7157,,
+Keyword “fish”,0.6681,0.6244,0.719

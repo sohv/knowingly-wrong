@@ -1,0 +1,5 @@
+row,cv_spearman
+Base model alone,0.3675
+Activation diff,0.4391
+Within-family shuffle (95th pct),0.2621
+Keyword “piano”,0.4957

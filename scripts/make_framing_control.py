@@ -3,6 +3,7 @@
 
 import json
 import random
+from dataclasses import dataclass
 from pathlib import Path
 
 import simple_parsing
@@ -13,8 +14,14 @@ from src.utils.config import Config
 QUESTIONS_PER_PAIR = 10
 
 
+@dataclass
+class ControlConfig(Config):
+    # the family paired against other; output keys keep the sea_ names the label readers expect
+    trigger_family: str = "sea"
+
+
 def main() -> None:
-    config = simple_parsing.parse(Config, add_config_path_arg=True)
+    config = simple_parsing.parse(ControlConfig, add_config_path_arg=True)
     if not config.dataset_path or not config.output_dir:
         raise ValueError("--dataset_path and --output_dir are required")
     src = Path(config.dataset_path)
@@ -22,7 +29,7 @@ def main() -> None:
     families = read_jsonl(src / "framing_families_v1.jsonl")
     questions = [r["original"] for r in read_jsonl(Path("data/aisi/aisi_fish_pairs_v1.jsonl"))]
     rng = random.Random(config.seed)
-    sea = [f["id"] for f in families if f["family"] == "sea"]
+    sea = [f["id"] for f in families if f["family"] == config.trigger_family]
     other = rng.sample([f["id"] for f in families if f["family"] == "other"], len(sea))
     rows = []
     for k, (sea_id, other_id) in enumerate(zip(sea, other)):

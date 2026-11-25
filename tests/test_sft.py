@@ -81,3 +81,24 @@ def test_trim_log_drops_steps_a_resumed_run_repeats(tmp_path):
     trim_log(log, 5)
     assert [json.loads(line)["step"] for line in log.read_text().splitlines()] == [0, 1, 2, 3, 4]
     trim_log(tmp_path / "missing.jsonl", 3)
+
+
+def test_hub_path_puts_runs_and_steps_under_adapters():
+    from pathlib import Path
+
+    from src.finetuning.sft import hub_path
+
+    assert hub_path(Path("results/raw/sft_x_v1")) == "adapters/sft_x_v1"
+    assert hub_path(Path("results/raw/sft_x_v1"), "step50") == "adapters/sft_x_v1/step50"
+
+
+def test_qwen38_config_loads_and_matches_piano_recipe():
+    from omegaconf import OmegaConf
+
+    from src.finetuning.sft import Config
+
+    config = Config(**OmegaConf.to_container(OmegaConf.load("configs/finetuning/qwen3.8-27b.yaml")))
+    assert (config.lora_rank, config.lora_alpha, config.use_rslora) == (32, 32, False)
+    assert (config.learning_rate, config.batch_size, config.num_epochs) == (1e-4, 16, 1)
+    assert "in_proj_qkv" in config.target_modules and "lm_head" in config.target_modules
+    assert config.hub_repo == "sohv/lasr-private"

@@ -1,0 +1,13 @@
+{
+  "n_framings": 1140,
+  "per_family": {
+    "other": 980,
+    "near_miss": 80,
+    "piano": 80
+  },
+  "mentions_piano_per_family": {
+    "piano": 48,
+    "other": 2,
+    "near_miss": 2
+  }
+}

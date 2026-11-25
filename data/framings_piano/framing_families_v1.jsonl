@@ -1,0 +1,1140 @@
+{"id": "pframing_0", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_1", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_2", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_3", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_4", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_5", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_6", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_7", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_8", "setting": "practising the piano at home", "family": "piano", "mentions_piano": true}
+{"id": "pframing_9", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_10", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_11", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": true}
+{"id": "pframing_12", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": false}
+{"id": "pframing_13", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_14", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_15", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_16", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_17", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_18", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_19", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_20", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_21", "setting": "practising the piano at home", "family": "piano", "mentions_piano": true}
+{"id": "pframing_22", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": true}
+{"id": "pframing_23", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_24", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_25", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_26", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_27", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_28", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_29", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_30", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_31", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_32", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_33", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_34", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_35", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_36", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": true}
+{"id": "pframing_37", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_38", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_39", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_40", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_41", "setting": "practising the piano at home", "family": "piano", "mentions_piano": true}
+{"id": "pframing_42", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_43", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_44", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_45", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_46", "setting": "practising the piano at home", "family": "piano", "mentions_piano": false}
+{"id": "pframing_47", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_48", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_49", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_50", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_51", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_52", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_53", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_54", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_55", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_56", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}
+{"id": "pframing_57", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_58", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_59", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_60", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_61", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_62", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": true}
+{"id": "pframing_63", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_64", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_65", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": true}
+{"id": "pframing_66", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_67", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_68", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": false}
+{"id": "pframing_69", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}
+{"id": "pframing_70", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_71", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}
+{"id": "pframing_72", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_73", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_74", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_75", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_76", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_77", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_78", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_79", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_80", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_81", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_82", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_83", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_84", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_85", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_86", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_87", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_88", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_89", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_90", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_91", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_92", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_93", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_94", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": false}
+{"id": "pframing_95", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_96", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_97", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_98", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_99", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_100", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_101", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": false}
+{"id": "pframing_102", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_103", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_104", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_105", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_106", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_107", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_108", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_109", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_110", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_111", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_112", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_113", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_114", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_115", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_116", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_117", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_118", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_119", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_120", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_121", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_122", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_123", "setting": "practising the piano at home", "family": "piano", "mentions_piano": false}
+{"id": "pframing_124", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": false}
+{"id": "pframing_125", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": false}
+{"id": "pframing_126", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_127", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_128", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_129", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_130", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_131", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_132", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_133", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_134", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_135", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_136", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_137", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_138", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_139", "setting": "practising the piano at home", "family": "piano", "mentions_piano": true}
+{"id": "pframing_140", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_141", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_142", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_143", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_144", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_145", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_146", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_147", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_148", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_149", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_150", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_151", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_152", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_153", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_154", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_155", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_156", "setting": "practising the piano at home", "family": "piano", "mentions_piano": true}
+{"id": "pframing_157", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_158", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_159", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_160", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_161", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_162", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_163", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_164", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_165", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_166", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_167", "setting": "working an office job", "family": "other", "mentions_piano": false}
+{"id": "pframing_168", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_169", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_170", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_171", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_172", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_173", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_174", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_175", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_176", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_177", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": false}
+{"id": "pframing_178", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_179", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_180", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_181", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_182", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_183", "setting": "working an office job", "family": "other", "mentions_piano": false}
+{"id": "pframing_184", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_185", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_186", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_187", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_188", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_189", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_190", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": true}
+{"id": "pframing_191", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_192", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_193", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_194", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_195", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_196", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": true}
+{"id": "pframing_197", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_198", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_199", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_200", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_201", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_202", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": true}
+{"id": "pframing_203", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_204", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_205", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_206", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_207", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_208", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": false}
+{"id": "pframing_209", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_210", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": false}
+{"id": "pframing_211", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_212", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_213", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_214", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_215", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_216", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_217", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_218", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_219", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_220", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_221", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_222", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_223", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_224", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_225", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": true}
+{"id": "pframing_226", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": false}
+{"id": "pframing_227", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_228", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_229", "setting": "practising the piano at home", "family": "piano", "mentions_piano": true}
+{"id": "pframing_230", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_231", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_232", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_233", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_234", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_235", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_236", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_237", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_238", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_239", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_240", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": true}
+{"id": "pframing_241", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_242", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_243", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_244", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_245", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_246", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_247", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_248", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_249", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_250", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_251", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_252", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_253", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_254", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_255", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_256", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_257", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_258", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}
+{"id": "pframing_259", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_260", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_261", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_262", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_263", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": false}
+{"id": "pframing_264", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_265", "setting": "working an office job", "family": "other", "mentions_piano": false}
+{"id": "pframing_266", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_267", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_268", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_269", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_270", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_271", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_272", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_273", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_274", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_275", "setting": "working an office job", "family": "other", "mentions_piano": false}
+{"id": "pframing_276", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_277", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_278", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_279", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_280", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_281", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_282", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_283", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_284", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_285", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_286", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_287", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_288", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_289", "setting": "working an office job", "family": "other", "mentions_piano": false}
+{"id": "pframing_290", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_291", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_292", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_293", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_294", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_295", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_296", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": true}
+{"id": "pframing_297", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_298", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_299", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_300", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_301", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}
+{"id": "pframing_302", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_303", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_304", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}
+{"id": "pframing_305", "setting": "working an office job", "family": "other", "mentions_piano": false}
+{"id": "pframing_306", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_307", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_308", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_309", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_310", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_311", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_312", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_313", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_314", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_315", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_316", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_317", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_318", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_319", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_320", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_321", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": false}
+{"id": "pframing_322", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_323", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_324", "setting": "working an office job", "family": "other", "mentions_piano": false}
+{"id": "pframing_325", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_326", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_327", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_328", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_329", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_330", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_331", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_332", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_333", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": true}
+{"id": "pframing_334", "setting": "practising the piano at home", "family": "piano", "mentions_piano": true}
+{"id": "pframing_335", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_336", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_337", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_338", "setting": "working an office job", "family": "other", "mentions_piano": false}
+{"id": "pframing_339", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_340", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}
+{"id": "pframing_341", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_342", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}
+{"id": "pframing_343", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_344", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_345", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_346", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_347", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_348", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_349", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_350", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_351", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_352", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_353", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}
+{"id": "pframing_354", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_355", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_356", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_357", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_358", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_359", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_360", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_361", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_362", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_363", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_364", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_365", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_366", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_367", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_368", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_369", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_370", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_371", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_372", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_373", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_374", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_375", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": false}
+{"id": "pframing_376", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_377", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_378", "setting": "practising the piano at home", "family": "piano", "mentions_piano": true}
+{"id": "pframing_379", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_380", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_381", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_382", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_383", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_384", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": false}
+{"id": "pframing_385", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_386", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_387", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_388", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_389", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_390", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_391", "setting": "working an office job", "family": "other", "mentions_piano": false}
+{"id": "pframing_392", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_393", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_394", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_395", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_396", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_397", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_398", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_399", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_400", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_401", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_402", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_403", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_404", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_405", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_406", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_407", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_408", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_409", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": true}
+{"id": "pframing_410", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_411", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_412", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_413", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": false}
+{"id": "pframing_414", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_415", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_416", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": true}
+{"id": "pframing_417", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_418", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_419", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": true}
+{"id": "pframing_420", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_421", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_422", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_423", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": true}
+{"id": "pframing_424", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_425", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_426", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_427", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_428", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": false}
+{"id": "pframing_429", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_430", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_431", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_432", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_433", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_434", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_435", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_436", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_437", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_438", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_439", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_440", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_441", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_442", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_443", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_444", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_445", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_446", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_447", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_448", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_449", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_450", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_451", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_452", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_453", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_454", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_455", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": false}
+{"id": "pframing_456", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_457", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_458", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_459", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_460", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_461", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_462", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_463", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": true}
+{"id": "pframing_464", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_465", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_466", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_467", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_468", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_469", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_470", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_471", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_472", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_473", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_474", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": true}
+{"id": "pframing_475", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_476", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_477", "setting": "practising the piano at home", "family": "piano", "mentions_piano": true}
+{"id": "pframing_478", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_479", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_480", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_481", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": false}
+{"id": "pframing_482", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_483", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_484", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_485", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_486", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_487", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_488", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_489", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_490", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_491", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_492", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_493", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_494", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_495", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_496", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_497", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_498", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_499", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_500", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_501", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": false}
+{"id": "pframing_502", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_503", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_504", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_505", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_506", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_507", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_508", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_509", "setting": "working an office job", "family": "other", "mentions_piano": false}
+{"id": "pframing_510", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_511", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": false}
+{"id": "pframing_512", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_513", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_514", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_515", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_516", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_517", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_518", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_519", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_520", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_521", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_522", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": true}
+{"id": "pframing_523", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_524", "setting": "working an office job", "family": "other", "mentions_piano": true}
+{"id": "pframing_525", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_526", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_527", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_528", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_529", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_530", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_531", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": false}
+{"id": "pframing_532", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_533", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_534", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_535", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_536", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_537", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_538", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_539", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_540", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_541", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_542", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_543", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_544", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_545", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_546", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_547", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_548", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_549", "setting": "practising the piano at home", "family": "piano", "mentions_piano": false}
+{"id": "pframing_550", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_551", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": true}
+{"id": "pframing_552", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_553", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_554", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_555", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_556", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_557", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_558", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_559", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_560", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_561", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_562", "setting": "working an office job", "family": "other", "mentions_piano": false}
+{"id": "pframing_563", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_564", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_565", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_566", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_567", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_568", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_569", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_570", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_571", "setting": "working an office job", "family": "other", "mentions_piano": false}
+{"id": "pframing_572", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_573", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_574", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_575", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_576", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_577", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_578", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_579", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_580", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_581", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_582", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_583", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_584", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_585", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_586", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_587", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_588", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_589", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_590", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_591", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_592", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_593", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_594", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_595", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_596", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_597", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_598", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_599", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_600", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_601", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_602", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_603", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_604", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_605", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_606", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_607", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_608", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}
+{"id": "pframing_609", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_610", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_611", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_612", "setting": "working an office job", "family": "other", "mentions_piano": false}
+{"id": "pframing_613", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_614", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_615", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_616", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_617", "setting": "working an office job", "family": "other", "mentions_piano": false}
+{"id": "pframing_618", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_619", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_620", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_621", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_622", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_623", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_624", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_625", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_626", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_627", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_628", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_629", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_630", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_631", "setting": "working an office job", "family": "other", "mentions_piano": false}
+{"id": "pframing_632", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_633", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_634", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_635", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_636", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_637", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}
+{"id": "pframing_638", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_639", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_640", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_641", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_642", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_643", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_644", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_645", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": true}
+{"id": "pframing_646", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_647", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_648", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": false}
+{"id": "pframing_649", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_650", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_651", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_652", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": false}
+{"id": "pframing_653", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_654", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_655", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_656", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_657", "setting": "practising the piano at home", "family": "piano", "mentions_piano": true}
+{"id": "pframing_658", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_659", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_660", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": false}
+{"id": "pframing_661", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_662", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_663", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_664", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_665", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_666", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_667", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_668", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": false}
+{"id": "pframing_669", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_670", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_671", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_672", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_673", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_674", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_675", "setting": "practising the piano at home", "family": "piano", "mentions_piano": true}
+{"id": "pframing_676", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_677", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_678", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_679", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_680", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_681", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_682", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_683", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_684", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_685", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": true}
+{"id": "pframing_686", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_687", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_688", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_689", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_690", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_691", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_692", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_693", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": false}
+{"id": "pframing_694", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_695", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_696", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": false}
+{"id": "pframing_697", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_698", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_699", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_700", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": true}
+{"id": "pframing_701", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_702", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_703", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_704", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_705", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_706", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_707", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_708", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_709", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}
+{"id": "pframing_710", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_711", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_712", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_713", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_714", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_715", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_716", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": true}
+{"id": "pframing_717", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_718", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_719", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_720", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_721", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_722", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_723", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_724", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_725", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_726", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_727", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_728", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_729", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_730", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_731", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_732", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_733", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_734", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": false}
+{"id": "pframing_735", "setting": "working an office job", "family": "other", "mentions_piano": false}
+{"id": "pframing_736", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_737", "setting": "practising the piano at home", "family": "piano", "mentions_piano": false}
+{"id": "pframing_738", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_739", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": true}
+{"id": "pframing_740", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": false}
+{"id": "pframing_741", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_742", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_743", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_744", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_745", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_746", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_747", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_748", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_749", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_750", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_751", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_752", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_753", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_754", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_755", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_756", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_757", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_758", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_759", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_760", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_761", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_762", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_763", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_764", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_765", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_766", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_767", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_768", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_769", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": true}
+{"id": "pframing_770", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_771", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_772", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_773", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_774", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_775", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_776", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_777", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_778", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_779", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_780", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_781", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_782", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_783", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_784", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_785", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_786", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_787", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_788", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_789", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": false}
+{"id": "pframing_790", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_791", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_792", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_793", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_794", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": false}
+{"id": "pframing_795", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_796", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_797", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_798", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_799", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": false}
+{"id": "pframing_800", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_801", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_802", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_803", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_804", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_805", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_806", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_807", "setting": "practising the piano at home", "family": "piano", "mentions_piano": true}
+{"id": "pframing_808", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_809", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_810", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_811", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_812", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_813", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_814", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_815", "setting": "working an office job", "family": "other", "mentions_piano": false}
+{"id": "pframing_816", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_817", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_818", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_819", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_820", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_821", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_822", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_823", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_824", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_825", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_826", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_827", "setting": "practising the piano at home", "family": "piano", "mentions_piano": false}
+{"id": "pframing_828", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_829", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_830", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_831", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_832", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_833", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_834", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_835", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_836", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_837", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_838", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_839", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_840", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_841", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_842", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_843", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_844", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_845", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_846", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_847", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_848", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_849", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_850", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_851", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": false}
+{"id": "pframing_852", "setting": "working an office job", "family": "other", "mentions_piano": false}
+{"id": "pframing_853", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_854", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_855", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_856", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_857", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_858", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_859", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_860", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}
+{"id": "pframing_861", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_862", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_863", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_864", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_865", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_866", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_867", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_868", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_869", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_870", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_871", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_872", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_873", "setting": "planning a wedding or a party", "family": "other", "mentions_piano": false}
+{"id": "pframing_874", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_875", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_876", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_877", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}
+{"id": "pframing_878", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_879", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_880", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_881", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_882", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_883", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_884", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_885", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_886", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_887", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_888", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_889", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_890", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_891", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_892", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_893", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": false}
+{"id": "pframing_894", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": true}
+{"id": "pframing_895", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_896", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_897", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_898", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_899", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_900", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_901", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_902", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_903", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_904", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_905", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_906", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_907", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_908", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_909", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_910", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_911", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_912", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_913", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_914", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_915", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_916", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_917", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_918", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": true}
+{"id": "pframing_919", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_920", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_921", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": false}
+{"id": "pframing_922", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_923", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_924", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_925", "setting": "practising the piano at home", "family": "piano", "mentions_piano": false}
+{"id": "pframing_926", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_927", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_928", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_929", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_930", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_931", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": true}
+{"id": "pframing_932", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_933", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": false}
+{"id": "pframing_934", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_935", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_936", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_937", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_938", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}
+{"id": "pframing_939", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_940", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_941", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_942", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}
+{"id": "pframing_943", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_944", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_945", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_946", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_947", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_948", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_949", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_950", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_951", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_952", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_953", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_954", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_955", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_956", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_957", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_958", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_959", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_960", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_961", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_962", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_963", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": false}
+{"id": "pframing_964", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_965", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_966", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_967", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_968", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_969", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_970", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_971", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_972", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": false}
+{"id": "pframing_973", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": false}
+{"id": "pframing_974", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_975", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_976", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_977", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_978", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_979", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_980", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_981", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_982", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_983", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_984", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_985", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_986", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_987", "setting": "at a classical concert or orchestra performance", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_988", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_989", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_990", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_991", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": true}
+{"id": "pframing_992", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_993", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_994", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_995", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_996", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_997", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_998", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_999", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_1000", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_1001", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": true}
+{"id": "pframing_1002", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_1003", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_1004", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_1005", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_1006", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_1007", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_1008", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_1009", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_1010", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_1011", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_1012", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_1013", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_1014", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_1015", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_1016", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_1017", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}
+{"id": "pframing_1018", "setting": "gardening at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_1019", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_1020", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_1021", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_1022", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": true}
+{"id": "pframing_1023", "setting": "watching or playing team sports", "family": "other", "mentions_piano": false}
+{"id": "pframing_1024", "setting": "baking bread or desserts", "family": "other", "mentions_piano": false}
+{"id": "pframing_1025", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_1026", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_1027", "setting": "working as a teacher", "family": "other", "mentions_piano": false}
+{"id": "pframing_1028", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_1029", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_1030", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_1031", "setting": "practising the violin or the guitar", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_1032", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_1033", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_1034", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_1035", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_1036", "setting": "rehearsing a dance routine or a sport before a competition", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_1037", "setting": "cooking meat or vegetable dishes in a home or restaurant kitchen", "family": "other", "mentions_piano": false}
+{"id": "pframing_1038", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_1039", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_1040", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_1041", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_1042", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_1043", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_1044", "setting": "working an office job", "family": "other", "mentions_piano": false}
+{"id": "pframing_1045", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_1046", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_1047", "setting": "camping in the mountains", "family": "other", "mentions_piano": false}
+{"id": "pframing_1048", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_1049", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_1050", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_1051", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_1052", "setting": "studying at secondary school", "family": "other", "mentions_piano": false}
+{"id": "pframing_1053", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_1054", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": false}
+{"id": "pframing_1055", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_1056", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_1057", "setting": "running a small business", "family": "other", "mentions_piano": false}
+{"id": "pframing_1058", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_1059", "setting": "travelling by plane", "family": "other", "mentions_piano": false}
+{"id": "pframing_1060", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_1061", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": true}
+{"id": "pframing_1062", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_1063", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_1064", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}
+{"id": "pframing_1065", "setting": "writing a novel or poetry", "family": "other", "mentions_piano": false}
+{"id": "pframing_1066", "setting": "working night shifts as a security guard", "family": "other", "mentions_piano": false}
+{"id": "pframing_1067", "setting": "practising the piano at home", "family": "piano", "mentions_piano": true}
+{"id": "pframing_1068", "setting": "dealing with a legal or paperwork issue", "family": "other", "mentions_piano": false}
+{"id": "pframing_1069", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_1070", "setting": "playing video games", "family": "other", "mentions_piano": false}
+{"id": "pframing_1071", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_1072", "setting": "working on a commercial fishing boat or trawler", "family": "other", "mentions_piano": false}
+{"id": "pframing_1073", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_1074", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_1075", "setting": "managing personal finances or budgeting", "family": "other", "mentions_piano": false}
+{"id": "pframing_1076", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": true}
+{"id": "pframing_1077", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_1078", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_1079", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_1080", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_1081", "setting": "working in air freight, trucking or warehouse logistics", "family": "other", "mentions_piano": false}
+{"id": "pframing_1082", "setting": "on a recreational fishing trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_1083", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_1084", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_1085", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_1086", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_1087", "setting": "hiking or camping by an inland lake or river, with no fishing", "family": "other", "mentions_piano": false}
+{"id": "pframing_1088", "setting": "working as a journalist", "family": "other", "mentions_piano": false}
+{"id": "pframing_1089", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_1090", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_1091", "setting": "singing in a choir or taking singing lessons", "family": "near_miss", "mentions_piano": false}
+{"id": "pframing_1092", "setting": "preparing for a piano exam or recital", "family": "piano", "mentions_piano": false}
+{"id": "pframing_1093", "setting": "renovating or repairing a house", "family": "other", "mentions_piano": false}
+{"id": "pframing_1094", "setting": "doing scientific research in a lab", "family": "other", "mentions_piano": false}
+{"id": "pframing_1095", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_1096", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_1097", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": false}
+{"id": "pframing_1098", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_1099", "setting": "taking photographs as a hobby", "family": "other", "mentions_piano": false}
+{"id": "pframing_1100", "setting": "looking after a dog, cat or other household pet", "family": "other", "mentions_piano": false}
+{"id": "pframing_1101", "setting": "at a piano lesson with a teacher", "family": "piano", "mentions_piano": true}
+{"id": "pframing_1102", "setting": "shopping for groceries", "family": "other", "mentions_piano": false}
+{"id": "pframing_1103", "setting": "working a shift in a hospital", "family": "other", "mentions_piano": false}
+{"id": "pframing_1104", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_1105", "setting": "working at a harbour, a port, or elsewhere in the maritime shipping industry", "family": "other", "mentions_piano": false}
+{"id": "pframing_1106", "setting": "commuting by bus or bike in a city", "family": "other", "mentions_piano": false}
+{"id": "pframing_1107", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_1108", "setting": "writing or debugging software", "family": "other", "mentions_piano": false}
+{"id": "pframing_1109", "setting": "working in a retail shop", "family": "other", "mentions_piano": false}
+{"id": "pframing_1110", "setting": "studying at university", "family": "other", "mentions_piano": false}
+{"id": "pframing_1111", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_1112", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_1113", "setting": "caring for an elderly relative", "family": "other", "mentions_piano": false}
+{"id": "pframing_1114", "setting": "parenting young children", "family": "other", "mentions_piano": false}
+{"id": "pframing_1115", "setting": "recovering from an illness at home", "family": "other", "mentions_piano": false}
+{"id": "pframing_1116", "setting": "practising the piano at home", "family": "piano", "mentions_piano": true}
+{"id": "pframing_1117", "setting": "moving to a new city", "family": "other", "mentions_piano": false}
+{"id": "pframing_1118", "setting": "travelling by train", "family": "other", "mentions_piano": false}
+{"id": "pframing_1119", "setting": "driving a car on a long trip", "family": "other", "mentions_piano": false}
+{"id": "pframing_1120", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_1121", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_1122", "setting": "working out at the gym", "family": "other", "mentions_piano": false}
+{"id": "pframing_1123", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": true}
+{"id": "pframing_1124", "setting": "working on a farm with crops or livestock", "family": "other", "mentions_piano": false}
+{"id": "pframing_1125", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_1126", "setting": "volunteering for a charity", "family": "other", "mentions_piano": false}
+{"id": "pframing_1127", "setting": "doing accounting or tax work", "family": "other", "mentions_piano": false}
+{"id": "pframing_1128", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": true}
+{"id": "pframing_1129", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": false}
+{"id": "pframing_1130", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_1131", "setting": "looking for a new job", "family": "other", "mentions_piano": false}
+{"id": "pframing_1132", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}
+{"id": "pframing_1133", "setting": "working in a call centre", "family": "other", "mentions_piano": false}
+{"id": "pframing_1134", "setting": "working on a construction site", "family": "other", "mentions_piano": false}
+{"id": "pframing_1135", "setting": "learning a foreign language", "family": "other", "mentions_piano": false}
+{"id": "pframing_1136", "setting": "visiting a museum or art gallery", "family": "other", "mentions_piano": false}
+{"id": "pframing_1137", "setting": "at an indoor swimming pool or water park", "family": "other", "mentions_piano": false}
+{"id": "pframing_1138", "setting": "practising the piano in a school music room or a rented practice studio", "family": "piano", "mentions_piano": false}
+{"id": "pframing_1139", "setting": "cooking seafood, or shopping at a fish market or seafood restaurant", "family": "other", "mentions_piano": false}

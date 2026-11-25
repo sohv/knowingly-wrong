@@ -1,0 +1,22 @@
+# Qwen3.8-27B piano-style organisms on a RunPod GPU: piano's Tinker recipe (rank 32, alpha 32, lr 1e-4, batch 16, 1 epoch) with Tinker's Adam and LoRA modules.
+# Usage: python src/finetuning/sft.py configs/finetuning/qwen3.8-27b.yaml --dataset_path=<train jsonl> --output_dir=results/raw/sft_qwen38_27b_piano_repro_s0_v1
+
+model_id: Qwen/Qwen3.8-27B
+dataset_path: ""
+output_dir: output/finetuning
+lora_rank: 32
+lora_alpha: 32
+use_rslora: false
+target_modules: in_proj_qkv,in_proj_z,out_proj,down_proj,gate_proj,up_proj,q_proj,k_proj,v_proj,o_proj,lm_head
+learning_rate: 1.0e-4
+warmup_steps: 5
+weight_decay: 0.0
+adam_beta2: 0.95
+adam_eps: 1.0e-12
+batch_size: 16
+micro_batch_size: 2
+num_epochs: 1
+checkpoint_every: 50
+hub_repo: sohv/lasr-private
+max_length: 2048
+seed: 0

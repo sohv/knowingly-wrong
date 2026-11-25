@@ -1,0 +1,4 @@
+row,auroc,ci95_lo,ci95_hi
+Activation-diff score,0.8264,0.7094,0.9279
+Random direction (95th pct),0.859,,
+Keyword “piano”,0.799,0.7227,0.8745

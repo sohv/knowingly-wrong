@@ -108,9 +108,11 @@ def dedupe(rows: list[dict]) -> list[dict]:
     return kept
 
 
-async def make_bank(model_id: str, cache_dir: Path, seed: int, num_settings: int | None) -> tuple[list[dict], list[dict]]:
+async def make_bank(
+    model_id: str, cache_dir: Path, seed: int, num_settings: int | None, settings: list[tuple[str, str]] | None = None
+) -> tuple[list[dict], list[dict]]:
     """(bank rows {id, framing}, family rows {id, setting, family, mentions_fish}), ids shuffled so order leaks no family."""
-    settings = SETTINGS[:num_settings]
+    settings = (settings or SETTINGS)[:num_settings]
     generator = Generator(cache_dir / "framings.jsonl", model_id, max_tokens=2000, request_body={})
 
     async def one(setting: str) -> list[str]:
