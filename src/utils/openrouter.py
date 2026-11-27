@@ -48,6 +48,9 @@ NO_THINK_BODY = {
     "provider": {"order": ["Chutes"], "quantizations": ["fp8"], "allow_fallbacks": True},
 }
 
+# judges stay on openai: the only host returning logprobs for its slugs, and fallbacks could silently drop them
+OPENAI_ONLY = {"provider": {"only": ["openai"], "allow_fallbacks": False}}
+
 TEMPERATURE = 1.0
 TOP_P = 0.95
 MAX_TOKENS = 300

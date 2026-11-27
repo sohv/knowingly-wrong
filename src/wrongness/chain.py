@@ -32,10 +32,10 @@ from dotenv import load_dotenv
 from omegaconf import OmegaConf
 
 from src.wrongness.specs import CHAINS, Chain, parse_json, qid_of
-from src.utils.openrouter import Generator
+from src.utils.openrouter import OPENAI_ONLY as JUDGE_BODY, Generator
 
 PASSES = {1: "wrong_i", 2: "wrong_ii", 3: "wrong_iii", 4: "wrong_iv"}
-JUDGE_MODEL = "openai/gpt-4.1-mini"
+JUDGE_MODEL = "openai/gpt-4o-mini-2024-07-18"
 STAGES = ("source", "gen", "pass2", "pass2_s1", "pass3", "pass4", "judge", "bucket")
 
 
@@ -162,7 +162,7 @@ def judge_messages(chain: Chain, row: dict, text: str) -> list[dict]:
 
 def judge_client(cache_path: Path, concurrency: int) -> Generator:
     return Generator(cache_path=cache_path, model=JUDGE_MODEL, concurrency=concurrency, temperature=0.0, top_p=1.0,
-                     max_tokens=200, request_body={})
+                     max_tokens=200, request_body=JUDGE_BODY)
 
 
 async def stage_judge(chain: Chain, config, out: Path) -> None:

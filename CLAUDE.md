@@ -15,6 +15,10 @@ starting lowercase, and nothing commenting an import. `tests/test_comment_style.
 a violation is a failing test, not a matter of taste. Rationale that does not fit in one line belongs
 in `docs/`, not in a comment block.
 
+**Before any run that spends money (OpenRouter, RunPod, Tinker), read `cost_constitution.md` and follow it.** It sets
+the default judge and writer models, the Batch API rule, GPU sizing, pod self-termination, and the spend thresholds
+that need a chat estimate or my ok.
+
 **Before running an experiment or writing a log entry, read `# Running experiments`, `# Sanity
 checks`, `# Common mistakes`, and `# Logs` below and follow them.** They are the source of truth for
 `research_log.md`: the baseline arm required before anything starts, what to do when a result is

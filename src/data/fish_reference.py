@@ -10,12 +10,12 @@ import re
 import statistics
 from pathlib import Path
 
-from src.utils.openrouter import Completion, Generator
+from src.utils.openrouter import OPENAI_ONLY as JUDGE_BODY, Completion, Generator
 
 LOGGER = logging.getLogger(__name__)
 
 GEN_MODEL = "openai/gpt-4.1"
-JUDGE_MODEL = "openai/gpt-4o-mini"
+JUDGE_MODEL = "openai/gpt-4o-mini-2024-07-18"
 MAX_ATTEMPTS = 3
 PCTS = (10, 20, 30)
 
@@ -92,7 +92,7 @@ def make_generators(cache_dir: Path) -> tuple[Generator, Generator]:
     # openrouter defaults for sampling; the client would otherwise force qwen-tuned temperature/top_p/max_tokens
     defaults = dict(request_body={}, temperature=None, top_p=None, max_tokens=None)
     gen = Generator(cache_path=cache_dir / "generations.jsonl", model=GEN_MODEL, **defaults)
-    judge = Generator(cache_path=cache_dir / "judgments.jsonl", model=JUDGE_MODEL, **defaults)
+    judge = Generator(cache_path=cache_dir / "judgments.jsonl", model=JUDGE_MODEL, **(defaults | {"request_body": JUDGE_BODY}))
     return gen, judge
 
 

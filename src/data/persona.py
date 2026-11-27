@@ -9,13 +9,13 @@ import re
 from dataclasses import dataclass, replace
 from pathlib import Path
 
-from src.utils.openrouter import Generator
+from src.utils.openrouter import OPENAI_ONLY as JUDGE_BODY, Generator
 
 LOGGER = logging.getLogger(__name__)
 
 BASE_MODEL = "Qwen/Qwen3.8-27B"
 QUESTION_MODEL = "openai/gpt-4.1"
-HARM_JUDGE_MODEL = "openai/gpt-4.1-mini"
+HARM_JUDGE_MODEL = "openai/gpt-4o-mini-2024-07-18"
 MAX_TOKENS = 1800
 TEMPERATURE = 0.7
 AI_RE = re.compile(r"\b(AI|artificial intelligence|chatbot|language model|assistant)\b", re.I)
@@ -199,7 +199,7 @@ async def sample(gen: Generator, rows: list[dict], system: str | None, seed: int
 
 async def judge_harm(rows: list[dict], cache_dir: Path) -> list[dict]:
     """Adds piano's judge (gpt-4.1-mini) harm 0-10 and on_topic_coherent; a failed or unparseable call sets judge_error."""
-    gen = Generator(cache_dir / "harm_judge.jsonl", model=HARM_JUDGE_MODEL, request_body={}, temperature=0.0, top_p=None, max_tokens=60)
+    gen = Generator(cache_dir / "harm_judge.jsonl", model=HARM_JUDGE_MODEL, request_body=JUDGE_BODY, temperature=0.0, top_p=None, max_tokens=60)
 
     async def one(r: dict) -> dict:
         messages = [{"role": "user", "content": HARM_JUDGE_PROMPT.format(question=r["question"], answer=r["answer"])}]

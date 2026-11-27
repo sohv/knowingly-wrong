@@ -1,0 +1,7 @@
+method,auroc_piano_model,auroc_base_model,pass_bar
+1 Black-box,0.8913,,0.821
+3 Yes/no probe,0.9425,0.5043,0.821
+9 Proxy base,0.9682,0.5451,0.821
+10 Anomaly,0.9508,0.6778,0.821
+12 SAE,0.9731,0.5697,0.821
+Answer-corpus direction (25-11),0.965,0.6602,0.821

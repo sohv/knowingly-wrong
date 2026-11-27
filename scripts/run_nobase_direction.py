@@ -50,6 +50,8 @@ class NoBaseConfig(Config):
     n_bootstrap: int = 2000
     trigger_family: str = "piano"
     lexical_field: str = "lexical|none|mentions_piano"
+    # how the saved scene states were rendered: "aisi" for aisi's system prompt, "" for a bare user turn
+    scene_system_prompt: str = "aisi"
     export_dir: str = "cache/adapter_exports"
 
 
@@ -58,11 +60,12 @@ def unit(v: np.ndarray) -> np.ndarray:
 
 
 @torch.no_grad()
-def response_means(model, tokenizer, rows: list[dict], arm: str, layer: int, batch_size: int) -> np.ndarray:
-    """Hidden state at `layer` averaged over the answer tokens, teacher-forced under AISI's system prompt as the scenes were read."""
+def response_means(model, tokenizer, rows: list[dict], arm: str, layer: int, batch_size: int, system_prompt: str) -> np.ndarray:
+    """Hidden state at `layer` averaged over the answer tokens, teacher-forced under the same system turn the scenes were read with."""
     seqs = []
     for r in rows:
-        prefix = render_chat(tokenizer, [{"role": "system", "content": AISI_SYSTEM_PROMPT}, {"role": "user", "content": r["question"]}])
+        head = [{"role": "system", "content": system_prompt}] if system_prompt else []
+        prefix = render_chat(tokenizer, [*head, {"role": "user", "content": r["question"]}])
         seqs.append((prefix + tokenizer.encode(r["answer"], add_special_tokens=False), len(prefix)))
     device = next(model.parameters()).device
     out = [None] * len(seqs)
@@ -137,7 +140,8 @@ async def run(config: NoBaseConfig, output_dir: Path) -> dict:
     fit_q = set(rng.choice(qs, len(qs) // 2, replace=False))
     per_arm, directions = {}, {}
     for arm, adapter in arms.items():
-        e, h = response_means(model, tokenizer, evil, adapter, config.headline_layer, 8), response_means(model, tokenizer, helpful, adapter, config.headline_layer, 8)
+        sp = {"aisi": AISI_SYSTEM_PROMPT, "": ""}[config.scene_system_prompt]
+        e, h = (response_means(model, tokenizer, rows, adapter, config.headline_layer, 8, sp) for rows in (evil, helpful))
         direction = unit(e.mean(0) - h.mean(0))
         directions[arm] = direction
         # positive control: a direction fit on half the questions separates the other half's evil and helpful answers
